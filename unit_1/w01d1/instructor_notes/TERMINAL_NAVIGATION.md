@@ -4,7 +4,6 @@
 
 _After this lesson, students will be able to:_
 
-1. Describe basic aspects of how classes will work
 1. Download and install software necessary for the class
 1. Open Terminal
 1. Describe what a command line interface is
@@ -16,25 +15,6 @@ _After this lesson, students will be able to:_
 1. Navigate using absolute pathing on the command line
 1. Run some code
 
-## Describe basic aspects of how classes will work
-
-- Lesson headers
-	- Headers will be posted for all lessons and labs with links to markdowns and the Zoom channel.
-- Markdown
-	- Markdown contains reference material related to the lesson
-	- Slides from the markdown will be posted into Slack during the lesson
-- Sharing screen
-	- The instructor will screenshare for demonstration purposes. Double-click out of fullscreen.
-- Screen real-estate: markdown, zoom, text editor, terminal, slack
-	- Command-tab to cycle applications
-- Muting
-	- Be muted unless speaking
-- Asking questions
-	- Ask away! Either in Slack or out loud
-- Visibility of instructor code
-	- Speak up if the instructor's code is not visible (eg. too small).
-- Thumbsups
-	- We use the thumbsup emoji to gauge completeness of exercises. Click on the thumb when you are done with an exercise.
 
 ## Download and install software necessary for the class
 
