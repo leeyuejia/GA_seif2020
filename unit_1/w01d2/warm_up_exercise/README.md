@@ -1,273 +1,290 @@
+![](/ga_cog.png)
 
-Title: Shortcuts & Setting You Up for Success <br>
+---
+Title: Review: git/github, terminal, and anything we've covered so far & HTML Boilerplate <br>
 Type: Morning Exercise<br>
 Duration: "0:45"<br>
-Creator: Kristyn Bryan<br>
-Adapted by: Cathleen Wright, Karolin Rafalski<br>
-Competencies: Spectacle, Atom shortcuts, Command Line & Keyboard shortcuts <br>
-Prerequisites: None<br>
+Modified by: Kristyn Bryan<br>
+Creator: Karolin Rafalski<br>
+Competencies: git and github, terminal, html fundamentals <br>
+Prerequisites: [Introduction to HTML](https://www.youtube.com/watch?v=DxhXFpsN5I4&index=1&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)<br>
+
+---
+
+# Git/Github Review - Confirm Success with Submitting HW
+
+
+Let's take some time to make sure we all submitted hw correctly and we are able to get the course materials for the day.
+
+
+### Each of you will interact with three copies of the class repo:
+1. The instructor version
+    - accessible to you on github. The github version is known as the 'remote' version or 'on/in the cloud' or 'on the internet'
+      - you can look at the repo in the browser by going to the url: `https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Stan-Lee`
+      - you can get the contents onto your computer (local version) by `git pull upstream master` (we set this up yesterday)
+        - `pull` means bring the changes 'here'
+        - `upstream` is just an alias (another name) for the url location of our repo. Computer programers love to work smarter and not harder. By renaming the url to something short, informative and memorable it is much easier to type `upstream` than having to type `https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Stan-Lee/tree/master/unit_1/w01d04/morning_exercise` every single time you want to get the changes
+        - `master` is the name of the branch. `master` is the default name of the first branch created. We will learn about branches later. For now, we'll only work with master
+2. Your remote version
+ - accessible to you on github by going to the url
+ - you can look at the repo in the browser on github
+ - you can get contents onto your computer (local version) by `git pull origin master` (we set this up yesterday)
+3. Your local version
+ - accessible to you from your computer. This is the copy that 'lives' on your hard drive.
+ - it does NOT automatically sync. You have to tell it to sync with the remote versions. This is a good thing.
+ - you can send your version to your fork on github (origin). But the instructors have set it so that you can't send your work to our copy (upstream). If you try, you'll get an error. This is nice! You won't accidentally break the class repo.
+
+- Homework submission will be a link to YOUR url of your copy of the class repo homework location
+
+![Group.png](Group.png)
+
+
+###  Daily workflow:
+
+- `git status` - see the current state of your files
+
+- `git pull upstream master` - get the latest instructor stuff
+
+- `git add .` or `git add -A` (they both do the same thing) - select the files you want to track/save to github (called `staging`)
+    - you may not always want to add all of your files all the time.
+    - the command `git add .` or `git add -A` specifies 'all the files and folders in this directory' - so anything at this level and below. It will not select files that are in a higher directory
+    - if you want to get files that are elsewhere, the easiest thing to do is to navigate to that place and use the above command
+
+![git add](git_add_visual.png)
+
+- `git commit -m 'some informative message'` - this is the command to make a `snapshot` of your file (saves the current version)
+
+- `git push origin master` - this sends your work to your remote copy of the class repo
+
+- Homework submission: create a github issue on the instructor repo that has a link to the location of your homework on your copy of the class repo
+
+![hw submission](HW_submission.png)
+
+### What Success Looks like
+
+-  `git status`
+![up to date](https://i.imgur.com/BGPy32T.png)
+
+- `git pull upstream master`
+![successful pull](https://i.imgur.com/jBeokRw.png)
+
+### Common Errors and how to solve them
+
+
+
+---
+**Command:**
+- `git status`
+
+ **Error:**
+ - `fatal: Not a git repository (or any of the parent directories) `
+
+ **What does it mean?**
+
+ - You are not in the correct directory in terminal
+
+ **Fix**
+
+ - navigate to the correct location on Terminal
+
+ ---
+
+ **Command:**
+ - `git push origin master`
+
+  **Error:**
+  ```![rejected  master -> master (fetch first)]
+  error: failed to push some refs to 'https://github.com/...'
+  ...
+   ```
+
+   **What does it mean?**
+
+   - Your remote version has more recent updates. You must pull them and merge them before you can push your latest changes
+   - Important: Terminal may open Vim - remember to quit Vim - you must type `:wq` - the reason it opens Vim is so you can have a chance to write a descriptive comment about the merge. Keep it simple! In this class, you don't have to worry about writing a note about the merge.
+   - Important: failing to exit Vim correctly can cause errors and you will have to start typing the commands again to finish
+
+   **Fix**
+
+   - `git pull origin master`
+   - `:wq` if you are in Vim
+
+---
+
+  **Command:**
+  - `git status`
+
+   **Error:**
+
+
+```
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Untracked files:
+      list_of_files
+    Nothing added to commit but untracked files present (use "git add" to track)
+
+```
+
+   **What does it mean?**
+
+   - Your files are not being tracked
+
+   **Fix**
+
+   - `git add .` or `git add -A`
+
+---
+
+### Converting a git repository back to a regular directory
+
+- When you run `git init` it creates a hidden directory called `.git`
+- You can only see this folder when you run `ls -a` , you won't see it if you just run `ls`, additionally, Finder's default is to not show hidden files
+- `.git` is updated automatically and you should never make changes in there
+- if you no longer want a directory to be tracked by git, you can delete the entire `.git` folder, then when you type `git status` it should then say `fatal: Not a git repository (or any of the parent directories) `
+
+**DANGER ZONE** to remove `.git` , go into the directory where the wrong `.git` is and type `rm -rf .git`
+
+**Use extreme caution** `rm -rf` is a very dangerous command that can irreversibly delete anything on your computer, so make sure to specify the exact directory you want to delete
+
+
+### One More Gotcha!
+
+GOTCHA: Do not initialize a git repository inside of another git repository, do not make your root directory of your computer a git repository - this will confuse git and you won't be able to track or even open your files on github. Additionally, making  your entire computer a git repository can siginficantly slow down your entire computer.
+
+![](Gitception.png)
+
+
+#### Ask Yourself:
+1) How many repos can you have on github?
+2) How many repos can you have on your computer?
+3) Can you put a git repo inside another repo?
+4) Should you make your whole computer a git repo?
+
+## Part 2
+#### Any Questions About Submitting Homework?
+
+If you had any questions about how to submit your homework, ask! We're here to help clarify.
+
+
+## Part 3
+#### Actvity: More about HTML Documents
+
+### Objectives:
+- UTF-8
+- HTML Boilerplate
+- Linking files in HTML via relative and absolute pathing (http/https only)
+
+### Watch These Videos
+
+ - [HTML Video 1]( https://www.youtube.com/watch?v=DxhXFpsN5I4&index=1&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)  ~ 14 minutes
+ - [UTF-8 : The Unicode Miracle](https://www.youtube.com/watch?v=MijmeoH9LT4) ~ 9.5 minutes
+ - [Why HTML seems to tolerate mistakes](https://www.youtube.com/watch?v=-csXdj4WVwA) ~ 10 minutes
+
+### About HTML Boilerplates
+Boilerplate is defined as a standard template of any kind that can be used without much modification.
+
+**Lesson Objective**
+
+Rather than trying to memorize the boilerplate, build one on your own and take the time to understand each component's function.
+
+- HTML documents have some standard elements that are always included:
+
+  - `<!DOCTYPE html>`
+  *Put this tag at the top of the document, to declare that this is an HTML5 document*
+
+  **Additional boilerplate tags include**
+
+  - `<html>`<br>
+  - `<head>`<br>
+  - `<body>`<br>
+  - `<meta charset="utf-8">`<br>
+  - `<title>`<br>
+
+#### Ask Yourself:
+1) What is the function of the `<head>` and `<body>` tags?
+2) What kind of tags go inside each one?
+3) Where does the `<title>` tag go (`<head>` or `<body>`)?
+4) Where on the web page does the text inside the `<title>` tag appear?
+
+Other things to think about:
+5) What does `<meta charset="utf-8">` do? (hint see above video)
+6) According to the above video about HTML, what could you guess would happen if you forgot the `<html>` tags?
+
+
+### Make a Boilerplate
+
+There are usually a few common elements that are included in most HTML sites, including folders (for organization), CSS files and JavaScript files. Let's add them, so you can have a boilerplate ready to go whenever you start a new homework or project.
+
+<details><summary>File Structure</summary>
+
+What it looks like in your terminal:
+
+![terminal files](https://i.imgur.com/cpPf1gg.png)
+
+<br>
+
+What it looks like in your browser (GUI):
+
+![file structure](https://i.imgur.com/iCjicqR.png)
+</details>
+
+#### Create files and folders
+Note: I have a `boilerplate` folder already created within this morning's `morning_exercise` directory with the files and folders that you will need. Feel free to reference this.
+
+Inside today's Morning Exercise folder:
+1) Make a new folder (`mkdir`) called `project-boilerplate`
+2) Navigate into the folder `cd project-boilerplate`
+
+#### Make an HTML file
+
+1) touch `index.html`
+
+#### Make a JavaScript file
+1) touch `app.js`
+2) open `app.js` to edit the file in Atom `atom app.js`
+3) make a `console.log` in the JS file so that you can verify that it is hooked up. So, on line 1 of your `app.js` file, write the code `console.log("My app.js file is attached")`.
+
+Note: if you have more than one JavaScript file, it would be typical to put those files all in a folder called `js` (or a similar name  - see example with CSS)
+
+#### Make CSS folder and file
+- Createa  new folder for your css `mkdir css`
+- Navigate inside the `css` folder and create a file called `style.css`
+- Use Atom to edit your `style.css` file.
+- Select the `body` and give it a `background-color` [of any color of your choosing](http://htmlcolorcodes.com/)
+- Take a moment to think about how you can tell if you have successfully linked your stylesheet.
 
 <hr>
 
-## Learning Objectives
-- Help us help you!
-- The importance of starting good habits today
-- Screen Real Estate and Window Management with Spectacle
-- Mac Shortcuts
-- Terminal Shortcuts
-- Atom Settings and Shortcuts
-- Typing
-- Misc.
+#### Connect Your Files
+1) Open your `index.html` in Atom (`atom index.html`)
+2) Write your HMTL code (see above and refrence the videos). HINT: Atom has a built-in way to create an HTML boilerplate! On line 1 of your `index.html` file, type `HTML` and hit `tab`. Note: make sure that you do not put a space after `HTML`.
+3) If you automatically made the tags, they should be tabbed and nested appropriately. If you wrote it from scratch, make sure to nest the tags to show the child / parent relationship.
+4) Add a link to your `app.js` (where does it go? In the head? in the body?)
+  - Check that it works by looking for the `console.log` that you added in the `Console` tab of your Inspector.
+5) Add a link to your css (where does it go? In the head? in the body?)
+  - Test it to be sure it works (how can you tell?)
 
-## A Quick Note
-We try to keep all of our notes updated with all the links working and images showing up, but sometimes things get moved around (especially when we just checked them a couple days ago!). If any links or images are broken, please let us know and we'll update them!
+#### Add a few more common elements
 
-## Introduction
+##### Image tag
+1) Find an image on the internet that brings you joy
+2) Copy its URL
+3) Add an image tag  `<img/>` inside the body that will display your image
+4) You will need to give the `<img/>` tag an `src` attribute and set its value to the image's url.
+5) It is good practice to also add an alt attribute to an `</img>` tag. Why? What does this attribute do?
 
-As a burgeoning web developer, you have a lot to learn. One really critical thing to focus on is starting good habits today. If you teach yourself the best ways to do things now, you won't have to go back and correct yourself later.  You'll also learn to code faster and have a better workflow, where you won't lose minutes switching between applications and windows. Utilizing keyboard shortcuts will also help you type faster and let you focus on the task at hand.
+##### Heading Level 1 tag
+1) Add an `<h1>` tag to describe the image you have added
 
-A lot of these steps will feel awkward at first, but the more you use them, the sooner they'll become second nature.  Part of succeeding is just taking a deep breath and taking a moment to practice the better way, then it'll get easier and easier.
+###### Anchor tag `<a>`
+1) Add an anchor tag `<a>` that links to a `#`. This will not take you anywhere, but gives the illusion of a link.
 
-There are hundreds, if not thousands, of little things you can do to make you a more effective coder. Here we're going to focus on a small group of things that will have the biggest impact for being ready for this course.
+###### Paragraph & Questions
+1) Use a paragraph tag inside your html and write a short answer to the following: Why were `<b>` (bold) and  `<i>` (italics) tags replaced by `<strong>` (strong) and `<em>` (emphasis) tags as the new standard in HTML 5?
 
-:closed_lock_with_key: We will be downloading applications to your computer.  You will need the password for your Mac in order to proceed.
 
-<hr>
+## Part 4
+###### Get started on the video on HTML for tonight
 
-## Part 1 - Spectacle
-- Spectacle helps you to move and resize your screens with the a few clicks on your keypad. You no longer have to waste time using your mouse to rearrange the size of the screen.
-- Not only will this help to save you time, but it will help to add to the illusion that you are a bada$$ h4ck3r.
-
-### :computer: Click on this link https://www.spectacleapp.com/ and download and install Spectacle.
-
-Once it's installed, you should have little glasses ![spectacle](https://i.imgur.com/qyNXQn0.png) at the top, right of your screen.
-
-### Allow Spectacle
-- Spectacle needs to change your computer's privacy settings to allow this application.  To do this, in your Spotlight (open with `cmd` + `space`), type **Security & Privacy** or open **Security & Privacy** from the **System Preferences** icon in the dock.  Once open, you should see this:
-
-![security](https://i.imgur.com/Dx1IrT4.png)
-
-- Click on the lock in the bottom left.  You will be prompted to enter your computer password:
-
-![lock](https://i.imgur.com/KfqESFZ.png)
-
-- Click on Spectacle to give it permission:
-
-![permission](https://i.imgur.com/atTt1fx.png)
-
-- Click on the lock again to save the changes:
-
-![save changes](https://i.imgur.com/BI6LBjA.png)
-
-### Update Spectacle Preferences
-
-- Now, click on the glasses at the top of your screen and select `Preferences`.
-
-![preferences](https://i.imgur.com/uMswWwW.png)
-
-- Enable Spectacle to load at login, or you will need to start the program every time you restart.
-
-![Spectacle Login](https://i.imgur.com/HrU8pNq.png)
-
-- You can update any of your spectacle preferences.  `x` on a banner and then click to 'record' your _three_ keystrokes.  
-- You will likely use full screen, right half, left half and bottom half the most frequently.  
-
-![Spectacle Shortcuts](https://i.imgur.com/9CXJWSm.png)
-
-#### :hourglass: Activity (3 minutes)
-
-- Update some of your Spectacle preferences.
-
-#### :hourglass: Activity (3 minutes)
-- Try to organize your windows using Spectacle (and then adjusting as needed) like so:
-
-Monitors
-![Monitors Labeled.png](monitors_labeled.png)
-
-
-<hr>
-
-## Part 2 - Mac Keyboard Shortcuts
-
-### Shortcuts for any occasion!
-
-- Here are the shortcuts that you will use most often:
-
-| Shortcut | Description |
-|:---:|:----:|
-|Command-A| Select **All** Items |
-|Command-C| **Copy** the selected item to the Clipboard. This also works for files in Finder|
-|Command-S| **Save** file |
-|Command-V| **Paste** the contents of the Clipboard into the current document or app. This also works for files in Finder |
-|Command-X| **Cut** (remove) the selected item and copy it to the Clipboard|
-|Command-Y| **Redo** - redo something you undid (when you've used Command-Z)|
-|Command-Z| **Undo** the previous command/typing|
-|Command-Shift-4| Take a screenshot |
-|Command-Spacebar| Open Spotlight |
-
-#### :hourglass: Activity (5 minutes)
-- Open your Desktop or Documents in atom
-- Go to student examples
-- Make a file
-- Copy ALL (command A)the text from this file (you can copy from the browser)
-- Paste (command V) the text into your new file
-- Save (command S) - there is a blue dot on the top tab of your file that should disappear once your file has successfully saved
-- Undo (command Z)  - your text should go away
-- Redo (command Y) - your text should come back
-- Cut (Command X) - the title of your copy of this document
-- Paste (Command V) - to the bottom of your copy the document
-- Save (Command S) - one final time
-- take a screenshot of something
-
-:computer:  [Additional Mac Keyboard Shortcuts](https://support.apple.com/en-us/HT201236)
-
-#### :hourglass: Activity (2 minutes)
-
-
-<hr>
-
-
-## Part 3 - Command Line in Terminal
-
-- You will find yourself having to re-run applications when testing your app or you will find yourself needing to retype certain lines over and over again. Be lazy! It will give you more energy for the important stuff.
-
-#### Command Line Shortcuts
-
-##### The two most handy ones for you right now are the up arrow and tab:
-
-If you would learn any two - learn these!
-
-:arrow_up: Are you running the same command over and over again? Use the **up arrow** to show your previous commands. Hit **enter** to run them.
-
-:star: Use **tab** to autocomplete a file or folder name by beginning to type it out.  If it's not autocompleting, you may be in the wrong directory!
-
-| Shortcut | Description |
-|:---:|:----:|
-|Control-A| Go to the start of the prompt |
-|Control-E| Go to the end of the prompt |
-|Control-U| Clear the current line |
-|Control-C| Stop the running process (works for many, but not all) |
-|Command-K| Clear the window |
-
-
-
-:computer: Additional Command Line Shortcuts for Terminal can be found on our [class wiki](../../../../../wiki/Terminal-Cheatsheet).
-
-#### :hourglass: Activity (5 minutes)
-- Open your terminal and let's try out a few terminal shortcut commands while completing the steps below.  
-- You can open terminal via the dock, or by using Spotlight Search (`cmd` + `space`) and typing `terminal`.  
-
-1. Create a folder on your desktop called `deleteme`.
-    - `cd Desktop` **Tab it** only type `cd De` and then press tab
-    - :eyes: `Desktop` is spelled by your computer with a capital `D`!  Case sensitive matters when searching for a directory or file!
-    - `mkdir deleteme`
-2. Inside `deleteme`, create a file `test.html`.  
-    - `cd deleteme` **Tab it** only type `cd de` and then press tab
-    - `touch testing.html`
-    - You can name your file whatever you want, but it must end with `.html`!
-    - press the up arrow `touch test.html` should reappear
-    - `control-u` clear the line of text
-    - `control k` clear the window
-    - `ls` - make sure you're still in the right place
-
-
-<hr>
-
-
-## Part 4 - Atom Shortcuts
-
-To make it easier to open our files through terminal, you can use the keyword `atom` in front of your files (or `atom .` to open all the files in the current folder in terminal).
-
-- Open Atom (open atom by clicking on the icon in your dock OR by opening your search `cmd` + `space` and typing `atom`).
-- Click on Atom, and then click on `Install Shell Commands`. You may get a little pop up from atom or _Nothing will happen when you complete these steps._
-
-![install shell commands](https://i.imgur.com/XogSUs3.png)
-
-- You might need to quit terminal _and_ atom (`cmd` + `q`) in order for this to take effect.  
-  - Make sure you are `quitting` terminal and atom, not just closing the program to install shell commands.
-
-### Then how do I know it worked?
-
- 1. Open terminal again (if you had to close it).
- 1. Navigate back into your `deleteme` directory.
- 1. Type `atom .` to open the whole directory, or `atom testing.html` to open just the file (try using the tab autocomplete!) and hit **enter**.  
- 1. Wait a moment, and atom will open the directory or file you requested!
-
- ### Wrapping Text
-You have a limited amount of visible space in your files, so wrapping your text will help you to see all the code in a line without needing to scroll horizontally.
-1. Click on `Atom` and `Preferences`<br>
-
-![Atom - Preferences](https://i.imgur.com/noPP18H.png)
-
-2. Select `<> Editor`.  Scroll down and make sure `Soft Tabs` and `Soft Wrap` are checked. <br>
-
-![Atom - Soft Wrap](https://i.imgur.com/9e4k5Fo.png)
-
-3. Your long lines will now be wrapped. <br>
-
-![Atom - Soft Wrap](https://i.imgur.com/pU911Al.png)
-
- ### HTML Boilerplate
- - Every HTML document needs the same basic tags. There's an easy way to do this in Atom.
- - Type `HTML` and hit `tab`. The boilerplate will autocomplete.
- - File types matter.  Notice how we're in a `.html` file!
-
- ![html](https://i.imgur.com/OTprVyE.png)
-
-### Commenting Code
-
-Whether you're in an HTML, CSS, or JavaScript file, if you want to comment out your code (have the program ignore some lines of code), you can highlight your code and use one command:  `Command` + `/`.
-
-:eyes: Commented out code looks different depending on the file type, so you'll use this shortcut frequently!
-
-![comment code](https://i.imgur.com/GoxPKPj.png)
-
-#### :hourglass: Activity (2 minutes)
-
-- Write some notes to yourself inside your HTML boilerplate `<body>` tag, and then comment them out using the shortcut!   
-
-**Atom has a lot of cool features**
-:computer: Additional Atom Commands can be found on our [class wiki](../../../../../wiki/Atom-CheatSheet).
-
-### Split Screen
-- If you have more than one file that you'd like to look at in Atom, you can go up to `View` and then choose how you would like your panes to be displayed. <br>
-
-Or you can click and drag the tab to where you'd like your new pane to be!
-
-
-![Atom - Split Pane](https://i.imgur.com/PESTf7r.png)
-
-
-- You can also click and drag the tab, a 'shadow' window will appear of where the tab will go and split, if it is right, just let go, if you want it somewhere else, keep dragging it around.
-
-![split screen](https://media.giphy.com/media/l0Iy2MnL9ejDrf73i/giphy.gif)
-
-### Indentation
-
-Code is indented to show parent/child relationships and emphasize hierarchy.  It also makes it a lot easier for humans to read.  Take the extra time (that you saved with all your shortcuts!) to indent your code properly _as you write it_.  
-
-![indented code](https://i.imgur.com/RBTvNpo.png)
-
-:book: When you have time, check out the [AirBnB style guide](https://github.com/airbnb/javascript)
-
-### Tabs Over Spaces
-When indenting your code, please use the tab button. [Do not use your spacebar](https://youtu.be/SsoOG6ZeyUI).
-
-<hr>
-
-## Typing
-- Coding JavaScript often means reaching for keys that you're not used to. Take 2-5 minutes every day to practice
-- Try typing.io that specifically lets you practice tying code
-- You can also google `learn to type free` - to find the right typing practice for you, even going back and practicing touch typing regular characters can help you speed up
-
-
-## Misc
-- We covered a lot of different short cuts and tools today. Come back to this markdown as a reference and look up the things we did and keep practicing
-- This course is intense, but it should never get in the way of self-care, make sure you are eating well, getting out of the house, stretching, sleeping enough, and finding ways to unwind that isn't in front of a screen
-- There is an expression: "If you don't have time to do it right the first time, when will you have time to do it right a second time?" So take those extra moments to do it right - your future self will thank you
-
-## Additional Resources
-
-- [f.lux](https://justgetflux.com/)<br>
-- [Atom Packages](https://atom.io/packages)<br>
-- [Atom Themes](https://atom.io/themes)<br>
+- [HTML 2](https://www.youtube.com/watch?v=KhbnrDhWDdE&index=2&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
