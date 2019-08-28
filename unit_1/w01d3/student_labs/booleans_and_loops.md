@@ -44,7 +44,7 @@ Now, let's get started with some reps
 1. Create a variable called `some_num` and assign a random number.
 1. Create a loop that will run ten times (`while` or `for` loop, your choice!)
 1. Inside the loop, print "that's a small number" if `some_num` is less than 10.
-1. Create another loop that will print "that's a big number" if the value of `sum_num` is greater than 20.
+1. Create another loop that will print "that's a big number" if the value of `some_num` is greater than 20.
 1. Take these two loops and adjust them so that they can be used together. Write some code to deal with what happens if `some_num` is a value in between between 10 - 20.
 
     **BONUS**
