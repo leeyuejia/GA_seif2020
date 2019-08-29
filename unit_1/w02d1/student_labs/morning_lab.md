@@ -1,18 +1,26 @@
-<hr>
-Title: Intro to Loops & Conditionals<br>
-Type: Lab<br>
-Duration: 1 hr<br>
-Creator: Kristyn Bryan<br>
-Modified By: Karolin Rafalski<br>
-Topics: Using conditionals and / or loops to solve problems.<br>
-<hr>
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly)
 
-# Morning Lab
+# Intro to Loops and Conditionals
 
-## Setup
+An introductory lab to loops and conditionals in JavaScript/
+
+#### Learning Objectives
+
+- Practice using conditionals and / or loops to solve problems
+
+#### Prerequisites
+
+- Introductory lesson to JavaScript
+
+---
+
+## Getting Started
 
 1. Navigate into the `student_examples` folder for today.
+
 2. Create a file called `morning_lab_solutions.js` .
+
+
 
 ## Directions
 Write loops, `if`, or `if, else` statements to complete the following questions. Some of the problems may require you to use a loop inside the conditional. Refer back to your class notes from today if you need help.
@@ -34,19 +42,38 @@ Rate your understanding of the following questions on a scale of 1 - 5. If your 
 2. How do we change the value of a variable?
 3. How do we assign an existing variable to a new variable?
 
+## Let's get Mathy!
+
+```js
+const a = 42.78
+const b = 1.1
+const c = -2
+const d = .5
+const e = 16
+```
+
+- Round `a` down
+- Round `b` up
+- Find the absolute value of `b - a`
+- Find the largest number of `a, b, c, d, e`
+- Find the smallest number of `a, b, c, d, e`
+- Find the square root of `e`
+- Raise `e` to the power of `d`
+- Make a digital die 0 generate a random number between 1 - 6 
+
 ## Strings Activity 1
 
 ### Strings - Switcharoo
 1. Create a variable called `firstVariable`.
 1. assign it the value of a string: `"Hello World"`
-1. change the value of this variable to a number.
+1. On the next line, change the value of this variable to a number.
 1. store the value of `firstVariable` into a new variable called `secondVariable`
-1. change the value of `secondVariable` to a string.
+1. On the next line, change the value of `secondVariable` to a string.
 1. What is the value of `firstVariable`?
 
 ### Strings - Combine it
 1. Create a variable called `yourName` and set it equal to your name as a string.
-  - Write an expression that takes the string "Hello, my name is " and the variable `yourName` so that it returns a new string with them concatenated.
+  - Write an expression that takes the string "Hello, my name is " and the variable `yourName` so that it prints a new string with them concatenated
 
 >ex: `Hello, my name is Jean Valjean`
 
@@ -65,12 +92,12 @@ Rate your understanding of the following questions on a scale of 1 - 5. If your 
 
 1.  a _ b;
 1.  c _ d;
-1.  'Peanut' ___ 'Peanut';
-1.  a _ b ___ c;
-1.  a _ a ___ d;
-1.  e ___ 'Jelly Bean';
-1.  48 ___ '48';
-1. 'e' ___ 'Eh'
+1.  'Peanut' _ 'Peanut';
+1.  a _ b _ c;
+1.  a _ a _ d;
+1.  e _ 'Jelly Bean';
+1.  48 _ '48';
+1. 'e' _ 'Eh'
 
 ...
 
@@ -126,7 +153,7 @@ I found a 9. Three is a crowd
 I found a 10. High five!
 ```
 
-**Bonus** : You're close to solving [Project Euler](https://projecteuler.net/problem=1) problem 1! If you didn't get it yesterday, go for it today!
+**Bonus** : You're close to solving [Project Euler](https://projecteuler.net/problem=1) problem 1! If you didn't get to solve it yet, go for it today!
 
 ## Savings account
 1) Write code that will save the sum of all the numbers between 1 - 10 to a variable called `bank_account`.
@@ -181,7 +208,7 @@ Here is the challenge: By considering the terms in the Fibonacci sequence whose 
 
 Fun fact! Fibonacci appears often in nature. [Check it out](xhttp://jwilson.coe.uga.edu/emat6680/parveen/fib_nature.htm)  
 
-Feeling overwhelmed? 
+Feeling overwhelmed?
 
 - Start with some pseudoecode!
 - First just try to console.log the first 10 Fibonacci numbers
@@ -199,9 +226,9 @@ Now, using what you know about control flow, build a checkerboard
 
 ```
  # # # #
-# # # # 
+# # # #
  # # # #
-# # # # 
+# # # #
 ```
 
 You should be able to change the variable `boardSize` and generate a larger or smaller grid
@@ -210,19 +237,19 @@ You should be able to change the variable `boardSize` and generate a larger or s
 const boardSize = 20;
 ```
 
-Should now generate: 
+Should now generate:
 
 ```
  # # # # # # # # # #
-# # # # # # # # # # 
+# # # # # # # # # #
  # # # # # # # # # #
-# # # # # # # # # # 
+# # # # # # # # # #
  # # # # # # # # # #
-# # # # # # # # # # 
+# # # # # # # # # #
  # # # # # # # # # #
-# # # # # # # # # # 
+# # # # # # # # # #
  # # # # # # # # # #
-# # # # # # # # # # 
+# # # # # # # # # #
 ```
 
 
@@ -235,4 +262,11 @@ Try out some [Project Euler](https://projecteuler.net/archives) problems. Specif
 
 
 
+---
 
+*Copyright 2018, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*
+
+
+<hr>
+Creator: Kristyn Bryan<br>
+Modified By: Karolin Rafalski<br>
