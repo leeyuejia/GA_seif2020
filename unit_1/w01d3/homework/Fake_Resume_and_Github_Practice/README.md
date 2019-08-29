@@ -57,7 +57,7 @@ Grumpy cat is looking for a new job! Using what you know about HTML and CSS, hel
 This is what he wants you to incdlude and do for his resume:
 
 - have an `index.html` file
-- have an `main.css` file that is linked to the `index.html` file
+- have an `style.css` file that is linked to the `index.html` file
 - have HTML `boilerplate` code for `index.html`
   - _HINT:_ in your `index.html` file type `html` and press tab. A few basic HTML tags should populate your file, including `head` and `body`
 - Include:
