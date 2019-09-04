@@ -1,6 +1,6 @@
 
 
-# Morning Lab
+# Problem Solving Lab
 
 <hr>
 Title: Problem solving<br>

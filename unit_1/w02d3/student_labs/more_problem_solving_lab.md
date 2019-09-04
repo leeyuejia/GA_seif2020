@@ -1,6 +1,6 @@
 
 
-# Afternoon Lab
+# More Problem Solving Lab
 
 <hr>
 Title: More problem solving<br>
