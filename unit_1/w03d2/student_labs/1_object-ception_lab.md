@@ -24,7 +24,7 @@ Objects, objects, and objects, oh my!
 
 ## Objects Refresher 
 
-Remember, objects are a type of **data structure** that we use to store data with greater specificity than arrays. The greater specificity is achieved becaue objects hold what are called **key-value pairs**. Need a longer reminder of what they are? Look back at the [instructor notes on objects](/unit_1/w01d05/instructor_notes/2.%20Objects.md) 
+Remember, objects are a type of **data structure** that we use to store data with greater specificity than arrays. The greater specificity is achieved becaue objects hold what are called **key-value pairs**. Need a longer reminder of what they are? Look back at the [instructor notes on objects](/unit_1/w03d1/instructor_notes/2.%20Objects.md) 
 
 Before we jump right into nested objects, let's warm-up with a few simple object reps 
 
@@ -41,7 +41,7 @@ Before we jump right into nested objects, let's warm-up with a few simple object
 
 The following data structure, `solarSystem`, is a common data structure: an **array** of **objects**. You will see this particular data structure more and more as you venture into JSON and servers. This one is an **array** of **objects** which also contains **arrays**.
 
-Note that the objects do not have names. They are just anynmous objects listed in an array. 
+Note that the objects do not have names. They are just anonymous objects listed in an array. 
 
 Given the following data structure of arrays and objects:
 
