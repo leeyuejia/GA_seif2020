@@ -182,12 +182,6 @@ const garmonbozia = {
 
 ```
 
-## Hungry for More? - Modeling Wakanda 
-
-1. Model census data for Wakanda, for example, total number of inhabitants, schools, parks, residents, and make up addresses for whatever necessary. 
-
-It's up to you how you model this data and what data structures you use, there's no 'right' answer, but try and think about what makes the most sense to you. Should it all be inside one object or split it into many objects? Try and list all the pross and cons you can think of for using one object versus creating some normalization by splitting it into many objects. 
-
 ## Hungry for More? - Extra  
 
 1. Want to do more combined datatype drills? Try out [this extra lab](3_extra_methods_lab.md).
