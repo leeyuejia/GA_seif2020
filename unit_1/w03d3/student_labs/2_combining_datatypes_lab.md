@@ -112,25 +112,6 @@ const theAvengers = [
 ]
 ```
 
-## MCU Movies 
-
-Given the following array of arrays, use two loops to loop over each inner array and list all the mcu movies.
-
-```javascript
-const mcuMovies = [
-  ['ant-man', 'ant-man and the wasp'],
-  ['the avengers', 'avengers: age of ultron', 'avengers: infinity war', 'avengers: end game'],
-  ['black panther'],
-  ['captain america: the first avenger', 'captain america: the winter soldier', 'captain america: civil war'],
-  ['doctor strange'],
-  ['guardians of the galaxy', 'guardians of the galaxy vol.2'],
-  ['the hulk'],
-  ['iron man', 'iron man 2', 'iron man 3'],
-  ['spiderman: homecoming'],
-  ['thor', 'thor: the dark world', 'thor: ragnarok']
-]
-```
-
 ## Other Objects - Intstruments 
 
 Switching gears, let's look at some instrument data! 
