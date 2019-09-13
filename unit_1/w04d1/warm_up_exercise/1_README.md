@@ -21,37 +21,6 @@ Course: WDIR-Space Ghost<br>
 
 <hr>
 
-### :movie_camera: [How Super Mario Mastered Level Design - 5:42](https://youtu.be/ZH2wGpEZVgE)
-
-**Discuss - How does this apply to web development?**
-
-# The Basics
-
-### Goal Focused
-A design should be centered around the user accomplishing their tasks. This requires stripping away any secondary or unnecessary features, and highlighting the features that will help.
-
-### Invisible
-Controls and functions should be intuitive and self-explanatory, and not draw attention to themselves. Remove all distractions and potential hurdles so that the person has a clear path to their goal.
-
-### Forgiving
-User errors are bound to happen, so design in a way that these errors won’t derail the user’s progress. This typically involves clear and friendly communication, like warnings before critical actions or potential errors.
-
-### Consistent
-Consistency cultivates security and trust, whereas inconsistency is distracting and forces the user to question aspects unnecessarily.  Have a single function work the same througout the entire site, i.e., if you click the red button on one page, it will perform the same action if you click it on another page.  Consistency reduces the cognitive load which lowers the learning curve.
-
-### Smooth Onboarding
-The onboarding phase, when a user learns how to use the product, greatly affects the opinion they form about it. Use this phase to point out features they may not notice or understand on their own.  If there's any doubt about how something works, explain it - However, don’t take too long so they can get to using the product as soon as possible.
-
-**A user interface is like a joke.  If you have to explain it, it's not that good.**
-
-# Bad Design vs. Good Design:
-
-### :movie_camera: [Norman Doors: Don’t Know Whether to Push or Pull? Blame Design - 5:31](https://youtu.be/yY96hTb8WgI)
-
-**Discuss - How does this apply to web development?**
-
-<hr>
-
 ### Information Overload
 Imagine you are a driver along this road on a Tuesday morning at 9 a.m. Can you park at this spot?
 
@@ -65,29 +34,13 @@ This design also makes use of visuals, rather than text, to convey information. 
 
 Now when you look at the sign, you’ll know that on Tuesday at 9 a.m., parking is not allowed.
 
-### Mystery Meat Navigation
+<hr>
 
-Mystery Meat Navigation refers to cases where the destination of a link is not visible until the user clicks on it or points the cursor at it. The term “mystery meat” is a reference school cafeteria meals that are so processed that their exact type is no longer discernible.
+### :movie_camera: [How Super Mario Mastered Level Design - 5:42](https://youtu.be/ZH2wGpEZVgE)
 
-Below is a screen shot of a real estate website, which is just a grid of thumbnails.  
+**Discuss - How does this apply to web development?**
 
-![real estate](https://i.imgur.com/UugV7LZ.png)
-
-Are they clickable? If you move your mouse cursor over an image, it changes to a pointer, but what happens when you click on an image?
-
-“Click and find out!” is never a good UX solution.
-
-![where to click](https://i.imgur.com/Bs2kWTi.png)
-
-These cards not only have “View Course” at the bottom of each to indicate the action that will happen, but also have a hover state with the text “Go to course”.
-
-Always label your links! You wouldn’t like to eat mystery meat—and similarly, your users wouldn’t like to click on mystery links.
-
-### Deceptive Imagery
-
-Are you ready for a tropical vacation ... I mean, a haircut?
-
-![tropical haircut](https://i.imgur.com/vB66SSb.png)
+<hr>
 
 # Let's Talk About Google
 
@@ -106,6 +59,27 @@ Are you ready for a tropical vacation ... I mean, a haircut?
 ![Google Secondary](https://i.imgur.com/4W5FoAX.png)<br>
 ![Google Secondary 2](https://i.imgur.com/GtgSvIA.png)
 
+<hr>
+
+# The Basics
+
+### Goal Focused
+A design should be centered around the user accomplishing their tasks. This requires stripping away any secondary or unnecessary features, and highlighting the features that will help.
+
+### Invisible
+Controls and functions should be intuitive and self-explanatory, and not draw attention to themselves. Remove all distractions and potential hurdles so that the person has a clear path to their goal.
+
+### Forgiving
+User errors are bound to happen, so design in a way that these errors won’t derail the user’s progress. This typically involves clear and friendly communication, like warnings before critical actions or potential errors.
+
+### Consistent
+Consistency cultivates security and trust, whereas inconsistency is distracting and forces the user to question aspects unnecessarily.  Have a single function work the same througout the entire site, i.e., if you click the red button on one page, it will perform the same action if you click it on another page.  Consistency reduces the cognitive load which lowers the learning curve.
+
+### Smooth Onboarding
+The onboarding phase, when a user learns how to use the product, greatly affects the opinion they form about it. Use this phase to point out features they may not notice or understand on their own.  If there's any doubt about how something works, explain it - However, don’t take too long so they can get to using the product as soon as possible.
+
+<hr>
+
 # Activity (5 Minutes)
 
 ### What's a site that you use _all the time_ that has good UX?  
@@ -117,21 +91,24 @@ Are you ready for a tropical vacation ... I mean, a haircut?
  - Forgiving
  - Consistent
  - Smooth Onboarding
+ 
+<hr> 
+ 
+# Bad Design vs. Good Design:
 
-# But I'm not a designer!  
+### :movie_camera: [Norman Doors: Don’t Know Whether to Push or Pull? Blame Design - 5:31](https://youtu.be/yY96hTb8WgI)
 
-1. Share your projects with your friends, family, and fellow classmates!  The best way to find fault in a project is for someone else to try and use it.  Try to give them as little outside instruction as possible.
-2. User stories!  Write user stories from the perspective of the user: "As a user I want to be able to click on x and have y happen" or “As a ____, I need a ____ in order to ____”.
+**Discuss - How does this apply to web development?**
 
-:pencil2: [Writing Good User Stories](http://www.mariaemerson.com/user-stories/)
+# Exercise.. But I'm not a designer!  
 
-# Exercise
+1. Think of an application that you are going to create... but before we begin, what are some user stories that we'll want to make sure we cover?
+2. Write user stories from the perspective of the user: "As a <role>, I can <goal/need> so that <why>" or "As a <user>, I want to <be able to perform/do something> so that <I get some form of value or benefit>".
 
-We're going to create the game tic-tac-toe ... but before we begin, what are some user stories that we'll want to make sure we cover?
+3. Share your user stories in the slack channel as you write them!  
 
-:elephant: Reminder - Write from the perspective of the user: "As a user I want to be able to click on x and have y happen" or “As a ____, I need a ____ in order to ____”.
+:pencil2: [Writing Good User Stories](https://www.freecodecamp.org/news/how-and-why-to-write-great-user-stories-f5a110668246/)
 
-Share your user stories in the tech-talk channel as you write them!  
 
 # Resources & More
 
