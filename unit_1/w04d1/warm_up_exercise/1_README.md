@@ -103,7 +103,7 @@ The onboarding phase, when a user learns how to use the product, greatly affects
 # Exercise.. But I'm not a designer!  
 
 1. Think of an application that you are going to create... but before we begin, what are some user stories that we'll want to make sure we cover?
-2. Write user stories from the perspective of the user: "As a <role>, I can <goal/need> so that <why>" or "As a <user>, I want to <be able to perform/do something> so that <I get some form of value or benefit>".
+2. Write user stories from the perspective of the user: "As a user, I can <goal/need> so that <why>" or "As a user, I want to <be able to perform/do something> so that <I get some form of value or benefit>".
 
 3. Share your user stories in the slack channel as you write them!  
 
