@@ -10,7 +10,7 @@ Course: WDIR-Space Ghost<br>
 
 # What is UX/UI?
 
-- User Experience (UX) is the process of enhancing customer satisfaction and loyalty by improving the usability, ease of use, and pleasure provided in the interaction between the customer and the product.  
+- User Experience (UX) is the process of enhancing customer satisfaction and loyalty by improving the usability, ease of use, and joy in the interaction between the customer and the product.  
 - User Interface (UI) is the space where interactions between humans and machines occur.
 
 ### Same product, different UX
