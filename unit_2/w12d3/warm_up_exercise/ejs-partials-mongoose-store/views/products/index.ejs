@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mongoose Store</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/assets/$.png">
+  </head>
+  <body>
+    <nav>
+      <div class="row nav">
+        <a href="/products"><h1 id="store" class="six columns">The Mongoose Store</h1></a>
+        <span class="three columns">&nbsp;</span>
+        <a href="/products/new"><button type="button" name="button" class="new-product three columns">New Product</button></a>
+        <span class="one column">&nbsp;</span>
+      </div>
+    </nav>
+    <div class="container">
+      <h2>Check Out All The Glorious Wares</h2>
+      <div class="products">
+        <% products.forEach( function (product) { %>
+          <div class="card">
+            <h5> <%= product.name  %></h5>
+            <a href="/products/<%=product.id%>">
+              <img src="<%= product.img %>" alt="An image of <%= product.name %>" /></a>
+              <h6>Price: $<%=product.price %></h6>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </body>
+</html>

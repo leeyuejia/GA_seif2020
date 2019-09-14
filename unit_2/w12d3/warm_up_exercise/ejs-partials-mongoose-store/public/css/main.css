@@ -1,0 +1,109 @@
+/** {
+  border: 1px solid gold;
+}*/
+
+h1 {
+  display: inline-block;
+  color: #ADEAED;
+  padding-left: 1em;
+  font-size: 4vmax;
+  margin-top: 2vmax;
+  text-shadow: 1px 1px 2px #96DADD;
+}
+
+h1:hover {
+text-shadow: 1px 1px 2px #F5B8D9;
+}
+
+.nav {
+  background-color: #212525;
+  width: 100%;
+  position: fixed;
+  top : 0;
+  z-index: 10;
+  box-shadow: 4px 4px 8px silver;
+}
+
+.new-product {
+  background-color: #F5B8D9;
+  margin-top: 1em;
+  text-align: center;
+}
+
+h2  {
+  margin-top: 2.6em;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.card {
+  display: inline-block;
+  flex-basis: 19%;
+  text-align: center;
+  padding: .3em;
+  margin: 1em;
+  box-shadow: 1px 1px 2px silver, -1px 1px 2px silver;
+  border-radius: 10px;
+  background-color: #FFF5EC;
+  min-height:250px;
+}
+
+img {
+  max-width: 90%;
+  max-height: 10vmax;
+}
+
+
+p {
+  max-width:70%;
+  margin: auto;
+}
+
+.jumbo-img {
+  max-width: 90%;
+  max-height: 25vmax;
+}
+
+.jumbo {
+  margin:auto;
+  width:90%;
+  text-align: center;
+  padding: .3em;
+  margin: 1em;
+  background-color: #FFF5EC;
+  border-radius: 10%;
+  border: .2em solid #272124;
+}
+
+.buy-button {
+  background-color: #96DADD;
+}
+
+.delete-button {
+  background-color: #EEA2CC;
+  margin-left: 1em;
+}
+
+.edit-button {
+  background-color: #D5F695;
+}
+
+.admin-actions {
+  margin-auto;
+  display:flex;
+  justify-content: center;
+
+}
+
+.products {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+footer {
+  background-color: #272124;
+  color: #96DADD;
+  font-size: 2em;
+  text-align: center;
+}

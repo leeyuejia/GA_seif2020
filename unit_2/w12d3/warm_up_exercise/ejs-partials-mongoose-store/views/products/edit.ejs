@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <nav>
+
+    </nav>
+    <div class="container">
+      <h2>Improve this item</h2>
+
+        <div class="jumbo">
+          <form class="edit" action="/products/<%=product.id%>?_method=PUT" method="POST">
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="<%=product.name%>">
+            <label for="img">Image: </label>
+            <input type="text" name="img" value="<%=product.img%>">
+            <label for="description">Description: </label>
+            <input type="textarea" name="description" value="<%=product.description%>">
+            <label for="price">Price: </label>
+            <input type="number" name="price" value="<%=product.price || 0%>" min="0" step=".01">
+            <label for="qty">Quantity: </label>
+            <input type="number" name="qty" value="<%=product.qty%> || 0" min="0" > <br>
+            <input type="submit" name="submit" value="submit" class="edit-button">
+          </form>
+            <h5>Current image:</h5>
+            <img src="<%= product.img %>" alt="An image of <%= product.name %>" />
+        </div>
+    </div>
+  </body>
+</html>

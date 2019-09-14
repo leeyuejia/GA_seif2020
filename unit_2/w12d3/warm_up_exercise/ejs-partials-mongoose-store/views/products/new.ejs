@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <nav>
+
+    </nav>
+    <div class="container">
+      <h2>Add something</h2>
+        <div class="jumbo">
+          <form class="edit" action="/products" method="POST">
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="" required>
+            <label for="img">Image: </label>
+            <input type="text" name="img" value="">
+            <label for="description">Description: </label>
+            <input type="textarea" name="description" value="">
+            <label for="price">Price: </label>
+            <input type="number" name="price" min="0" step=".01" value="0">
+            <label for="qty">Quantity: </label>
+            <input type="number" name="qty"  pattern="[0-9]*" min="0" value="0"><br>
+            <input type="submit" name="submit" value="submit" class="edit-button">
+          </form>
+        </div>
+    </div>
+  </body>
+</html>
