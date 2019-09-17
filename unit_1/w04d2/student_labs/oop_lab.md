@@ -105,22 +105,18 @@ We will need a pool of names to draw from. Make an array called `names`, and add
 taken from http://listofrandomnames.com/
 
 ```javascript
-const names = [
-			       "Laila", "Jack", "Harley", "Hertha", "Darren", "Jolene", 
+const names = ["Laila", "Jack", "Harley", "Hertha", "Darren", "Jolene", 
              "Loura", "Lona", "Davida", "Reena", "Leland", "Ta", "Jen", 
-             "Linn", "Roslyn", "Margorie", "Rafaela", "Romona", "Shanel", "Stan"
-            ];
+             "Linn", "Roslyn", "Margorie", "Rafaela", "Romona", "Shanel", "Stan"];
 ```
   
 Make an array called `occupations` and add in a few occupations. Here's one if you want to use it:
 
 ```javascript
-const occupations = [
-					         "Clerical assistant", "Leaflet distributor", "Landowner",
+const occupations = ["Clerical assistant", "Leaflet distributor", "Landowner",
                    "Special constable", "Anaesthetist", "Park-keeper", "Butler",
                    "Choreographer", "Blacksmith", "Chef", "Legal secretary",
-                   "Song writer", "Librarian", "Landscape gardener"
-					        ];
+                   "Song writer", "Librarian", "Landscape gardener"];
 ```
 
 <br>
