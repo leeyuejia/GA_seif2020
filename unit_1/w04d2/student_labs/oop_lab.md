@@ -13,7 +13,7 @@ Topics: Object methods, Constructors<br>
 ## Setup
 
 1. In `student_labs` folder, make a new file `oop_westworld.js`.
-2. Give `oop_woestworld.js` a console.log.
+2. Give `oop_westworld.js` a console.log.
 3. Run it in node `node oop_westworld.js`. Verify the console log appears.
 4. Work inside the `oop_westworld.js` file for this lab.
 
