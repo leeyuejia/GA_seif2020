@@ -1,4 +1,4 @@
-# Lab - Classes
+# Lab - Classes and Factory
 
 
 ## Create the following objects
@@ -38,6 +38,7 @@
     
 1. update one property of the dog after it has been created and log it to check
 1. updated one property of the cat after it has been creatd and log it to check
+1. Create a farm for Pet that you can get Dog and Cat
 
 
 
