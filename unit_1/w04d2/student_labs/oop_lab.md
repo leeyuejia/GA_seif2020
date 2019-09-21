@@ -13,7 +13,7 @@ Topics: Object methods, Constructors<br>
 ## Setup
 
 1. In `student_labs` folder, make a new file `oop_westworld.js`.
-2. Give `oop_woestworld.js` a console.log.
+2. Give `oop_westworld.js` a console.log.
 3. Run it in node `node oop_westworld.js`. Verify the console log appears.
 4. Work inside the `oop_westworld.js` file for this lab.
 
@@ -105,22 +105,18 @@ We will need a pool of names to draw from. Make an array called `names`, and add
 taken from http://listofrandomnames.com/
 
 ```javascript
-const names = [
-			       "Laila", "Jack", "Harley", "Hertha", "Darren", "Jolene", 
+const names = ["Laila", "Jack", "Harley", "Hertha", "Darren", "Jolene", 
              "Loura", "Lona", "Davida", "Reena", "Leland", "Ta", "Jen", 
-             "Linn", "Roslyn", "Margorie", "Rafaela", "Romona", "Shanel", "Stan"
-            ];
+             "Linn", "Roslyn", "Margorie", "Rafaela", "Romona", "Shanel", "Stan"];
 ```
   
 Make an array called `occupations` and add in a few occupations. Here's one if you want to use it:
 
 ```javascript
-const occupations = [
-					         "Clerical assistant", "Leaflet distributor", "Landowner",
+const occupations = ["Clerical assistant", "Leaflet distributor", "Landowner",
                    "Special constable", "Anaesthetist", "Park-keeper", "Butler",
                    "Choreographer", "Blacksmith", "Chef", "Legal secretary",
-                   "Song writer", "Librarian", "Landscape gardener"
-					        ];
+                   "Song writer", "Librarian", "Landscape gardener"];
 ```
 
 <br>
