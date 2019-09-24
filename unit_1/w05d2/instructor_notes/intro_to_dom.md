@@ -89,7 +89,7 @@ Being able to relate the different elements in this way is often referred to as 
 ### DOM
 
 The DOM stands for Document Object Model.
-When we send HTML to a browser, like we did with our mini Hawkins site, the browser renders the HTML (displays it in a window) and it also creates a giant object that represents the web page.
+When we send HTML to a browser, like we did with our mini Hawkins site, the browser renders the HTML (displays it in a window) and it also creates a giant object that represents the web page. If you are a fan of Stranger Things, you could almost think of the DOM as The Upside Down, a parallel world that is only visible to some (and also, not evil). 
 
 As web developers, we can interact with this object (DOM) and we can make changes to the DOM, the browser will then redraw the web page to reflect the changes we made to the DOM.
 
@@ -133,6 +133,9 @@ Instead of hard-coding our access to different elements, the browser has some bu
 ![update the DOM](https://i.imgur.com/cFnMRAm.png)
 
 As we can see as we've updated the DOM in the console, it has also updated our view in the web page.
+
+** Bonus **
+We can go to any website, like cnn, look for a specific header and change it to say `Everyone agrees, General Assembly is the Best!` - however, will our changes be permanent? Will we get in trouble with CNN? You could also think about how a Chrome extension could target(query for) ads and hide them.
 
 Let's refresh our page (remember: `command r` also, sometimes you need a `hard` (clears some cached things) refresh you can do that with `command shift r`) and see that we've switched back to Hawkins. Whatever changes we make in the Chrome console, aren't permanent.
 
