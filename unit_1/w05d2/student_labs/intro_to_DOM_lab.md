@@ -13,7 +13,7 @@ Topics:  DOM intro with Vanilla JS<br>
 
 You are not expected to remember these commands. This is an exercise to get you familiar with the concept of the DOM and the pattern of how we interact with it. We will be using jQuery commands in the future.
 
-At the bottom of the instructor notes for this morning's lecture is an appendix of vanilla DOM commands, use that and your notes from lecture to complete the following
+At the bottom of the instructor notes for today's lecture is an appendix of vanilla DOM commands, use that and your notes from lecture to complete the following
 
 ## Setup Part 1
 

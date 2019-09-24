@@ -161,7 +161,7 @@ Now, when we refresh our page, we should see our updated `h1`.
 
 - JavaScript was built to manipulate the DOM
 - Early JavaScript was challenging to use for complex projects, and although all the basic functionality was built in, creating solutions could be verbose and clunky
-- jQuery is a JavaScript library that was created to make manipulating the DOM easier. It built a lot of useful functions and made JavaScript for the DOM easier to write. Later today, we'll learn to use jQuery instead of 'vanilla' JavaScript
+- jQuery is a JavaScript library that was created to make manipulating the DOM easier. It built a lot of useful functions and made JavaScript for the DOM easier to write. We'll learn to use jQuery instead of 'vanilla' JavaScript
 - JavaScript has been changing and a lot of better functionality has been built in. Some people would argue that now 'vanilla' JavaScript is a superior solution over jQuery. My personal opinion: use the right tools for the job
 
 Because we're only using 'vanilla' JavaScript for this lesson, and for the rest of the unit we'll be using jQuery - truly don't worry about memorizing the methods for this lesson. Focus on the big concepts. You'll see the same concepts in jQuery.
