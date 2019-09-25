@@ -1,4 +1,25 @@
 console.log('stranger things are coming');
+//document.querySelector('h1').innerText = 'Welcome to the Upside Down';
+
+const image = document.querySelector('img');
+// console.log(image.style);
+// image.style.display = 'none';
+// image.style.display = 'block';
+image.style.filter = 'grayscale(100%)';
+image.style.width = '95%';
+// image.style.filter = '';
+
+console.log('stranger things are coming- part 2');
+
+
+
+
+
+
+
+
+
+
 
 
 
