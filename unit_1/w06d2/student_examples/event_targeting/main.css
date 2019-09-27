@@ -1,0 +1,70 @@
+/**********************************
+* GENEREAL
+***********************************/
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+h2 {
+  text-align: center;
+}
+
+/**********************************
+* CARDS
+***********************************/
+.card {
+  flex-basis: 8em;
+  height: 12em;
+  border: 1px solid orange;
+  background: #FBFBFB;
+  box-shadow: 2px 2px 4px grey;
+  display: grid;
+  border-radius: 10%;
+  grid-template-columns: .5em 1.5em 4em 1.5em .5em;
+  grid-template-rows: 3em 5em 3em;
+  grid-column-gap: .5em;
+  grid-row-gap: .5em;
+  grid-template-areas:
+    ". . . top ."
+    ". . center . ."
+    ". bottom . . ."
+}
+
+.top {
+  grid-area: top;
+}
+
+.center {
+  grid-area: center;
+}
+
+.bottom  {
+  grid-area: bottom;
+}
+.card h5 {
+  font-size: 5em;
+  margin: 0;
+  margin-top: -.3em;
+}
+
+.card span {
+  color: hotpink;
+  font-size: 2em;
+}
+
+.card-back span {
+  color: rgba(0,0,0,0);
+}
+
+.card-back  {
+  /* adapted from: https://leaverou.github.io/css3patterns/#zig-zag */
+background:
+  linear-gradient(135deg, #FBFBFB 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, #FBFBFB 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, #FBFBFB 25%, transparent 25%),
+  linear-gradient(45deg, #FBFBFB 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: mediumseagreen;
+  color: rgba(0,0,0,0);
+}
