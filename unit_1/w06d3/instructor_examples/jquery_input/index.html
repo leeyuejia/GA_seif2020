@@ -8,14 +8,40 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="app.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- <ul></ul> -->
+
+    <!-- <div class="container">
+        <h1>Movie Info</h1>
+        <dl>
+            <dt>Title</dt>
+            <dd id="title"></dd>
+
+            <dt>Year</dt>
+            <dd id="year"></dd>
+
+            <dt>Rating</dt>
+            <dd id="rated"></dd>
+        </dl>
+    </div> -->
+
+    <div class="container">
+    <h1 class="display-4">OMDb API</h1>
+    <p class="lead">The Open Movie Database</p>
+    <p class="lead">The OMDb API is a RESTful web service to obtain movie information</p>
     <form>
-        <input type="text" id="input-box"/>
-        <input type="submit" id="submit-btn"/>
+        <div class="form-group">
+            <input type="text" class="text-muted" id="input-box" placeholder="Movies" />
+            <input type="submit" class="btn btn-primary" id="submit-btn" value="Search"/>
+        </div>
     </form>
-    <ul></ul>
+    <div class="card-columns">
+    </div>
+
 </body>
 </html>
