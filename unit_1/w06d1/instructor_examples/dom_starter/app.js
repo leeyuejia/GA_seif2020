@@ -39,6 +39,11 @@ $(
         // gets executed when document is ready
         addH2();
         generateQuilt(1000);
+
+        $('.square').on('click', (event) => {
+            console.log(event);
+            event.currentTarget.style.display="none"
+        });
     }
 
 

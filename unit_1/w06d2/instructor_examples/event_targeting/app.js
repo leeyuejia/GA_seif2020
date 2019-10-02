@@ -20,7 +20,9 @@ const clickCard = (card) => {
         }
         else {
             console.log("we dont have matching cards");
-
+            $(handOfCards[0]).toggleClass('card-back');
+            $(handOfCards[1]).toggleClass('card-back');
+            handOfCards = [];
         }
     }
 }
@@ -28,6 +30,7 @@ const clickCard = (card) => {
 $(() => {
     //code runs when document is ready or dom is loaded
     $('.card').on('click', (event) => {
+        console.log($(event.currentTarget));
         if($(event.currentTarget).hasClass('card-back')) {
             $(event.currentTarget).toggleClass('card-back');
             clickCard(event.currentTarget);

@@ -3,8 +3,8 @@ console.log('app.js');
 $(()=>{
     $('.outside').on('click', (event)=>{
         console.log("outside is clicked..");
-        // console.log('OUTSIDE target is: ', event.target);
-        // console.log('OUTSIDE currentTarget is: ', event.currentTarget);
+        //console.log('OUTSIDE target is: ', event.target);
+        //console.log('OUTSIDE currentTarget is: ', event.currentTarget);
 
         $(event.currentTarget).toggleClass('black');
         return false;
@@ -12,8 +12,8 @@ $(()=>{
 
     $('.inside').on('click', (event)=>{
         console.log("inside is clicked..");
-        // console.log('INSIDE target is: ', event.target);
-        // console.log('INSIDE currentTarget is: ', event.currentTarget);
+        //console.log('INSIDE target is: ', event.target);
+        //console.log('INSIDE currentTarget is: ', event.currentTarget);
         $(event.currentTarget).toggleClass('black');
         return false;
     });
