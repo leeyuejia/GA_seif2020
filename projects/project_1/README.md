@@ -1,16 +1,6 @@
 ![](/ga_cog.png)
 
-# Project #1: Your first application
-
-## Attendance
-There are no full day classes during project weeks, but we expect you to be working on your project from at least 10 AM - 6 PM EST during class days and be available during that time for TA hours or any meetings with instructors as needed.  
-
-We also will **still have some attendance checks** during project week, as follows:
-
-  - **Tuesday, January 8**: You're required to meet up with your instructor at whatever time you schedule to approve your project idea. You're also required to show up to Outcomes at 4:30 PM EST
-  - **Monday, January 14**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM EST
-
-_Failure to make an attendance check will result in an unexcused absence for both morning and afternoon for that day_.
+# Project #1: Your first application or game
 
 ## Project Details
 
@@ -94,24 +84,18 @@ You will be sharing your game and your code.  Be prepared to answer questions fr
 ## Meetings with instructors
 _An instructor will contact you to setup a meeting time to approve your project._
 
-**Tuesday, January 8 (Tomorrow!) - Mandatory**<br>
+**W7D2 or W7D3 - Mandatory**<br>
 You will meet with an instructor for ~15 minutes to get your app idea approved. Be sure to sketch out a wireframe, pick out what API you want to use, and write out what features you will need to build in order to meet MVP and some stretch goal ideas _before_ you meet with us!
 
 ## How to Submit Your Project
-Your project is due on Monday, January 14 at 10:00 am EST. You will present your project and show your code to classmates and instructors.
+Your project is due on **W8D3 or W9D1**. You will present your project and show your code to classmates and instructors.
 
-:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1UK237eneoOq3g1F2Awz1lriavFutYCV1cDVAb-tfGf4/edit?usp=sharing). Note that this will be the order you present your projects!
+:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1_Ui3f-WYJvjKud-ec0X0KzIRHOBkfr4QON-JDqNWUQo/edit?usp=sharing).
 
 ## Where to go for help during project week
 1. Seek out help online
 2. Seek out help with your classmates
 3. Seek out help with our class TA
-
-**TA Hours** (all times EST):
-- Tuesday: 1:30pm-4:30pm, 7pm-10pm
-- Wednesday: 2pm-5pm, 7pm-10pm
-- Thursday: 2pm-5pm, 7pm-10pm
-- Sunday: 2pm-5pm, 7pm-10pm
 
 ## Suggested Ways to Get Started
 
