@@ -1,23 +1,25 @@
-# SHAPE CLICKER
+[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
+
+# Shape Clicker
+
+#### Learning Objectives
+
+- jQuery event.currentTarget
+
+#### Prerequisites
+
+- jQuery
+- JavaScript
 
 ---
-Title: Shape Clicker<br>
-Type: Lab<br>
-Duration: 45<br>
-Creator: Thom Page <br>
-Adapted by: Sonyl Nagale <br/>
-Topics: jQuery `event.currentTarget`<br>
 
----
+## Getting Started
 
+1. We provide you with starter code in the `shape_clicker` folder that has some shapes hardcoded into the html, and some classes in the css file. You don't need to adjust these files, just work primarily in the `app.js` file.
 
-### Setup
+## Shape Clicker 
 
-We provide you with starter code in the `shape_clicker` folder that has some shapes hardcoded into the html, and some classes in the css file. You don't need to adjust these files, just work primarily in the app.js file.
-
-### Shape Clicker
-
-In app.js, write the code to perform the following:
+In `app.js`, write code to perform the following: 
 
 _The page starts out like this_
 
@@ -52,12 +54,14 @@ Then the next click will be a circle again, then a square, etc. The process can 
 
 Use `$(event.currentTarget)` to target the clicked shape. Use the provided classes to give the shapes ... shape.
 
+---
 
-# Hungry for More?
+## Hungry for More?
 
 - Dynamically generate the initial triangles using jQuery, and set the event listener (once) in the loop
 - Set a ‘mouseenter’ event on the shapes that changes the color of the shape to black
 - Set a ‘mouseleave’ event on the shapes that changes the color of the shape back to red
 
-<br>
-<hr>
+---
+
+*Copyright 2018, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*
