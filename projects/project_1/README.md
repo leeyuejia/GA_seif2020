@@ -7,12 +7,13 @@
 ### &#x1F534; Mandatory To Pass:
 #### MVP - Minimum Viable Product
 
-#### Your application must meet these requirements:
+#### Your application or game must meet these requirements:
 
-  1. Built with HTML, CSS, JavaScript and jQuery
-  2. Hosted on github pages<br>
-  3. Commits to github every day<br>
-  4. A `README.md` file with explanations of the technologies used, the approach taken, a link to your live site, installation instructions, unsolved problems, etc.
+  1. Built with HTML, CSS and JavaScript (jQuery is optional)
+  2. Use Javascript for DOM manipulation
+  3. Hosted on github pages<br>
+  4. Commits to github frequently<br>
+  5. A `README.md` file with explanations of the technologies used, the approach taken, a link to your live site, installation instructions, unsolved problems, etc.
 
 #### The app must:
 
@@ -20,10 +21,17 @@
   1. Implement responsive design (i.e. it should be fully functional on desktop, tablet, mobile, etc)
   1. Have one or more complex user interface modules such as a carousel, drag and drop, a sticky nav, tooltips, etc
 
+#### The game must:
+
+  1. Be displayed in the browser
+  1. Have some kind of user interaction via mouseclick or keypress
+
+
 ### 📋 List of API's
 
 Below is a non-exhaustive list of some free API's you can use. There are _many_ API's out there, however, so if you find one not on this list that you'd like to use, feel free! Please note that some may require signing up for an API key (e.g. the Marvel API).
 
+  1. SG Government: https://data.gov.sg/
   1. Marvel: https://developer.marvel.com/
   1. Star Wars: https://swapi.co/
   1. Weather: https://openweathermap.org/api
@@ -45,7 +53,7 @@ Lastly, the following sites congregates a bunch of API's together, so you can ta
 ### &#x1F535; Stretch Goals (Not Mandatory):
 #### Recommended Features
 
-- Game functionality (e.g. a quiz)
+- Search and filter functionality (e.g. flight or hotel booking websites)
 - Look into [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) so you can save data to the user's browser 
 
 ## Make A New Repo
