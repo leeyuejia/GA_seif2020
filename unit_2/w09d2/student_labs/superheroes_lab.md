@@ -1,8 +1,20 @@
-# Lab - REST: Index/Show
+[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
 
-## Superheros
+# Superheroes need REST Too (Index/Show)
 
-### Basic Express App
+#### Learning Objectives
+
+- Setting up a basic express server
+
+#### Prerequisites
+
+- JavaScript
+- Express
+
+---
+
+## Getting Started with a Basic Express App
+
 1. Create a new directory inside your labs dir called "superheroes"
 1. cd into superheroes
 1. create a `server.js` file
@@ -14,7 +26,7 @@
     - once it's listening, log "Here to save the day..."
 1. test it by going to http://localhost:3000
 
-### Routes
+## Creating Routes
 
 1. Create a variable called superheroes and set it to [ 'Superman', 'Wonder Woman', 'Black Panther' ]
 1. Create a route to `/superheroes`, which will be the `index`
@@ -22,7 +34,7 @@
 1. Create a route to `/superheroes/:index`, which will be the `show` route
     - The route should send the superhero that is at the index in the superheroes array as specified by req.params.index
 
-### Enhancing Data
+## Enhancing Data
 
 1. Change the entries in the superheroes array so that each element in the array is an object
     - E.g. Instead of 'superman' have: `{ name: "Superman", powers: ['flight', 'invulnerability', 'x-ray vision']}`
@@ -56,7 +68,11 @@
 Hints: 
 - It's all just JavaScript! Do JS things to manipulate the 'data'
 
-## Friends
+---
+
+## Friends 
+
+Let's do another rep with setting up an express server!
 
 1. cd back into the labs directory
 1. create a directory called friends
@@ -68,6 +84,12 @@ Hints:
 1. The `index` should be a name that links to the show page
 1. the `show` route should show all the details of your friend
 
-## Bonus
+---
+
+## Hungry for More?
 
 Go back to the X-Files lab from the previous day and/or check out the new Super Bonus!
+
+---
+
+*Copyright 2018, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*
