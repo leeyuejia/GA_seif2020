@@ -1,30 +1,30 @@
-![](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/blob/master/ga_cog.png)
+[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
+
+# Exobiology II
+
+![](https://i.imgur.com/naenSjp.png)
+
+The previous planet got raided by pirates and our scientists have sucessfully escaped! They are, understandably, a bit shaken. So we have a new batch of scientists that are coming in to take their place and continue the planetary survey while they recoup!
+
+#### Learning Objectives
+
+- Full CRUD App
+
+#### Prerequisites
+
+- Javascript
+- Node / Express
 
 ---
-Title: Exobiology - Delete<br>
-Type: Lab<br>
-Creator: Sonyl Nagale<br>
-Modified By: Jerrica Bobadilla<br>
-Competencies: Express app with full CRUD
 
----
-
-# Exobiology II - Update
-
-![planet](https://i.imgur.com/naenSjp.png)
-
-## Activity 
-
-> The previous planet got raided by pirates and our scientists have sucessfully escaped! They are, understandably, a bit shaken. So we have a new batch of scientists that are coming in to take their place and continue the planetary survey while they recoup!
-
-### Set Up
+## Getting Started
 
 1. You'll be working in the same `uncharted_planet` folder
 1. If you didn't finish the morning lab, go back and finish that first!
 1. If you didn't attempt to delete the entire database, delete all the scientists now
 1. Then create 5 new scientists
 
-### Edit Route
+## Edit Route
 
 > Our five new scientists have been doing well, but it seems the previous five are ready to jump back into action! Let's expand the morning's app so that we can just update the scientists.
 
@@ -32,7 +32,7 @@ Competencies: Express app with full CRUD
 1. Create an `edit.ejs` file and fill it with a `form` to edit data
 1. Add a link to the `edit` route on your `index.ejs` onto all the scientists
 
-### Put Route 
+## Put Route 
 
 1. Create a `put` route in your `server.js`
 1. Make sure the `form` in your `edit.ejs` file has the appropriate method and action 
@@ -48,6 +48,10 @@ Competencies: Express app with full CRUD
 1. Create a copy button that duplicates an entry and then goes directly to the edit page
 1. Enter images for each item and display them on the homepage. _(Hint: you can use static assets.)_
 
-## Hungrier for Even More
+### Hungrier for Even More
 
 1. Use [taxonomic rank](https://en.wikipedia.org/wiki/Taxonomic_rank) to order your items in a drill-down manner. Be sure your data objects reflects this hierarchically.
+
+---
+
+*Copyright 2019, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*

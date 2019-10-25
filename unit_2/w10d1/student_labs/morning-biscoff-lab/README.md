@@ -1,20 +1,25 @@
-![](/ga_cog.png)
-
----
-Title: Biscoff Bakery<br>
-Type: Lab<br>
-Creator: Thom Page<br>
-Adapted By: Jerrica Bobadilla<br>
-Topics: Adding views for reading and creating data
-
----
+[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
 
 # Biscoff Bakery
+
 ![](https://i.ytimg.com/vi/CIGk1sgCfSg/maxresdefault.jpg)
 
-A new bakery specializing in Biscoff-inspired sweets (Biscoff being the cookie that was translated into delicious cookie butter, this cohort's namesake!) is opening up soon and has asked you to help get their website started. They've given you some data to work with, but it's up to you to add some view layers to the app and add in some functionality that will allow the owners to add new baked goods when needed. Let's get started!
+A new bakery specializing in Biscoff-inspired sweets is opening up soon and has asked you to help get their website started. They've given you some data to work with, but it's up to you to add some view layers to the app and add in some functionality that will allow the owners to add new baked goods when needed. Let's get started!
 
-## Starter Code
+#### Learning Objectives
+
+- Practice with setting up a basic express server with view layers
+
+#### Prerequisites
+
+- JavaScript
+- Node
+- Express 
+
+---
+
+## Getting Started
+
 You can find the starter code for this morning's lab in `student_labs/morning/biscoff-starter` -- work in that folder!
 
 #### Provided in the starter code
@@ -46,3 +51,7 @@ Now, the bakery owners want the ability to add new baked good products.
 ### Hungry for More?
 
 1. Practice some CSS/design and style the app! Want practice with using CSS frameworks? Consider using [Skeleton](http://getskeleton.com/), [Materialize](http://materializecss.com/), [Bulma](https://bulma.io/), or find another of your choosing!
+
+---
+
+*Copyright 2018, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*
