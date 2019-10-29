@@ -2,15 +2,6 @@
 
 # Project #2: Building Your First Full-Stack Application
 
-## Attendance
-There is only two mandatory attendance checks during the project week, but as always please make sure you're working on your project every day!
-
-  - **Monday, January 28:** You're required to show up at 10 AM ET for a heroku deployment lesson
-  - **Tuesday, January 29:** You're required to show up to Outcomes at 4:30PM ET
-  - **Thursday, January 31:** Project presentation day! You're required to show up in the classroom zoom at 10AM ET to present your projects.
-
-_Failure to make attendance check will result in an unexcused absence for both morning and afternoon_.
-
 ## Technical Requirements
 
 For this project, you will be making a full CRUD app using the technologies outlined below. When thinking of an app idea, try to frame the project in terms of trying to solve a "problem" and think about the purpose of the app, who would use it, etc. The problem doesn't have to be anything intense and can be something small and simple! For example: 
