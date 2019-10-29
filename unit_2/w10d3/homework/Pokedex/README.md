@@ -8,7 +8,7 @@ Your mission is to be the very best, like no one ever was, at making a Pokémon 
 
 #### Learning Objectives
 
-- Full CRUD App
+- Full REST App
 
 #### Prerequisites
 
