@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Fruits Show</title>
+	</head>
+	<body>
+		<h1>Fruits Show Page</h1>
+		<h2><a href="/fruits">Back to Index</a></h2>
+		<h3>The <%= fruit.name %> is <%= fruit.color%></h3>
+		<% if(fruit.readyToEat) {%>
+		<h4>It is ready to eat</h4>
+		<% } else { %>
+		<h4>It is not ready to eat</h4>
+		<% } %>
+		<a href="/fruits/<%=index%>/edit">Edit</a>
+	</body>
+</html>
