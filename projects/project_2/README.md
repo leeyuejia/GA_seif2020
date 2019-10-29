@@ -61,25 +61,15 @@ You will be sharing your app and your code.  Be prepared to answer questions fro
 ## Meetings with instructors
 _Your instructor will contact you to setup a meeting time to approve your project._
 
-**Friday, January 25 - Mandatory**<br>
 You will meet with an instructor to get your app idea approved. Be sure to write out what features you will need to build in order to meet MVP and some stretch goal ideas.
 
 ## How to Submit Your Project
-Your project is due on Thursday, January 31 at 10:00 AM ET. You will present your project and show your code to classmates and instructors.
-
-:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1cHJKHcq2Pib9nV8GiPjr9Z3ScZuHTOgOkhPdSHlTEv8/edit?usp=sharing).
-
-  - _NOTE:_ This will be the order you present in!
+Your project is due on W14D1. You will present your project and show your code to classmates and instructors.
 
 ## Where to go for help during project week
 1. Seek out help online
 2. Seek out help with your classmates
 3. Seek out help with our class TA 
-
-**TA Hours** (all times ET):
-
-- Sunday to Wednesday: 2-5PM, 7-10PM
-  - Except Tuesday's afternoon hours are: 1:30-4:30 PM
 
 ## Etc.
 
