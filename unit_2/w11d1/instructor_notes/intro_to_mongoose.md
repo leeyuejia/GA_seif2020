@@ -87,26 +87,21 @@ Getting a warning like this?
 Warnings are ok, it'll still work, for now. But in later versions it may stop working and you'll have to update your code.
 
 
-Add this:
+This should clear up the errors:
 ```js
-mongoose.connect(mongoURI, { useNewUrlParser: true})
+mongoose.connect(mongoURI, { useNewUrlParser: true}, () => {
+	console.log('the connection with mongod is established')
+})
 ```
 
-- provide error/success messages about the connections
+- **OPTIONAL**  provide error/success messages about the connections
 
 ```js
 // Connection Error/Success
 // Define callback functions for various events
-db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-db.on('connected', () => console.log('mongo connected: ', mongoURI));
-db.on('disconnected', () => console.log('mongo disconnected'));
-```
-
-- Finally, open the connection
-```js
-db.on( 'open' , ()=>{
-  console.log('Connection made!');
-});
+db.on('error', (err) => console.log(err.message + ' is mongod not running?'))
+db.on('connected', () => console.log('mongo connected: ', mongoURI))
+db.on('disconnected', () => console.log('mongo disconnected'))
 ```
 
 - While the connection is open, we won't have control of our terminal. If we want to regain control, we have to close the connection.
@@ -135,20 +130,15 @@ const mongoURI = 'mongodb://localhost:27017/'+ 'tweets';
 const db = mongoose.connection;
 
 // Connect to Mongo
-mongoose.connect( mongoURI );
+mongoose.connect(mongoURI, { useNewUrlParser: true}, () => {
+	console.log('the connection with mongod is established')
+})
 
 // Connection Error/Success - optional but can be helpful
 // Define callback functions for various events
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', mongoURI));
 db.on('disconnected', () => console.log('mongo disconnected'));
-
-
-// Open the Connection
-db.on( 'open' , ()=>{
-  console.log('Connection made!');
-});
-
 ```
 
 ## Set Up Tweet Schema
@@ -167,7 +157,7 @@ const tweetSchema = new Schema({
   body: String,
   author: String,
   likes:{ type: Number, default: 0},
-  deleted: {type: Boolean, default: false}
+  sponsored: {type: Boolean, default: false}
 }, {timestamps: true});
 
 // Creating Tweet model : We need to convert our schema into a model-- will be stored in 'tweets' collection.  Mongo does this for you automatically
@@ -251,7 +241,8 @@ const manyTweets = [
   {
     title: 'Confusion',
     body: 'Friends, why do you just respond with the word `dislike`? Surely you mean to click the like button?',
-    likes: 1
+		author: 'Karolin'
+    likes: -100
   },
   {
     title: 'Vespa',
@@ -361,7 +352,7 @@ Finally, we have a few options for updating
 If we want to have our updated document returned to us in the callback, we have to set an option of `{new: true}` as the third argument
 
 ```js
-Tweet.findOneAndUpdate({title:'Vespa'},{deleted: true}, {new: true},(err, tweet)=>{
+Tweet.findOneAndUpdate({title:'Vespa'},{sponsored: true}, {new: true},(err, tweet)=>{
   if (err){
     console.log(err);
   } else {
@@ -371,12 +362,14 @@ Tweet.findOneAndUpdate({title:'Vespa'},{deleted: true}, {new: true},(err, tweet)
   })
 ```
 
+We'll see the console.logged tweet will have the value of sponsored updated to true. Without `{new: true}` we would get the original unaltered tweet back.
+
 
 ### Intermediate
 
 We can count how many tweets we have with likes greater than 20
 ```js
-Tweet.count({likes:{$gte:20}}, (err, tweets)=>{
+Tweet.countDocuments({likes:{$gte:20}}, (err, tweets)=>{
   console.log(tweets);
   db.close();
 });
