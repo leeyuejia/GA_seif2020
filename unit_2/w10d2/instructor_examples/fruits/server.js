@@ -2,7 +2,7 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // middleware
 app.use(express.static('public'));
@@ -12,6 +12,13 @@ app.use(methodOverride('_method'));
 
 // 'Data'
 const fruits = require('./models/fruits.js');
+
+// Index
+app.get('/game', (req, res) => {
+	res.render('game.ejs', {
+		game: 'This is my game'
+	});
+});
 
 // Index
 app.get('/fruits', (req, res) => {
