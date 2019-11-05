@@ -1,0 +1,20 @@
+{
+  "name": "blog_complete",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.11.3"
+  },
+  "devDependencies": {},
+  "description": ""
+}

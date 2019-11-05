@@ -1,51 +1,121 @@
-![](/ga_cog.png)
 
----
-Title: Loop the Loop! Two Dimensional Sums<br>
-Type: Morning Exercise <br>
+Title: EJS Partials  <br>
+Type: Morning Exercise<br>
 Duration: "0:45"<br>
 Creator: Karolin Rafalski<br>
-Competencies:  Arrays, Loops, Breaking down a problem into smaller steps<br>
-Prerequisites: JavaScript or Ruby Fundamentals<br>
+Competencies: EJS Forms <br>
+Prerequisites: EJS , Node, Express, MongoDB<br>
 
 ---
 
-### Loop the Loop: 2D Array Additon
+## EJS Partials
 
-**Make a function that returns the greatest sum of a row, column or diagonal from a two dimensional array**
+## Intro
+EJS allows you to create reusable elements that can go on multiple pages and will allow you to streamline your ejs page creation and updates.
+
+### EJS Partials
+
+#### Set Up
+
+We'll go back to Mongoose Store.
+##### Note: this is a Mongoose Store 'lite' - for full solution check the homework folder with the initial readme.
+
+-  `cd` into the directory `ejs-partials-mognoose-store` that is in the morning exercise folder for today
+- `npm install`
+- open two more Terminal tabs (one for `mongod` and one for `nodemon`)
+- start `mongod` in a new terminal window
+- start `nodemon`
+- `atom .` in the last tab
+- go to `http://localhost:3000/products` in the browser - You should see an empty mongo store!
+- organize your windows so you can easily go between the browser, terminal and atom
+- go to `http://localhost:3000/products/seed/newproducts/viaseedfile` you should see JSON of the seed data
+- go back to `http://localhost:3000/products` (may need to reload page to see data/products)
+- now the mongoose store should have products!
 
 
-Make a function that takes one argument, a two dimensional array, where all the arrays are the same length, and returns the greatest sum of the numbers by row, column and diagonal.
+**Note**: if you made a mistake, repopulated your db twice or just want to get my mongoose store out of your mongodb got here `http://localhost:3000/products/dropdatabase/cannotundo/areyoursure/reallysure/okthen`
+
+#### First Partial
+
+EJS partials let you create reusable EJS that you only have to edit in one place and it will update across all your pages where the partial is included
+
+- in the views folder: `mkdir partials`
+- then in the partials folder: `touch head.ejs`
+
+Right now, only the `index` route has the CSS linked. Let's cut that code out of the head and paste it into our `head.ejs` file (don't forget to save all the files!)
 ```
-const arr = [ [10, 20, 30],
-            [40, 50, 60],
-            [70, -80, 90] ];
+    <meta charset="utf-8">
+    <title>Mongoose Store</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/assets/$.png">
+ ```
 
-greatestSum(arr); //180
+- Save and reload the page
+- Goodbye CSS!
+- Let's add it back into `index.ejs` as a partial
+
+```
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+```
+- don't forget to save and reload the page
+- cool! Now let's copy paste that code onto the other three ejs pages: `edit.ejs`, `new.ejs`, and `show.ejs`
+- navigate to the index, show, edit and new routes and see that our css has returned Hooray!
+
+
+#### Header partial
+- Right now only our index page has a nav bar, let's follow the above steps and create a partial for the header
+- `touch nav.ejs` inside the `partials` folder
+- cut (out of `index.ejs`)
+```
+      <div class="row nav">
+        <a href="/products"><h1 id="store" class="six columns">The Mongoose Store</h1></a>
+        <span class="three columns">&nbsp;</span>
+        <a href="/products/new"><button type="button" name="button" class="new-product three columns">New Product</button></a>
+        <span class="one column">&nbsp;</span>
+      </div>
 ```
 
-#### Hungry for More?
-
-
-Test your function on this data set and let me know if it was a row, column or diagonal that had the greatest sum!
+- paste it into `nav.ejs`
+- in your 4 ejs files:
+ ```
+ <% include ../partials/nav.ejs %>
 
 ```
-const bigArray =
-[ [ 887, -541, -430, -590, 117, 172, -319, -18 ],
-  [ -269, 964, 209, 840, -456, 156, 365, -568 ],
-  [ 289, -41, 488, 198, 240, 124, -427, 214 ],
-  [ 452, 894, 968, -149, 683, 977, 741, -805 ],
-  [ 181, -714, -950, 107, 800, 751, -143, 380 ],
-  [ 152, 493, 707, 914, 37, 356, -625, 608 ],
-  [ -345, 906, 83, 676, 723, 381, 557, -183 ],
-  [ 199, -943, -710, 565, 193, 315, 281, 245 ] ];
+- be sure to save save save all your files
+
+#### Footer partial
+- `touch footer.ejs` inside the `partials folder`
+- add
 ```
+    <footer>
+        all rights reversed
+    </footer>
+```
+- now add the partials to the four ejs files using the same pattern we've used in our previous two partials
+- don't forget to save
 
-**Still Hungry?**<br>
 
-Create a function that takes one argument, an integer, that makes a 2D array of random integers between 0  and 1000 where the length of the rows and columns is determined by the argument.
+#### Editing a partial
+Whoops! Our footer says `all rights reversed` it should say `all rights reserved`.
 
-Add a 30% chance that the integer will become negative.
+Let's update our `footer.ejs` file
+- click around the mongoose store, did the footer change on all your pages now?
+- If so sweet! If not, let's troubleshoot
 
-**Still Moar Hungry?**
-Sign up for [codewars](codewars.com) and choose a code challenge (in JavaScript) or three and solve them. Found a fun one? Share it in slack!
+
+<hr>
+
+## Got Some Time Left? Let's work on a Hackerrank Challenge!
+<br>
+Some companies use HackerRank challenges as part of their interview process. Try one out to practice!
+
+- [Min Max Sum](https://www.hackerrank.com/challenges/mini-max-sum/problem)
+
+
+HackerRank's code submission process can take a little getting used to
+
+- [How to Solve HackerRank Problems](https://www.hackerrank.com/domains/algorithms/warmup)
