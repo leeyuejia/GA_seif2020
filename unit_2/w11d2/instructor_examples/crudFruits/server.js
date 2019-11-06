@@ -7,7 +7,9 @@ const app = express();
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 
-//... and then farther down the file
+//Connect to database
+//mongodb://localhost:27017/fruitscrud
+//mongodb+srv://henry:<password>@cluster0-dqzcz.mongodb.net/fruitscrud?retryWrites=true&w=majority
 mongoose.connect('mongodb://localhost:27017/fruitscrud', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
