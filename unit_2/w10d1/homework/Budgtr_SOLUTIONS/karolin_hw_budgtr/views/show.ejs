@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Budtr</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Item</h1>
+      <a href="/budgets">      <button type="button" name="button">Back</button></a>
+      <div class="">
+        <dl>
+          <dt><strong>date</strong></dt>
+          <dd><%= ledgerItem.date%></dd>
+          <dt><strong>name</strong></dt>
+          <dd><%= ledgerItem.name%></dd>
+          <dt><strong>from</strong></dt>
+          <dd><%= ledgerItem.from%></dd>
+          <dt><strong>amount</strong></dt>
+          <dd><%= ledgerItem.amount%></dd>
+          <dt><strong>tags</strong></dt>
+          <dd><%= ledgerItem.tags%></dd>
+        </dl>
+      </div>
+    </div>
+  </body>
+</html>

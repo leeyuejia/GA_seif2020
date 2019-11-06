@@ -1,0 +1,15 @@
+/* GENERAL PAGE STYLING */
+h1 {
+  text-align: center;
+}
+
+/* POKEDEX PAGE STYLING */
+img.pokedex {
+  width: 100px;
+  height: 100px;
+}
+
+/* SHOW PAGE STYLING */
+.button, form {
+  margin: 0;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Budtr</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Budgtr</h1>
+      <a href="/budgets/new"><button type="button" name="button">New Item</button></a>
+      <% if(bankAccount > 1000) { %>
+        <h2 class="wealthy">Bank Account Total: <%= bankAccount %> </h2>
+      <% } else if (bankAccount < 0){%>
+          <h2 class="debt">Bank Account Total: <%= bankAccount %></h2>
+      <% } else {%>
+          <h2>Bank Account Total: <%= bankAccount %></h2>
+      <% } %>
+
+      <table>
+        <tbody>
+          <% let counter = 0 %>
+          <% for (ledgerItem of ledger){ %>
+            <tr>
+              <td><%= ledgerItem.date %></td>
+              <td><a href="/budgets/<%= counter %>"><%= ledgerItem.name %></a></td>
+              <td><%= ledgerItem.amount %></td>
+            </tr>
+            <% counter++%>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
