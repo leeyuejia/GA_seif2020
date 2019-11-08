@@ -1,50 +1,3 @@
-# Creating A Relationship Between Two Models
-
-## Reference other models by id
-
-### Single ObjectId reference
-
-```javascript
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-mongoose.connect('mongodb://localhost:27017/twomodels');
-
-const articleSchema = new Schema({
-	title: { type: String },
-	author: { type: Schema.Types.ObjectId, ref: 'Author' } //the author property is just an id of another object
-});
-
-const authorSchema = new Schema({
-	name: { type: String }
-});
-
-const Article = mongoose.model('Article', articleSchema);
-const Author = mongoose.model('Author', authorSchema);
-
-const matt = new Author({ name: 'Matt' });
-matt.save(() => {
-	const article1 = new Article({ title: 'Awesome Title', author: matt._id });
-	article1.save(() => {
-		showAll();
-	});
-});
-
-const showAll = () => {
-	Article.find()
-		.populate('author')
-		.exec((error, article) => {
-			//dynamically switch out any ids with the objects they reference
-			console.log(article);
-			mongoose.connection.close();
-		});
-};
-```
-
-### Arrays of ObjectId references
-
-We can do the same with arrays of ids
-
-```javascript
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost:27017/twomodels');
@@ -103,4 +56,3 @@ const showAllArticles = () => {
 			}
 		});
 };
-```
