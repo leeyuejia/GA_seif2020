@@ -20,7 +20,8 @@ mongoose.connect(
 	'mongodb+srv://henry:henry@cluster0-dqzcz.mongodb.net/fruitscrud?retryWrites=true&w=majority',
 	{
 		useNewUrlParser: true,
-		useUnifiedTopology: true
+		useUnifiedTopology: true,
+		useFindAndModify: true
 	}
 );
 mongoose.connection.once('open', () => {
