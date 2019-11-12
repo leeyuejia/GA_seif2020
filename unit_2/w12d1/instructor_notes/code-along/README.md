@@ -148,7 +148,7 @@ Let's play around with another popular CSS Framework from Google called Material
 
 We have 6 EJS files
 
-- `views/app/messages/new.ejs `- BONUS Lab add nothing now
+- `views/app/index.ejs `- BONUS Lab add nothing now
 - `views/app/messages/new.ejs` - BONUS Lab add nothing now
 - `views/partials/head.ejs` - we'll handle our head tag and meta data (copy paste from below)
 - `views/sessions/new.ejs` - making forms look nice takes a lot of work, let's use the boilerplate from the Materialize website and update it as needed
