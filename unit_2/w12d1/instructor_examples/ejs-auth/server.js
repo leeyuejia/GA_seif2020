@@ -32,9 +32,19 @@ app.use(
   })
 );
 
+// auth middleware
+
 // Use controllers
 app.use("/users", userController);
 app.use("/sessions", sessionsController);
+
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next();
+  } else {
+    res.redirect("/sessions/new");
+  }
+};
 
 // Routes
 app.get("/", (req, res) => {
@@ -44,12 +54,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/app", (req, res) => {
-  if (req.session.currentUser) {
-    res.render("app/index.ejs");
-  } else {
-    res.redirect("/sessions/new");
-  }
+app.get("/app", isAuthenticated, (req, res) => {
+  res.render("app/index.ejs");
 });
 
 // Listen
