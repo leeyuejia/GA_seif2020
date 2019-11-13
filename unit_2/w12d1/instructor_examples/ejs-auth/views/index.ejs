@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container">
+        <h1>
+        <% if(currentUser) { %>
+            Welcome <%=currentUser.username%>!
+            <form action="/sessions?_method=DELETE" method="POST">
+                <input type="submit" value="Logout" class="waves-effect waves-light btn"/>
+            </form>
+            <!-- <a class="waves-effect waves-light btn" href="/sessions/">Log Out</a> -->
+        </h1>
+        <h2>
+        <a class="waves-effect waves-light btn" href="/app">Join the Party</a>
+        </h2>
+        <% } else { %>
+            <h2>Please </h2>
+            <a class="waves-effect waves-light btn" href="/users/new">Sign Up</a></h2>
+            <h3>or</h3>
+            <a class="waves-effect waves-light btn" href="/sessions/new">Log In</a>
+        <% } %>
+      <!-- <h1>Welcome</h1>
+          <h2>Please </h2>
+          <a class="waves-effect waves-light btn" href="/users/new">Sign Up</a></h2>
+          <h3>or</h3>
+          <a class="waves-effect waves-light btn" href="/sessions/new">Log In</a> -->
+    </div>
+  </body>
+</html>
