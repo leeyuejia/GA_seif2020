@@ -25,6 +25,8 @@
         <% for(let i = 0; i < articles.length; i++){ %>
         <li>
           <a href="/articles/<%=articles[i]._id%>"><%=articles[i].title%></a>
+          <% if(articles[i].author) { %> - <%=articles[i].author.name%> <% } %>
+          <% if(articles[i].fruit) { %> - <%=articles[i].fruit.name%> <% } %>
         </li>
         <% } %>
       </ul>

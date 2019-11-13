@@ -3,25 +3,24 @@ const router = express.Router();
 const Article = require("../models/articles.js");
 
 router.get("/", (req, res) => {
-  Article.find({}, (err, foundArticles) => {
-    res.render("articles/index.ejs", {
-      articles: foundArticles
-    });
-  });
-
-  // Article.find()
-  //   .populate("author")
-  //   .exec((err, foundArticles) => {
-  //     if (err) console.error(err.message);
-
-  //     if (foundArticles) {
-  //       console.log("Showing all articles..");
-  //       console.log(foundArticles);
-  //       res.render("articles/index.ejs", {
-  //         articles: foundArticles
-  //       });
-  //     }
+  // Article.find({}).exec((err, foundArticles) => {
+  //   res.render("articles/index.ejs", {
+  //     articles: foundArticles
   //   });
+  // });
+
+  Article.find()
+    .populate("author")
+    .populate("fruit")
+    .exec((err, foundArticles) => {
+      if (err) console.error(err.message);
+
+      if (foundArticles) {
+        res.render("articles/index.ejs", {
+          articles: foundArticles
+        });
+      }
+    });
 });
 
 router.get("/new", (req, res) => {
