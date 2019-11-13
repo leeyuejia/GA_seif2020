@@ -13,10 +13,12 @@ const isAuthenticated = (req, res, next) => {
 }
 
 messages.get('/new', isAuthenticated, (req, res) => {
-  res.render('messages/new.ejs')
+  res.render('app/messages/new.ejs')
 })
 
 messages.get('/', isAuthenticated, (req, res) => {
   res.send('it works' + req.session.currentUser)
 })
+
+module.exports = messages;
 ```
