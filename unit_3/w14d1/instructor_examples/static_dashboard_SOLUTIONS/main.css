@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  background: #6A6180;
+  color: ghostwhite;
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  width: 90%;
+  height: 98vh;
+  margin: auto;
+  background: #4C4A5E;
+  display: grid;
+  align-content: space-around;
+  grid-template-columns: 19% 24% 24% 24%;
+  grid-template-rows: 45% 45%;
+  grid-column-gap: 2%;
+  grid-row-gap: 1em;
+  grid-template-areas:
+  "sidebar reviews rating sentiment"
+  "sidebar visitors visitors visitors"
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  align-items: center;
+}
+.reviews {
+  padding: 0 .5em;
+  background: #313A43;
+  grid-area: reviews;
+}
+.rating {
+  padding: 0 .5em;
+  background: #313A43;
+  grid-area: rating;
+}
+.sentiment {
+  padding: 0 .5em;
+  background: #313A43;
+  grid-area: sentiment;
+}
+.visitors {
+  padding: 0 .5em;
+  background: #313A43;
+  grid-area: visitors;
+}
+
+
+li {
+  list-style: none;
+  margin: 1em auto;
+  font-size: .4em;
+}
+
+h3 {
+  opacity: .5;
+  font-size: .5em;
+  text-transform: uppercase;
+}
