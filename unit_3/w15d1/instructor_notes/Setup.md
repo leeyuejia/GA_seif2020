@@ -170,7 +170,7 @@ class App extends React.Component {
     return (
       <div>
       <h1 onClick={this.toggleHiring}> Big Time Shopping </h1>
-       {!this.state.isHiring ? <h2>Yes, we are hiring </h2>: <h2>Sorry, try again tomorrow</h2>}
+       {this.state.isHiring ? <h2>Yes, we are hiring </h2>: <h2>Sorry, try again tomorrow</h2>}
       <form onSubmit={this.handleSubmit}>
         <label for="name">Name</label>
         <input type="text" value={this.state.name} onChange={this.handleChange} id="name" />
