@@ -18,6 +18,7 @@ class Grocery extends React.Component {
 
 // Example of React Arrow Function Component
 const PurchaseList = ({ grocery }) => {
+  //props.grocery
   // const handleClick = () => {
   //   props.togglePurchase(props.grocery);
   // };
