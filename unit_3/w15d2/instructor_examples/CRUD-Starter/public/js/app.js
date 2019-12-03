@@ -13,27 +13,43 @@ class App extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch("/todos", {
-      body: JSON.stringify({ description: this.state.description }),
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json"
+    // fetch("/todos", {
+    //   body: JSON.stringify({ description: this.state.description }),
+    //   method: "POST",
+    //   headers: {
+    //     Accept: "application/json, text/plain, */*",
+    //     "Content-Type": "application/json"
+    //   }
+    // })
+    //   .then(createdToDo => {
+    //     return createdToDo.json();
+    //   })
+    //   .then(jsonedToDo => {
+    //     // reset the form
+    //     // add person to list
+    //     this.setState({
+    //       description: "",
+    //       todos: [jsonedToDo, ...this.state.todos]
+    //     });
+    //     console.log(jsonedToDo);
+    //   })
+    //   .catch(error => console.log(error));
+
+    // Go to axios github for more info -> https://github.com/axios/axios
+    axios({
+      method: "post",
+      url: "/todos",
+      data: {
+        description: this.state.description
       }
-    })
-      .then(createdToDo => {
-        return createdToDo.json();
-      })
-      .then(jsonedToDo => {
-        // reset the form
-        // add person to list
-        this.setState({
-          description: "",
-          todos: [jsonedToDo, ...this.state.todos]
-        });
-        console.log(jsonedToDo);
-      })
-      .catch(error => console.log(error));
+    }).then(function(response) {
+      console.log(response.data);
+      const jsonedToDo = response.data;
+      this.setState({
+        description: "",
+        todos: [jsonedToDo, ...this.state.todos]
+      });
+    });
   };
 
   render() {
