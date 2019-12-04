@@ -81,14 +81,14 @@ Before you begin coding, make a new GitHub repo for your project. _Take the foll
 
 3. On `npm init`, specify `server.js` as your entry point
 
-4. If you did not set up your `entry point` in `package.json` correctly, make sure that you edit your `pacakge.json` so that `main` is set to `server.js`
+4. If you did not set up your `entry point` in `package.json` correctly, make sure that you edit your `package.json` so that `main` is set to `server.js`
 
 5. Make sure your `server.js` and `package.json` are in the **root** of your project repository
 
 <details><summary> Expected File Structure </summary>
 
 
-![Suggested File Structure](https://i.imgur.com/jY7cBLB.png)
+[Suggested File Structure](https://i.imgur.com/jY7cBLB.png)
 
 </details>
 
