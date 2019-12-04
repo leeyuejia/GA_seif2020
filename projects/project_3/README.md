@@ -3,8 +3,7 @@
 # Project #3: MERN Stack - Group Project
 
 ## Attendance
-There is only one mandatory attendance check during project week, but as always please make sure you're working on your project every day!
-
+Attendance as usual during project week. Adhoc classes will be organised and instructors will be around to help with your projects.
   - **W18D1 - Saturday, 21 Dec at 10:00am**: Project presentation day!
 
 ## Stand-ups
