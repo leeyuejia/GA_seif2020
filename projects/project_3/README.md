@@ -85,9 +85,6 @@ Before you begin coding, make a new GitHub repo for your project. _Take the foll
 
 5. Make sure your `server.js` and `package.json` are in the **root** of your project repository
 
-<summary> Expected File Structure </summary>
-<hr>  
-
 ## Technical Demonstration
 
 All projects will be presented to the class.  Your presentation should be:
@@ -154,6 +151,11 @@ Are you able to defend why you implemented your solution in a certain way? Can y
 * **[Mongo Documentation](https://docs.mongodb.com/manual/)**
 * **[Mongoose Documentation](http://mongoosejs.com/docs/guide.html)**
 * **[Mongo Cheatsheet](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Mongo-Cheatsheet)**
+<hr>  
+
+<summary> Recommended File Structure </summary>
+
+![](https://i.imgur.com/jY7cBLB.png)
 <hr>  
 
 ## Inspiration - Projects by Previous WDI Students
