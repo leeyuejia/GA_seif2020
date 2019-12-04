@@ -86,8 +86,7 @@ Before you begin coding, make a new GitHub repo for your project. _Take the foll
 5. Make sure your `server.js` and `package.json` are in the **root** of your project repository
 
 <summary> Expected File Structure </summary>
-![](https://i.imgur.com/jY7cBLB.png)
-
+<hr>  
 
 ## Technical Demonstration
 
@@ -123,7 +122,7 @@ Your project is due on W18D1 - Saturday, 21 Dec at 10:00am. Your group will pres
 
 ## Etc.
 
-<details><summary><strong>Suggested Ways to Get Started</strong></summary>
+<summary><strong>Suggested Ways to Get Started</strong></summary>
 
 * **Wireframe** Make a drawing of what your app will look like in all of the stages of the app(what does it look like as soon as you log on to the site? What does it look like while the player is playing? What does it look like when the player wins / loses?).
 
@@ -132,10 +131,10 @@ Your project is due on W18D1 - Saturday, 21 Dec at 10:00am. Your group will pres
 * **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
 
 * **Consult documentation resources** (MDN, jQuery, etc.) at home to better understand what you’ll be getting into.
-</details>
+<hr>  
 
 
-<details><summary><strong>Think about...</strong></summary>
+<summary><strong>Think about...</strong></summary>
 
 - **Creativity**  
 Did you add a personal spin or creative element into your project submission? Did you deliver something of value to the end user?
@@ -145,9 +144,9 @@ Did you follow code style guidance and best practices covered in class, such as 
 
 - **Problem Solving**  
 Are you able to defend why you implemented your solution in a certain way? Can you demonstrate that you thought through alternative implementations?
-</details>
+<hr>  
 
-<details><summary><strong>Useful Resources</strong></summary>
+<summary><strong>Useful Resources</strong></summary>
 
 * **[Heroku](http://www.heroku.com)**
 * **[Writing Good User Stories](http://www.mariaemerson.com/user-stories/)**
@@ -155,7 +154,6 @@ Are you able to defend why you implemented your solution in a certain way? Can y
 * **[Mongo Documentation](https://docs.mongodb.com/manual/)**
 * **[Mongoose Documentation](http://mongoosejs.com/docs/guide.html)**
 * **[Mongo Cheatsheet](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Mongo-Cheatsheet)**
-</details>
 <hr>  
 
 ## Inspiration - Projects by Previous WDI Students
