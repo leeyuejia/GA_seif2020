@@ -1,6 +1,6 @@
 ![](/ga_cog.png)
 
-# Project #3: MEAN Stack - Group Project
+# Project #3: MERN Stack - Group Project
 
 ## Attendance
 There is only one mandatory attendance check during project week, but as always please make sure you're working on your project every day!
@@ -123,7 +123,6 @@ Your project is due on W18D1 - Saturday, 21 Dec at 10:00am. Your group will pres
 1. Seek out help online
 2. Seek out help with your classmates
 3. Seek out help with our class TA
-  * There will **not** be daytime TA hours during project week since you'll have each other. However, TAs will still be available for help in the evenings during their regularly scheduled hours from 7-10 PM Eastern.
 
 ## Etc.
 
