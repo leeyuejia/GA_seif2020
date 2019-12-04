@@ -85,10 +85,9 @@ Before you begin coding, make a new GitHub repo for your project. _Take the foll
 
 5. Make sure your `server.js` and `package.json` are in the **root** of your project repository
 
-<details><summary> Expected File Structure </summary>
+<summary> Expected File Structure </summary>
 ![](https://i.imgur.com/jY7cBLB.png)
 
-</details>
 
 ## Technical Demonstration
 
