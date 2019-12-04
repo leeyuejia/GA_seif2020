@@ -5,8 +5,7 @@
 ## Attendance
 There is only one mandatory attendance check during project week, but as always please make sure you're working on your project every day!
 
-  - **Tuesday, February 12**: You're required to show up to Outcomes at 4:30PM ET
-  - **Wednesday, February 13**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM ET
+  - **W18D1 - Saturday, 21 Dec at 10:00am**: Project presentation day!
 
 ## Stand-ups
 Not required, but a suggestion: consider having stand-ups with your group every day to keep track of how your project progress is coming along. Consider the following points to talk about:
@@ -27,14 +26,14 @@ For this project, you will be making another full CRUD app using the technologie
 >General App Idea/Purpose: An app that allows me to catalogue all my pins by category <br>
 >Who Would Use It: Pin collectors<br>
 
-* A working full-stack application, built by you and your group members, using the MEAN stack: **Node.js, Mongoose, Express and Angular**.  
+* A working full-stack application, built by you and your group members, using the MERN stack: **Node.js, Mongoose, Express and React**.  
    - Your project should *not* include *EJS*.
-* Adhere to the **MVC** file structure: Models, Views, Controllers (Note, in this case _views_ is angular within the `public` folder, there will not be a _views_ directory)
+* Adhere to the **MVC** file structure: Models, Views, Controllers (Note, in this case _views_ is React within the `public` folder, there will not be a _views_ directory)
 * At least _one model_ with full **CRUD**.
-* Include **at least one** of the following features:
+* Include **at least two** of the following features:
     - Authorization
       - Include **sign up/log in** functionality, with encrypted passwords & an authorization flow
-    - Pull from a third party API - either client side with AJAX or server-side with an NPM
+    - Pull from a third party API - either client side with AJAX or server-side
       - NPMs that work with an API: Twitter, Yelp, etc.  Remember the `request` module can make API calls server side to any URL.  
     - Have two models
       - Have two separate models that don't have to be related
@@ -50,9 +49,9 @@ For this project, you will be making another full CRUD app using the technologie
 ### &#x1F535; Stretch Goals (Not Mandatory):
 #### Recommended Features
 
-* Consider using angular partials, routing, or custom directives
+* Consider using React routing for multi-page views
 * Include portfolio-quality styling
-* Use a CSS framework like Skeleton or Bootstrap
+* Use a CSS framework or theme from Bootstrap or Materialize
 * Incorporate **Google Maps**
 * Use `socket.io` for real-tme updates (like gmail) and collaborative interaction (like chat rooms).  
 * Inside in your `README.md`:
@@ -68,7 +67,7 @@ For example, it is very important that you not push your API keys to a public Gi
 This is especially true when working with Amazon Web Services (AWS). Here's an example of a [stolen key horror story](https://wptavern.com/ryan-hellyers-aws-nightmare-leaked-access-keys-result-in-a-6000-bill-overnight).
 
 ## Make A New Repo & Setup for Heroku Deployment
-Before you begin coding, make a new GitHub repo for your project. _Take the following steps to ensure you have the right file structure/set up in order to deploy your site to Heroku. If you need a reminder on deploying to Heroku, look back at the [deployment notes](/unit_2/w06d04/instructor_notes/heroku.md)_
+Before you begin coding, make a new GitHub repo for your project. _Take the following steps to ensure you have the right file structure/set up in order to deploy your site to Heroku. If you need a reminder on deploying to Heroku, look back at the [deployment notes](/unit_2/w12d3/instructor_notes/heroku.md)_
 
 :heavy_exclamation_mark: You will be using GitHub, **not** GitHub Enterprise!
 
@@ -114,13 +113,11 @@ You will be sharing your app and your code.  Be prepared to answer questions fro
 
 ## Meetings with instructors
 
-**Friday, February 8 - Mandatory**<br>
+**Mandatory**<br>
 Your group will meet with your dedicated project instructor for 15 minutes to get your app idea approved. Be sure to write out what features you will need to build in order to meet MVP and some stretch goal ideas.
 
 ## How to Submit Your Project
-Your project is due on Wednesday, February 13th at 10:00 am ET. Your group will present your project and show your code to classmates and instructors.
-
-:heavy_check_mark: Add your group project to [this google sheet](https://docs.google.com/spreadsheets/d/1rJL0jqbDUAD-kxDGiohO072XsBIWKjNuwu9rCjHM51Q/edit?usp=sharing).  Note that this is the order you will be presenting.
+Your project is due on W18D1 - Saturday, 21 Dec at 10:00am. Your group will present your project and show your code to classmates and instructors.
 
 ## Where to go for help during project week
 1. Seek out help online
