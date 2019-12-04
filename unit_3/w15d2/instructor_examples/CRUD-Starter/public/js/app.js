@@ -7,16 +7,93 @@ class App extends React.Component {
     };
   }
 
+  // on first load
   componentDidMount() {
-    console.log("component did mount");
+    console.log("componentDidMount");
     fetch("/todos")
       .then(response => response.json())
       .then(todos => {
+        console.log(todos);
         this.setState({
           todos: todos
         });
       });
   }
+
+  deleteToDo = (id, index) => {
+    axios.delete("/todos/" + id).then(data => {
+      axios.get("/todos").then(response => {
+        console.log(response.data);
+        this.setState({
+          todos: response.data
+        });
+      });
+    });
+
+    /*
+    fetch("todos/" + id, {
+      method: "DELETE"
+    }).then(data => {
+      // this.setState({
+      //   todos: [
+      //     ...this.state.todos.slice(0, index),
+      //     ...this.state.todos.slice(index + 1)
+      //   ]
+      // })
+
+      // const updatedTodos = this.state.todos.filter(todo => {
+      //   if (todo._id !== id) return todo;
+      // });
+
+      // this.setState({
+      //   todos: updatedTodos
+      // });
+
+      fetch("/todos")
+        .then(response => response.json())
+        .then(todos => {
+          console.log(todos);
+          this.setState({
+            todos: todos
+          });
+        });
+        
+    });*/
+  };
+
+  updateToDo = (todo, index) => {
+    todo.complete = !todo.complete;
+
+    axios
+      .put("todos/" + todo._id, {
+        description: todo.description,
+        complete: todo.complete
+      })
+      .then(response => {
+        fetch("/todos")
+          .then(response => response.json())
+          .then(todos => {
+            this.setState({ todos: todos });
+          });
+      });
+    /*
+    fetch("todos/" + todo._id, {
+      body: JSON.stringify(todo),
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(updatedToDo => updatedToDo.json())
+      .then(jsonedToDo => {
+        fetch("/todos")
+          .then(response => response.json())
+          .then(todos => {
+            this.setState({ todos: todos });
+          });
+      });
+      */
+  };
 
   handleChange = event => {
     this.setState({ [event.target.id]: event.target.value });
@@ -92,12 +169,18 @@ class App extends React.Component {
         </form>
         <table>
           <tbody>
-            {this.state.todos.map(todo => {
+            {this.state.todos.map((todo, index) => {
               return (
                 <tr>
-                  <td> {todo.description} </td>
-                  <td> X </td>
-                  <td> complete </td>
+                  <td className={todo.complete ? "complete" : ""}>
+                    {" "}
+                    {todo.description}{" "}
+                  </td>
+                  <td onClick={() => this.deleteToDo(todo._id, index)}> X </td>
+                  <td onClick={() => this.updateToDo(todo, index)}>
+                    {" "}
+                    complete{" "}
+                  </td>
                 </tr>
               );
             })}
