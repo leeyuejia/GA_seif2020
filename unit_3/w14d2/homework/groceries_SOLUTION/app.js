@@ -17,7 +17,7 @@ class Grocery extends React.Component {
 }
 
 // Example of React Arrow Function Component
-const PurchaseList = ({ grocery }) => {
+const PurchasedItem = ({ grocery }) => {
   //props.grocery
   // const handleClick = () => {
   //   props.togglePurchase(props.grocery);
@@ -59,7 +59,7 @@ class App extends React.Component {
       isPurchased: this.state.isPurchased
     };
     this.setState({
-      groceries: [newItem, ...groceries],
+      groceries: [newItem, ...this.state.groceries],
       item: "",
       brand: "",
       units: "",
@@ -71,7 +71,7 @@ class App extends React.Component {
   togglePurchase = grocery => {
     console.log(grocery);
     // toggle isPurchase of the grocery item
-    const updatedGroceries = groceries.map(groceryItem => {
+    const updatedGroceries = this.state.groceries.map(groceryItem => {
       if (groceryItem.item === grocery.item) {
         groceryItem.isPurchased = !groceryItem.isPurchased;
         return groceryItem;
@@ -145,7 +145,7 @@ class App extends React.Component {
           <h2>Purchased</h2>
           <ul class="purchased">
             {this.state.groceries.map(grocery =>
-              grocery.isPurchased ? <PurchaseList grocery={grocery} /> : ""
+              grocery.isPurchased ? <PurchasedItem grocery={grocery} /> : ""
             )}
           </ul>
         </div>
