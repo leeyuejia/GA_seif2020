@@ -36,20 +36,33 @@ class App extends React.Component {
     //   .catch(error => console.log(error));
 
     // Go to axios github for more info -> https://github.com/axios/axios
-    axios({
-      method: "post",
-      url: "/todos",
-      data: {
+    //   axios({
+    //     method: "post",
+    //     url: "/todos",
+    //     data: {
+    //       description: this.state.description
+    //     }
+    //   }).then(response => {
+    //     console.log(response.data);
+    //     const jsonedToDo = response.data;
+    //     this.setState({
+    //       description: "",
+    //       todos: [jsonedToDo, ...this.state.todos]
+    //     });
+    //   });
+    // };
+    axios
+      .post("/todos", {
         description: this.state.description
-      }
-    }).then(function(response) {
-      console.log(response.data);
-      const jsonedToDo = response.data;
-      this.setState({
-        description: "",
-        todos: [jsonedToDo, ...this.state.todos]
+      })
+      .then(response => {
+        console.log(response.data);
+        const jsonedToDo = response.data;
+        this.setState({
+          description: "",
+          todos: [jsonedToDo, ...this.state.todos]
+        });
       });
-    });
   };
 
   render() {
