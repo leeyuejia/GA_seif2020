@@ -20,6 +20,11 @@ class App extends React.Component {
       });
   }
 
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+    // alert("number of todos is " + this.state.todos.length);
+  }
+
   deleteToDo = (id, index) => {
     axios.delete("/todos/" + id).then(data => {
       axios.get("/todos").then(response => {
