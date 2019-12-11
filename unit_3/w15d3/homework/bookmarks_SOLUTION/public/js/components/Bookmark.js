@@ -32,29 +32,3 @@ class Bookmark extends React.Component {
     );
   }
 }
-
-{
-  /* <tr>
-  <td>
-    <a href={protocol + tempBookmark.url} target="_blank">
-      {tempBookmark.title}
-    </a>
-  </td>
-  <td>
-    <button
-      className="btn btn-danger"
-      onClick={() => this.deleteBookmark(tempBookmark._id, index)}
-    >
-      Delete
-    </button>
-  </td>
-  <td>
-    <button
-      className="btn btn-warning"
-      onClick={() => this.toggleEditing(tempBookmark)}
-    >
-      Change
-    </button>
-  </td>
-</tr>; */
-}

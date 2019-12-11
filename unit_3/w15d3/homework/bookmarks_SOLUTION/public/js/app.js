@@ -8,7 +8,7 @@ class App extends React.Component {
       title: "",
       url: "",
       _id: "",
-      editing: "",
+      editing: false,
       bookmarks: []
     };
   }
@@ -32,53 +32,20 @@ class App extends React.Component {
   };
 
   toggleEditing = bookmark => {
-    this.state.editing = !this.state.editing;
-    console.log(this.state.editing);
     this.setState({
       title: bookmark.title,
       url: bookmark.url,
-      _id: bookmark._id
+      _id: bookmark._id,
+      editing: true
     });
   };
 
-  handleChange = event => {
-    this.setState({ [event.target.id]: event.target.value });
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-    console.log("submit running");
-    fetch(baseURL + "/bookmarks", {
-      body: JSON.stringify({
-        title: this.state.title,
-        url: this.state.url
-      }),
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json"
-      }
-    })
-      .then(createdBookmarks => {
-        return createdBookmarks.json();
-      })
-      .then(jsonedToDo => {
-        this.setState({
-          title: "",
-          url: "",
-          bookmarks: [jsonedToDo, ...this.state.bookmarks]
-        });
-        console.log(jsonedToDo);
-      })
-      .catch(error => console.log(error));
-  };
-
-  updateBookmark = event => {
+  updateBookmark = (title, url) => {
     event.preventDefault();
     fetch(baseURL + "/bookmarks/" + this.state._id, {
       body: JSON.stringify({
-        title: this.state.title,
-        url: this.state.url
+        title: title,
+        url: url
       }),
       method: "PUT",
       headers: {
@@ -91,7 +58,8 @@ class App extends React.Component {
         this.setState({
           title: "",
           url: "",
-          _id: ""
+          _id: "",
+          editing: false
         });
         this.dataRefresh();
       });
@@ -110,54 +78,46 @@ class App extends React.Component {
     });
   };
 
+  addBookmark = (title, url) => {
+    fetch(baseURL + "/bookmarks", {
+      body: JSON.stringify({
+        title: title,
+        url: url
+      }),
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(createdBookmark => {
+        this.setState({
+          title: "",
+          url: "",
+          _id: "",
+          bookmarks: [createdBookmark, ...this.state.bookmarks]
+        });
+      })
+      .catch(error => console.log(error));
+  };
+
   render() {
     return (
       <React.Fragment>
         <div class="jumbotron">
           <h1 class="display-4">Bookmark</h1>
+          <BookmarkForm
+            id={this.state._id}
+            title={this.state.title}
+            url={this.state.url}
+            updateBookmark={this.updateBookmark}
+            addBookmark={this.addBookmark}
+            editing={this.state.editing}
+          />
 
-          <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="title">title</label>
-              <input
-                type="text"
-                className="form-control"
-                value={this.state.title}
-                onChange={this.handleChange}
-                id="title"
-              />
-              <br />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="url">url</label>
-              <input
-                type="text"
-                className="form-control"
-                value={this.state.url}
-                onChange={this.handleChange}
-                id="url"
-              />
-              <br />
-            </div>
-
-            {this.state._id === "" ? (
-              <input
-                type="submit"
-                className="btn btn-success"
-                value="Create New Bookmark"
-              />
-            ) : (
-              <button
-                onClick={this.updateBookmark}
-                type="submit"
-                className="btn btn-info"
-                value="Change Bookmark"
-              >
-                Edit Bookmark
-              </button>
-            )}
-          </form>
           <br />
 
           <table class="table table-dark">
@@ -181,17 +141,6 @@ class App extends React.Component {
               })}
             </tbody>
           </table>
-          {/* { this.state.editing ? 
-                        <form>
-                            <label htmlFor="title_edit">title</label>
-                            <input type="text" value={this.state.title} onChange={this.state.handleChange} id="title_edit" />
-
-                            <label htmlFor="url_edit">url</label>
-                            <input type="text" value={this.state.url} onChange={this.state.handleChange} id="url_edit" />
-
-                            <input type="submit" />
-                        </form>
-                    : " "} */}
         </div>
       </React.Fragment>
     );
