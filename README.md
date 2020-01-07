@@ -65,13 +65,13 @@
 | w16d3 |[Vowel in a word](./unit_3/w16d3/warm_up_exercise)| [](./unit_3/w16d3/instructor_notes)| [](./unit_3/w16d3/student_labs)|[](./unit_3/w16d3/homework)|
 | w17d1 | **Project 3**|
 | w17d2 | **Project 3**|
-| w17d3 | **Project 3 Presentations** |[Install Ruby, Rails, Postgres](./unit_4/w17d3)||
+| w17d3 | **Project 3 Presentations** |||
 
 ## Unit 4
 
 | Day | Warm Up Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| [w17d2](./unit_4/w17d2) ||||
+| [w17d2](./unit_4/w17d2) ||[Install Ruby, Rails, Postgres](./unit_4/w17d2/instructor_notes)||
 | [w17d3](./unit_4/w17d3) ||||
 | [w18d1](./unit_4/w18w1) |[Sass](./unit_4/w18d1/warm_up_exercise)| [Intro to Ruby](./unit_4/w18d1/instructor_notes)| [Look at the differences](./unit_4/w18d1/student_labs)|[](./unit_4/w18d1/homework)|
 | [w18d2](./unit_4/w18d2) |[](./unit_4/w18d2/warm_up_exercise)| [Ruby Blocks, Enumerables](./unit_4/w18d2/instructor_notes)| [Look at the differences cont.](./unit_4/w18d2/student_labs)|[Ruby Basics](./unit_4/w18d2/homework)|
