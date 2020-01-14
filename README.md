@@ -74,10 +74,10 @@
 | [w17d2](./unit_4/w17d2) ||[Install Ruby, Rails, Postgres](./unit_4/w17d2/instructor_notes)||
 | [w17d3](./unit_4/w17d3) ||[Intro to Ruby, Ruby Blocks, Enumerables](./unit_4/w17d3/instructor_notes)|[Look at the differences](./unit_4/w17d3/student_labs)|[Ruby Basics](./unit_4/w17d3/homework)|
 | [w18d1](./unit_4/w18d1) |[CS - Intro to Algorithms](https://my.generalassemb.ly/activities/780) [CS - Big O](https://my.generalassemb.ly/activities/511)|[Ruby Method, User Input, Class](./unit_4/w18d1/instructor_notes) |[Ruby Drills](./unit_4/w18d1/student_labs) |[Ruby Blackjack](./unit_4/w18d1/homework)|
-| [w18d2](./unit_4/w18d2) |[](./unit_4/w18d2/warm_up_exercise)| [](./unit_4/w18d2/instructor_notes)| [](./unit_4/w18d2/student_labs)|[](./unit_4/w18d2/homework)|
-| [w18d3](./unit_4/w18d3) |[](./unit_4/w18d3/warm_up_exercise)| [](./unit_4/w18d3/instructor_notes)| [](./unit_4/w18d3/student_labs)|[](./unit_4/w18d3/homework)|
-| w19d1 |[](./unit_4/w19d1/warm_up_exercise)| [SQL Basics](./unit_4/w19d1/instructor_notes)| [Computers and Televisions](./unit_4/w19d1/student_labs)|[](./unit_4/w19d1/homework)|
-| w19d2 |[Luhn Revisit](./unit_4/w19d2/warm_up_exercise)| [SQL Basics cont.](./unit_4/w19d2/instructor_notes)| [Airports](./unit_4/w19d2/student_labs)|[Carmen, NFL](./unit_4/w19d2/homework)|
+| [w18d2](./unit_4/w18d2) |[](./unit_4/w18d2/warm_up_exercise)| [SQL Basics](./unit_4/w18d2/instructor_notes)| [Computers and Televisions](./unit_4/w18d2/student_labs)|[](./unit_4/w18d2/homework)|
+| [w18d3](./unit_4/w18d3) |[](./unit_4/w18d3/warm_up_exercise)| [Advanced SQL](./unit_4/w18d3/instructor_notes)| [Airports](./unit_4/w18d3/student_labs)|[Carmen, NFL](./unit_4/w18d3/homework)|
+| w19d1 |[](./unit_4/w19d1/warm_up_exercise)| [](./unit_4/w19d1/instructor_notes)| [](./unit_4/w19d1/student_labs)|[](./unit_4/w19d1/homework)|
+| w19d2 |[](./unit_4/w19d2/warm_up_exercise)| [](./unit_4/w19d2/instructor_notes)| [](./unit_4/w19d2/student_labs)|[](./unit_4/w19d2/homework)|
 | w19d3 |[SQL Zoo](./unit_4/w19d3/warm_up_exercise)| [Intro to Rails API](./unit_4/w19d3/instructor_notes)| [Migrations, Q&A](./unit_4/w19d3/student_labs)|[Glitch in the Matrix](./unit_4/w19d3/homework)|
 | w20d1 |[](./unit_4/w20d1/warm_up_exercise)| [Rails Controllers](./unit_4/w20d1/instructor_notes)| [Books App](./unit_4/w20d1/student_labs)|[](./unit_4/w20d1/homework)|
 | w20d2 |[Ruby Reps](./unit_4/w20d2/warm_up_exercise)| [Rails Controllers continued](./unit_4/w20d2/instructor_notes)| [Books app cont](./unit_4/w20d2/student_labs)|[Tweetr](./unit_4/w20d2/homework)|
