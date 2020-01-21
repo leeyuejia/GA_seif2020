@@ -133,9 +133,9 @@ In `seeds.rb` let's write some Ruby to use the Faker gem in a loop:
 ```ruby
 10.times do
   Song.create(
-    title: Faker::Hipster.sentence(3),
+    title: Faker::Hipster.sentence(word_count:3),
     artist_name: Faker::Team.name,
-    artwork: Faker::Placeholdit.image("50x50")
+    artwork: Faker::Placeholdit.image(size:"50x50")
   )
 end
 ```
