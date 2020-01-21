@@ -77,10 +77,10 @@
 | [w18d2](./unit_4/w18d2) |[](./unit_4/w18d2/warm_up_exercise)| [SQL Basics](./unit_4/w18d2/instructor_notes)| [Computers and Televisions](./unit_4/w18d2/student_labs)|[](./unit_4/w18d2/homework)|
 | [w18d3](./unit_4/w18d3) |[](./unit_4/w18d3/warm_up_exercise)| [Advanced SQL](./unit_4/w18d3/instructor_notes)| [Airports](./unit_4/w18d3/student_labs)|[Carmen, NFL](./unit_4/w18d3/homework)|
 | w19d1 |[SQL Zoo](./unit_4/w19d1/warm_up_exercise) [CS - Recursion](https://my.generalassemb.ly/activities/773) [CS - Intro to sorting](https://my.generalassemb.ly/activities/818)| [Intro to Rails API](./unit_4/w19d1/instructor_notes)| [Migrations, Q&A](./unit_4/w19d1/student_labs)|[Glitch in the Matrix](./unit_4/w19d1/homework)|
-| w19d2 |[](./unit_4/w19d2/warm_up_exercise)| [](./unit_4/w19d2/instructor_notes)| [](./unit_4/w19d2/student_labs)|[](./unit_4/w19d2/homework)|
-| w19d3 |[](./unit_4/w19d3/warm_up_exercise)| [](./unit_4/w19d3/instructor_notes)| [](./unit_4/w19d3/student_labs)|[](./unit_4/w19d3/homework)|
-| w20d1 |[](./unit_4/w20d1/warm_up_exercise)| [Rails Controllers](./unit_4/w20d1/instructor_notes)| [Books App](./unit_4/w20d1/student_labs)|[](./unit_4/w20d1/homework)|
-| w20d2 |[Ruby Reps](./unit_4/w20d2/warm_up_exercise)| [Rails Controllers continued](./unit_4/w20d2/instructor_notes)| [Books app cont](./unit_4/w20d2/student_labs)|[Tweetr](./unit_4/w20d2/homework)|
+| w19d2 |[](./unit_4/w19d2/warm_up_exercise)| [Rails Controllers](./unit_4/w19d2/instructor_notes)| [Books App](./unit_4/w19d2/student_labs)|[](./unit_4/w19d2/homework)|
+| w19d3 |[Ruby Reps](./unit_4/w19d3/warm_up_exercise)| [Rails Controllers continued](./unit_4/w19d3/instructor_notes)| [Books app cont](./unit_4/w19d3/student_labs)|[Tweetr](./unit_4/w19d3/homework)|
+| w20d1 |[Public Holiday](./unit_4/w20d1/warm_up_exercise)| [](./unit_4/w20d1/instructor_notes)| [](./unit_4/w20d1/student_labs)|[](./unit_4/w20d1/homework)|
+| w20d2 |[](./unit_4/w20d2/warm_up_exercise)| [](./unit_4/w20d2/instructor_notes)| [](./unit_4/w20d2/student_labs)|[](./unit_4/w20d2/homework)|
 | w20d3 |[Intro to Regular Expressions](./unit_4/w20d3/warm_up_exercise)| [Rails Scaffold, Create React App, CORS](./unit_4/w20d3/instructor_notes)| [](./unit_4/w20d3/student_labs)|[Dating App](./unit_4/w20d3/homework)|
 | w21d1 |[](./unit_4/w21d1/warm_up_exercise)| [One to Many](./unit_4/w21d1/instructor_notes)| [Data Modeling](./unit_4/w21d1/student_labs)|[](./unit_4/w21d1/homework)|
 | w21d2 |[](./unit_4/w21d2/warm_up_exercise)| [One to Many cont.](./unit_4/w21d2/instructor_notes)| [Stock Prices](./unit_4/w21d2/student_labs)|[Products and Reviews](./unit_4/w21d2/homework)|
