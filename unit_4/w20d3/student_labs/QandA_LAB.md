@@ -3,9 +3,9 @@
 
 #### READ BELOW: WHY RUN A SEPARATE FRONTEND SERVER?
 
-You could just plop your static Angular stuff on Github Pages, and avoid using a second server altogether. Your github pages Angular could make cross-origin requests to your (hosted) API.
+You could just plop your static frontend stuff on Github Pages, and avoid using a second server altogether. Your github pages frontend app could make cross-origin requests to your (hosted) API.
 
-You could integrate your Angular stuff into the Rails server that serves the API.
+You could integrate your frontend stuff into the Rails server that serves the API.
 
 Here are some reasons why you shouldn't do those things:
 
