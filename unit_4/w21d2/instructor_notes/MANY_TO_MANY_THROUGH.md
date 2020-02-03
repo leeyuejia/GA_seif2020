@@ -380,21 +380,21 @@ Unless Active Record relations have been set, we will get
 
 Add many-to-many through relations to the two main models:
 
-commodity.rb
-
-```ruby
-class Commodity < ApplicationRecord
-  has_many :ledgers
-  has_many :traders, through: :ledgers
-end
-```
-
 trader.rb
 
 ```ruby
 class Trader < ApplicationRecord
   has_many :ledgers
   has_many :commodities, through: :ledgers
+end
+```
+
+commodity.rb
+
+```ruby
+class Commodity < ApplicationRecord
+  has_many :ledgers
+  has_many :traders, through: :ledgers
 end
 ```
 
