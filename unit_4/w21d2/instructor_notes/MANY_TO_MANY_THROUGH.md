@@ -200,9 +200,6 @@ With a one to many, a commodity with a foreign key could only be associated with
 
 What if we want it so that traders could take from a pool of commodities? A commodity could belong to many traders, and a trader could have many different commodities?
 
-A commodity would need a way to keep track of all its traders, OR, a trader would need a way to keep track of all its commodities . . . The foreign keys for each would have to be an array. An array of trader ids or an array of commodity ids.
-
-Since we are not storing array data, we need a better solution.
 
 10:18
 
