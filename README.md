@@ -96,6 +96,33 @@
 | w24d3 | **Final Projects** |
 | w25d1 || **Final Project Presentations & Graduation ** ||
 
+## CS Warm Up Exercises List
+| Computer Science |
+|:-----------:|
+|[CS - Intro to Algorithms](https://my.generalassemb.ly/activities/780)|
+|[CS - Big O](https://my.generalassemb.ly/activities/511)|
+|[CS - Recursion](https://my.generalassemb.ly/activities/773)|
+|[CS - Intro to sorting](https://my.generalassemb.ly/activities/818)|
+|[CS - Basic Sorting Algo](https://my.generalassemb.ly/activities/778)|
+|[CS - Divide and Conquer Sorting Algo](https://my.generalassemb.ly/activities/882)|
+|[CS - Distribution Sort](https://my.generalassemb.ly/activities/802)|
+|[CS - Search Algo - binary search iterative](https://my.generalassemb.ly/activities/633)|
+|[CS - Intro to Data Structures](https://my.generalassemb.ly/activities/878)|
+|[CS - Stacks and Queues](https://my.generalassemb.ly/activities/803)|
+|[CS - Hash Tables 1](https://my.generalassemb.ly/activities/512)|
+|[CS - Hash Tables 2](https://my.generalassemb.ly/activities/761)|
+|[CS - Binary Trees 1](https://my.generalassemb.ly/activities/8)|
+|[CS - Binary Trees 2](https://my.generalassemb.ly/activities/263)|
+|[CS - Graphs](https://my.generalassemb.ly/activities/403)|
+
+
+
+
+
+
+
+
+
 
 
 
