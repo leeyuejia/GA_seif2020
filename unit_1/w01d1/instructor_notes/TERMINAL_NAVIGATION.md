@@ -18,8 +18,8 @@ _After this lesson, students will be able to:_
 
 ## Download and install software necessary for the class
 
-- Atom installed? Or your favorite text editor.
-	- [Download Atom](https://atom.io/)
+- VS Code installed? Or your favorite text editor.
+	- [Download VS Code](https://code.visualstudio.com/)
 - Node installed?
 	- [Current version](https://nodejs.org/en/download/current/), **not** LTS
 	- Click on "Macintosh Installer"
@@ -37,6 +37,7 @@ _After this lesson, students will be able to:_
 
 ![](https://i.imgur.com/ZrPuVNq.png)
 
+- A Fancier Terminal iTerms- [iTerm2+zsh+oh-my-zsh](https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c)
 
 ### Terminal Preferences
 
@@ -103,6 +104,8 @@ In the long term, reduce your reliance on the mouse. More Bash keyboard shortcut
 	- autocompletes (case-sensitive)
 - up / down arrow
 	- cycle command history
+
+- For iTerm2 and zsh, we need some [extra configuration](https://coderwall.com/p/a8uxma/zsh-iterm2-osx-shortcuts).
 
 ### Code Along
 
@@ -252,13 +255,13 @@ We are going to:
 * Make a directory `w1d1_student_examples`
 * Go inside the directory
 * Make a file `first_code.js`
-* Open up Atom through Spotlight or the Dock.
-* Go to `Atom -> Install Shell Commands`
-	* this allows you to open Atom using a terminal command
-* Close Atom
-* From inside the `w1d1_student_examples` directory, open Atom from the command line with `atom .` (atom space dot)
+* Open up VS Code through Spotlight or the Dock.
+* Go to `VS Code ->` &#8984; &#8679; P `-> Shell Command: Install Code Command in PATH`
+	* this allows you to open VS Code using a terminal command
+* Close VS Code
+* From inside the `w1d1_student_examples` directory, open VS Code from the command line with `code .` (code space dot)
 	* **NOTE** This might not work on some systems. If not we will get it sorted out in time. For now, Just open the directory from `File -> Open`, and open the `w1d1_student_examples` directory.
-* When Atom opens, you should see the `w1d1_student_examples` directory and all the files inside the directory (in this case, just the `first_code.js` file.
+* When VS code opens, you should see the `w1d1_student_examples` directory and all the files inside the directory (in this case, just the `first_code.js` file.
 
 #### Write/Run Code
 

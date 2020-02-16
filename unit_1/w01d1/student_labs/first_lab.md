@@ -2,7 +2,6 @@
 
 # LAB
 
----
 
 Title: Afternoon Lab<br>
 Duration: 1 hr 15 mins approx<br>
