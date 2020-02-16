@@ -304,4 +304,4 @@ More Bash keyboard shortcuts:
 
 `cd -` toggle previous directory
 
-There are also video tutorials [here](https://www.youtube.com/playlist?list=PLdnONIhPScSToZztXRHyKZTQEsE30luMx)
+There are also video tutorials [here](https://www.youtube.com/playlist?list=PLdnONIhPScSToZztXRHyKZTQEsE30luMx).
