@@ -115,7 +115,7 @@ Write these answers in `first_js_homework.js`
 Replace the underscores to make a Boolean expression that evaluates to true. Use > , < and === only.
 
 ```
-a _ (b || f) _ !f && e _ c
+a _ (b || f) _ !f && d _ c
 ```
 [Bonus hint]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 
