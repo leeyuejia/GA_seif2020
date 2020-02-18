@@ -140,6 +140,10 @@ First we have to set the display to `inline-block`, since divs have a default di
  }
 
  ```
+
+```
+The greater than sign (>) selector in CSS is used to select the element with a specific parent. It is called as element > element selector. It is also known as the child combinator selector which means that it selects only those elements which are direct children of a parent. It looks only one level down the markup structure and not further deep down. Elements which are not the direct child of the specified parent is not selected.
+```
 ![featured dreams half images sized](https://i.imgur.com/AejAF5m.png)
 
 ## Intro to Floats
