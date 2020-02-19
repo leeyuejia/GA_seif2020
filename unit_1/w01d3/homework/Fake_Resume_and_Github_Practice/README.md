@@ -54,7 +54,7 @@ You should have covered all of this information during Fundamentals, but if you 
 
 Grumpy cat is looking for a new job! Using what you know about HTML and CSS, help him by creating a resume website for him. (Note: You don't need to know 'real information' about Grumpy Cat -- just make things up!)
 
-This is what he wants you to incdlude and do for his resume:
+This is what he wants you to include and do for his resume:
 
 - have an `index.html` file
 - have an `style.css` file that is linked to the `index.html` file
@@ -73,7 +73,7 @@ This is what he wants you to incdlude and do for his resume:
 1. Inside your `homework` folder for today, create a new folder called `resume_page`.
 1. Change directories to `resume_page`.
 1. From inside this file, create two files: `index.html` and `style.css`.
-1. Using Atom, open your files and add the HTML boilerplate code.
+1. Using VS Code, open your files and add the HTML boilerplate code.
 1. Create a heading level-one tag with the name: Grumpy Cat.
 1. Open the `index.html` in your browser to confirm that everything is set up properly.
 Reminder: To open your file with your browser, from the command line, type `open index.html`

@@ -267,8 +267,9 @@ There is a nice and simple use cse for floats, and that is to wrap text around a
   max-width: 50%;
   float: left;
 }
-
 ```
+
+
 Expected appearance: You can see that Kono's and Vashti's dreams have text wrapping around their images.
 
 ![float image](https://i.imgur.com/ykwiXds.png)
