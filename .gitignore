@@ -265,3 +265,6 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+
+# ignore my own test file
+*_test.js
