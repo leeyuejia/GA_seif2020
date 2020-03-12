@@ -7,7 +7,7 @@
   height: 50px;
   background: thistle;
   margin: 10px;
-  /* float: left; */
+  float: left;
 
 }
 
@@ -17,8 +17,8 @@ footer {
   background: cadetblue;
 }
 
-/* .container:after {
+.container:after {
   content: "";
   display: table;
   clear: both;
-} */
+}
