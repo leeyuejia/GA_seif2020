@@ -1,3 +1,16 @@
+* {
+   border: 1px solid gold;
+ }
+
 body {
   background: #255C7D;
+}
+
+.half, .third {
+  background:ghostwhite;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
 }
