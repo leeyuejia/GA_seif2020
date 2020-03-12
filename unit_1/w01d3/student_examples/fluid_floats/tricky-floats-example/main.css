@@ -3,20 +3,20 @@ main{
   height: 200px;
   background: teal;
   float: left;
-  
+
 }
 
- aside {
+aside {
   width: 28%;
   height: 150px;
   background: orange;
   float: right;
-  
+
  }
 
-footer {
+ footer {
   width: 100%;
   height: 100px;
   background: dodgerblue;
-  
- }
+
+  clear: both;

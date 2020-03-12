@@ -1,22 +1,8 @@
-* {
-   border: 1px solid gold;
- }
+
 
 body {
   background: #255C7D;
+  font-family: 'Poiret One', cursive;
+  color: steelblue;
 }
 
-.half, .third {
-  background:ghostwhite;
-  display: inline-block;
-  width:49%;
-}
-.half > img, .third > img {
-  max-width: 50%;
-  float: left;
-}
-
-.container {
-  width: 100%;
-  margin: auto;
-}
