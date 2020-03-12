@@ -8,9 +8,15 @@ body {
 
 .half, .third {
   background:ghostwhite;
+  display: inline-block;
+  width:49%;
+}
+.half > img, .third > img {
+  max-width: 50%;
+  float: left;
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
