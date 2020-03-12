@@ -2,6 +2,7 @@ main{
   width: 68%;
   height: 200px;
   background: teal;
+  float: left;
   
 }
 
@@ -9,6 +10,7 @@ main{
   width: 28%;
   height: 150px;
   background: orange;
+  float: right;
   
  }
 
