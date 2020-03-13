@@ -1,3 +1,112 @@
-.center-align {
+header {
     text-align: center;
+    background-image: url('Comando cat.jpg');
+    background-size: cover;
+    background-position: 0% 25%;
+    height: 300px;
+    margin:0 auto;
+    position: relative;
+}
+body {
+    margin: 0px;
+    font-family: 'Segoe UI';
+}
+h1 {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    left: 0px;
+    display: inline-block;
+    font-family:"Raleway";
+    font-weight:800;
+    font-size: 80px;
+    color: slategrey;
+    text-shadow: 5px 5px 10px #000000;
+}
+h3 {
+    position: absolute;
+    max-width: 100%;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin:0;
+    padding:10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-image: linear-gradient(to right, rgba(111,128,88,1), rgba(111,128,88,1), rgba(111,128,88,1));
+    font-family: "Raleway", "san-Serif";
+    color: ghostwhite;
+    font-weight: 200;
+}
+nav {
+    min-width: 700px;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color:#434D35;
+    font-size:  16px;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin: 0px 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+}
+span {
+    font-size: 10px;
+    position: relative;
+}
+.first  {
+    background-image: url(pussnboots.jpg);
+    background-size: cover;
+    background-position: 0% 50%;
+    height: 300px;
+    position: relative;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+}
+.second  {
+    background-image: url(pussnbootsloyal.jpg);
+    background-size: cover;
+    background-position: 0% 50%;
+    height: 300px;
+    position: relative;
+    margin: 30px 0px 30px 0px;
+    padding: 10px;
+}
+.third  {
+    background-image: url(pussnbootscute.jpg);
+    background-size: cover;
+    background-position: 0% 50%;
+    height: 300px;
+    position: relative;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+}
+h2 {
+    position: relative;
+    display: inline-block;
+    bottom: 0px;
+    color: ghostwhite;
+    text-shadow: 2px 2px 5px black;
+    padding: 10px;
+}
+p {
+    position: absolute;
+    bottom: 0px;
+    color: ghostwhite;
+    text-shadow: 2px 2px 5px black;
+    width: 75%;
+    float: right;
+    padding: 10px;
+}
+.button {
+    position: absolute;
+    margin: 10px;
 }

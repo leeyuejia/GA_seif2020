@@ -5,27 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type ="text/css" href="./style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
 </head>
 <body>
     <header>   
-        <h1 class="center-align">GRUMPY GAVIN</h1>
-        <img src="Comando Cat.jpg" alt="mona_lisa" title="mona_lisa and cat">
-        <h3>Hire Me!</h3>
-        <ul>
-            <li>rat catcher</li>
-            <li>rat raider</li>
-            <li>senior rat raider</li>
-            <li>commando of rat raider</li>
-        </ul>
-        <nav>   
-            <a href="http://linkedin/grumpy_gavin">Linkedin</a>
-            <a href="http://twitter.com">Twitter</a>
-            <a href="https://en.wikipedia.org/wiki/Cats_%26_Dogs:_The_Revenge_of_Kitty_Galore">Movie about me</a>
-        </nav>
+        <h1>GRUMPY GAVIN</h1>
+        <h3>KILL EM ALL</h3>
     </header>
+    <nav>   
+        <a href="http://linkedin/grumpy_gavin">Linkedin</a>
+        <a href="http://twitter.com">Twitter</a>
+        <a href="https://en.wikipedia.org/wiki/Cats_%26_Dogs:_The_Revenge_of_Kitty_Galore">Movie about me</a>
+    </nav>
+    <ul>
+        <li>RAT HUNTER <b>Jan'15 - Jan'16</b><br><span>Served in West Coast sewer system</span></li>
+        <li>RAT RAIDER <b>Jan'16 - Apr'16</b><br><span>Served in West Coast sewer system</span></li>
+        <li>SENIOR RAIDER <b>Apr'16'- Jan'19</b><br><span>Served in West Coast sewer system</span></li>
+        <li>COMMAND OPERATION OFFICER OF RAT RAIDER <b>Since Jan'19</b><br><span>Served in West Coast sewer system</span></li>
+    </ul>
 
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button>   button </button>
+    <main>
+        <div class ="first">
+            <button class ="button">Read more</button>
+            <h2>RATS R PESTS</h2>
+            <p>Adrenaline pumps in whenever I watch Tom and Jerry. I am extremely excited when Jerry gets caught by Tom but extremely frustrated when
+               Jerry escapes (which he always does! ugh!) I sympathise with hoofman whenever they mourn over their food being ravaged by 
+               these abominable creatures. They sneak in when nobody is around and take for themselves food which is great significances
+               to hoofman. These poor hoofman worked so hard for the society and yet they have to endure the terror by these extremist acts. 
+               They also faces the everyday fear of starvation. I have witness these poor conditions of hoofman and I have since put on the burden to 
+               rid of these creatures. There is no room for hesitation. Whenever I have them, I will always look back at what I have been through to 
+               remind myself that I would never want to see another hoofman starved because of these damnable rats. Never!
+            </p>
+        </div>
+
+        <div class ="second">
+            <button class ="button">Read more</button>
+            <h2>LOYAL TO THE END</h2>
+            <p>Lid fuga itaque harum laborum eius dolor modi. Modi, tempora?</p>
+            </div>
+
+        <div class ="third">
+            <button class ="button">Read more</button>
+            <h2>I LOVE HOOFMAN</h2>
+            <p>Lid fuga itaque harum laborum eius dolor modi. Modi, tempora?</p>
+            </div>
+    </main>
+        
+    
+    <script>
+        $('div').on('click', function() {
+            $(this).toggleClass('show-description');
+        });
+        
+        /*$("button").on("click", function() {
+            alert("Clicked!");*/
+      </script>
 </body>
 </html>
