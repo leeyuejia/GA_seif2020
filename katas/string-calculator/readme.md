@@ -1,6 +1,6 @@
 # String Calculator
 ### Introduction
-This exercuse covers the following concepts: 
+This exercise covers the following concepts: 
 - String manipulation
 - Functions
 
