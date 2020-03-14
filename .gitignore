@@ -268,3 +268,6 @@ yarn-debug.log*
 
 # ignore my own test file
 *_test.js
+
+# ignore Jetbrains IDE files
+.idea/
