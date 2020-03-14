@@ -35,6 +35,17 @@ add('10,20');
 ```
 
 ```javascript
+add('1,2,3,1000,1005')
+// should ignore numbers greater than or equal to 1000
+// should return 6
+```
+### Bonus Requirements
+
+> **Info**
+>
+> These requirements cover more advanced concepts. Tread carefully!
+
+```javascript
 add('1\n2');
 // should recognize '\n' as a delimiter and return 3
 ```
@@ -46,19 +57,6 @@ add('1\n2,3\n4');
 add('1\n2\n3,4,5');
 // should return 15
 ```
-
-```javascript
-add('1,2,3,1000,1005')
-// should ignore numbers greater than or equal to 1000
-// should return 6
-```
-
-
-### Bonus Requirements
-
-> **Info**
->
-> These requirements cover more advanced concepts. Tread carefully!
 
 ```javascript
 add('-5,2');
