@@ -10,5 +10,5 @@ let randomNum = Math.random() /2; // 0 -1 -> 0-0.5
 
 
 let randomNum3 = Math.round(Math.random() * 50 + 50) 
-// from 0to1, then times 50 means plus 50 to both ends.  
+// from 0to1, then times 50 means 0to50. plus 50 to both ends becomes 50 t0 100  
 console.log(randomNum3)
