@@ -23,7 +23,7 @@ These two things are crucial in the mindset of a developer and they are why deve
 <br>
 <hr>
 
-### printGreeting
+### printGreeting (5 mins)
 
 Write a function called `printGreeting` with a parameter `name` that returns a greeting with the argument **interpolated** into the greeting.
 
@@ -36,7 +36,7 @@ console.log(printGreeting("Slimer"));
 <br>
 <hr>
 
-### reverseWordOrder
+### reverseWordOrder (10 mins)
 
 Write a function `reverseWordOrder` that accepts a single argument, a string. The function should return a string with the order of the words reversed. Don't worry about punctuation.
 
@@ -58,7 +58,7 @@ Hints: is there a method that can split a string into an array of strings? Can y
 <br>
 <hr>
 
-### calculate
+### calculate (10 mins)
 
 Write a function called `calculate`.
 
@@ -87,7 +87,7 @@ console.log(calculate(4, 3, "exp"));
 <br>
 <hr>
 
-### printConsecutives
+### printConsecutives (10 mins)
  
 Write a function `printConsecutives` that can take an array of any length, and print groups of three numbers where three consecutive numbers increase by 1.
 
@@ -115,7 +115,7 @@ printConsecutives([0, 0, 0, -3, -2, -1, 0, 1, 2, 3]);
 <br>
 <hr>
 
-### letterReverse
+### letterReverse (10 mins)
 
 Write a function `letterReverse` that accepts a single argument, a string. The function should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation.
 

@@ -27,10 +27,10 @@ Using combinations of arrays, loops, and conditionals to solve problems
 
 ## Exercises
 
-### Easy Does It
+### Easy Does It (2 mins)
 1. Create an array that contains three quotes and store it in a variable called `quotes`.
 
-### Random
+### Random (3 mins)
 Given the following array `const randomThings = [1, 10, "Hello", true]`
 
 1. how do you access the 1st element in the array?
@@ -39,7 +39,7 @@ Given the following array `const randomThings = [1, 10, "Hello", true]`
 
 3. Check the value of the array to make sure it updated the array.
 
-### We've Got Class
+### We've Got Class (5 mins)
 Given the following array `const ourClass = ["Stan Lee", "Zoom", "Github", "Slack"]`
 
 1. What would you write to access the 3rd element of the array?
@@ -48,7 +48,7 @@ Given the following array `const ourClass = ["Stan Lee", "Zoom", "Github", "Slac
 
 3. Add a new element, "Cloud City" to the array.
 
-### Mix It Up
+### Mix It Up (5 mins)
 1. Given the following array `const myArray = [5 ,10 ,500, 20]`
 
 1. Using the `push` method, add the string `"Egon"` to the end of the array.
@@ -61,14 +61,14 @@ Given the following array `const ourClass = ["Stan Lee", "Zoom", "Github", "Slac
 
 1. Use the reverse method on this array
 
-### Biggie Smalls
+### Biggie Smalls  (5 mins)
 Write an `if..else` statement that iterates over the `myArray` array declared above:
 
 1. console.log `little number` if the number is entered is less than **100**
 
 2. If the number entered is 100 or more, alert `big number`.
 
-### Monkey in the Middle
+### Monkey in the Middle (5 mins)
 Write an `if...else if...else` statement:
 
 1. console.log `little number` if the number entered is less than **5**.<br>
@@ -77,7 +77,7 @@ Write an `if...else if...else` statement:
 
 3. Otherwise, console.log "monkey". <br>
 
-### What's in Your Closet?
+### What's in Your Closet? (10 mins)
 
 Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript.
 
@@ -133,7 +133,7 @@ const thomsCloset = [
 1. Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to `Footie Pajamas`.
 
 
-### HFM
+### HFM (10 mins)
 
 Write a loop that prints the numbers in order
 
@@ -159,7 +159,7 @@ expect:
 Try using `for of` loops instead of a regular `for` loop - does it make sense for this task?
 
 
-### Wildly Ravenous For Even More
+### Wildly Ravenous For Even More (20 mins)
 
 ##### Spiral Path
 
