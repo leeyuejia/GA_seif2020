@@ -61,31 +61,58 @@
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
-const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\s Moving Case', 'Danjo Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Lige', 'Snatch', 'Fast and Furious'];
+/*
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\s Moving Case', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Lige', 'Snatch', 'Fast and Furious'];
 let sinking = favMovies.indexOf('Titanic');
-console.log (favMovies[sinking] + " is the index " + sinking);
+// console.log (favMovies[sinking] + " is the index " + sinking);
 favMovies.pop(); //remove Fast and furious
 favMovies.push("Guardian of the Galaxy"); // added guardian of galaxy to the last of the list
 favMovies.sort(); //sort array from A-Z
-favMovies.reverse(); //sort arrat from Z-a(in a reverse order)
+favMovies.reverse(); //sort array from Z-a(in a reverse order)
 favMovies.shift(); // Remove the first element of the array
 let insert = favMovies.splice(2,1,"Inception", "The Dark Knight") //from position 2, remove the next element and replace with the new movie as a new element
-console.log (insert + " , " + favMovies);
-console.log(favMovies.length);
-favMovies.unshift("Prestige");
-console.log(favMovies);
-//stopped at 7.
-
+favMovies.unshift("Prestige"); // Add an element into the first list of the array
+let Django = favMovies.indexOf('Django Unchained'); //Danjo is a
+favMovies.splice((Django + 1),0,'Avatar');
+let halfOfMovies = favMovies.slice((favMovies.length / 2));
+console.log(halfOfMovies);
+console.log(favMovies.indexOf('Fast and Furious')); //We get -1. Suggesting that this is not found in the list of array]
+*/
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
-
-
+/*
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+whereIsWaldo.splice(1,1);
+let arrayListTwo = whereIsWaldo[1];
+arrayListTwo[2] = 'No One';
+let arrayListThree = whereIsWaldo[2];
+let arrayListFour = arrayListThree[1];
+console.log(arrayListFour[1]);
+// console.log(whereIsWaldo);
+*/
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
-
-
+/*
+for (let i = 0; i<=20; i++) {
+    if (i%2 === 0) {
+        let arrayOfQuote = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...Why does the red dot always get away"];
+        let talk = arrayOfQuote[(Math.round(Math.random() * 2))];      
+        console.log(talk);
+    } else {
+        console.log(i);
+    }
+};
+*/
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+nums.sort(function(a,b){return a-b});
+let x = nums[Math.floor(nums.length/2)];
+console.log(x);
+
