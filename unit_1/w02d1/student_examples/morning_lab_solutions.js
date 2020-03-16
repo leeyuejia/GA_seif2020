@@ -98,11 +98,11 @@
 
 let bankAccount = 0;
 
-for (let q=0; q<=10; q++) {
+for (let q=0; q<=100; q++) {
    bankAccount = bankAccount + q ;
 }
-console.log(bankAccount);
-console.log(0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)
+let double = bankAccount * 2;
+console.log(double);
 
 //Fibonanci
 // Assume the last two numbers are num1 and num2
@@ -115,29 +115,55 @@ console.log(0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)
 // then store the num2 to num1
 // and store the current number to become the num2 
 //For WHILE LOOP//
-let num1 = 1;
-let num2 = 2;
-let num = 0;
-let sum = 0; 
 
-while (num <= 400) {
-    num = num1 + num2;
-    if(num%2 === 0) {
-        sum += num; 
-    }
-    num1 = num2;
-    num2 = num;
-}
-console.log(sum)
+
+// let num1 = 1;
+// let num2 = 2;
+// let num = 0;
+// let sum = 0; 
+
+// while (num <= 400) {
+//     num = num1 + num2;
+//     if(num%2 === 0) {
+//         sum += num; 
+//     }
+//     num1 = num2;
+//     num2 = num;
+// }
+// console.log(sum)
 
 //For FOR LOOP//
+// let num1 = 1
+// let num2 = 2
+// let sum = 0;
 
-for (let num1 = 1, num2 = 2; num<= 400;) {
-    num = num1 + num2;
-    if (num%2 ===0) {
-        sum += num;
+// for (let i=0; i<=10; i++) {
+//     num3 = num1 + num2;
+//     num1 = num2
+//     num2 = num3
+// if (num3%2 === 0) {
+//     console.log(num3);
+//     sum += num3
+// }
+// };
+// console.log(sum)
+
+const boardSize = 20
+let area = ""; //create an empty "space"
+
+for (let axisy = 1; axisy <=boardSize; axisy++) { // Create a loop that loops downwards
+        for (let axisx = 1; axisx <=boardSize; axisx++) { //create another loop that loops horizontal 
+            if (axisx%2 === 0) { //in horizontal, if its even add a "#", if odd, add " "
+                area += "#"
+            }else {
+                area += " "
+            } // axis x will loop 8 times resulting in "# # # # " 
+        }
+    if (axisy%2 === 1) {  // for even number, axis y will break line after the above loop
+        area += "\n "
     }
-    num1 = num2
-    num2 = num;
-} 
-console.log(sum);
+    else ( // for odd number, axis x will breakline with a space
+        area += "\n"
+    )
+};
+console.log(area);
