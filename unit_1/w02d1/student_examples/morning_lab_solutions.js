@@ -148,22 +148,55 @@ console.log(double);
 // };
 // console.log(sum)
 
-const boardSize = 20
+const boardSize = 8
 let area = ""; //create an empty "space"
 
-for (let axisy = 1; axisy <=boardSize; axisy++) { // Create a loop that loops downwards
-        for (let axisx = 1; axisx <=boardSize; axisx++) { //create another loop that loops horizontal 
-            if (axisx%2 === 0) { //in horizontal, if its even add a "#", if odd, add " "
-                area += "#"
-            }else {
-                area += " "
-            } // axis x will loop 8 times resulting in "# # # # " 
-        }
-    if (axisy%2 === 1) {  // for even number, axis y will break line after the above loop
-        area += "\n "
-    }
-    else ( // for odd number, axis x will breakline with a space
-        area += "\n"
-    )
+// for (let axisy = 1; axisy <=boardSize; axisy++) { // Create a loop that loops downwards
+//         for (let axisx = 1; axisx <=boardSize; axisx++) { //create another loop that loops horizontal 
+//             if (axisx%2 === 0) { //in horizontal, if its even add a "#", if odd, add " "
+//                 area += "#"
+//             }else {
+//                 area += " "
+//             } // axis x will loop 8 times resulting in "# # # # " 
+//         }
+//     if (axisy%2 === 1) {  // for even number, axis y will break line after the above loop
+//         area += "\n "
+//     }
+//     else ( // for odd number, axis x will breakline with a space
+//         area += "\n"
+//     )
+// };
+// console.log(area);
+
+let white = "0"
+let black = "#"
+let newLine = "\n"
+
+function isEven(number) {
+    return number%2 === 0
 };
-console.log(area);
+for (let column = 0; column<boardSize; column++){
+    if (isEven(column)) {
+        for (let row = 0; row<boardSize; row++) {
+            if (isEven(row)%2 === 0) {
+                area += white;
+            } else {
+                area += black;
+            }
+        }
+        area += newLine;
+    if (isEven(column) !== 0){
+        for (let row = 0; row<boardSize; row++) {
+            if (isEven(row)%2 === 0) {
+                area += black;
+            } else {
+                area += white;
+            }
+        }
+        area += newLine;
+    }
+    } 
+    
+}
+
+console.log(area)
