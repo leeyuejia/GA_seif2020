@@ -42,43 +42,43 @@
 
 ///STUDENT LABS, OBJECT_LAB
 
-const me = {};
+// const me = {};
 
-me.name = 'Lee Yue Jia';
-me.age = '32';
-me.email ='leeyuejia@gmail.com';
-console.log(me);
-console.log(me.name);
-me.age = 1000 + " years old"
-console.log(me.age);
-me['place of residence'] = "Harborfront";
-console.log(me['place of residence']);
+// me.name = 'Lee Yue Jia';
+// me.age = '32';
+// me.email ='leeyuejia@gmail.com';
+// console.log(me);
+// console.log(me.name);
+// me.age = 1000 + " years old"
+// console.log(me.age);
+// me['place of residence'] = "Harborfront";
+// console.log(me['place of residence']);
 
 ///Slimer
 
-const monster = {
-    name: "Slimer",
-    color: "greenish",
-    type: "plasm or ghost or something"
- };
- console.log(monster.name);
- monster.type = 'creature';
- monster.age = 6
- console.log('type is ' + monster.type + ' age is ' + monster.age);
+// const monster = {
+//     name: "Slimer",
+//     color: "greenish",
+//     type: "plasm or ghost or something"
+//  };
+//  console.log(monster.name);
+//  monster.type = 'creature';
+//  monster.age = 6
+//  console.log('type is ' + monster.type + ' age is ' + monster.age);
 
  ///Ogres
 
 
+//STARTING POINT
 
- const start =() => {
-    const adventurer = {
+let adventurer = {
         name: 'Hero',
         hitPoint: 100,
         atk:15,
         magicatk:3,
         def:10,
     };
-    const monster = {
+let monster = {
         name: 'ogre',
         hitPoint:120,
         atk:18,
@@ -86,8 +86,20 @@ const monster = {
         def:5
     };
 
-     askForAction();
- };
+const main = () => {
+        while (adventurer.hitPoint > 0 || monster.hitPoint >0) {
+            showstatus ();
+            askForAction ();
+            if (adventurer.hitPoint <= 0) {
+                alert(monster.name + ' has won')
+                break;
+            } else if (adventurer.hitPoint <=0) {
+                alert(adventurer.name + ' has won')
+                break;
+            } 
+        }
+        gameOver();
+    };
 
  const showstatus =() => {
      alert(adventurer.name + " have " + adventurer.hitPoint + "and" + monster.name + "have" + monster.hitPoint);
@@ -108,6 +120,18 @@ const monster = {
       }
     };
 
+//ENDPOINT
+const gameOver =() => {
+    const choice = prompt('Restart?', 'Yes / No');
+    if (choice === 'Yes') {
+        main();
+    }
+    if (choice === 'No') {
+        console.log('Thank you for playing!')
+    }
+};
+
+//ORGE ACTIONS//
 const orgehurt = () => {
     monster.hitPoint -= adventurer.atk;
     alert(adventurer.name + " has attack " + monster.name);
@@ -129,11 +153,12 @@ const orgeScream = () => {
     orgeturn();
 }
 
+//ORGE TURN//
 const orgeTurn =() => {
     let orgeChoice = ['use atk','use magicdef','use def',]
     const choice = prompt('Orge turn', orgeChoice[Math.floor(Math.random())]);
     if (choice === 'use atk') {
-        adventurerhurt();
+       adventurerhurt();
      } else if (choice ==='use magicdef') {
        adventurerLaugh();
      } else if (choice ==='use def') {
@@ -144,4 +169,28 @@ const orgeTurn =() => {
      }
    };
 
-   
+//ADVENTURER TURN//
+ const adventurerhurt = () => {
+     adventurer.hitpoint -= (monster.atk + adventurer.def);
+     alert(orge.name + " has attack " + adventurer.name);
+     alert(adventurer.name + ' has ' + adventurer.hitPoint + " and " + monster.name + ' has ' + monster.hitPoint);
+     askForAction();
+ };
+
+ const adventurerLaugh = () => {
+    adventurer.hitpoint -= 0;
+    alert(orge.name + " has cast shield");
+    alert(adventurer.name + ' has ' + adventurer.hitPoint + " and " + monster.name + ' has ' + monster.hitPoint);
+    askForAction();
+};
+
+const adventurerScream = () => {
+    adventurer.hitpoint -= 0;
+    alert(orge.name + " has defended against " + adventurer.name);
+    alert(adventurer.name + ' has ' + adventurer.hitPoint + " and " + monster.name + ' has ' + monster.hitPoint);
+    askForAction();
+};
+
+
+
+main();
