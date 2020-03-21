@@ -1,3 +1,22 @@
+// Fibonacci number solution
+
+let num1 = 0
+let num2 = 1
+let num3 = num1 + num2
+let sum = 0
+
+while (num3 <=6) {
+    num3 = num2
+    num2 = num1
+    num3 ++
+    if ( num3%2 ===0) {
+        sum +=num3
+    }
+};
+
+console.log(sum);
+
+
 // Write a function calculateCube that takes a single number
 //  and prints the volume of a cube made from that number.
 
@@ -66,4 +85,6 @@ console.log(maxOfThree(6, 9, 1));
 // }
 
 // console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
+
+
 
