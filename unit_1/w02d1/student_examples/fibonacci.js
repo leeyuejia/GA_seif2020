@@ -33,3 +33,4 @@ for (let num1 = 1, num2 = 1; num <= 4000000; ) {
     num2 = num;
 }
 console.log(sum);
+
