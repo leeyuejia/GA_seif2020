@@ -1,0 +1,26 @@
+* { border: 1px solid gold}
+.flex-container {
+    display:flex;
+    background-color: ghostwhite;
+    width: 70%;
+    margin: auto;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    overflow:auto;
+}
+
+.card {
+    color:white;
+    background-color: grey;
+    padding: 10px;
+    margin: 5px 5px;
+    /* width: 10px; */
+    flex-basis: 40px;
+    text-align: center;
+}
+.selected {
+    background-color: #fae569;
+    color:#40A69A;
+    flex-grow:2;
+    order: 0;
+}
