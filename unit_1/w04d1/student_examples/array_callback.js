@@ -25,24 +25,24 @@
 // console.log(arrayOfNumbers.every(checknum));
 
 
-// const temp = [37.7, 37.8, 37.9, 38.7, 38.0, 37.8,35.0]
-// function checktemp(temp) {
-//     return temp >= 37.5
-// };
-// console.log('Is everyone\s temperature higher than 37.5?' + temp.every(checktemp));
+const temp = [37.7, 37.8, 37.9, 38.7, 38.0, 37.8,35.0]
+function checktemp(temp) {
+    return temp >= 37.5
+};
+console.log('Is everyone\s temperature higher than 37.5?' + temp.every(checktemp));
 
-// const success = ['understand','understand','understand','understand','understand']
-// function checkSuccess(success) {
-//     return success == 'understand'
-// };
-// const check = () => {
-//     if (success.every(checkSuccess) === true) {
-//         console.log(' I have succeed')
-//     } else {
-//         console.log( ' I have fail')
-//     }
-// };
-// check()
+const success = ['understand','understand','understand','understand','understand']
+function checkSuccess(success) {
+    return success == 'understand'
+};
+const check = () => {
+    if (success.every(checkSuccess) === true) {
+        console.log(' I have succeed')
+    } else {
+        console.log( ' I have fail')
+    }
+};
+check()
 
 
 // 1. Every
@@ -77,15 +77,3 @@
 //     }
 // };
 // check()
-
-const foo = ()=>{
-    console.log("I'm the function 'foo'");
-}
-
-const bar = (param1)=>{
-    console.log(param1);
-    param1()
-}
-
-foo(bar)
-bar(foo)
