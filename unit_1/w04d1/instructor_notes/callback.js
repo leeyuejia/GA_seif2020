@@ -87,4 +87,5 @@ const myTimerCallback = () => {
         shanTimer = setInterval(shanTimerCallback, 2000);
     }
 };
+
 myTimer = setInterval(myTimerCallback, 1000); 
