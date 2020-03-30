@@ -150,7 +150,7 @@ const shirtColor = {
   color: ['red', 'blue', 'green', 'white', 'pink'],
 }
 ```
-Expected Output:  ```"red, green, white, pink"```
+Expected Output:  ```"red, blue, green, white, pink"```
 
 
 # More
