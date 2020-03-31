@@ -1,0 +1,58 @@
+* {
+    border: 1px solid red;
+}
+header {
+    background-image: url(img/sailboat.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1, header p{
+    color: ghostwhite;
+    text-align: center;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 70px;
+    font-weight: 500;
+    margin: 0 auto;
+}
+header p {
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+nav {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row;
+    flex-direction: column;
+    background-color: gray;
+    padding: 20px;
+    justify-content: center;
+}
+ul {
+    padding: 20px;
+}
+nav a {
+    display:inline-block;
+    padding: 20px 60px;
+    font-size: 20px;
+    -webkit-flex: 1auto;
+    flex: 1 auto;
+}
