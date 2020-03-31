@@ -1,11 +1,5 @@
 const SCRIPTS = require('./scripts.js');
 
-function repeat (n, action) {
-    for (let i = 0; i < n; i++) {
-        action(i);
-    }
-}
-
 function characterScript (code) {
     for (let script of SCRIPTS) {
         if (script.ranges.some(([from, to]) => {
@@ -45,5 +39,4 @@ function textScripts (text) {
     }).join(', ');
 }
 
-repeat(3, console.log);
 console.log(textScripts('英国的狗说"woof", 俄罗斯的狗说"тяв"'));
