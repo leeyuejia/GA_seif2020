@@ -139,3 +139,17 @@ console.log(nums.sort((a,b) => a-b))
 console.log((nums.sort((a,b) => a-b)).reverse())
 console.log(panagram.join().toLowerCase().split(',').sort())
 console.log(panagram.join().toLowerCase().split(',').sort().reverse())
+
+const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+const arrayOfLetters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+const sortedPanagram = panagram.join('').toLowerCase().split('').sort()
+console.log(sortedPanagram)
+
+function removeDuplicates (arr){
+  return arr.reduce((acc, curr) => acc.includes(curr) ? acc : [...acc, curr], []); 
+//I found this solution online,but I do not understand what does the false returns. ie, "[...acc,curr], []"
+}
+console.log(removeDuplicates(sortedPanagram))
+console.log(arrayOfLetters.join())
+console.log(removeDuplicates(sortedPanagram).join() === arrayOfLetters.join())
