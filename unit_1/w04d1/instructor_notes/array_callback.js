@@ -1,7 +1,7 @@
 const iceCreams = ['Vanilla','Chocolate','Strawberry','Rocky Road'];
 
 const updatedIceCreams = iceCreams.map((flavor) => {
-    return flavor + " Ice Cream";
+    return flavor + ' Ice Cream';
 });
 
 console.log(iceCreams);

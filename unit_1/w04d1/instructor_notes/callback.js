@@ -45,9 +45,9 @@
  * @summary console logs an english string consisting of the person's name and how old they are
  */
 const describePerson = (name, age)=>{
-    const finalString = name + " is " + age + " years old."; //create the message
+    const finalString = name + ' is ' + age + ' years old.'; //create the message
     console.log(finalString); //log the message
-}
+};
 
 
 describePerson('Mike', 30);
