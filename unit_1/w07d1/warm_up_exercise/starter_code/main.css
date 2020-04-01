@@ -1,0 +1,97 @@
+/********************************** 
+General
+*********************************/
+body {
+  background-color: snow;
+  font-size: .7em;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color:  #212F3C;
+  margin: auto;
+  border-radius: 2%;
+  border: 5px dotted black;
+}
+
+.wrapper {
+    background-color:  #212F3C;
+    margin: auto;
+    width: 95%;
+    height: 95%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/********************************** 
+Newspaper details
+*********************************/
+h1, h3 {
+  display: inline-block;
+}
+
+h1 {
+  font-family: 'Fascinate Inline', cursive;
+}
+
+h3 {
+  max-width: 15%;
+  border: 1px solid black;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: .95em;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+}
+
+h2 {
+  text-align: center;
+  margin: 2px;
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+  text-align: justify;
+}
+
+p:first-child:first-letter {
+  color: red;
+}
+.newspaper {
+  background-color:ivory;
+  border-radius: 5% 5% 1% 1%;
+  width: 50%;
+  transform-origin: center;
+  animation: spin .3s 10 linear;
+  padding: 10px 30px;
+  max-height: 200px;
+  overflow: scroll;
+  box-shadow: 2px 2px 4px black, -2px -2px 4px black;
+}
+
+.size-in {
+  transform: scale(1);
+  animation: size-in 3s 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/********************************** 
+Add animations here
+*********************************/
