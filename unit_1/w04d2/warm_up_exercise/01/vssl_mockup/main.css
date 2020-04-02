@@ -2,7 +2,7 @@
     border: 1px solid red;
 }
 header {
-    background-image: url(img/sailboat.jpg);
+    background-image: url(https://i.ibb.co/M9p6390/sailboat.jpg);
     background-size: cover;
     background-position: center;
     height: 800px;
@@ -37,22 +37,21 @@ header p {
     flex-flow: row wrap;
 }
 nav {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row;
-    flex-direction: column;
     background-color: gray;
     padding: 20px;
-    justify-content: center;
 }
 ul {
     padding: 20px;
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	justify-content:center;
 }
 nav a {
-    display:inline-block;
-    padding: 20px 60px;
+    padding: 20px;
     font-size: 20px;
-    -webkit-flex: 1auto;
-    flex: 1 auto;
+	-webkit-flex: 0 auto 30px;
+	flex: 0 auto 30px;
 }
