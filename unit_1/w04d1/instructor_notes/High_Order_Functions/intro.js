@@ -1,4 +1,4 @@
-/*function factorial (n) {
+function factorial (n) {
     if (n == 0) {
         return 1;
     } else {
@@ -75,9 +75,45 @@ repeat(5, i => {
 });
 console.log(labels);
 
+//Flattening
 let arrays = [[1,2,3],[4,5],[6]] 
-let newArrays = []
-console.log(arrays.reduce((acc,cur) => newArrays.push(acc)))
+const combineArrays = arrays.reduce((acc,cur) => acc.concat(cur))
+console.log(combineArrays)
 
-console.log(arrays.concat(arrays))
-console.log(arrays.reduce((acc,cur) => acc + cur))
+//Your Own Loop
+
+function testFunction(i) {
+    return i < 10;
+};
+function updatedFunction (i) {
+    return i +1; // Why when I write i++, it goes into infinity loop
+};
+function bodyFunction(i) {
+    console.log(i)
+}
+// A functional loop that takes a value, test function update function and body function
+const loop = (value) => {
+    for (let i=value; testFunction(i) ; i =updatedFunction(i)) {
+        bodyFunction(i)
+    }}
+loop(7)
+
+// EVERY FUNCTION
+function every(array, test) {
+    return array.every(test)
+};
+console.log(every([1,4,5], element => element <3))
+// LOOP FUNCTION
+function everyLoop(arr, test) {
+    let end = true
+    for (el in arr) {
+        test(el)? end : end = false
+    }
+    return end
+}
+console.log(everyLoop([1,4,5],el => el <1))
+//SOME FUNCTION
+const everySome = (arr,pre) => {
+    return arr.some(element => pre(element));
+}
+console.log(everySome([1,5,7],n => n <5))
