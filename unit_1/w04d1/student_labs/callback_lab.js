@@ -93,7 +93,13 @@ const checkVowels = () => {
 for (words of panagram) {
   console.log(words)
 }
-// console.log(panagram.filter(words => words.includes(/*any of 2 vowels*/)))
-
-// const checkVowels = ()=> {
-//   for (words of panagram.split().toLowerCase())
+// Below is Ryan solution
+const wordsTwoVowels = panagrams.filter(word => {
+  let counter = 0;
+  for (letter of word.toLowerCase()) {
+      vowels.includes(letter) && counter++ ;
+  }
+  return counter >= 2 ? true : false;
+})
+console.log('Words Two Vowels');
+console.log(wordsTwoVowels);
