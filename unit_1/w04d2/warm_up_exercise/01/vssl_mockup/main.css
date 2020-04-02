@@ -52,6 +52,6 @@ ul {
 nav a {
     padding: 20px;
     font-size: 20px;
-	-webkit-flex: 0 auto 30px;
-	flex: 0 auto 30px;
+	-webkit-flex: 1 auto 30px;
+    flex: 1 auto 30px;
 }
