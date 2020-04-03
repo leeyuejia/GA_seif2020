@@ -24,7 +24,7 @@ Topics: Intro to the DOM, Intro to 'Vanilla' JS<br>
 1. `cd dom_intro`
 1. `touch app.js`
 1. `touch index.html`
-1. `atom .`
+1. `code .`
 
 **`app.js`:**
 
