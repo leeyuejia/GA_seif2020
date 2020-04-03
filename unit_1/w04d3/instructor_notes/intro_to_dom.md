@@ -19,7 +19,7 @@ Topics: Intro to the DOM, Intro to 'Vanilla' JS<br>
 ### Part 1
 
 1. Code along to create a little website for Hawkins, Indiana
-1. Navigate to  your `student_examples` folder for today
+1. Navigate to  your `instructor_examples` folder for today
 1. `mkdir dom_intro`
 1. `cd dom_intro`
 1. `touch app.js`
