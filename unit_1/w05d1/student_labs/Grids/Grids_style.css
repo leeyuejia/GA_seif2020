@@ -1,0 +1,14 @@
+* {
+    background-color: ghostwhite;
+}
+
+body {
+    /* display: inline-block; */
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* width: 250px; */
+}
+
+.row {
+    display:block;
+}
