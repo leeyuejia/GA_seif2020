@@ -65,8 +65,15 @@ $(() => {
     $mission.append($title)
     // $('h4').appendTo($mission)
 
+    //Year 6
+    $('.secret').hide(5000,'swing')
+    $('.secret').delay(2000).show(3000)
+    $arrayList[4].addClass('cabbage')
+    $arrayList[4].removeClass('cabbage')
+
+
     console.log($container)
     console.log($hogwarts)
-    console.log($arrayList[2])
+    console.log($arrayList[4])
 
 })

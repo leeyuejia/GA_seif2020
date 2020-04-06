@@ -6,7 +6,7 @@ body {
 }
 ul {
     list-style: none;
-    padding: 0;
+    padding: 0;;
 }
 
 .secret {
@@ -27,4 +27,8 @@ tr {
     border: 1px solid darkblue;
     padding: 5px;
     width:200px;
-};
+}
+
+/* .cabbage {
+    color: chartreuse;
+} */
