@@ -3,3 +3,26 @@ body {
     text-align: center;
     font-family: fantasy;
 }
+ul {
+    list-style: none;
+}
+
+.secret {
+    opacity: 0.5;;
+}
+table {
+    display: flex;
+    justify-content: center;
+    border: 1px solid darkblue;
+
+}
+tr {
+    display:flex;
+    justify-content: center;
+
+}
+ th,td {
+    border: 1px solid darkblue;
+    padding: 5px;
+    width:200px;
+};
