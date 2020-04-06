@@ -9,6 +9,7 @@ const $james = $('<h2>').text('James')
 const $house = $('<h3>').text('Gryffindor')
 const $pet = $('<h4>').text('Owl').addClass('bird')
 const $wand = $('<h5>').text('Night Moon')
+
 const $array = [$hogwarts, $james, $house, $pet, $wand]
 const $unOrderList = $('<ul>').attr('storage', 'trunk')
 const $list = ['butter beer', 'Invisibility Cloak', 'magic map', 'time turner', 'leash', 'Bertie Boot\s Every Flavor Jelly Beans']
@@ -20,7 +21,7 @@ $arrayList[$list.indexOf('Invisibility Cloak')].addClass('secret')
 $arrayList[$list.indexOf('magic map')].addClass('secret')
 $arrayList[$list.indexOf('time turner')].addClass('secret')
 $arrayList[$list.indexOf('leash')].addClass('bird')
-const $tableTitle = $('<h5>').text('Spring 2017')
+const $tableTitle = $('<h6>').text('Spring 2017')
 const $table = $('<table>').attr('id', 'table')
 const $thead = $('<thead>')
 
@@ -45,15 +46,27 @@ $(() => {
     $('#container').append($array)
     $('#container').append($unOrderList)
     $('ul').append($arrayList)
+    // Year 4
     $('#container').append($tableTitle)
     $('#container').append($table)
     $('#table').append($thead)
-
     $($thead).append($('<tr>'))
     $('tr').append($('<th>').text('Day'))
     $('tr').append($('<th>').text('Classes'))
     timeTable()
+    // Year 5
+    // $('h5').hide()
+    $('li:nth-child(1)').hide()
+    $('h5').text('Night Dragon String').addClass('wand')
+    .css('background-color','rgb(230,245,255)')
+    const $mission = $('<div>').attr('id','mission')
+    $('#container').append($mission)
+    const $title = $('<p>').text('Mission: Spy on Voldemort').attr('id','mission title')
+    $mission.append($title)
+    // $('h4').appendTo($mission)
+
     console.log($container)
     console.log($hogwarts)
     console.log($arrayList[2])
+
 })
