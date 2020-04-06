@@ -2,7 +2,7 @@ const $breakLine = () => {
     const $break = $('</br>')
     $('body').append($break)
 }
-const creatrRow = () => {}
+// const createRow = () => {}
 const $redbox = () => {
     const $div = $('<div>');
     $div.addClass('division')
