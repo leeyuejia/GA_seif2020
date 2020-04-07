@@ -24,9 +24,17 @@ $arrayList[$list.indexOf('leash')].addClass('bird')
 const $tableTitle = $('<h6>').text('Spring 2017')
 const $table = $('<table>').attr('id', 'table')
 const $thead = $('<thead>')
+const $hideButton = $('<button>').attr('id','hide').text('hide')
+const $showButton = $('<button>').attr('id','show').text('show')
 
 function $createTf() {
     return $('<tr>')
+};
+
+function $butterbeer (amount) {
+    for (let i =0; i <amount; i++) {
+        $('ul').prepend($('<li>').text($list[0]))
+    }
 };
 
 let day = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -46,11 +54,16 @@ $(() => {
     $('#container').append($array)
     $('#container').append($unOrderList)
     $('ul').append($arrayList)
+    $('#container').append($('<div>').attr('id','button'))
+    $('#button').append($showButton)
+    $('#button').append($hideButton)
+
     // Year 4
     $('#container').append($tableTitle)
     $('#container').append($table)
     $('#table').append($thead)
     $($thead).append($('<tr>'))
+
     $('tr').append($('<th>').text('Day'))
     $('tr').append($('<th>').text('Classes'))
     timeTable()
@@ -63,15 +76,23 @@ $(() => {
     $('#container').append($mission)
     const $title = $('<p>').text('Mission: Spy on Voldemort').attr('id','mission title')
     $mission.append($title)
-    // $('h4').appendTo($mission)
+    //  $('h4').appendTo($mission)
 
     //Year 6
-    $('.secret').hide(5000,'swing')
-    $('.secret').delay(2000).show(3000)
+    $('#hide').click(function () {
+        $('.secret').fadeOut('slow','linear').hide(1000);
+    })
+    $('#show').click(function () {
+        $('.secret').fadeIn('slow','linear').show(1000);
+    })
+
     $arrayList[4].addClass('cabbage')
     $arrayList[4].removeClass('cabbage')
 
-
+    // Year 7
+    $('h6').text('Fall 2018')
+    $butterbeer(3)
+    $('ul').attr('storage','chest')
     console.log($container)
     console.log($hogwarts)
     console.log($arrayList[4])
