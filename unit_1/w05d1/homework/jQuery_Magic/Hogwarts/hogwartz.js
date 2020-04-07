@@ -24,15 +24,15 @@ $arrayList[$list.indexOf('leash')].addClass('bird')
 const $tableTitle = $('<h6>').text('Spring 2017')
 const $table = $('<table>').attr('id', 'table')
 const $thead = $('<thead>')
-const $hideButton = $('<button>').attr('id','hide').text('hide')
-const $showButton = $('<button>').attr('id','show').text('show')
+const $hideButton = $('<button>').attr('id', 'hide').text('hide')
+const $showButton = $('<button>').attr('id', 'show').text('show')
 
 function $createTf() {
     return $('<tr>')
 };
 
-function $butterbeer (amount) {
-    for (let i =0; i <amount; i++) {
+function $butterbeer(amount) {
+    for (let i = 0; i < amount; i++) {
         $('ul').prepend($('<li>').text($list[0]))
     }
 };
@@ -54,7 +54,7 @@ $(() => {
     $('#container').append($array)
     $('#container').append($unOrderList)
     $('ul').append($arrayList)
-    $('#container').append($('<div>').attr('id','button'))
+    $('#container').append($('<div>').attr('id', 'button'))
     $('#button').append($showButton)
     $('#button').append($hideButton)
 
@@ -71,19 +71,19 @@ $(() => {
     // $('h5').hide()
     $('li:nth-child(1)').hide()
     $('h5').text('Night Dragon String').addClass('wand')
-    .css('background-color','rgb(230,245,255)')
-    const $mission = $('<div>').attr('id','mission')
+        .css('background-color', 'rgb(230,245,255)')
+    const $mission = $('<div>').attr('id', 'mission')
     $('#container').append($mission)
-    const $title = $('<p>').text('Mission: Spy on Voldemort').attr('id','mission title')
+    const $title = $('<p>').text('Mission: Spy on Voldemort').attr('id', 'mission title')
     $mission.append($title)
     //  $('h4').appendTo($mission)
 
     //Year 6
     $('#hide').click(function () {
-        $('.secret').fadeOut('slow','linear').hide(1000);
+        $('.secret').fadeOut('slow', 'linear').hide(1000);
     })
     $('#show').click(function () {
-        $('.secret').fadeIn('slow','linear').show(1000);
+        $('.secret').fadeIn('slow', 'linear').show(1000);
     })
 
     $arrayList[4].addClass('cabbage')
@@ -92,7 +92,7 @@ $(() => {
     // Year 7
     $('h6').text('Fall 2018')
     $butterbeer(3)
-    $('ul').attr('storage','chest')
+    $('ul').attr('storage', 'chest')
     console.log($container)
     console.log($hogwarts)
     console.log($arrayList[4])
