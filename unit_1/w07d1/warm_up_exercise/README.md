@@ -1,48 +1,103 @@
-<hr>
+![](/ga_cog.png)
 
-Title: Flying Newspaper<br>
-Type: Morning Exercise <br>
-Duration: "0:45"<br>
-Creator: Matt Huntington<br>
-Adapted by: Karolin Rafalski<br>
-Course: WDIr Hopper<br>
-Competencies: CSS Animations<br>
-Prerequisites: CSS, HTML <br>
-<hr>
+---
+Title: Corgi Carousel<br>
+Type: Morning Exercise<br>
+Creator: Jerrica Bobadilla<br>
+Adapted From: Madeline O'Moore<br>
+Competencies: CSS, HTML, jQuery
+
+---
+
+# CORGI CAROUSEL
+
+![](https://imgur.com/pq7zXBJ.png)
+
+Carousels are essentially slideshows used to cycle through a series of content. Today, we'll be building a very simple one to cycle through a set of images using HTML/CSS/jQuery. 
+
+## Setup
+
+Starter code has been provided for you with all the files linked together and the jQuery library.
+  1. `git pull upstream master`
+  1. Navigate to the `morning_exercise/corgi-carousel-starter` folder for today.
+  1. Open the entire folder in atom to follow along and create a carousel with cute little corgis.
+  1. Open the `index.html` in your browser.
+  
+## CSS
+
+Before we can move onto the javascript file to give our carousel buttons some functionality, we need to hide all content of the carousel except the very first one. This way, the user only sees the first image when they first load the page. 
+
+1. In the `css/style.css` file, hide all the images in the carousel by adding `display: none` to `.carousel-images img`
+1. Show just the first image in the carousel by adding:
+  ```
+  .carousel-images img:first-of-type {
+    display: block;
+  }
+  ```
+   > :dog: See more on [:first-of-type selector](https://css-tricks.com/almanac/selectors/f/first-of-type/)
+   
+ ## JQUERY
+ 
+##### First, don't forget to include the document ready function!
+ 
+##### Now, let's just get our "next" button working
+ 
+ 
+ 1. Add event listener/handler onto our 'next' button 
+
+  ```
+   $('.next').on('click', () => {
+    // stuff will go here 
+   }
+   ```
+1. Keep track of what image is currently showing by setting a global index counter variable: 
+  `let currentImgIndex = 0;`
+1. Back inside the event handler for our next class, select the currently showing carousel image with:  
+  `$('.carousel-images').children().eq(currentImgIndex)`
+1. Hide that currently showing carousel image by tacking on `.css('display', 'none')`
+1. Increment the currentImgIndex so that we cycle to the next image: `currentImgIndex++` 
+1. Show the new currentImgIndex image by using: `$('.carousel-images').children().eq(currentImgIndex).css('display', 'block')`
+> :dog: Read more on the [.children](https://api.jquery.com/children/) and [.eq](https://api.jquery.com/eq-selector/) jQuery methods by sifting through the docs!
 
 
-## Make a newspaper (a `<div>` element) fly!
-
-[Original Inspiration](https://www.youtube.com/watch?v=GaiZIulY4EU)
-<br>
-[Karolin's Version](https://youtu.be/V6RqAjbjnU0)
+##### Great, now our next button works and we can cycle through all the images -- but then it breaks when we reach the last one! Let's fix that!
 
 
-## Choices
-Start from scratch or start with `starter_code`. If you are using the starter code feel free to change the text or any other elements (html and css) to suit your taste.
+1. Define another global variable named `highestIndex` so we can count the highest index of images we have in our carousel by using: `$('.carousel-images').children().length - 1` 
+    - :red_circle: Remember! `.length` gives us an exact count of how long an array is, but indexes in JavaScript start counting from 0, so we need to account for that by subtracting 1 from the value .length gives us
+1. Back inside our event handler for our next class, let's write an if/else statement so that if we go above the amount of images we have, it'll reset the currentImgIndex back to the first one 
+    - :red_circle: Remember to watch where you place this if/else statement! Should it go before you hide the current image or after?
+  ```
+   if(currentImgIndex < highestIndex) {
+    currentImgIndex ++
+   } else {
+    currentImgIndex = 0
+   }
+  ```
+  
+##### Now let's do the same thing for the "previous" button! 
 
-## Setup without starter code:
-1. Create a directory for your `flying_newspaper` in today's `morning_exercise` folder.  
-2. Create an `index.html` and `main.css` files within that folder.
-3. Using **only** HTML and CSS (no JavaScript or jQuery!), make a div with a class of `newspaper`.
-4. Add CSS animations to make it fly like the given example.
+1. Add the event handler:
+  ```
+   $('.previous').on('click', () => {
+    // stuff will go here 
+   }
+  ```
+1. Add the hide/show code like we did for the next button:
+  ```
+  $('.carousel-images').children().eq(currentImgIndex).css('display', 'none')
+  $('.carousel-images').children().eq(currentImgIndex).css('display', 'block')
+  ```
+1. For our previous button, we want to _decrement_ the image index this time. So, write an if/else statment that says, as long as currentImgIndex is greater than 0, we can keep decrementing. But once it hits 0, reset the currentImgIndex back to the _last_ image index: 
+    - :red_circle: Remember again to watch where you place this!
+  ```
+  if(currentImgIndex > 0) {
+    currentImgIndex --
+  } else {
+    currentImgIndex = highestIndex
+  }
+  ```
 
-## My newspaper flies! I'm hungry for more!
-1. Create a nav and make it look similar to [this](http://www.hugeinc.com/)
+## BONUS
 
-_or_
-
-2. Create some colored `div` elements and animate each one differently
-
-## Deliverable
-Make something you'd enjoy sharing with the class at the end of this session!
-
-## Resources
-
-### Links
-[animista](http://animista.net/)
-
-### Videos
-[CSS Transform](https://youtu.be/Gu-HBBZLyjg?list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)<br>
-[CSS Transitions](https://youtu.be/Xu3SrQhtBqw?list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)<br>
-[CSS Animations](https://youtu.be/9RfHG3K8U_Q?list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)<br>
+:dog: Some of this code isn't quite DRY, try to dry it up! 
