@@ -50,9 +50,9 @@ const makeMiddleEarth = () => {
   $('body').append($middleEarth)
   const lands = ['The Shire', 'Rivendell', 'Mordor']
   for (let i = 0; i < lands.length; i++) {
-    let makeArticles = $('<article>').attr('id', lands[i])
-    makeArticles.append($('<h1>').text(lands[i]))
-    $middleEarth.append(makeArticles)
+    let makeArticles = $('<article>').attr('id', lands[i]);
+    makeArticles.append($('<h1>').text(lands[i]));
+    $middleEarth.append(makeArticles);
   }
 };
 
@@ -67,10 +67,12 @@ const makeHobbits = () => {
   // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
   // 1. create a 'ul'
-
+const unorderedList = $('<ul>')
   // 2. make each hobbit an li element and append it to the 'ul' you just created
   // hint: use the given 'hobbits' array and use a for loop
-
+for (people in hobbits) {
+  unorderedList.append($('<li>').addClass('hobbits').text(people));
+}
   // 3. also, give each hobbit (`li`) a class of "hobbit"
 
   // 4. append the ul to the shire
@@ -273,6 +275,13 @@ $(() => {
   makeArticles.append($('<h1>').text(lands[0]))
   $middleEarth.append(makeArticles)
 
+  const unorderedList = $('<ul>')
+  for (people of hobbits) {
+    unorderedList.append(($('<li>')).addClass('hobbits').text(people));
+  }
+  $('#The-Shire').append(unorderedList)
+  // unorderedList.append(($('<li>')).addClass('hobbits').text('people'));
+  
   $('#1').on('click', makeMiddleEarth);
   $('#2').on('click', makeHobbits);
   $('#3').on('click', keepItSecretKeepItSafe);
