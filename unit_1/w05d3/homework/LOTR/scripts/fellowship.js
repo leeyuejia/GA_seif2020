@@ -117,7 +117,11 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-
+  const listAside = $('<aside>').append($('<ul>'));
+  $('#middle-earth').append(listAside);
+  for (good of buddies) {
+    $('aside > ul').append($('<li>').addClass('buddy').text(good));
+  }
   // 1. create an aside tag and append it to middle-earth below mordor
 
   // 2. display an unordered list of buddies in the aside
@@ -274,7 +278,8 @@ $(() => {
   keepItSecretKeepItSafe();
   // Chapter Four
   makeBaddies();
-
+  // Chapter Five
+  makeBuddies();
   $('#1').on('click', makeMiddleEarth);
   $('#2').on('click', makeHobbits);
   $('#3').on('click', keepItSecretKeepItSafe);
