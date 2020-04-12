@@ -142,7 +142,7 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
+  $('#Rivendell').append($('#The-Shire > ul'))
   //Stretch: add an event handler/listener so that when you click on the `h1` The Shire, this function will be called (be sure to do it in the window.onload/document.ready function)
 
 };
@@ -280,6 +280,8 @@ $(() => {
   makeBaddies();
   // Chapter Five
   makeBuddies();
+  // Chapter Six
+  $('#The-Shire > h1').on('click',leaveTheShire);
   $('#1').on('click', makeMiddleEarth);
   $('#2').on('click', makeHobbits);
   $('#3').on('click', keepItSecretKeepItSafe);
