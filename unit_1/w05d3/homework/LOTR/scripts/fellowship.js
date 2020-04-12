@@ -36,25 +36,24 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor'];
 // Chapter 1
 // ============
 const makeMiddleEarth = () => {
-
-  // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
   console.log('making Middle Earth');
+  // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
   // console.log("Trying to make middle earth.");
-
   // 1. create a section tag with an id of middle-earth
-
   // 2. append the section to the body of the DOM.
-
   // 3. use a for loop to iterate over the lands array that does the following:
-
   //   3a. creates an article tag (there should be one for each land when the loop is done)
-
   //   3b. gives each land article an `id` tag of the corresponding land name
-
   //   3c. includes an h1 with the name of the land inside each land article
-
   //   3d. appends each land to the middle-earth section
-
+  const $middleEarth = $('<div>').attr('id', 'middle-earth')
+  $('body').append($middleEarth)
+  const lands = ['The Shire', 'Rivendell', 'Mordor']
+  for (let i = 0; i < lands.length; i++) {
+    let makeArticles = $('<article>').attr('id', lands[i])
+    makeArticles.append($('<h1>').text(lands[i]))
+    $middleEarth.append(makeArticles)
+  }
 };
 
 // COMMIT YOUR WORK
@@ -70,12 +69,12 @@ const makeHobbits = () => {
   // 1. create a 'ul'
 
   // 2. make each hobbit an li element and append it to the 'ul' you just created
-    // hint: use the given 'hobbits' array and use a for loop
+  // hint: use the given 'hobbits' array and use a for loop
 
   // 3. also, give each hobbit (`li`) a class of "hobbit"
 
   // 4. append the ul to the shire
-    // hint: get 'The-Shire' by using its id
+  // hint: get 'The-Shire' by using its id
 
 };
 
@@ -90,9 +89,9 @@ const keepItSecretKeepItSafe = () => {
   // 1. create an empty div with an id of 'the-ring'
 
   // 2. add the ring as a child of Frodo
-    // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
+  // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
-    // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
+  // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
 };
 
@@ -139,7 +138,7 @@ const makeBuddies = () => {
 
 const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-      // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
   //Stretch: add an event handler/listener so that when you click on the `h1` The Shire, this function will be called (be sure to do it in the window.onload/document.ready function)
 
@@ -154,7 +153,7 @@ const leaveTheShire = () => {
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-     // hint: You can get a list of elements by tag name, such as 'aside'
+  // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
 
@@ -267,7 +266,12 @@ const thereAndBackAgain = () => {
 
 
 
-$(()=>{
+$(() => {
+  const $middleEarth = $('<div>').attr('id', 'middle-earth')
+  $('body').append($middleEarth)
+  let makeArticles = $('<article>').attr('id', lands[0])
+  makeArticles.append($('<h1>').text(lands[0]))
+  $middleEarth.append(makeArticles)
 
   $('#1').on('click', makeMiddleEarth);
   $('#2').on('click', makeHobbits);
