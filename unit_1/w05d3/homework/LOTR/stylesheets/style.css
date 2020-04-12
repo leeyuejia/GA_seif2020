@@ -50,7 +50,7 @@ article {
 }
 
 article li {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 
 article:hover {
@@ -105,6 +105,9 @@ ul {
   margin: auto;
 }
 
+.buddy {
+  font-size: 1.8em;
+}
 
 /*aside {
   display: inline-block;
@@ -160,4 +163,4 @@ ul {
     top: 385px;
   }
 
-}
+};

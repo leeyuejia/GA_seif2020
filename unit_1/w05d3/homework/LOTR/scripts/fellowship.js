@@ -140,11 +140,10 @@ const makeBuddies = () => {
 // ============
 
 const leaveTheShire = () => {
+  $('#Rivendell').append($('#The-Shire > ul'))
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-  $('#Rivendell').append($('#The-Shire > ul'))
   //Stretch: add an event handler/listener so that when you click on the `h1` The Shire, this function will be called (be sure to do it in the window.onload/document.ready function)
-
 };
 
 // COMMIT YOUR WORK
@@ -154,7 +153,7 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
-
+  return $('.buddy:nth-child(4)').text('Aragorn');
   // 1. change the buddy 'Strider' textnode to "Aragorn"
   // hint: You can get a list of elements by tag name, such as 'aside'
 
@@ -282,6 +281,10 @@ $(() => {
   makeBuddies();
   // Chapter Six
   $('#The-Shire > h1').on('click',leaveTheShire);
+  // Chapter Seven
+  beautifulStranger()
+  // Chapter Eight
+  
   $('#1').on('click', makeMiddleEarth);
   $('#2').on('click', makeHobbits);
   $('#3').on('click', keepItSecretKeepItSafe);
