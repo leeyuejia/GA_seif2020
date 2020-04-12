@@ -105,7 +105,7 @@ ul {
   margin: auto;
 }
 
-.buddy {
+#the-fellowship > ul > li {
   font-size: 1.8em;
 }
 

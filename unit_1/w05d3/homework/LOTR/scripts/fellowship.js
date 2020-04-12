@@ -166,6 +166,14 @@ const beautifulStranger = () => {
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
+  const fellowship = $('<div>').attr('id', 'the-fellowship')
+  $('#middle-earth').append(fellowship)
+  fellowship.append($('<h1>').text('The Fellowship'))
+  const newPeople = $('<ul>')
+  fellowship.append(newPeople)
+  newPeople.append($('li'))
+  // newPeople.append($('.hobbits'))
+  // newPeople.append($('.buddy'))
 
   // 1. create a new div with an id 'the-fellowship'
 
@@ -280,11 +288,13 @@ $(() => {
   // Chapter Five
   makeBuddies();
   // Chapter Six
-  $('#The-Shire > h1').on('click',leaveTheShire);
+  $('#The-Shire > h1').on('click', leaveTheShire);
   // Chapter Seven
-  beautifulStranger()
+  beautifulStranger();
   // Chapter Eight
-  
+  // forgeTheFellowShip();
+  // Chapter Nine
+
   $('#1').on('click', makeMiddleEarth);
   $('#2').on('click', makeHobbits);
   $('#3').on('click', keepItSecretKeepItSafe);
