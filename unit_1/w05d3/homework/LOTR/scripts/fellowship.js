@@ -48,7 +48,6 @@ const makeMiddleEarth = () => {
   //   3d. appends each land to the middle-earth section
   const $middleEarth = $('<div>').attr('id', 'middle-earth')
   $('body').append($middleEarth)
-  const lands = ['The Shire', 'Rivendell', 'Mordor']
   for (let i = 0; i < lands.length; i++) {
     let makeArticles = $('<article>').attr('id', lands[i]);
     makeArticles.append($('<h1>').text(lands[i]));
@@ -63,23 +62,18 @@ const makeMiddleEarth = () => {
 // Chapter 2
 // ============
 const makeHobbits = () => {
-
-  // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
-  const unorderedList = $('<ul>')
+  const unorderedList = $('<ul>');
   for (people of hobbits) {
-    unorderedList.append(($('<li>')).addClass('hobbit').text(people));
+    unorderedList.append(($('<li>')).addClass('hobbits').text(people));
   }
   $('#The-Shire').append(unorderedList);
+  // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // 1. create a 'ul'
-
   // 2. make each hobbit an li element and append it to the 'ul' you just created
   // hint: use the given 'hobbits' array and use a for loop
-
   // 3. also, give each hobbit (`li`) a class of "hobbit"
-
   // 4. append the ul to the shire
   // hint: get 'The-Shire' by using its id
-
 };
 
 // COMMIT YOUR WORK
@@ -89,15 +83,11 @@ const makeHobbits = () => {
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
-
+  $('li:nth-child(1)').append(($('<div>')).attr('id', 'the-ring'))
   // 1. create an empty div with an id of 'the-ring'
-const ring = $('<div>').attr('id','the-ring')
-$('li:nth-child(1)').append(ring)
   // 2. add the ring as a child of Frodo
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-
   // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
-
 };
 
 // COMMIT YOUR WORK
@@ -273,21 +263,12 @@ const thereAndBackAgain = () => {
 
 $(() => {
   // Chapter one
-  const $middleEarth = $('<div>').attr('id', 'middle-earth')
-  $('body').append($middleEarth)
-  let makeArticles = $('<article>').attr('id', lands[0])
-  makeArticles.append($('<h1>').text(lands[0]))
-  $middleEarth.append(makeArticles)
+  makeMiddleEarth();
 
   // Chapter Two
-  const unorderedList = $('<ul>')
-  for (people of hobbits) {
-    unorderedList.append(($('<li>')).addClass('hobbits').text(people));
-  }
-  $('#The-Shire').append(unorderedList)
-
+  makeHobbits();
   // Chapter Three
-$('li:nth-child(1)').append(($('<div>')).attr('id','the-ring'))
+  keepItSecretKeepItSafe();
 
   $('#1').on('click', makeMiddleEarth);
   $('#2').on('click', makeHobbits);
