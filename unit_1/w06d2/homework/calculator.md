@@ -4,7 +4,7 @@
 
 ---
 Title: Calculator <br>
-Type: Lab <br>
+Type: Homework <br>
 Competencies: HMTL, CSS, Javascript functions, jQuery and DOM<br>
 
 ---
