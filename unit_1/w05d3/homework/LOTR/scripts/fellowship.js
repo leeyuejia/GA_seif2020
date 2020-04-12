@@ -97,7 +97,11 @@ const keepItSecretKeepItSafe = () => {
 // Chapter 4
 // ============
 const makeBaddies = () => {
-
+  const badPeople = $('<ul>')
+  for (bad of baddies) {
+    badPeople.append(($('<li>').addClass('baddy').text(bad)))
+  }
+  $('#Mordor').append(badPeople)
   // 1. display an unordered list of baddies in Mordor
 
   // 2. give each of the baddies a class of "baddy"
@@ -264,11 +268,12 @@ const thereAndBackAgain = () => {
 $(() => {
   // Chapter one
   makeMiddleEarth();
-
   // Chapter Two
   makeHobbits();
   // Chapter Three
   keepItSecretKeepItSafe();
+  // Chapter Four
+  makeBaddies();
 
   $('#1').on('click', makeMiddleEarth);
   $('#2').on('click', makeHobbits);
