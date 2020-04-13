@@ -171,18 +171,12 @@ const forgeTheFellowShip = () => {
   fellowship.append($('<h1>').text('The Fellowship'))
   const newPeople = $('<ul>')
   fellowship.append(newPeople)
-  newPeople.append($('li'))
-  // newPeople.append($('.hobbits'))
-  // newPeople.append($('.buddy'))
-
+  newPeople.append($('.hobbits'));
+  newPeople.append($('.buddy'));
   // 1. create a new div with an id 'the-fellowship'
-
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
   // 3. append the fellowship to middle-earth
-
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
 };
 
 // COMMIT YOUR WORK
@@ -192,7 +186,10 @@ const forgeTheFellowShip = () => {
 // Chapter 9
 // ============
 const theBalrog = () => {
-
+  let gandalf = $('.buddy:nth-child(1)')
+  gandalf.addClass('the-white').text('Gandalf the white');
+  $('.the-white').css('background-color','ghostwhite')
+                 .css('border', '1px solid grey')
   // 1. change the 'Gandalf' text to 'Gandalf the White'
 
   // 2. add a class "the-white" to this element
@@ -294,9 +291,9 @@ $(() => {
   // Chapter Eight
   // forgeTheFellowShip();
   // Chapter Nine
-
+  
   $('#1').on('click', makeMiddleEarth);
-  $('#2').on('click', makeHobbits);
+  $('#2').on('click', makeHobbits); 
   $('#3').on('click', keepItSecretKeepItSafe);
   $('#4').on('click', makeBaddies);
   $('#5').on('click', makeBuddies);
