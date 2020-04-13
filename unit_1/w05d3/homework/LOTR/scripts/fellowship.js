@@ -190,8 +190,8 @@ const theBalrog = () => {
   /*let gandalf = $('.buddy:nth-child(1)')
   $('.buddy:nth-child(1)').addClass('the-white').text('Gandalf the white');*/
   $('.buddy').eq(0).addClass('the-white').text('Gandalf the white')
-  $('.the-white').css('background-color','ghostwhite')
-                 .css('border', '1px solid grey')
+  $('.the-white').css('background-color', 'ghostwhite')
+    .css('border', '1px solid grey')
   // 1. change the 'Gandalf' text to 'Gandalf the White'
   // 2. add a class "the-white" to this element
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
@@ -222,7 +222,7 @@ const hornOfGondor = () => {
 const itsDangerousToGoAlone = () => {
   let frodo = $('.hobbits').eq(0)
   let sam = $('.hobbits').eq(1)
-  let mountDoom = $('<div>').attr('id','mount-doom')
+  let mountDoom = $('<div>').attr('id', 'mount-doom')
   $('#Mordor').append(mountDoom)
   mountDoom.append(frodo)
   mountDoom.append(sam)
@@ -237,7 +237,10 @@ const itsDangerousToGoAlone = () => {
 // Chapter 12
 // ============
 const weWantsIt = () => {
-
+  const gollum = $('<div>').attr('id', 'gollum')
+  $('#mount-doom').append(gollum)
+  const ring = $('#the-ring')
+  gollum.append(ring)
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
   // 2. Move the ring from Frodo and give it to Gollum
@@ -253,6 +256,9 @@ const weWantsIt = () => {
 // Chapter 13
 // ============
 const thereAndBackAgain = () => {
+  $('#gollum').remove()
+  $('.baddy').remove()
+  $('#The-Shire').append($('.hobbits'))
 
   // 1. remove Gollum and the Ring from the DOM
 
@@ -276,26 +282,26 @@ const thereAndBackAgain = () => {
 
 
 $(() => {
-  // Chapter one
-  makeMiddleEarth();
-  // Chapter Two
-  makeHobbits();
-  // Chapter Three
-  keepItSecretKeepItSafe();
-  // Chapter Four
-  makeBaddies();
-  // Chapter Five
-  makeBuddies();
-  // Chapter Six
-  $('#The-Shire > h1').on('click', leaveTheShire);
-  // Chapter Seven
-  // beautifulStranger();
-  // Chapter Eight
-  // forgeTheFellowShip();
-  // Chapter Nine
-  
+  // // Chapter one
+  // makeMiddleEarth();
+  // // Chapter Two
+  // makeHobbits();
+  // // Chapter Three
+  // keepItSecretKeepItSafe();
+  // // Chapter Four
+  // makeBaddies();
+  // // Chapter Five
+  // makeBuddies();
+  // // Chapter Six
+  // $('#The-Shire > h1').on('click', leaveTheShire);
+  // // Chapter Seven
+  // // beautifulStranger();
+  // // Chapter Eight
+  // // forgeTheFellowShip();
+  // // Chapter Nine
+
   $('#1').on('click', makeMiddleEarth);
-  $('#2').on('click', makeHobbits); 
+  $('#2').on('click', makeHobbits);
   $('#3').on('click', keepItSecretKeepItSafe);
   $('#4').on('click', makeBaddies);
   $('#5').on('click', makeBuddies);
