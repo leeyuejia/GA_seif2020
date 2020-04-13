@@ -186,14 +186,14 @@ const forgeTheFellowShip = () => {
 // Chapter 9
 // ============
 const theBalrog = () => {
-  let gandalf = $('.buddy:nth-child(1)')
-  gandalf.addClass('the-white').text('Gandalf the white');
+  // After I completed Chapter 8, I cannot select Gandalf by $('.buddy:nth-child(1)')
+  /*let gandalf = $('.buddy:nth-child(1)')
+  $('.buddy:nth-child(1)').addClass('the-white').text('Gandalf the white');*/
+  $('.buddy').eq(0).addClass('the-white').text('Gandalf the white')
   $('.the-white').css('background-color','ghostwhite')
                  .css('border', '1px solid grey')
   // 1. change the 'Gandalf' text to 'Gandalf the White'
-
   // 2. add a class "the-white" to this element
-
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
@@ -205,13 +205,12 @@ const theBalrog = () => {
 // Chapter 10
 // ============
 const hornOfGondor = () => {
-
+  alert('the horn of GONDOR has been blown')
+  $('.buddy').eq(-1).css('text-decoration', 'line-through')
+  $('.baddy:nth-child(3)').remove();
   // 1. create a pop-up alert that the horn of gondor has been blown
-
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
 };
 
 // COMMIT YOUR WORK
@@ -221,11 +220,14 @@ const hornOfGondor = () => {
 // Chapter 11
 // ============
 const itsDangerousToGoAlone = () => {
-
+  let frodo = $('.hobbits').eq(0)
+  let sam = $('.hobbits').eq(1)
+  let mountDoom = $('<div>').attr('id','mount-doom')
+  $('#Mordor').append(mountDoom)
+  mountDoom.append(frodo)
+  mountDoom.append(sam)
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
   // 2. add a div with an id of 'mount-doom' to Mordor
-
 };
 
 // COMMIT YOUR WORK
@@ -287,7 +289,7 @@ $(() => {
   // Chapter Six
   $('#The-Shire > h1').on('click', leaveTheShire);
   // Chapter Seven
-  beautifulStranger();
+  // beautifulStranger();
   // Chapter Eight
   // forgeTheFellowShip();
   // Chapter Nine
