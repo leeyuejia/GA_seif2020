@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
-        <script src="app.js" charset="utf-8"></script>
-        <link rel="stylesheet" href="app.css">
-    </head>
-    <body>
-        <div id="container"></div>
-        <form>
-            <input type="number" id="input-box"/>
-            <input type="submit" />
-        </form>
-    </body>
+<html>
+  <head>
+    <title>SketchPad</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="app.css">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <form>
+        <input id="input-box" type="text" placeholder="grid size" />
+        <input type="submit" />
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
