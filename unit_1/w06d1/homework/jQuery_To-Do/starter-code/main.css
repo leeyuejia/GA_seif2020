@@ -78,7 +78,7 @@ input:focus {
 
 
 /* make list containers flex */
-#to-do-list,  #completed {
+#to-do-list,  #completed, #history {
   display: flex;
   flex-direction: column;
   flex-basis: 40%;
@@ -86,7 +86,7 @@ input:focus {
 }
 
 /* style list items, common styles */
-.to-do-item, .done-item {
+.to-do-item, .done-item, .history-item {
   margin: .5em;
   border-radius: 1em;
   animation: zoom-in .3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
@@ -102,7 +102,14 @@ input:focus {
 .done-item {
   background: var(--candy-pink);
 }
-
+.history-item {
+  background: var(--grey-ice-blue);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 /* New item animation */
 @keyframes zoom-in {
