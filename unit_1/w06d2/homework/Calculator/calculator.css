@@ -1,0 +1,96 @@
+:root {
+    --dark-buttons: rgb(90, 83, 83);
+    --dark-background: rgb(37, 36, 36);
+    --hightlight-buttons: rgb(187, 123, 38);
+    --interface-font: rgb(53, 47, 47);
+    --reset-Buttons: rgb(122, 29, 29);
+    --buttons-font: rgb(233, 233, 233);
+}
+
+body {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 60%;
+    margin: 0 auto;
+
+}
+div {
+    border: 1px solid black;
+}
+.header {
+    max-width: 60%;
+    height: 100px;
+    margin:50px auto;
+}
+
+.container {
+    width: 90%;
+    /* height: 90%; */
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+#screen {
+    /* display: block; */
+    flex-grow: 1 0 50px;
+    /* height: 30%; */
+    margin: 10px;
+}
+#screeninput {
+    display: inline-block;
+    height: 50px;
+}
+#interface {
+    background-color: var(--dark-background);
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+#number-column {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    flex: 1 0 auto;
+}
+#operator-column {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin:5px;
+    flex: 0 1 auto;
+}
+
+.number {
+    flex: 1 0 75px;
+    /* width:100%; */
+    background-color: var(--dark-buttons);
+    height: 80px;
+}
+
+.operator {
+    flex: 0 1 auto;
+    width:40%;
+    background-color: var(--dark-buttons);
+}
+
+button {
+    color: lightblue;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    box-shadow: 5px 5px 1px black;
+    padding:0;
+    border-radius: 50px;
+}
+.operator:last-child, .operator:nth-child(1){
+    background-color: var(--hightlight-buttons);
+
+}
+.operator:nth-child(2) {
+    background-color: var(--reset-Buttons);
+}
