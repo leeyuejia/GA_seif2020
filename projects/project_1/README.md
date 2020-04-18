@@ -98,7 +98,7 @@ You will meet with an instructor for ~15 minutes to get your app idea approved. 
 ## How to Submit Your Project
 Your project is due on **W8D3 or W9D1**. You will present your project and show your code to classmates and instructors.
 
-:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1_Ui3f-WYJvjKud-ec0X0KzIRHOBkfr4QON-JDqNWUQo/edit?usp=sharing).
+:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1VXdGOFQlxPtPTsGX1m42NltyOkGfNLQVzTvE-eRjpaw/edit?usp=sharing).
 
 ## Where to go for help during project week
 1. Seek out help online
