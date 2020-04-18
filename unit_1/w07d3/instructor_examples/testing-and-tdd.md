@@ -13,7 +13,7 @@
 ## Introduction
 When we write code, it is usually part of a larger application meant to solve some problem or execute some tasks. 
 
-> #### We should write code in small, progressive steps, and test our code at every stage. 
+> ### We should write code in small, progressive steps, and test our code at every stage. 
 
 That way, when we string our small chunks of code together (i.e. functions, classes, modules, etc.)
 we know that our code will run it its entirety.
@@ -31,7 +31,7 @@ const helloWorld = () => console.log('hello world');
 ```
 To test whether it is working, we might simply run it our browser or within `NodeJs`. 
 
-> #### Manual testing is great when we're running small pieces of code that are not very complex.
+> ### Manual testing is great when we're running small pieces of code that are not very complex.
 
 But when we have to test a complex code with a lot of scenarios, manual testing is tedious 
 and even detrimental to the development of the app. One of the main problems with manual testing is that it is very error-prone. 
@@ -90,7 +90,7 @@ This allows you to use the `Chai` library within this test file. `Chai` is a tes
 This is often called a `test suite`. `it` is used to describe a specific test within a `test suite`. In 
 this example here the first test is to check that 1 is equal to 1.
 
-> #### This condition is being checked with `expect`, a test assertion function. Test assertions check that one condition matches another. If they do not match, an error is thrown.
+> ### This condition is being checked with `expect`, a test assertion function. Test assertions check that one condition matches another. If they do not match, an error is thrown.
 
 ### How do I run this test and see the results?
 To run this file, you will need to use an `npm script`. I have written one in the `course-materials/package.json`, and called it `test`. To run this script, use the following command in your terminal: 
@@ -104,11 +104,9 @@ This script will tell `Jest`, your test runner, to check all the tests within th
 If you would like to learn how to write your own test script, you will need to know the `jest` api, which you can find at [their website](https://jestjs.io/).
 
 
-
-
 ### What is Test Driven Development (TDD)?
-> #### TDD is not simply about writing test cases for your code. TDD is the process of writing test code and applying specific principles when doing so.
+> ### TDD is not simply about writing test cases for your code. TDD is the process of writing test code and applying specific principles when doing so.
 
 One of the main principles of TDD is applying the **red-green-refactor** cycle of test writing:
 
-![Red Green Refactor](https://jfiaffe.files.wordpress.com/2014/09/redgreenrefacor.png)
+![Red Green Refactor](https://miro.medium.com/max/390/1*srsgq3niqqd1YcBgKEN2lg.png)
