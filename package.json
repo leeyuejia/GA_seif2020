@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "![ga](ga_cog.png) <br>",
   "main": "index.js",
-  "dependencies": {
-    "chai": "^4.2.0",
-    "jest": "^25.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "jest": "^25.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
