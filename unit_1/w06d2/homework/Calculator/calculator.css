@@ -24,44 +24,51 @@ div {
 }
 
 .container {
-    width: 90%;
-    /* height: 90%; */
+    width: 400px;
+    height: 800px;
     margin: auto;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 #screen {
-    /* display: block; */
-    flex-grow: 1 0 50px;
-    /* height: 30%; */
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: space-around;
     margin: 10px;
+    padding: 5px;
 }
 #screeninput {
-    display: inline-block;
+    flex: 1 0 auto;
     height: 50px;
+    padding:0;
+    border: 1px solid black;
+    margin:3px;
+}
+#logo {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    padding: 0;
 }
 #interface {
     background-color: var(--dark-background);
-    display:flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    flex-grow: 1;
 }
 #number-column {
-    display: flex;
+    /* display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     margin: 5px;
-    flex: 1 0 auto;
+    flex: 1 0 auto; */
 }
 #operator-column {
-    display: flex;
+    /* display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     margin:5px;
-    flex: 0 1 auto;
+    flex: 0 1 auto; */
 }
 
 .number {
