@@ -93,17 +93,6 @@ while (ingredients.length > 0) {
 
 console.log("👩‍🍳👨‍🍳 All ingredients chopped!!");
 
-Array.prototype.range = function (start, end, step) {
-    if (step == null) step = 1;
-    let array = [];
-
-    if (step > 0 && start < end) {
-        for (let i = start; i <= end; i += step) array.push(i);
-    } else if (step < 0 && start > end) {
-        for (let i = start; i >= end; i += step) array.push(i);
-    }
-    return array;
-};
 
 Array.prototype.sum = function () {
     let total = 0;
@@ -126,6 +115,37 @@ function range(start, end, step) {
 }
 
 console.log(range(1, 10, 1).sum());
+
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+ }
+ 
+ function repeatLog(n) {
+    for (let i = 0; i < n; i++) {
+        console.log(i);
+    }
+ }
+ 
+ function repeat(n, action) {
+    for (let i = 0; i < n; i++) {
+        action(i);
+    }
+ }
+ 
+ repeat(3, console.log);
+ 
+ let labels = [];
+ repeat(5, i => {
+    labels.push(`Unit ${i + 1}`);
+ });
+ console.log(labels);
+
+ function greaterThan(n) {
+    return m => m > n;
+ }
+ let greaterThan10 = greaterThan(10);
+ console.log(greaterThan10(11));
+  // → true
 
 function verbose(f) {
     return (...args) => {

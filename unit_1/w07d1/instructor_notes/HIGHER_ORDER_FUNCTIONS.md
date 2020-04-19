@@ -256,7 +256,7 @@ verbose(Math.min)(3, 2, 1);
 
 ## Functions that provide new types of control flow
 ![Unless](https://media.giphy.com/media/443fTQRDiAtAJHKGIm/giphy.gif)
-### Unless CEO has approved that you can go to office, you should work from home.
+### Unless CEO has approved that you can go to office, you must work from home.
 ```javascript
 function unless(predicate, then) {
    if (!predicate) then();
