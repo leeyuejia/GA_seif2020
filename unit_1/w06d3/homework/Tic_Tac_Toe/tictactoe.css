@@ -1,0 +1,54 @@
+div {
+    border: 1px solid black;
+    text-align: center;
+    margin: 0 auto;
+}
+:root {
+    --game-border: 1px solid red;
+}
+
+.gameboard {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    flex-flow: row wrap;
+}
+
+.block {
+    /* flex: 1 0 auto; */
+    margin: 0;
+    width: 98px;
+    height: 98px;
+    background-color: burlywood;
+    /*for h2 content */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.block:hover {
+    cursor: pointer;
+}
+#square2, #square8 {
+    border-left:var(--game-border);
+    border-right:var(--game-border);
+}
+#square5 {
+    border:var(--game-border);
+}
+#square4, #square6 {
+    border-top: var(--game-border);
+    border-bottom:var(--game-border);
+}
+img {
+    flex: 0 1 50%;
+    /* height:50%; */
+    align-self: center;
+}
+h2 {
+    margin: 0;
+    align-self: center;
+}
+
+/* Using CSS grid
+
