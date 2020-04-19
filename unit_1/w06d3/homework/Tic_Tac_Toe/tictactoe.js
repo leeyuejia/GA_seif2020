@@ -12,7 +12,7 @@ $(() => {
             renderCross(event)
             checkDraw();
         }
-        if (clickCount % 2 !== 0 && clickCount < $('.block').length ) {
+        if (clickCount % 2 !== 0 && clickCount < $('.block').length) {
             renderCross(event)
             checkAlign('cross-shape')
         }
