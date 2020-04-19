@@ -1,7 +1,7 @@
-const citizens = ['😷', '😷', '😷', '😷', '😷', '😷', '😷', '😌', '😷'];
+const citizens = ["😷", "😷", "😷", "😷", "😷", "😷", "😷", "😌", "😷"];
 
 const isWearingMask = citizen => {
-    return citizen === '😷';
+    return citizen === "😷";
 };
 
 // accepting a predicate function but return a boolean
@@ -19,7 +19,7 @@ const justTheCitizensWearingMasks = citizens.filter(isWearingMask);
 console.log(justTheCitizensWearingMasks);
 
 const isNotWearingMask = citizen => {
-    return citizen !== '😷';
+    return citizen !== "😷";
 };
 
 // accepting a predicate function but return a element
@@ -34,19 +34,19 @@ console.log(theIndexOfCitizenNotWearingMask);
 
 // accepting a transformation function to transform the original array into a new array
 const residentsBeforeCircuitBreaker = [
-    '🤑',
-    '🤧',
-    '🤨',
-    '😏',
-    '😘',
-    '😃',
-    '🤬',
-    '😭',
-    '😨'
+    "🤑",
+    "🤧",
+    "🤨",
+    "😏",
+    "😘",
+    "😃",
+    "🤬",
+    "😭",
+    "😨"
 ];
 
 const circuitBreaker = () => {
-    return '🏡😷';
+    return "🏡😷";
 };
 
 const residentsDuringCircuitBreaker = residentsBeforeCircuitBreaker.map(
@@ -63,7 +63,7 @@ residentsBeforeCircuitBreaker.forEach(el => {
 // Reduce - total/sum/max/min/combined
 // datasource:
 // https://data.europa.eu/euodp/en/data/dataset/covid-19-coronavirus-data
-const data = require('./covid-19-sg.json');
+const data = require("./covid-19-sg.json");
 const maxData = data.reduce((maxData, dayData) =>
     dayData.deaths > maxData.deaths ? dayData : maxData
 );
@@ -84,14 +84,14 @@ console.log(totalConfirmed);
 // The splice() method changes the contents of an array
 // by removing or replacing existing elements and/or adding
 // new elements in place.
-const ingredients = ['🌶', '🍅', '🥕', '🥦'];
+const ingredients = ["🌶", "🍅", "🥕", "🥦"];
 
 while (ingredients.length > 0) {
     console.log(`Currently chopping ${ingredients[0]}`);
     ingredients.splice(0, 1);
 }
 
-console.log('👩‍🍳👨‍🍳 All ingredients chopped!!');
+console.log("👩‍🍳👨‍🍳 All ingredients chopped!!");
 
 Array.prototype.range = function (start, end, step) {
     if (step == null) step = 1;
@@ -113,7 +113,7 @@ Array.prototype.sum = function () {
 
 console.log([1, 2, 3, 5, 7, 9].sum());
 
-function range (start, end, step) {
+function range(start, end, step) {
     if (!step) step = 1;
     let array = [];
 
@@ -124,3 +124,27 @@ function range (start, end, step) {
     }
     return array;
 }
+
+console.log(range(1, 10, 1).sum());
+
+function verbose(f) {
+    return (...args) => {
+        console.log("calling with", args);
+        let result = f(...args);
+        console.log("called with", args, ", returned", result);
+        return result;
+    };
+}
+
+Math.min(3, 2, 1);
+verbose(Math.min)(3, 2, 1);
+
+function unless(predicate, then) {
+    if (!predicate) then();
+}
+
+const hasCEOApproved = false;
+const workFromHome = () => {
+    console.log("Work From Home");
+};
+unless(hasCEOApproved, workFromHome);
