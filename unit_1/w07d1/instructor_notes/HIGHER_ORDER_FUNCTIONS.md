@@ -13,6 +13,8 @@ const citizens = ["😷", "😷", "😷", "😷", "😷", "😷", "😷", "😌"
 
 In traditional grammar, a predicate is one of the two main parts of a sentence. For example, "John [is yellow]". John is the subject, and is yellow is the predicate, which modifies the description of the subject. It is usually headed with a verb. Predicate is a condition about a subject. From Google Dictionary, predicate is something which is affirmed or denied concerning an argument of a proposition.
 
+An example predicate function is:
+
 ```javascript
 const isWearingMask = citizen => {
   return citizen === "😷";
@@ -34,7 +36,7 @@ const someWearingMasks = citizens.some(isWearingMask);
 console.log(someWearingMasks);
 ```
 
-## Accepting a predicate function but return a array. 
+## Accepting a predicate function but return an array. 
 
 > ### Array method filter.
 ```javascript
@@ -47,7 +49,7 @@ const isNotWearingMask = citizen => {
 };
 ```
 
-## Accepting a predicate function but return a element.
+## Accepting a predicate function but return an element.
 > ### Array method find.
 ```javascript
 const theCitizenNotWearingMask = citizens.find(isNotWearingMask);
@@ -56,7 +58,7 @@ console.log(theCitizenNotWearingMask);
 ```
 
 
-## Accepting a predicate function but return a index.
+## Accepting a predicate function but return an index.
 > ###  Array method findIndex
 ```javascript
 const theIndexOfCitizenNotWearingMask = citizens.findIndex(isNotWearingMask);
@@ -122,7 +124,7 @@ console.log(totalConfirmed);
 ```
 
 
-## Ok, Ok. All these array methods create a new array. Is there any array method change the original array **in-place**?
+## Ok. All these array methods create a new array. Is there any array method change the original array **in-place**?
 Yes. The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 
 ```javascript
@@ -155,7 +157,6 @@ for (let i = 1; i <= 10; i++) {
 ```
 
 ### If I want to get the range of integers from 1 to 50/100/1000/5000, then how? 
-### Get their total sum of an array of number. 
 ### We have two questions here. 
 1. How to make a generic function to generate range of integers from start value to end value?
 1. How to write a generic function to sum an array of numbers?
@@ -219,10 +220,10 @@ residentsBeforeCircuitBreaker.forEach(el => {
 });
 ```
 
-- OK, Functions are also regular values - nothing remarkable
-- Higher-Order Function allow us to abstract over actions, not just values
-
+## OK, It looks like that functions are also regular values - nothing remarkable, right?
 > ### Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions
+
+Higher-Order Function allow us to abstract over actions, not just values
 
 There are two types of Higher-Order Functions:
 1. Functions that create new functions
@@ -232,7 +233,7 @@ There are two types of Higher-Order Functions:
 ## Functions that create new functions
 ```javascript
 function greaterThan(n) {
-   return m => m > n;
+   return m => m > n; // it's an arrow function
 }
 let greaterThan10 = greaterThan(10);
 console.log(greaterThan10(11));

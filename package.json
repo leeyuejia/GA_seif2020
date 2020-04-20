@@ -10,7 +10,9 @@
     "jest": "^25.3.0"
   },
   "jest": {
-    "roots": ["<rootDir>/unit_1"]
+    "roots": [
+      "<rootDir>/unit_1"
+    ]
   },
   "scripts": {
     "test": "jest"
