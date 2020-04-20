@@ -4,7 +4,6 @@ module.exports = {
         'es6': true,
         'node': true,
         'jquery': true,
-        'chai': true,
         'jest': true,
     },
     'extends': 'eslint:recommended',
