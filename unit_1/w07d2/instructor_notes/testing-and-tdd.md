@@ -457,11 +457,11 @@ const orange = {
 };
 
 const getFruitColor = fruit => {
-    if (fruitName === 'apple') {
+    if (fruit.name === 'apple') {
         return 'red';
-    } else if (fruitName === 'pear') {
+    } else if (fruit.name === 'pear') {
         return 'green';
-    } else if (fruitName === 'orange') {
+    } else if (fruit.name === 'orange') {
         return 'orange';
     }
 }
