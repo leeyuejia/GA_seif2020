@@ -25,26 +25,30 @@ div {
 
 .container {
     width: 400px;
-    height: 800px;
+    height: 600px;
     margin: auto;
-    display: flex;
+    display: grid;
+    grid-template-rows: 0.5fr 2fr;
+    /* display: flex;
     flex-flow: column wrap;
-    justify-content: flex-start;
+    justify-content: stretch; */
 }
+/*TOP SCREEN*/
 #screen {
     display: flex;
     flex-flow:row nowrap;
     align-items: center;
     justify-content: space-around;
-    margin: 10px;
     padding: 5px;
+    background-color: var(--dark-buttons);
 }
 #screeninput {
-    flex: 1 0 auto;
-    height: 50px;
+    flex: 1 1 auto;
+    height: 90px;
     padding:0;
     border: 1px solid black;
     margin:3px;
+    background-color: var(--dark-buttons);
 }
 #logo {
     width: 50px;
@@ -54,45 +58,58 @@ div {
 }
 #interface {
     background-color: var(--dark-background);
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
 }
 #number-column {
     /* display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 5px;
     flex: 1 0 auto; */
-}
-#operator-column {
-    /* display: flex;
-    flex-flow: row wrap;
+    display:grid;
+    grid-template-areas: "a b c"
+                         "d e f"
+                         "g h i"
+                         "j j j";
+    grid-gap: 0.5em;
+    align-items: center;
+    /* justify-items: center; */
     justify-content: space-around;
     margin:5px;
-    flex: 0 1 auto; */
 }
 
 .number {
-    flex: 1 0 75px;
-    /* width:100%; */
     background-color: var(--dark-buttons);
-    height: 80px;
+    width:60px;
+    height:60px;
+    align-content: center;
+}
+.number:nth-last-child(1) {
+    grid-area: 4/ 1 / 4 / 4;
+    width: 100%;
+}
+#operator-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: space-around;
+    align-items: center;
 }
 
 .operator {
-    flex: 0 1 auto;
-    width:40%;
     background-color: var(--dark-buttons);
+    width:60px;
+    height:60px;
 }
 
 button {
     color: lightblue;
     border: none;
-    text-align: center;
     text-decoration: none;
-    margin: 5px;
     box-shadow: 5px 5px 1px black;
     padding:0;
     border-radius: 50px;
+    font-size: 18px;
 }
 .operator:last-child, .operator:nth-child(1){
     background-color: var(--hightlight-buttons);
