@@ -76,8 +76,8 @@ console.log(maxData);
 // console.log(totalConfirmed);
 
 const totalConfirmed = data.reduce(
-    (totalConfirmed, { cases }) => (totalConfirmed += cases),
-    0
+    (totalConfirmed, /* {cases} is a object destruction will give u the value of the cases,cases is an object*/{ cases }) => (totalConfirmed += cases),
+    /* initial value of totalConfirmed is 0*/ 0 
 );
 console.log(totalConfirmed);
 
@@ -101,6 +101,9 @@ Array.prototype.sum = function () {
 };
 
 console.log([1, 2, 3, 5, 7, 9].sum());
+
+// How to make a generic function to generate any range i want (eg. )
+// how to add sum of the range 
 
 function range(start, end, step) {
     if (!step) step = 1;
@@ -130,7 +133,7 @@ for (let i = 0; i < 10; i++) {
     for (let i = 0; i < n; i++) {
         action(i);
     }
- }
+ } 
  
  repeat(3, console.log);
  
