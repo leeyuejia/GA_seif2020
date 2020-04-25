@@ -21,6 +21,7 @@
           this.name = name;
           this.sides = sides;
           this.sideLength = sideLength;
+        
       }
       calcPerimeter () {
           return this.sideLength * this.sides;
@@ -34,8 +35,10 @@
   console.log(newTriangle.calcPerimeter());
 
 class Square extends shape {
-    constructor (sideLength) {
-        super('square', 4, sideLength)
+    constructor (Length) {
+        super('square', 4, Length);
+        this.area = this.sideLength * this.sideLength;
+        this.cir = "something"
     }
     calcArea () {
         return this.sideLength ** 2;
@@ -43,6 +46,6 @@ class Square extends shape {
 }
 
 const square = new Square(10);
-
-console.log(square.calcArea(10))
-console.log(square.calcPerimeter())
+console.log(square.area)
+// console.log(square.calcArea(10))
+// console.log(square.calcPerimeter())
