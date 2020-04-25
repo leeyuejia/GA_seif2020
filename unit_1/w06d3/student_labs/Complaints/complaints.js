@@ -7,6 +7,15 @@ $(() => {
         $('form').append($summitButton);
     };
 
+    // retrieve data from Flat.io
+    const promiseGen = $.ajax({
+        url: "https://binaryjazz.us/wp-json/genrenator/v1/",
+        methods: "GET"
+    })
+    promiseGen.then(data => {
+        console.log(data)
+        console.log(data.routes)
+    })
     //App token from 311 service
 
     // Then retrieved this data and use then() to manipulate 
@@ -70,3 +79,5 @@ $(() => {
 // promiseBrookyn.then((data) => {
 //   alert("Retrieved " + data.length + " records from the dataset!");
 //   console.log(data);
+
+
