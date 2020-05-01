@@ -27,13 +27,13 @@
 | [w07d3](https://git.generalassemb.ly/SG-SEIF-1/course-materials/tree/master/unit_1/w07d3) |[](./unit_1/w07d3/warm_up_exercise)| [OOP Basics](./unit_1/w07d3/instructor_notes)| [OOP Basics](./unit_1/w07d3/student_labs)|[OOP Basics](./unit_1/w07d3/homework)|
 | [w08d1](https://git.generalassemb.ly/SG-SEIF-1/course-materials/tree/master/unit_1/w08d1) |[**PROJECT 1**](./unit_1/w08d1/warm_up_exercise)| [](./unit_1/w08d1/instructor_notes)| [](./unit_1/w08d1/student_labs)|[](./unit_1/w08d1/homework)|
 | [w08d2](https://git.generalassemb.ly/SG-SEIF-1/course-materials/tree/master/unit_1/w08d2) |[**PROJECT 1**](./unit_1/w08d2/warm_up_exercise)| [](./unit_1/w08d2/instructor_notes)| [](./unit_1/w08d2/student_labs)|[](./unit_1/w08d2/homework)|
-| [w08d3](https://git.generalassemb.ly/SG-SEIF-1/course-materials/tree/master/unit_1/w08d3) |[**PROJECT 1 Presentations**](./unit_1/w08d3/warm_up_exercise)| [Install MongoDB](./unit_1/w08d3/instructor_notes)| [](./unit_1/w08d3/student_labs)|[Intro to Internet](./unit_1/w08d3/homework)|
+| [w08d3](https://git.generalassemb.ly/SG-SEIF-1/course-materials/tree/master/unit_1/w08d3) |[](./unit_1/w08d3/warm_up_exercise)| [Install MongoDB and Intro to the Internet](./unit_1/w08d3/instructor_notes)| [](./unit_1/w08d3/student_labs)|[Intro to Internet](./unit_1/w08d3/homework)|
 
 ## Unit 2
 
 | Day | Warm Up Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w09d1 |[CSS Bootstrap Intro - Done](./unit_2/w09d1/warm_up_exercise)| [Intro to the Internet and Express](./unit_2/w09d1/instructor_notes)| [TV Shows](./unit_2/w09d1/student_labs)|[](./unit_2/w09d1/homework)|
+| w09d1 |[**PROJECT 1 Presentations**](./unit_2/w09d1/warm_up_exercise)| [Express](./unit_2/w09d1/instructor_notes)| [TV Shows](./unit_2/w09d1/student_labs)|[](./unit_2/w09d1/homework)|
 | w09d2 |[CSS Bootstrap Practice](./unit_2/w09d2/warm_up_exercise)| [Params & Routing](./unit_2/w09d2/instructor_notes)| [Express Calculator](./unit_2/w09d2/student_labs)|[Magic 8 Ball, Pass it Around](./unit_2/w09d2/homework)|
 | w09d3 |[Word Frequency](./unit_2/w09d3/warm_up_exercise)| [REST: Index and Show, MVC, EJS](./unit_2/w09d3/instructor_notes)| [Super Heroes, Fruits, Mars Missions](./unit_2/w09d3/student_labs)|[Poke Express](./unit_2/w09d3/homework)|
 | w10d1 |[](./unit_2/w10d1/warm_up_exercise)| [REST: New, Create](./unit_2/w10d1/instructor_notes)| [Biscoff Bakery](./unit_2/w10d1/student_labs)|[](./unit_2/w10d1/homework)|
