@@ -12,27 +12,32 @@ app.get('/someroute', (req, res) => {
     res.send('someroute accessed' + req.query);
   });
 
+
+const calculate = (operator,number1,number2) => {
+    if (operator === "add") {
+        return number1 + number2;
+    }
+    else if (operator === "minus") {
+        return number1 - number2;
+    }
+    else if (operator === "divide") {
+        return number1 / number2;
+    }
+    else if (operator === "multiply") {
+        return number1 * number2;
+    }
+    else return false
+}
+
 app.get('/calcquery/:num1/:num2', (req, res) => {
     let number1 = parseInt(req.params.num1)
     let number2 = parseInt(req.params.num2)
-    if (req.query.operation === "add") {
-        let sum = number1 + number2;
-        res.send(`sum of ${number1} and ${number2} is ${sum}`);
-    }
-    else if (req.query.operation === "subtract") {
-        let sum = number1 - number2;
-        res.send(`sum of ${number1} and ${number2} is ${sum}`);
-    }
-    else if (req.query.operation === 'multiply') {
-        let sum = number1 * number2;
-        res.send(`sum of ${number1} and ${number2} is ${sum}`);
-    }
-    else if (req.query.operation === 'divide') {
-        let sum = number1 / number2;
-        res.send(`sum of ${number1} and ${number2} is ${sum}`);
-    }
-    else
-        res.send("Wrong operations!")
+    let operator = req.query.operation;
+    let result = calculate(operator,number1,number2);
+    if (result) {
+        res.send(`sum of ${number1} and ${number2} is ${result}`);
+    } else
+        res.send("Invalid operation")
 })
 
 app.listen(port, () => {
