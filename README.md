@@ -33,20 +33,21 @@
 
 | Day | Warm Up Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w09d1 |[**PROJECT 1 Presentations**](./unit_2/w09d1/warm_up_exercise)| [Express](./unit_2/w09d1/instructor_notes)| [TV Shows](./unit_2/w09d1/student_labs)|[First Contact](./unit_2/w09d1/homework)|
-| w09d2 |[](./unit_2/w09d2/warm_up_exercise)| [REST: Index and Show, MVC, EJS](./unit_2/w09d2/instructor_notes)| [Super Heroes, Fruits, Mars Missions](./unit_2/w09d2/student_labs)|[Poke Express](./unit_2/w09d2/homework)|
-| w09d3 |[Word Frequency](./unit_2/w09d3/warm_up_exercise)| [REST: Index and Show, MVC, EJS](./unit_2/w09d3/instructor_notes)| [Super Heroes, Fruits, Mars Missions](./unit_2/w09d3/student_labs)|[Poke Express](./unit_2/w09d3/homework)|
-| w10d1 |[](./unit_2/w10d1/warm_up_exercise)| [REST: New, Create](./unit_2/w10d1/instructor_notes)| [Biscoff Bakery](./unit_2/w10d1/student_labs)|[](./unit_2/w10d1/homework)|
-| w10d2 |[C.R.A.P.](./unit_2/w10d2/warm_up_exercise)| [cURL, Static Assets](./unit_2/w10d2/instructor_notes)| [Express CLI App](./unit_2/w10d2/student_labs)|[Budgtr](./unit_2/w10d2/homework)|
-| w10d3 |[Recursion](./unit_2/w10d3/warm_up_exercise)| [REST: Delete, Method Override](./unit_2/w10d3/instructor_notes)| [Exobiology/Pokedex](./unit_2/w10d3/student_labs)|[Pokedex](./unit_2/w10d3/homework)|
-| w11d1 |[](./unit_2/w11d1/warm_up_exercise)| [MongDB](./unit_2/w11d1/instructor_notes)| [Intergalatic Bounty Hunters](./unit_2/w11d1/student_labs)|[](./unit_2/w11d1/homework)|
-| w11d2 |[Pair Programming Responsive Design](./unit_2/w11d2/warm_up_exercise)| [Mongoose & Schemas](./unit_2/w11d2/instructor_notes)| [Mongoose Vampires](./unit_2/w11d2/student_labs)|[Hamburgers & Hotels](./unit_2/w11d2/homework)|
-| w11d3 |[Forms](./unit_2/w11d3/warm_up_exercise)| [Express w. Mongo/Mongoose Read, Create](./unit_2/w11d3/instructor_notes)| [Captain's Log](./unit_2/w11d3/student_labs)|[Mongoose Store](./unit_2/w11d3/homework)|
-| w12d1 |[Loop the Loop!](./unit_2/w12d1/warm_up_exercise)| [CRUD Delete, Edit, Update](./unit_2/w12d1/instructor_notes)| [Captains Log Continued](./unit_2/w12d1/student_labs)|[](./unit_2/w12d1/homework)|
-| w12d2 |[](./unit_2/w12d2/warm_up_exercise)| [Router](./unit_2/w12d2/instructor_notes)| [Captain's Log Continued](./unit_2/w12d2/student_labs)|[Mongoose Store Cont. ](./unit_2/w12d2/homework)|
-| w12d3 |[EJS Partials](./unit_2/w12d3/warm_up_exercise)| [Sessions, Auth, Build, Project 2 Announcement, Approvals](./unit_2/w12d3/instructor_notes)| [none (all day build)](./unit_2/w12d3/student_labs)|[Kingsmen](./unit_2/w12d3/homework)|
-| w13d1 |[**PROJECT 2**](./unit_2/w13d1/warm_up_exercise)| [Heroku Mandatory Deployment Lesson](./unit_2/w13d1/instructor_notes)| [](./unit_2/w13d1/student_labs)|[](./unit_2/w13d1/homework)|
-| w13d2 |[**PROJECT 2**](./unit_2/w13d2/warm_up_exercise)| [Related Models Notes (bonus)](./unit_2/w13d2/instructor_notes)| [](./unit_2/w13d2/student_labs)|[](./unit_2/w13d2/homework)|
+| w09d3 |[**PROJECT 1 Presentations**](./unit_2/w09d1/warm_up_exercise)| [Express](./unit_2/w09d1/instructor_notes)| [TV Shows](./unit_2/w09d1/student_labs)|[First Contact](./unit_2/w09d1/homework)|
+| w10d1 |[](./unit_2/w09d2/warm_up_exercise)| [REST: Index and Show, MVC, EJS](./unit_2/w09d2/instructor_notes)| [Super Heroes, Fruits, Mars Missions](./unit_2/w09d2/student_labs)|[Poke Express](./unit_2/w09d2/homework)|
+| w10d2 |[Word Frequency](./unit_2/w09d3/warm_up_exercise)| [REST: Index and Show, MVC, EJS](./unit_2/w09d3/instructor_notes)| [Super Heroes, Fruits, Mars Missions](./unit_2/w09d3/student_labs)|[Poke Express](./unit_2/w09d3/homework)|
+| w10d3 |[](./unit_2/w10d1/warm_up_exercise)| [REST: New, Create](./unit_2/w10d1/instructor_notes)| [Biscoff Bakery](./unit_2/w10d1/student_labs)|[](./unit_2/w10d1/homework)|
+| w11d1 |[C.R.A.P.](./unit_2/w10d2/warm_up_exercise)| [cURL, Static Assets](./unit_2/w10d2/instructor_notes)| [Express CLI App](./unit_2/w10d2/student_labs)|[Budgtr](./unit_2/w10d2/homework)|
+| w11d2 |[Recursion](./unit_2/w10d3/warm_up_exercise)| [REST: Delete, Method Override](./unit_2/w10d3/instructor_notes)| [Exobiology/Pokedex](./unit_2/w10d3/student_labs)|[Pokedex](./unit_2/w10d3/homework)|
+| w11d3 |[](./unit_2/w11d1/warm_up_exercise)| [MongDB](./unit_2/w11d1/instructor_notes)| [Intergalatic Bounty Hunters](./unit_2/w11d1/student_labs)|[](./unit_2/w11d1/homework)|
+| w12d1 |[Pair Programming Responsive Design](./unit_2/w11d2/warm_up_exercise)| [Mongoose & Schemas](./unit_2/w11d2/instructor_notes)| [Mongoose Vampires](./unit_2/w11d2/student_labs)|[Hamburgers & Hotels](./unit_2/w11d2/homework)|
+| w12d2 |[Forms](./unit_2/w11d3/warm_up_exercise)| [Express w. Mongo/Mongoose Read, Create](./unit_2/w11d3/instructor_notes)| [Captain's Log](./unit_2/w11d3/student_labs)|[Mongoose Store](./unit_2/w11d3/homework)|
+| w12d3 |[Loop the Loop!](./unit_2/w12d1/warm_up_exercise)| [CRUD Delete, Edit, Update](./unit_2/w12d1/instructor_notes)| [Captains Log Continued](./unit_2/w12d1/student_labs)|[](./unit_2/w12d1/homework)|
+| w13d1 |[](./unit_2/w12d2/warm_up_exercise)| [Router](./unit_2/w12d2/instructor_notes)| [Captain's Log Continued](./unit_2/w12d2/student_labs)|[Mongoose Store Cont. ](./unit_2/w12d2/homework)|
+| w13d2 |[EJS Partials](./unit_2/w12d3/warm_up_exercise)| [Sessions, Auth, Build, Project 2 Announcement, Approvals](./unit_2/w12d3/instructor_notes)| [none (all day build)](./unit_2/w12d3/student_labs)|[Kingsmen](./unit_2/w12d3/homework)|
+| w13d3 |[**PROJECT 2**](./unit_2/w13d1/warm_up_exercise)| [Heroku Mandatory Deployment Lesson](./unit_2/w13d1/instructor_notes)| [](./unit_2/w13d1/student_labs)|[](./unit_2/w13d1/homework)|
+
+| w13d3 |[**PROJECT 2**](./unit_2/w13d2/warm_up_exercise)| [Related Models Notes (bonus)](./unit_2/w13d2/instructor_notes)| [](./unit_2/w13d2/student_labs)|[](./unit_2/w13d2/homework)|
 | w13d3 |[**PROJECT 2 Presentations**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[Paradigm Shift SPA, MPA](./unit_3/w13d3/homework)|
 
 
