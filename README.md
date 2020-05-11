@@ -34,7 +34,7 @@
 | Day | Warm Up Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w09d1 |[**PROJECT 1 Presentations**](./unit_2/w09d1/warm_up_exercise)| [Express](./unit_2/w09d1/instructor_notes)| [TV Shows](./unit_2/w09d1/student_labs)|[First Contact](./unit_2/w09d1/homework)|
-| w09d2 |[](./unit_2/w09d2/warm_up_exercise)| [Params & Routing](./unit_2/w09d2/instructor_notes)| [Express Calculator](./unit_2/w09d2/student_labs)|[Magic 8 Ball, Pass it Around](./unit_2/w09d2/homework)|
+| w09d2 |[](./unit_2/w09d2/warm_up_exercise)| [REST: Index and Show, MVC, EJS](./unit_2/w09d2/instructor_notes)| [Super Heroes, Fruits, Mars Missions](./unit_2/w09d2/student_labs)|[Poke Express](./unit_2/w09d2/homework)|
 | w09d3 |[Word Frequency](./unit_2/w09d3/warm_up_exercise)| [REST: Index and Show, MVC, EJS](./unit_2/w09d3/instructor_notes)| [Super Heroes, Fruits, Mars Missions](./unit_2/w09d3/student_labs)|[Poke Express](./unit_2/w09d3/homework)|
 | w10d1 |[](./unit_2/w10d1/warm_up_exercise)| [REST: New, Create](./unit_2/w10d1/instructor_notes)| [Biscoff Bakery](./unit_2/w10d1/student_labs)|[](./unit_2/w10d1/homework)|
 | w10d2 |[C.R.A.P.](./unit_2/w10d2/warm_up_exercise)| [cURL, Static Assets](./unit_2/w10d2/instructor_notes)| [Express CLI App](./unit_2/w10d2/student_labs)|[Budgtr](./unit_2/w10d2/homework)|
