@@ -9,7 +9,7 @@ const sendFruits = (req, res) => {
 };
 
 const showForm = (req, res) => {
-    res.render('form.ejs', { fruit: fruits[req.params.id] });
+    res.render('form/form.ejs', { fruit: fruits[req.params.id] });
 };
 
 module.exports = {
