@@ -1,4 +1,4 @@
-const fruits = require('./models/fruits');
+const { fruits } = require('../models');
 
 const displayFruit = (req, res) => {
     res.send(fruits[req.params.id]);
