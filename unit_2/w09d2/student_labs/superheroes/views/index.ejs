@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        text-align: center;
+        font-family: 'Balsamiq Sans', cursive;
+    }
+    .container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+    .container > div {
+        background-color: rgb(52, 191, 255);
+        border-radius: 1em;
+        margin: 10px;
+        padding: 20px;
+        flex: 1 0 20%;
+    }
+    a {
+        text-decoration: none;
+        font-size: larger;
+        color: black;
+    }
+    .container > div:hover {
+        cursor: pointer;
+        background-color:rgb(6, 42, 59);
+        color: white;
+    }
+    a:hover {
+        color: white;
+    }
+</style>
+<body>
+    <h1>DC COMIC SUPERHEROES</h1>
+    <div class="container">
+        <% for (let i=0; i < superheroes.length; i++) { %>
+        <div id="<%=i%>">
+            <a href="/superheroes/<%=i%>"><%= superheroes[i].name %> </a>
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>

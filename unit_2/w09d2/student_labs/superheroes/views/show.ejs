@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        text-align: center;
+        font-family: 'Balsamiq Sans', cursive;
+        border: 1px solid black;
+    }
+
+    .container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+    .middle {
+        flex: 0 1 30%;
+    }
+    .superheroes, .villian {
+        flex: 1 0 auto;
+    }
+</style>
+
+<body>
+    <h1>DC clash of titans!</h1>
+    <div class="container">
+        <div class="superheroes">
+            <h1><%= superhero.name %></h1>
+            <h2>ability</h2>
+            <ul>
+                <% for(const power of superhero.power) {%>
+                <li><%= power %></li>
+                <%} %>
+            </ul>
+        </div>
+        <div class="middle">
+            <h1>VS</h1>
+        </div>
+        <div class="villian">
+            <h1><%= villian.name %></h1>
+            <h2>ability</h2>
+            <ul>
+                <% for(const power of villian.powers) {%>
+                <li><%= power %></li>
+                <%} %>
+            </ul>
+        </div>
+    </div>
+    <a href="/superheroes"> back to homepage</a>
+</body>
+
+</html>
