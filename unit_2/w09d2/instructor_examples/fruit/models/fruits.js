@@ -18,3 +18,5 @@ const fruits = [
 
 module.exports = fruits;
 
+const marsMissions = require('./models/marsMissions.js')
+

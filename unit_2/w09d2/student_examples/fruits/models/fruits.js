@@ -21,4 +21,19 @@ const fruits = [
     },
 ];
 
-module.exports = fruits;
+const animal = [
+    {
+        name:"Tiger",
+        kingOfjungle:false
+    },
+    {
+        name:"Lion",
+        kingOfjungle:true
+    }
+]
+
+module.exports = {
+    animal,
+    fruits
+}
+
