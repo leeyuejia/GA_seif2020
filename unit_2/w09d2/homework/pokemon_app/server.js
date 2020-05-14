@@ -14,8 +14,8 @@ app.get('/pokemon', (req, res) => {
 
 app.get('/pokemon/:id', (req, res) => {
     const index = parseInt(req.params.id);
-    if(!isNaN(index) && index >= 0 && index < pokemon.length) {
-        res.send(pokemon[index]);
+    if (!isNaN(index) && index >= 0 && index < pokemon.length) {
+        res.render('show.ejs', { pokemon: pokemon[index] });
     } else {
         res.send(`Your input is not valid, it should be equal to or larger than 0 and less than ${pokemon.length}`);
     }
