@@ -1,4 +1,5 @@
 // DEPENDENCIES
+require('dotenv').config()
 const express = require('express');
 
 
@@ -22,7 +23,7 @@ app.set('view engine', 'ejs');
 // views/missions folder has not been created create it!
 
 // PORT
-const port = 3000;
+const port = process.env.PORT || 3300;
 
 // DATA - put into marsMissions.js file inside of a models folder, for module.exports
 // remember to require it in the server
