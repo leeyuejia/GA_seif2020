@@ -12,6 +12,10 @@ app.get('/pokemon', (req, res) => {
     res.render('index.ejs', { pokemon });
 });
 
+app.get('/pokemon/:id', (req, res) => {
+    res.send(req.params.id);
+});
+
 app.listen(port, () => {
     console.log(`Listening to port ${port}`);
 });
