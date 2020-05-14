@@ -6,7 +6,6 @@ app.set('view engine', 'ejs');
 
 require('./router')(app);
 
-
 app.listen(port, () => {
     console.log('Listening to PORT', port);
 });
