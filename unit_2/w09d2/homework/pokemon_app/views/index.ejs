@@ -16,8 +16,10 @@
 <body>
     <h1>See All The Pokemon!</h1>
     <ul>
-        <% pokemon.forEach(poke => {%>
-        <li><%= poke.name[0].toUpperCase() + poke.name.slice(1) %>
+        <% pokemon.forEach((poke, index) => {%>
+        <li>
+            <a href='/pokemon/<%= index %>'><%=  poke.name[0].toUpperCase() + poke.name.slice(1) %>
+            </a>
         </li>
         <%}) %>
     </ul>
