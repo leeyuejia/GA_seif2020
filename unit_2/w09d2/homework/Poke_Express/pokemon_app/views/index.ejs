@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<style>
+    * {
+    text-align: center; 
+}
+body {
+    margin: 0 auto;
+    background-color:ghostwhite;
+    font-family: 'Balsamiq Sans', cursive;
+}
+ul {
+    display: inline-block;
+}
+</style>
+<body>
+    <h1>ALL POKEMON</h1>
+    <ul>
+        <% for (let i = 0; i < data.length; i++) { %>
+            <li> <a href="./pokemon/<%=i%>"></a> <%= data[i].name %></li> 
+        <%} %> 
+    </ul>
+</body>
+</html>

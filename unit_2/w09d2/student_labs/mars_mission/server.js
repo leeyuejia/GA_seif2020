@@ -1,6 +1,5 @@
 // DEPENDENCIES
 const express = require('express');
-const marsMissions = require('./models/marsMissions.js')
 
 
 const app = express();
