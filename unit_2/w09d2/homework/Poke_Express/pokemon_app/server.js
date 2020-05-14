@@ -5,6 +5,7 @@ const port = process.env.PORT || 4000;
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
+// unable to link css
 app.use(express.static("./pokemon_app"))
 
 require('./router')(app);

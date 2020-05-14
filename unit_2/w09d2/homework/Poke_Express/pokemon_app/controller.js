@@ -9,9 +9,10 @@ const indexPage = (req,res) => {
 const showPage = (req,res)=> {
     res.render("show.ejs", {
         data:pokemon,
-        itemID : req.params.id
-    })
-}
+        itemID: req.params.id
+    }, 
+    console.log(pokemon[req.params.id].name)
+    )}
 
 module.exports = {
     indexPage,
