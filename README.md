@@ -36,8 +36,8 @@
 | w09d3 |[**PROJECT 1 Presentations**](./unit_2/w09d1/warm_up_exercise)| [Express](./unit_2/w09d1/instructor_notes)| [TV Shows](./unit_2/w09d1/student_labs)|[First Contact](./unit_2/w09d1/homework)|
 | w10d1 |[](./unit_2/w09d2/warm_up_exercise)| [REST: Index and Show, MVC, EJS](./unit_2/w09d2/instructor_notes)| [Fruits, Mars Missions](./unit_2/w09d2/student_labs)|[Poke Express](./unit_2/w09d2/homework)|
 | w10d2 |[](./unit_2/w09d3/warm_up_exercise)| [Recap on MVC with Homeworks](./unit_2/w09d3/instructor_notes)| [Super Heroes](./unit_2/w09d3/student_labs)|[](./unit_2/w09d3/homework)|
-| w10d3 |[Word Frequency](./unit_2/w10d1/warm_up_exercise)| [Curl, Middleware, REST: Create & New](./unit_2/w10d1/instructor_notes)| [Biscoff Bakery](./unit_2/w10d1/student_labs)|[](./unit_2/w10d1/homework)|
-| w11d1 |[C.R.A.P.](./unit_2/w10d2/warm_up_exercise)| [cURL, Static Assets](./unit_2/w10d2/instructor_notes)| [Express CLI App](./unit_2/w10d2/student_labs)|[Budgtr](./unit_2/w10d2/homework)|
+| w10d3 |[Word Frequency](./unit_2/w10d1/warm_up_exercise)| [Curl, Middleware, REST: Create & New](./unit_2/w10d1/instructor_notes)| [Biscoff Bakery](./unit_2/w10d1/student_labs)|[Budgtr](./unit_2/w10d1/homework)|
+| w11d1 |[C.R.A.P.](./unit_2/w10d2/warm_up_exercise)| [cURL, Static Assets](./unit_2/w10d2/instructor_notes)| [Express CLI App](./unit_2/w10d2/student_labs)|[](./unit_2/w10d2/homework)|
 | w11d2 |[Recursion](./unit_2/w10d3/warm_up_exercise)| [REST: Delete, Method Override](./unit_2/w10d3/instructor_notes)| [Exobiology/Pokedex](./unit_2/w10d3/student_labs)|[Pokedex](./unit_2/w10d3/homework)|
 | w11d3 |[](./unit_2/w11d1/warm_up_exercise)| [MongDB](./unit_2/w11d1/instructor_notes)| [Intergalatic Bounty Hunters](./unit_2/w11d1/student_labs)|[](./unit_2/w11d1/homework)|
 | w12d1 |[Pair Programming Responsive Design](./unit_2/w11d2/warm_up_exercise)| [Mongoose & Schemas](./unit_2/w11d2/instructor_notes)| [Mongoose Vampires](./unit_2/w11d2/student_labs)|[Hamburgers & Hotels](./unit_2/w11d2/homework)|
