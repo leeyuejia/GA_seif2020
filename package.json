@@ -11,7 +11,7 @@
   },
   "jest": {
     "roots": [
-      "<rootDir>/unit_1"
+      "<rootDir>/unit_2"
     ]
   },
   "scripts": {
