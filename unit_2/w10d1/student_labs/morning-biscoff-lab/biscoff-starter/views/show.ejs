@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .container{
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    #image {
+        flex: 1 0 80%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="image">
+            <img src="<%=bakedGoods[indexOfGoods].image%>" alt="<%bakedGoods[indexOfGoods].name%>">
+        </div>
+        <div class="info">
+            <div id="name">
+                <h1><%=bakedGoods[indexOfGoods].name%></h1>
+            </div>
+            <div id=" price">
+                <h1>$ <%=bakedGoods[indexOfGoods].price%></h1>
+            </div>
+        </div>
+    </div>
+    <div class="homepage">
+        <a href="/bakedgoods"><- back to homepage</a>
+    </div>
+</body>
+</html>
