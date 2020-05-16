@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><%= bakedGood.name %></h1>
+            <h2 class="subtitle">$<%= bakedGood.price %></h2>
+            <img src="<%= bakedGood.image %>" alt="">
+            <div class="control">
+                <a class="button is-link is-light" href="/bakedgoods">Back to Home</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">All Baked Goods</h1>
+            <div class="content">
+                <ol type="I">
+                    <% for(let i = 0; i < bakedGoods.length; i++) { %>
+                    <li>
+                        <a href="/bakedgoods/<%=i%>"> <%= bakedGoods[i].name %></a>
+                    </li>
+                    <% } %>
+                </ol>
+            </div>
+
+            <a class="button is-success" href='/bakedgoods/new'>Create a new baked good</a>
+        </div>
+    </section>
+</body>
+
+</html>
