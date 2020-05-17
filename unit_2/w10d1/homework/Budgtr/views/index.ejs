@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>BUDGET</h1>
+    </div>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Month</th>
+                <th>Item</th>
+                <th>Amount</th>
+            </tr>
+            <%for (let i =0; i< data.length; i++) {%>
+            <tr>
+                <th><%=data[i].date%></th>
+                <th><a href="/budgets/<%=i%>"><%=data[i].name%></a></th>
+                <th><%=data[i].amount%></th>
+            </tr>
+            <%}%>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
