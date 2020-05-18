@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="/public/css/normalize.css">
+    <link rel="stylesheet" href="/public/css/skeleton.css">
 </head>
 
 <body>
     <div class="container">
         <h1>BUDGET</h1>
+        <h1>Bank Balance: have <%=totalAmount%></h1>
     </div>
     <div class="container">
         <table>
@@ -27,9 +28,13 @@
                 <th><%=data[i].amount%></th>
             </tr>
             <%}%>
-
         </table>
     </div>
+    <table>
+        <tr>
+            <th><a href="/budgets/new">create new item</a></th>
+        </tr>
+    </table>
 
 </body>
 
