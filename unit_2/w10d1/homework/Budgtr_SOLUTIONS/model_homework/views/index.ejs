@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<%- include('./partials/head.ejs') %>
+		<script src="./app.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Budgtr</h1>
+			<a href="/budgets/new"
+				><button type="button" name="button">New Item</button></a
+			>
+			<% if(bankAccount > 1000) { %>
+			<h2 class="wealthy">Bank Account Total: <%= bankAccount %></h2>
+			<% } else if (bankAccount < 0){%>
+			<h2 class="debt">Bank Account Total: <%= bankAccount %></h2>
+			<% } else {%>
+			<h2>Bank Account Total: <%= bankAccount %></h2>
+			<% } %>
+
+			<table>
+				<tbody>
+					<% let counter = 0 %> <% for (ledgerItem of ledger){ %>
+					<tr>
+						<td><%= ledgerItem.date %></td>
+						<td>
+							<a href="/budgets/<%= counter %>"
+								><%= ledgerItem.name %></a
+							>
+						</td>
+						<td><%= ledgerItem.amount %></td>
+					</tr>
+					<% counter++%> <% } %>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

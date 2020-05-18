@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+		<%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <div class="container">
+      <h1><%= ledgerItem.name%></h1>
+      <a href="/budgets"><button type="button" name="button">Back</button></a>
+      <div class="">
+        <dl>
+          <dt><strong>date</strong></dt>
+          <dd><%= ledgerItem.date%></dd>
+          <dt><strong>name</strong></dt>
+          <dd><%= ledgerItem.name%></dd>
+          <dt><strong>from</strong></dt>
+          <dd><%= ledgerItem.from%></dd>
+          <dt><strong>amount</strong></dt>
+          <dd><%= ledgerItem.amount%></dd>
+          <dt><strong>tags</strong></dt>
+          <dd><%= ledgerItem.tags%></dd>
+        </dl>
+      </div>
+    </div>
+  </body>
+</html>
