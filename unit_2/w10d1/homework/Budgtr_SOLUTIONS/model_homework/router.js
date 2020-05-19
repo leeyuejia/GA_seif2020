@@ -1,7 +1,7 @@
 const { index, init, show, create } = require('./controller');
 
 module.exports = (app) => {
-// Index
+    // Index
     app.get('/budgets', index);
 
     // new - need to show a form
