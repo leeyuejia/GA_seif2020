@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="/public/app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/planets" method="POST">
+            <label for="name">Name of mission</label>
+            <input type="text" name="name" id="name" />
+            <label for="description">description</label>
+            <input type="text" name="description" id="description" />
+            <label for="duration">duration of mission</label>
+            <input type="text" name="duration" id="duration" />
+            <label for="location">Location of planet</label>
+            <input type="text" name="location" id="location">
+            <div class="numberofcrew">
+                <label for="crew">name of crew</label>
+                <input type="text" name="crew" class="crew">
+                <button class="add-crew">+</button>
+                <button class="minus-crew">-</button>
+            </div>
+            <input type="submit" value="add mission">
+        </form>
+    </div>
+
+</body>
+
+</html>
