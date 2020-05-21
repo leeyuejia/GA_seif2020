@@ -35,10 +35,10 @@ const showPage = (req,res) => {
 }
 
 const postPage = (req,res) => {
-    req.body.misc= {};
-    req.body.misc.classification= "no info";
-    req.body.misc.weight = "no info";
-    req.body.misc.height = "no info";
+    //let arry = []
+    // store the name into an array and loop through the array. for each el, arry.push(name:el)
+    // then do a new data structure
+    console.log(req.body)
     if (!Array.isArray(req.body.moves.level.name)) req.body.moves.level.name = convertToArray(req.body.moves.level.name)
     if (!Array.isArray(req.body.type)) req.body.type = convertToArray(req.body.type)
     console.log(req.body)
