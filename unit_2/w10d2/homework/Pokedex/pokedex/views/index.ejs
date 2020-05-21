@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%-include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body>
+    <div class="container-header">
+        <h1>Pokemon manager </h1>
+        <h2><a href="/pokemon/new">Add pokemon</a></h2>
+    </div>
+    <div class="container-element">
+        <% data.forEach(el => {%>
+            <div class="container-pokemon">
+                <img src="<%=el.img%>" alt="<%= el.name%>" class="image">
+                <h3><%= el.name %> </h3>
+            </div>
+        <%})%>
+    </div>
+    
+</body>
+</html>
