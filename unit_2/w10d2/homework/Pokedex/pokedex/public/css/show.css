@@ -21,8 +21,7 @@ body {
     margin: 0 auto;
     margin-top: 20px;
     width: 80%;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    display: flex;
 }
 
 .container-pokemon {
@@ -35,8 +34,6 @@ h3 {
     margin: 3px auto 10px auto;
 }
 .image {
-    width: 150px;
-    height: 150px;
     border-radius: 1em;
     border: 1px solid black;
     flex: 1 0 auto;

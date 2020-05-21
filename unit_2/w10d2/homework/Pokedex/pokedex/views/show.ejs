@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show pokemon</title>
+    <%-include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/show.css">
+    <script src="../public/app.js"></script>
+</head>
+
+<body>
+    <div class="container-header">
+        <h2><a href="/pokemon">Home</a></h2>
+        <h1>Pokemon manager </h1>
+        <h2><a href="/pokemon/new">Add pokemon</a></h2>
+    </div>
+    <div class="container-info">
+        <div class="info-left">
+            <img src="<%=data[id].img%>" alt="<%=data[id].name%>" class="image">
+            <h3><%=data[id].name%></h3>
+        </div>
+    </div>
+
+    <div class="container-element">
+        <div class="info type">
+            <h2 class="type">Type</h2>
+            <ul>
+                <%for (const el of data[id].type) {%>
+                <li><%=el%></li>
+                <%}%>   
+            </ul>
+        </div>
+        <div class="info stats">
+            <h2 class="stats">Stats</h2>
+            <ul>
+                <% for (const el in data[id].stats) {%>
+                <li><%=`${el} : ${data[id].stats[el]}`%> </li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="info moves">
+            <h2 class="moves">Moves</h2>
+            <ul>
+                <% movesLevel.forEach(el =>{%>
+                <li><%= el.name %></li>
+                <%})%>
+            </ul>
+        </div>
+        <div class="info damages">
+            <h2 class="damages">Damages</h2>
+            <ul>
+                <% for (const el in data[id].damages) {%>
+                <li><%=`${el} : ${data[id].damages[el]}`%></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

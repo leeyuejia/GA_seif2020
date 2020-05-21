@@ -1,0 +1,18 @@
+body {
+    background-color: darkolivegreen;
+    margin: 10 auto;
+    text-align: center;
+    text-justify: center;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.container-header {
+    border-radius: 1em;
+    border: 3px solid black;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: goldenrod;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}

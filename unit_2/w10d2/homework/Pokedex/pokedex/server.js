@@ -5,7 +5,6 @@ const port = process.env.PORT || 8080
 const methodOverride = require('method-override')
 
 const data = require("./models/pokemon")
-const dataKeys = Object.keys(data)
 // require("./router/router.js")(app);
 
 // set view to ejs
@@ -16,12 +15,35 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"))
 //ALL FUNCTION
-
+const convertToArray = (input) => {
+    let arr = [];
+    input.includes(",") ? arr= input.split(",") : arr.push(input);
+    return arr;
+}
 const indexPage = (req,res) => {
     res.render("index.ejs", {data})
 }
 const newPage = (req,res) => {
-    res.render("new.ejs", {data, dataKeys})
+    let damagesKeys = Object.keys(data[0].damages)
+    res.render("new.ejs", {data,damagesKeys})
+}
+const showPage = (req,res) => {
+    let id = req.params.id;
+    let dataKeys = Object.keys(data[id])
+    let movesLevel = data[id].moves.level;
+    res.render("show.ejs", {data,id,dataKeys,movesLevel})
+}
+
+const postPage = (req,res) => {
+    req.body.misc= {};
+    req.body.misc.classification= "no info";
+    req.body.misc.weight = "no info";
+    req.body.misc.height = "no info";
+    if (!Array.isArray(req.body.moves.level.name)) req.body.moves.level.name = convertToArray(req.body.moves.level.name)
+    if (!Array.isArray(req.body.type)) req.body.type = convertToArray(req.body.type)
+    console.log(req.body)
+    data.push(req.body)
+    res.redirect('/pokemon')
 }
 
 //ALL ROUTES
@@ -29,11 +51,11 @@ app.get("/pokemon", indexPage)
 
 app.get("/pokemon/new", newPage)
 
-// app.get("/pokemon:id", showPage)
+app.get("/pokemon/:id", showPage)
 
 // app.get("/pokemon/:id/edit", editPage)
 
-// app.post("/pokemon", postPage)
+app.post("/pokemon", postPage)
 
 // app.put("/pokemon", putPage)
 

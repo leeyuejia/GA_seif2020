@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new pokemon</title>
+    <%-include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/new.css">
+    <script src="../public/app.js"></script>
+</head>
+
+<body>
+    <div class="container-header">
+        <h2><a href="/pokemon">Home</a></h2>
+        <h1>Pokemon manager </h1>
+        <h2><a href="/pokemon/new">Add pokemon</a></h2>
+    </div>
+    <div class="container-form">
+        <form action="/pokemon" method="POST">
+            <div class="name-container">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="name of pokemon" />
+            </div>
+            <div class="type">
+                <label for="type">Type</label>
+                <input type="text" name="type" id="type" placeholder="eg. wind,flying" />
+            </div>
+            <div class="moves">
+                <label for="moves">moves</label>
+                <input type="text" name="moves[level][name]" id="moves" placeholder="eg. tackle,sand-attack">
+            </div>
+            <div class="damage-container">
+                <label for="damages">Damages againsts</label>
+                <% damagesKeys.forEach(el => {%>
+
+                    <label for="damages"><%=el%></label>
+
+                    <input type="number" min="0" max="3" name="damages[<%=el%>]" id="damages" placeholder="0-3" />
+
+                <%})%>
+            </div>
+            <input type="submit" value="create pokemon">
+
+        </form>
+    </div>
+
+</body>
+
+</html>

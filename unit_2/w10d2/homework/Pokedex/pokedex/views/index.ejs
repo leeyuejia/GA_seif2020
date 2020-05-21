@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>home pokemon</title>
     <%-include('partials/head.ejs') %>
     <link rel="stylesheet" href="/public/css/index.css">
 </head>
@@ -13,13 +13,12 @@
         <h2><a href="/pokemon/new">Add pokemon</a></h2>
     </div>
     <div class="container-element">
-        <% data.forEach(el => {%>
+        <% data.forEach((el,index) => {%>
             <div class="container-pokemon">
                 <img src="<%=el.img%>" alt="<%= el.name%>" class="image">
-                <h3><%= el.name %> </h3>
+                <h3><a href="/pokemon/<%=index%>"><%= el.name %></a></h3>
             </div>
         <%})%>
     </div>
-    
 </body>
 </html>
