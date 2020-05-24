@@ -116,5 +116,3 @@ Fetched 1 record(s) in 2ms
 - let's make one more burger exactly like the one we just made (copy paste again)
 
 ### Follow the rest of the prompts in `answers.js`
-
-### Continue to the hotels part of tonight's homework!
