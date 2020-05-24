@@ -39,7 +39,7 @@
 | w10d3 |[Word Frequency](./unit_2/w10d1/warm_up_exercise)| [Curl, Middleware, REST: Create & New](./unit_2/w10d1/instructor_notes)| [Biscoff Bakery](./unit_2/w10d1/student_labs)|[Budgtr](./unit_2/w10d1/homework)|
 | w11d1 |[C.R.A.P.](./unit_2/w10d2/warm_up_exercise)| [REST: Delete, Method Override, Update](./unit_2/w10d2/instructor_notes)| [Exobiology](./unit_2/w10d2/student_labs)|[Pokedex](./unit_2/w10d2/homework)|
 | w11d2 |[Recursion](./unit_2/w10d3/warm_up_exercise)| [MongoDB](./unit_2/w10d3/instructor_notes)| [Intergalatic Bounty Hunters - MongDB Lab](./unit_2/w10d3/student_labs)|[](./unit_2/w10d3/homework)|
-| w11d3 |[](./unit_2/w11d1/warm_up_exercise)| [Public Holiday](./unit_2/w11d1/instructor_notes)| [Intergalatic Bounty Hunters](./unit_2/w11d1/student_labs)|[](./unit_2/w11d1/homework)|
+| w11d3 |[](./unit_2/w11d1/warm_up_exercise)| [Public Holiday](./unit_2/w11d1/instructor_notes)| [](./unit_2/w11d1/student_labs)|[](./unit_2/w11d1/homework)|
 | w12d1 |[Pair Programming Responsive Design](./unit_2/w11d2/warm_up_exercise)| [Advanced MongoDB](./unit_2/w11d2/instructor_notes)| [MongoDB Lab](./unit_2/w11d2/student_labs)|[Mongo Burgers](./unit_2/w11d2/homework)|
 | w12d2 |[Forms](./unit_2/w11d3/warm_up_exercise)| [Mongoose, Express w. Mongo/Mongoose Read, Create](./unit_2/w11d3/instructor_notes)| [Captain's Log](./unit_2/w11d3/student_labs)|[Mongoose Store](./unit_2/w11d3/homework)|
 | w12d3 |[Loop the Loop!](./unit_2/w12d1/warm_up_exercise)| [CRUD Delete, Edit, Update](./unit_2/w12d1/instructor_notes)| [Captains Log Continued](./unit_2/w12d1/student_labs)|[](./unit_2/w12d1/homework)|
