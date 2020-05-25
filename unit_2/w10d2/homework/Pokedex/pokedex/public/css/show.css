@@ -1,5 +1,5 @@
 body {
-    background-color: darkolivegreen;
+    background-color: ghostwhite;
     margin: 10 auto;
     text-align: center;
     text-justify: center;
@@ -16,11 +16,17 @@ body {
     justify-content: space-between;
     padding: 5px 20px;
 }
-
-.container-element {
+.container-body {
     margin: 0 auto;
     margin-top: 20px;
-    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.container-element {
+    flex: 0 1 auto;
     display: flex;
 }
 
@@ -46,4 +52,16 @@ a {
 }
 a:hover {
     border-bottom: 2px solid black;
+}
+
+.info-stats {
+    display: none;
+}
+/* .canvas {
+    width: 400px;
+    height: 400px;
+} */
+#myChart {
+    width: 400px;
+    height: 400px;
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home pokemon</title>
+    <%-include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/edit.css">
+</head>
+
+<body>
+    <div class="container-header">
+        <h2><a href="/pokemon">Home</a></h2>
+        <h1>Pokemon manager </h1>
+
+    </div>
+    <div class="container-center">
+        <img src="<%=editPokemon.img%>" alt="<%=editPokemon.name%>" class="image">
+    </div>
+    <div class="container-edit">
+        <form action="/pokemon/<%=id%>?_method=PUT" method="POST">
+            <div class="name">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="<%=editPokemon.name%>">
+            </div>
+            <div class="type">
+                <label for="type">Type</label>
+                <input type="text" name="type" id="type" value="<%=editPokemon.type%>">
+            </div>
+            <div class="image">
+                <label for="img">Image URL</label>
+                <input type="text" name="img" id="image" value="<%=editPokemon.img%>">
+            </div>
+            <div class="stats">
+                <label for="stats">stats</label>
+                <% for (const pro in editPokemon.stats) {%>
+                <label for="<%=pro%>"><%=pro%></label>
+                <input type="number" name="stats[<%=pro%>]" value="<%=parseInt(editPokemon.stats[pro])%>" placeholder="number">
+                <%}%>
+            </div>
+            <div class="moves">
+                <label for="moves">Moves</label>
+                <label for="name">names</label>
+                <% movesName.forEach((el,index) => {%>
+                <label for="moves-<%=index%>">No.<%=index%></label>
+                <input type="text" name="moves" id="movesName" value="<%=el.name%>">
+                <%})%>
+            </div>
+            <input type="submit" value="confirm pokemon">
+        </form>
+    </div>
+</body>
+
+</html>

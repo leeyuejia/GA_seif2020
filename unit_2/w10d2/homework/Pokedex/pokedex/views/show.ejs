@@ -16,47 +16,60 @@
         <h1>Pokemon manager </h1>
         <h2><a href="/pokemon/new">Add pokemon</a></h2>
     </div>
-    <div class="container-info">
-        <div class="info-left">
-            <img src="<%=data[id].img%>" alt="<%=data[id].name%>" class="image">
-            <h3><%=data[id].name%></h3>
+    <div class="container-body">
+        <div class="canvas">
+            <canvas id="myChart" width="400" height="400" aria-label="chart" role="img"></canvas>
         </div>
-    </div>
+        <div class="container-info">
+            <div class="info-left">
+                <button class="button"><a href="/pokemon/<%=id%>/edit">Edit pokemon</a></button>
+            </div>
+            <div class="info-center">
+                <img src="<%=data[id].img%>" alt="<%=data[id].name%>" class="image">
+                <h3><%=data[id].name%></h3>
+            </div>
+            <div class="info-right">
+                <form action="/pokemon/<%=id%>/?_method=DELETE" method="POST" class="form">
+                    <input type="submit" value="DELETE">
+                </form>
+            </div>
+        </div>
 
-    <div class="container-element">
-        <div class="info type">
-            <h2 class="type">Type</h2>
-            <ul>
-                <%for (const el of data[id].type) {%>
-                <li><%=el%></li>
-                <%}%>   
+        <div class="container-element">
+            <div class="info-type">
+                <h2 class="type">Type</h2>
+                <ul>
+                    <%for (const el of data[id].type) {%>
+                    <li><%=el%></li>
+                    <%}%>   
             </ul>
         </div>
-        <div class="info stats">
+        <div class="info-stats">
             <h2 class="stats">Stats</h2>
             <ul>
                 <% for (const el in data[id].stats) {%>
-                <li><%=`${el} : ${data[id].stats[el]}`%> </li>
-                <%}%>
+                    <li><%=`${el} : ${data[id].stats[el]}`%> </li>
+                    <%}%>
             </ul>
         </div>
-        <div class="info moves">
+        <div class="info-moves">
             <h2 class="moves">Moves</h2>
             <ul>
                 <% movesLevel.forEach(el =>{%>
-                <li><%= el.name %></li>
-                <%})%>
-            </ul>
-        </div>
-        <div class="info damages">
-            <h2 class="damages">Damages</h2>
-            <ul>
-                <% for (const el in data[id].damages) {%>
-                <li><%=`${el} : ${data[id].damages[el]}`%></li>
-                <%}%>
+                    <li><%= el.name %></li>
+                    <%})%>
+                </ul>
+            </div>
+            <div class="info-damages">
+                <h2 class="damages">Damages</h2>
+                <ul>
+                    <% for (const el in data[id].damages) {%>
+                    <li><%=`${el} : ${data[id].damages[el]}`%></li>
+                    <%}%>
             </ul>
         </div>
     </div>
+</div>
 </body>
 
 </html>

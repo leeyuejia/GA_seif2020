@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,25 @@
     <%-include('partials/head.ejs') %>
     <link rel="stylesheet" href="/public/css/index.css">
 </head>
+
 <body>
     <div class="container-header">
+        <h2>
+            <form action="/pokemon/all?_method=DELETE" method="POST">
+                <input type="submit" value="Delete ALL">
+            </form>
+        </h2>
         <h1>Pokemon manager </h1>
         <h2><a href="/pokemon/new">Add pokemon</a></h2>
     </div>
     <div class="container-element">
         <% data.forEach((el,index) => {%>
-            <div class="container-pokemon">
-                <img src="<%=el.img%>" alt="<%= el.name%>" class="image">
-                <h3><a href="/pokemon/<%=index%>"><%= el.name %></a></h3>
-            </div>
-        <%})%>
+        <div class="container-pokemon">
+            <a href="/pokemon/<%=index%>"><img src="<%=el.img%>" alt="<%= el.name%>" class="image"></a>
+            <h3><a href="/pokemon/<%=index%>"><%= el.name %></a></h3>
+        </div>
+        <%})%>                                                                        
     </div>
 </body>
+
 </html>

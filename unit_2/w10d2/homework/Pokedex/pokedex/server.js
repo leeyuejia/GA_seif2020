@@ -14,52 +14,129 @@ app.use("/public", express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"))
-//ALL FUNCTION
+
+////////////////////////////////////////////////
+///////////////  ALL FUNCTION   ////////////////
+////////////////////////////////////////////////
 const convertToArray = (input) => {
     let arr = [];
     input.includes(",") ? arr= input.split(",") : arr.push(input);
     return arr;
 }
+const addKeyToArray = (arr) => {
+    let arrayOfObject = [];
+    for (const el of arr) {
+        arrayOfObject.push({"name": el})
+    }
+    return arrayOfObject;
+}
+const convertObjToNumber = (obj)=> {
+    for (const pro in obj) {
+        obj[pro] = parseInt(obj[pro])
+    } return obj;
+};
+
+////////////////////////////////////////////////
+///////////////  ALL ROUTES   ////////////////
+////////////////////////////////////////////////
 const indexPage = (req,res) => {
     res.render("index.ejs", {data})
 }
 const newPage = (req,res) => {
     let damagesKeys = Object.keys(data[0].damages)
-    res.render("new.ejs", {data,damagesKeys})
+    let statsKeys = Object.keys(data[0].stats)
+    res.render("new.ejs", {data,damagesKeys,statsKeys})
 }
 const showPage = (req,res) => {
     let id = req.params.id;
     let dataKeys = Object.keys(data[id])
     let movesLevel = data[id].moves.level;
+    console.log(dataKeys)
     res.render("show.ejs", {data,id,dataKeys,movesLevel})
 }
 
 const postPage = (req,res) => {
-    //let arry = []
-    // store the name into an array and loop through the array. for each el, arry.push(name:el)
-    // then do a new data structure
-    console.log(req.body)
-    if (!Array.isArray(req.body.moves.level.name)) req.body.moves.level.name = convertToArray(req.body.moves.level.name)
+    if (!Array.isArray(req.body.moves)) req.body.moves = convertToArray(req.body.moves);
     if (!Array.isArray(req.body.type)) req.body.type = convertToArray(req.body.type)
-    console.log(req.body)
-    data.push(req.body)
+    let movesName = req.body.moves
+    let newPokemon = 
+        {name: req.body.name,
+        img: req.body.img,
+        type: req.body.type,
+        moves: {
+            level: addKeyToArray(movesName)
+        },
+        damages: req.body.damages,
+        stats: convertObjToNumber(req.body.stats)
+    }
+    data.push(newPokemon)
     res.redirect('/pokemon')
 }
 
-//ALL ROUTES
+const editPage = (req, res) => {
+    let id = req.params.id
+    let editPokemon = data[id]
+    let movesName = editPokemon.moves.level;
+    //movesName is an array of objects
+    res.render('edit.ejs',{id,editPokemon,movesName})
+};
+
+const putPage = (req,res) => {
+    if (!Array.isArray(req.body.moves)) req.body.moves = convertToArray(req.body.moves);
+    if (!Array.isArray(req.body.type)) req.body.type = convertToArray(req.body.type)
+    let editedPokemon = {
+        name: req.body.name,
+        img: req.body.img,
+        type: req.body.type,
+        moves: {
+            level: addKeyToArray(req.body.moves)
+        },
+        stats: convertObjToNumber(req.body.stats),
+        damages: data[req.params.id].damages
+    }
+    data[req.params.id] = editedPokemon
+    console.log(editedPokemon)
+    res.redirect(`/pokemon/${req.params.id}`)
+}
+
+const deleteAll = (req,res) => {
+    data.splice(0, data.length)
+    res.redirect("/pokemon")
+}
+
+const deletePage = (req,res) => {
+    data.splice(req.params.id, 1)
+    data = [{name:'',
+        img: '',
+        type:[],
+        moves: {level:[]},
+        stats:{hp:'', attack:'',defense:'',spattack:'',spdefense:'', speed:''},
+        damages:{normal:'', fire:''}
+    }]
+    res.redirect("/pokemon")
+    return data;
+}
+
+////////////////////////////////////////////////
+///////////////  ALL ROUTE  ////////////////
+////////////////////////////////////////////////
 app.get("/pokemon", indexPage)
 
 app.get("/pokemon/new", newPage)
 
 app.get("/pokemon/:id", showPage)
 
-// app.get("/pokemon/:id/edit", editPage)
+app.get("/pokemon/:id/edit", editPage)
 
 app.post("/pokemon", postPage)
 
-// app.put("/pokemon", putPage)
+app.put("/pokemon/:id", putPage)
 
-// app.delete("/fruits/:index", deletePage)
+app.delete("/pokemon/all", deleteAll)
+
+app.delete("/pokemon/:id", deletePage)
+
+
 
 
 

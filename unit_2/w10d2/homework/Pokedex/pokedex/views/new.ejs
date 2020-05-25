@@ -28,17 +28,25 @@
             </div>
             <div class="moves">
                 <label for="moves">moves</label>
-                <input type="text" name="moves[level][name]" id="moves" placeholder="eg. tackle,sand-attack">
+                <input type="text" name="moves" id="moves" placeholder="eg. tackle,sand-attack">
             </div>
             <div class="damage-container">
                 <label for="damages">Damages againsts</label>
                 <% damagesKeys.forEach(el => {%>
-
                     <label for="damages"><%=el%></label>
-
                     <input type="number" min="0" max="3" name="damages[<%=el%>]" id="damages" placeholder="0-3" />
-
                 <%})%>
+            </div>
+            <div class="stats">
+                <label for="stats">Stats</label>
+                <% statsKeys.forEach(el => {%>
+                <label for="stats[<%=el%>]"><%=el%></label>
+                <input type="number" name="stats[<%=el%>]" id="stats" placeholder="number">
+                <%})%>
+            </div>
+            <div class="image">
+                <label for="image">Image URL</label>
+                <input type="text" name="img" id="img" placeholder="img url">
             </div>
             <input type="submit" value="create pokemon">
 
