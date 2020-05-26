@@ -46,8 +46,8 @@
 | w13d1 |[](./unit_2/w12d2/warm_up_exercise)| [Router](./unit_2/w12d2/instructor_notes)| [Captain's Log Continued](./unit_2/w12d2/student_labs)|[Mongoose Store Cont. ](./unit_2/w12d2/homework)|
 | w13d2 |[EJS Partials](./unit_2/w12d3/warm_up_exercise)| [Sessions, Auth, Build, Project 2 Announcement, Approvals](./unit_2/w12d3/instructor_notes)| [none (all day build)](./unit_2/w12d3/student_labs)|[Kingsmen](./unit_2/w12d3/homework)|
 | w13d3 |[**PROJECT 2**](./unit_2/w13d1/warm_up_exercise)| [Heroku Mandatory Deployment Lesson](./unit_2/w13d1/instructor_notes)| [](./unit_2/w13d1/student_labs)|[](./unit_2/w13d1/homework)|
-| w13d3 |[**PROJECT 2**](./unit_2/w13d2/warm_up_exercise)| [Related Models Notes (bonus)](./unit_2/w13d2/instructor_notes)| [](./unit_2/w13d2/student_labs)|[](./unit_2/w13d2/homework)|
-| w13d3 |[**PROJECT 2 Presentations**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[Paradigm Shift SPA, MPA](./unit_3/w13d3/homework)|
+| w14d1 |[**PROJECT 2**](./unit_2/w13d2/warm_up_exercise)| [Related Models Notes (bonus)](./unit_2/w13d2/instructor_notes)| [](./unit_2/w13d2/student_labs)|[](./unit_2/w13d2/homework)|
+| w14d2 |[**PROJECT 2 Presentations**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[Paradigm Shift SPA, MPA](./unit_3/w13d3/homework)|
 
 
 ## Unit 3
