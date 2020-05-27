@@ -1,0 +1,296 @@
+[{
+  "_id": {
+    "$oid": "5ece740733396edd64b4ba9b"
+  },
+  "name": "Count Chocula",
+  "hair_color": "brown",
+  "eye_color": "brown",
+  "dob": {
+    "$date": "1971-03-13T00:17:00Z"
+  },
+  "loves": [
+    "cereal",
+    "marshmallows"
+  ],
+  "location": "Minneapolis, Minnesota, US",
+  "gender": "m",
+  "victims": 2
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4ba9c"
+  },
+  "name": "Dracula",
+  "dob": {
+    "$date": {
+      "$numberLong": "-32596278925000"
+    }
+  },
+  "hair_color": "brown",
+  "eye_color": "blue",
+  "loves": [
+    "Winona Ryder",
+    "top hats",
+    "fancy cloaks",
+    "handlebar   mustaches"
+  ],
+  "location": "Transylvania, Romania",
+  "gender": "m",
+  "victims": 1238
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4ba9d"
+  },
+  "name": "Elizabeth Bathory ",
+  "dob": {
+    "$date": {
+      "$numberLong": "-12916745125000"
+    }
+  },
+  "hair_color": "brown",
+  "eye_color": "brown",
+  "loves": [
+    "virgin blood",
+    "fancy cloaks",
+    "frilly collars"
+  ],
+  "location": "Nyírbátor, Hungary",
+  "gender": "f",
+  "victims": 980
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4ba9e"
+  },
+  "name": "Lestat",
+  "dob": {
+    "$date": {
+      "$numberLong": "-6597288685000"
+    }
+  },
+  "hair_color": "blonde",
+  "eye_color": "blue",
+  "loves": [
+    "frilly shirtsleeves",
+    "frilly collars",
+    "lurking in   rotting mansions",
+    "Louis"
+  ],
+  "location": "Auvergne, France",
+  "gender": "m",
+  "victims": 324
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4ba9f"
+  },
+  "name": "Louis de Pointe du Lac",
+  "dob": {
+    "$date": {
+      "$numberLong": "-6421697665000"
+    }
+  },
+  "hair_color": "brown",
+  "eye_color": "blue",
+  "loves": [
+    "brooding",
+    "Claudia",
+    "staring longingly into the   distance"
+  ],
+  "location": "New Orleans, Louisiana, US",
+  "gender": "m",
+  "victims": 150
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa0"
+  },
+  "name": "Claudia",
+  "dob": {
+    "$date": {
+      "$numberLong": "-5579879125000"
+    }
+  },
+  "hair_color": "blonde",
+  "eye_color": "blue",
+  "loves": [
+    "doll babies",
+    "ribbons",
+    "appearing innocent",
+    "  trickery"
+  ],
+  "location": "New Orleans, Louisiana, US",
+  "gender": "f",
+  "victims": 290
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa1"
+  },
+  "name": "Armand",
+  "dob": {
+    "$date": {
+      "$numberLong": "-15415647205000"
+    }
+  },
+  "hair_color": "red",
+  "eye_color": "brown",
+  "loves": [
+    "theatre",
+    "painting",
+    "velvet robes",
+    "being tragic"
+  ],
+  "location": "Kiev, Russia",
+  "gender": "m",
+  "victims": 1045
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa2"
+  },
+  "name": "Santino",
+  "dob": {
+    "$date": {
+      "$numberLong": "-15920568805000"
+    }
+  },
+  "hair_color": "brown",
+  "eye_color": "brown",
+  "loves": [
+    "trickery",
+    "vampiric cults",
+    "fancy cloaks"
+  ],
+  "location": "Rome, Italy",
+  "gender": "m",
+  "victims": 1103
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa3"
+  },
+  "name": "Akasha",
+  "dob": {
+    "$date": {
+      "$numberLong": "-314607096805000"
+    }
+  },
+  "hair_color": "brown",
+  "eye_color": "green",
+  "loves": [
+    "eating hearts",
+    "bathing in roses",
+    "elaborate   headdresses",
+    "R&B music"
+  ],
+  "location": "Kemet, Egypt",
+  "gender": "f",
+  "victims": 210234
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa4"
+  },
+  "name": "Edward Cullen",
+  "dob": {
+    "$date": {
+      "$numberLong": "-2160194305000"
+    }
+  },
+  "hair_color": "brown",
+  "eye_color": "brown",
+  "loves": [
+    "brooding",
+    "diamond skin",
+    "calling people spider   monkeys"
+  ],
+  "location": "Chicago, Illinois, US",
+  "gender": "m"
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa5"
+  },
+  "name": "Persephone Bourignon",
+  "dob": {
+    "$date": {
+      "$numberLong": "-5318668945000"
+    }
+  },
+  "hair_color": "red",
+  "eye_color": "green",
+  "loves": [
+    "wine",
+    "fancy cloaks",
+    "appearing innocent"
+  ],
+  "location": "Paris, France",
+  "gender": "f",
+  "victims": 450
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa6"
+  },
+  "name": "René Tremblay",
+  "dob": {
+    "$date": {
+      "$numberLong": "-1509069420000"
+    }
+  },
+  "hair_color": "brown",
+  "eye_color": "green",
+  "loves": [
+    "frilly shirtsleeves",
+    "trickery",
+    "card games"
+  ],
+  "location": "Bucharest, Romania",
+  "gender": "m",
+  "victims": 134
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa7"
+  },
+  "name": "Caroline Belmont",
+  "hair_color": "blonde",
+  "eye_color": "brown",
+  "dob": {
+    "$date": {
+      "$numberLong": "-5384068825000"
+    }
+  },
+  "loves": [
+    "marshmallows",
+    "ribbons",
+    "being tragic"
+  ],
+  "location": "Ljubljana, Slovenia",
+  "gender": "f",
+  "victims": 567
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa8"
+  },
+  "name": "Francis Frost",
+  "hair_color": "black",
+  "eye_color": "blue",
+  "dob": {
+    "$date": "1976-07-18T10:48:00Z"
+  },
+  "loves": [
+    "brooding",
+    "frilly shirtsleeves"
+  ],
+  "location": "New York, New York, US",
+  "gender": "m",
+  "victims": 112
+},{
+  "_id": {
+    "$oid": "5ece740733396edd64b4baa9"
+  },
+  "name": "Barnabas Spenser",
+  "hair_color": "brown",
+  "eye_color": "brown",
+  "dob": {
+    "$date": "1984-07-03T05:12:00Z"
+  },
+  "loves": [
+    "being merry",
+    "being insane",
+    "card games"
+  ],
+  "location": "New York, New York, US",
+  "gender": "m"
+}]

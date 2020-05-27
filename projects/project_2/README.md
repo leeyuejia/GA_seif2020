@@ -13,7 +13,7 @@ For this project, you will be making a full CRUD app using the technologies outl
 ### &#x1F534; Mandatory to pass:
 #### MVP - Minimum Viable Product
 
-* A working full-stack application, built by you, using **Node.js, Mongoose, Express and EJS**
+* A working full-stack application, built by you, using **Node.js, MongoDB, Express and EJS**
 * Adhere to the **MVC** file structure: Models, Views, Controllers
 * At least one model with all 7 **RESTful routes** and full **CRUD**.
 * :heavy_exclamation_mark: A git repository **not inside the class repo**.  
@@ -103,7 +103,7 @@ Are you able to defend why you implemented your solution in a certain way? Can y
 * **[Writing Good User Stories](http://www.mariaemerson.com/user-stories/)** 
 * **[Presenting Information Architecture](http://webstyleguide.com/wsg3/3-information-architecture/4-presenting-information.html)** 
 * **[Mongo Documentation](https://docs.mongodb.com/manual/)**
-* **[Mongoose Documentation](http://mongoosejs.com/docs/guide.html)**
+* **[Mongo Node.JS Driver Documentation](https://github.com/mongodb/node-mongodb-native)**
 * **[Mongo Cheatsheet](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/wiki/Mongo-Cheatsheet)**
 </details>
 <hr>  

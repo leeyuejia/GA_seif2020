@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body>
+    <h1>pokedex</h1>
+    <center>
+      <a href="/pokemon/new" class="button">Create New Pokemon</a>
+    </center>
+    <p></p>
+    <div class="container">
+      <% for(let i = 0; i < data.length; i++) { %> <!-- iterates through data -->
+        <% if (i % 6 === 0) { %> <!-- if 6 images have already been added to a row -->
+          <% if (i !== 0) { %> <!-- if it's not the very first row, close the previous row div -->
+            </div>
+          <% } %>
+          <div class="row"> <!-- add a row div -->
+        <% } %>
+        <div class="two columns">
+          <a href="/pokemon/<%=i%>"><img src="<%=data[i].img%>" class="pokedex"></a>
+        </div>
+      <% } %>
+    </div>
+  </body>
+</html>
