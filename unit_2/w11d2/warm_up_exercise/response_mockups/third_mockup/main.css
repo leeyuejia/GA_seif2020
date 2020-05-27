@@ -1,3 +1,44 @@
 body {
+  display: flex;
+  flex-flow:column nowrap;
   background: #FFE8DF;
+}
+div {
+  width: 100%;
+  border: 1px solid black;
+}
+.A {
+  background-color: red
+}
+.B-to-H {
+  background-color: blue;
+  width:100%;
+  min-height: 400px;
+  display:flex;
+  flex-flow:row nowrap;
+}
+.B-to-G {
+  display:flex;
+  flex-flow:row wrap;
+}
+.row {
+  display:flex;
+  flex:1 0 auto;
+}
+.H {
+  background-color: green;
+  width: 30%;
+}
+.square {
+  width: 33%
+}
+
+@media (max-width:800px) {
+  .B-to-H {
+    flex-flow: column nowrap;
+  }
+  .H {
+    flex: 1 0 auto;
+    width:100%;
+  }
 }
