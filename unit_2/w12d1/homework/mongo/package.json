@@ -1,16 +1,16 @@
 {
-  "name": "pokedex",
+  "name": "mongo_vampires",
   "version": "1.0.0",
-  "description": "",
-  "main": "mongo.js",
+  "description": "homework",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node mongo.js",
-    "dev": "nodemon mongo.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongo": "^0.1.0"
+    "mongodb": "^3.5.7"
   }
 }
