@@ -55,3 +55,53 @@ getData()
 // }).catch(err=>{
 // 	console.log(err);
 // })
+
+
+/* -------------------------------- Callback -------------------------------- */
+​
+collection.find({}).toArray((err, docs) => {
+	assert.equal(err, null);
+	console.log("Found the following records");
+	console.log(docs)
+	client.close()
+});
+​
+// OR
+​
+const callback = (err, docs) => {
+	assert.equal(err, null);
+	console.log("Found the following records");
+	console.log(docs)
+	client.close()
+}
+​
+collection.find({}).toArray(callback);
+​
+// problem w callback is nesting => callback hell
+​
+/* --------------------------------- Promise -------------------------------- */
+​
+const docs = collection.find({}).toArray()
+​
+docs.then(res => {
+	console.log("Found the following records");
+	console.log(res)
+	client.close()
+}).catch(err => {
+	assert.equal(err, null);
+})
+​
+/* ---------------------------------- Await --------------------------------- */
+​
+// remember to place await within an async fn
+const fn = async () => {
+	try {
+		const docs = await collection.find({}).toArray()
+		console.log("Found the following records");
+		console.log(docs)
+		client.close()
+	} catch (err) {
+		assert.equal(err, null);
+	}
+}
+fn()
