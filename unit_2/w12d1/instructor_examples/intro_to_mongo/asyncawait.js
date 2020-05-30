@@ -82,7 +82,7 @@ new Waiter()
 async function getData() {
     
     try {
-        let response = await fetch('https://mhw-db.com/charms/5');
+        let response = await fetch('https://mhw-db.com/charms/');
     let result = await response.json();
     console.log(result);
 
@@ -91,5 +91,6 @@ async function getData() {
     }
 }
 getData()
+// getData().catch (err => {console.log(err.message)}) another option to write the "try-catch error"
 
 
