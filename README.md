@@ -42,7 +42,7 @@
 | w11d3 |[](./unit_2/w11d1/warm_up_exercise)| [Public Holiday](./unit_2/w11d1/instructor_notes)| [](./unit_2/w11d1/student_labs)|[](./unit_2/w11d1/homework)|
 | w12d1 |[Pair Programming Responsive Design](./unit_2/w11d2/warm_up_exercise)| [Advanced MongoDB](./unit_2/w11d2/instructor_notes)| [MongoDB Lab](./unit_2/w11d2/student_labs)|[Mongo Burgers](./unit_2/w11d2/homework)|
 | w12d2 |[](./unit_2/w11d3/warm_up_exercise)| [Import Data, CRUD in MongoDB](./unit_2/w11d3/instructor_notes)| [](./unit_2/w11d3/student_labs)|[Mongo Vampire](./unit_2/w11d3/homework)|
-| w12d3 |[(./unit_2/w12d1/warm_up_exercise)| [MongoDB Node.JS Driver CRUD](./unit_2/w12d1/instructor_notes)| [](./unit_2/w12d1/student_labs)|[Mongo Vampires](./unit_2/w12d1/homework)|
+| w12d3 |[](./unit_2/w12d1/warm_up_exercise)| [MongoDB Node.JS Driver CRUD](./unit_2/w12d1/instructor_notes)| [](./unit_2/w12d1/student_labs)|[Mongo Vampires](./unit_2/w12d1/homework)|
 | w13d1 |[](./unit_2/w12d2/warm_up_exercise)| [Router](./unit_2/w12d2/instructor_notes)| [Captain's Log Continued](./unit_2/w12d2/student_labs)|[Mongoose Store Cont. ](./unit_2/w12d2/homework)|
 | w13d2 |[EJS Partials](./unit_2/w12d3/warm_up_exercise)| [Sessions, Auth, Build, Project 2 Announcement, Approvals](./unit_2/w12d3/instructor_notes)| [none (all day build)](./unit_2/w12d3/student_labs)|[Kingsmen](./unit_2/w12d3/homework)|
 | w13d3 |[**PROJECT 2**](./unit_2/w13d1/warm_up_exercise)| [Heroku Mandatory Deployment Lesson](./unit_2/w13d1/instructor_notes)| [](./unit_2/w13d1/student_labs)|[](./unit_2/w13d1/homework)|
