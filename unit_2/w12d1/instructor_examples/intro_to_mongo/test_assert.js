@@ -1,4 +1,5 @@
 const assert = require('assert');
-assert.equal(1, 1);
+let varToBeCompared = 1;
+assert.equal(varToBeCompared, 1); // if true, continue, else terminate here
 
 console.log('Hello world');
