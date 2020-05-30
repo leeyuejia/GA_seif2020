@@ -6,7 +6,7 @@
   <body style="text-align: center;">
     <h1>Edit a Pokémon!</h1>
     <!-- form -->
-    <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
+    <form action="/pokemon/<%=data._id%>?_method=PUT" method="POST">
       <!-- name -->
       <label for="name">NAME:</label>
       <input type="text" name="name" value="<%=data.name%>" /><br />

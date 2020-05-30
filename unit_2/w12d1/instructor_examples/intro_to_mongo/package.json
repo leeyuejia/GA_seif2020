@@ -1,7 +1,6 @@
 {
   "name": "intro_to_mongoose",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "mongodb": "^3.5.8",
+<<<<<<< HEAD
     "mongoose": "^5.7.7",
     "node-fetch": "^2.6.0"
   }
+=======
+    "mongoose": "^5.7.7"
+  },
+  "devDependencies": {},
+  "description": ""
+>>>>>>> cf63786459ad90073f31a7dcf32dc21207180ff9
 }

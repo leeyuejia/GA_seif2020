@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 // const assert = require('assert');
 // assert.equal(1, 1);
 const fetch = require('node-fetch');
 // console.log('Hello world');
+=======
+const assert = require('assert');
+let varToBeCompared = 1;
+assert.equal(varToBeCompared, 1); // if true, continue, else terminate here
+>>>>>>> cf63786459ad90073f31a7dcf32dc21207180ff9
 
 //// https://javascript.info/async-await#tasks task////
 //task 1
