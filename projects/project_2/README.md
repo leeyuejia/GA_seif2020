@@ -26,6 +26,7 @@ For this project, you will be making a full CRUD app using the technologies outl
 #### Recommended Features
 
 * Include **sign up/log in** functionality, with encrypted passwords & an authorization flow
+* TDD - Test Cases for controllers (pending for Min Shan's lecture).
 * Use EJS Partials
 * Include portfolio-quality styling
 * Use a CSS framework like Skeleton or Bootstrap
