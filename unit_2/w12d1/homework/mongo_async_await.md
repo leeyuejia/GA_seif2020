@@ -36,7 +36,7 @@ Create a simple terminal app that does the following.  There is no express, so t
     - active: true
     - products: ['search','maps','email','Android','ads','news','game']
     - CEO:
-        - name: Larry Page
+        - name: Sundar Pichai
         - age: 47
 1. Find Apple
     - log its employees
