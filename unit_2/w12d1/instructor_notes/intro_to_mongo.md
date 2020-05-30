@@ -3,11 +3,11 @@
 ## Lesson Objectives
 
 1. Explain what MongoDB Node.JS Driver is
-1. Connect to Mongo via text editor
-1. Create a model and save it
-1. find a specific model
-1. update a model already in the database
-1. remove a model already in the database
+1. Connect to Mongo via Node.JS Driver
+1. Insert documents in MongoDB Node.JS Driver
+1. find documents in MongoDB Node.JS Driver
+1. update documents in MongoDB Node.JS Driver
+1. remove documents in MongoDB Node.JS Driver
 1. combine actions
 
 ## Explain what is MongoDB Node. JS Driver
@@ -204,9 +204,9 @@ tweets.insertMany(manyTweets, (err, result) => {
 
 and let's comment it out so we don't insert duplicates
 
-## Find Documents with Mongoose
+## Find Documents with Mongo Node.JS Driver
 
-* Mongo Node. JS Driver has 4 methods for this
+* Mongo Node.JS Driver has 4 methods for this
 
  - `find` - generic
  - `findOne` - limits the search to the first document found
@@ -279,7 +279,7 @@ We can also limit the result to the first document that matches the query using 
     });
 ```
 
-### Delete Documents with Mongoose
+### Delete Documents with MongoDB Node.JS Driver
 
 We have two copies of our first tweet and a few options to delete it
 
@@ -298,7 +298,7 @@ We have two copies of our first tweet and a few options to delete it
     });
 ```
 
-### Update Documents with Mongoose
+### Update Documents with Mongo Node.JS Driver
 
 Finally, we have a few options for updating
 
