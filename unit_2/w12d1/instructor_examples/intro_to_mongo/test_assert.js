@@ -1,62 +1,78 @@
-<<<<<<< HEAD
 // const assert = require('assert');
 // assert.equal(1, 1);
 const fetch = require('node-fetch');
 // console.log('Hello world');
-=======
 const assert = require('assert');
 let varToBeCompared = 1;
 assert.equal(varToBeCompared, 1); // if true, continue, else terminate here
->>>>>>> cf63786459ad90073f31a7dcf32dc21207180ff9
 
 //// https://javascript.info/async-await#tasks task////
 //task 1
-const loadJson = async (url) => {
-        let result = await fetch(url)
-        if (result.status == 200) {
-            return result.json();
-        }
-        throw new Error (err.status)
-    }
-  
-  loadJson('https://mhw-db.com/charms')
-    .catch(console.log('error'))
+// const loadJson = async (url) => {
+//         let result = await fetch(url)
+//         if (result.status == 200) {
+//           let json = await result.json()
+//           return json
+//         }
+//         throw new Error (result.status)
+//     }
 
-// task 2
+//   loadJson('https://mhw-db.com/charms').then(res => {
+//     console.log(res)
+//   }).catch(console.log('error'))
 
+// // task 2
 class HttpError extends Error {
-    constructor(response) {
-      super(`${response.status} for ${response.url}`);
-      this.name = 'HttpError';
-      this.response = response;
-    }
+  constructor(response) {
+    super(`${response.status} for ${response.url}`);
+    this.name = 'HttpError';
+    this.response = response;
   }
-  const loadJson = async (url) => {
-    let result = await fetch(url)
-    if (result.status == 200) {
-        let jsonResult = await result.json()
-        return jsonResult
-    }
-    throw new HttpError(result)
 }
-  
-  // Ask for a user name until github returns a valid user
-  async function demoGithubUser() {
-    let name = await prompt("Enter a name?", "iliakan");
-  
-    return loadJson(`https://api.github.com/users/${name}`)
-      .then(user => {
-        alert(`Full name: ${user.name}.`);
-        return user;
-      })
-      .catch(err => {
-        if (err instanceof HttpError && err.response.status == 404) {
-          alert("No such user, please reenter.");
-          return demoGithubUser();
-        } else {
-          throw err;
-        }
-      });
+const loadJson = async (url) => {
+  let result = await fetch(url)
+  if (result.status == 200) {
+    let jsonResult = await result.json()
+    return jsonResult
   }
-  
-  demoGithubUser();
+  throw new HttpError(result)
+}
+
+
+// Ask for a user name until github returns a valid user
+async function demoGithubUser() {
+  let name = await prompt("Enter a name?", "iliakan");
+  try {
+    let result = await loadJson(`https://api.github.com/users/${name}`)
+  } catch (err) {
+    if (err instanceof HttpError && err.response.status == 404) {
+      console.log("No such user, please reenter.");
+      // return demoGithubUser();
+    } else {
+      throw err;
+    }
+  }
+    console.log(`Full name: ${user.name}.`)
+    return user
+}
+demoGithubUser().then(res => console.log(res).catch(console.log('err is:'+ err)));
+
+//task 3
+
+async function wait() {
+  await new Promise(resolve => setTimeout(resolve, 5000));
+
+  return 10;
+}
+
+async function f() {
+  let promise = new Promise((resolve,reject)=> {
+    resolve(wait())
+  })
+  promise.then(res => {console.log(res)})
+  // ...what to write here?
+  // we need to call async wait() and wait to get 10
+  // remember, we can't use "await"
+}
+
+f();
