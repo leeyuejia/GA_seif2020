@@ -1,18 +1,18 @@
 [![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
 
-# Mongoose Store
+# Mongo Store
 
-Make a product inventory manager with full CRUD using Mongoose.
+Make a product inventory manager with full CRUD using Mongo.
 
 #### Learning Objectives
 
-- Full CRUD app in Express with Mongoose
+- Full CRUD app in Express with Mongo
 
 #### Prerequisites
 
 - JavaScript 
 - Express / Node 
-- Mongo / Mongoose 
+- Mongo
 
 ---
 
@@ -71,28 +71,15 @@ Make a product inventory manager with full CRUD using Mongoose.
 
 ## Getting Started
 
-1. Inside the `mongoose_store` folder, set up Express with MVC architecture with the appropriate folders for models, views, and controllers.
+1. Set up Express with MVC architecture with the appropriate folders for db, repository, views, and controllers.
 
-1. You will need the seven RESTful routes. You can begin with your data-layer and test that everything works with cURL or Postman. Don't worry about what the BUY button does or where it goes just yet. Just set up your regular RESTful stuff.
+1. You will need the at least 4 RESTful routes for the CRUD operations. You can begin with your data-layer and test that everything works with cURL or Postman, but ideally, you should be able to write tests for the methods used to access MongoDB. If you find the test writing challenging, focus on just setting up your regular RESTful stuff.
 
-1. You will need to make a Mongoose Schema in a products.js file for your products. The schema should have:
-
-	```js
-	  name: String,
-	  description: String,
-	  img: String,
-	  price: Number,
-	  qty: Number
-	```
 1. Set up validations for the price and qty (can't be less than zero) and make the name a required field.
-
-1. Create a model and export it.
 
 1. Make sure you connect to your Mongo server in `server.js`
 
-1. Make sure your controller can access your model:
-
-	`const Product = require('./models/products');`
+1. Make sure your controller can access your repository/db.
 
 1. _NOTE:_ For testing purposes, especially for having quick access to those wacky Mongo ids, maybe think about having a route /json that res.sends an index of all the data in json format so that you can copy/paste ids into your url bar or cURL or what-have-you.
 
@@ -114,14 +101,10 @@ When the BUY button is pressed, it will make a request to update the qty of the 
 
 ## Seed Data 
 
-You can use these seeds to get some starting data if you so choose.
-
-_HANDY HINT:_ Make a route in your products controller /seed/newproducts (you can do that by pasting the code below into your controller), and to seed your database, just visit the route once in your browser.
+You can use these seeds to get some starting data if you so choose:
 
 ```js
-app.get('/seed', async (req, res) => {
-  const newProducts =
-    [
+[
       {
         name: 'Beans',
         description: 'A small pile of beans. Buy more beans for a big pile of beans.',
@@ -142,15 +125,9 @@ app.get('/seed', async (req, res) => {
         qty: 1
       }
     ]
-
-  try {
-    const seedItems = await Product.create(newProducts)
-    res.send(seedItems)
-  } catch (err) {
-    res.send(err.message)
-  }
-})
 ```
+
+_HANDY HINT:_ Write a script in `package.json` to drop and reseed your data in MongoDB.
 
 ## Commits 
 
