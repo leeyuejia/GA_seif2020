@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body style="text-align: center;">
+    <h1>Create a Pokémon!</h1>
+    <!-- form -->
+    <form action="/pokemon" method="POST">
+      <label for="name">NAME:</label>
+      <input type="text" name="name" /><br />
+      <label for="img">IMAGE:</label>
+      <input type="text" name="img" /><br />
+      <label for="type">TYPE:</label>
+      <input type="text" name="type" /><br />
+      <label for="hp">HP:</label>
+      <input type="text" name="hp" /><br />
+      <label for="attack">ATTACK:</label>
+      <input type="text" name="attack" /><br />
+      <label for="defense">DEFENSE:</label>
+      <input type="text" name="defense" /><br />
+      <label for="spattack">SPATTACK:</label>
+      <input type="text" name="spattack" /><br />
+      <label for="spdefense">SPDEFENSE:</label>
+      <input type="text" name="spdefense" /><br />
+      <label for="speed">SPEED:</label>
+      <input type="text" name="speed" /><br />
+      <input type="submit" />
+    </form>
+    <!-- nav links -->
+    <a href="/pokemon">Back to Pokedex</a>
+  </body>
+</html>

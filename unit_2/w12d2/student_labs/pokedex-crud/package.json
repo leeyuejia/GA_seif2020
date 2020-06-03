@@ -1,0 +1,21 @@
+{
+  "name": "pokedex_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "reseed": "mongoimport --jsonArray --db lab --collection pokemon --drop --file ./db/seed/pokemon.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.7.4",
+    "express": "^4.15.2",
+    "jest": "^26.0.1",
+    "method-override": "^2.3.8",
+    "mongodb": "^3.5.7"
+  }
+}
