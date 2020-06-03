@@ -10,7 +10,7 @@ module.exports = {
         const connection = await client.connect();
         console.log('Connected to MongoDB');
         const db = connection.db(DB_NAME);
-        this.pokemon = db.collection('pokedex');
+        this.pokemon = db.collection('pokemon');
     },
     disconnect () {
         return client.close();
