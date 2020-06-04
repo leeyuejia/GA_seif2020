@@ -98,11 +98,11 @@ client.connect((error) => {
     setTimeout(() => {
         client.close()
     }, 3000)
-*/
+
 /////////////////////////////////////////////////////////////////////////////
 ////////////////////////////   PROMISE   //////////////////////////////////// Done working!
 /////////////////////////////////////////////////////////////////////////////
-    /*
+
     const insertData = () => {
         const insert = techCompany.insertMany(data)
         return insert
@@ -190,12 +190,12 @@ client.connect((error) => {
                 client.close()
             }, 3000)
         })
-        */
+*/
 /////////////////////////////////////////////////////////////////////////////
 ////////////////////////////   ASYNC/AWAIT   //////////////////////////////// Done working!
 /////////////////////////////////////////////////////////////////////////////
     /// insert data
-    /*
+/*
     const insertData = async () => {
         try {
             const insert = await techCompany.insertMany(data)
@@ -307,7 +307,7 @@ client.connect((error) => {
     /////////////////////////////////////////////////////////////////////////////
     //////////////////////   STRETCH (promise.all)      ///////////////////////// 
     /////////////////////////////////////////////////////////////////////////////
-    /*
+  
         const insertData = async () => {
             try {
                 const promise = await techCompany.insertMany(data)
@@ -317,7 +317,7 @@ client.connect((error) => {
             }
         }
         const updateData = async () => {
-            const updateApple = await techCompany.findOneAndUpdate(
+            const updateApple = techCompany.findOneAndUpdate(
                 { name: 'Apple' },
                 { $set: {
                         'name': 'Apple Inc',
@@ -333,7 +333,7 @@ client.connect((error) => {
                         }
                     }
                 })
-            const updateGoogle = await techCompany.findOneAndUpdate(
+            const updateGoogle = techCompany.findOneAndUpdate(
                 { name: 'Google' },
                 { $set: {
                         'employees': 107100,
@@ -392,9 +392,9 @@ client.connect((error) => {
             await insertData()
             await updateData()
             await findData()
-            await dropData()
+            await dropData() // await techCompany.drop()
             return 'Done!'
         }
         sequence()
-        */
+
 })
