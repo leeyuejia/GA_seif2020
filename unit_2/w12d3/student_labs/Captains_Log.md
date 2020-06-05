@@ -141,6 +141,11 @@ Index, New and Create has been completed for you.
 1. Import controllers in the `routes.js` and connect the controller methods with api routes.
 
 
+### Deployment
+1. Deploy your application ot heroku
+1. Setup Mongo Atlas Sandbox and connect your application to it
+1. Seed your data into Atlas. 
+
 ### Bonuses
 1. The captain wants to keep track of eating habits: make a new set of routes in a new file in your controller folder called foodlogs
 1. build out the 7 restful routes for foodlogs, include a new model with whatever properties make sense
