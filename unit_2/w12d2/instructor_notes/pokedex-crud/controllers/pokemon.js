@@ -8,7 +8,12 @@ module.exports = {
     create (req, res) {
         res.render('new');
     },
-    getOne (req, res) {
-        res.render('show', { data: { stats: [], type: [] } });
+    async getOne (req, res) {
+        try {
+            const pokemon = await pokemonRepository.getOne(req.body);
+            res.render('show', { data: { stats: [], type: [] } });
+        } catch (err) {
+            res.send('err happened: ', err.message);
+        }
     },
 };
