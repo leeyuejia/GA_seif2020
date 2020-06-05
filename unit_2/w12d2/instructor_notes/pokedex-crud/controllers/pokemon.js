@@ -1,6 +1,9 @@
+const pokemonRepository = require('../repositories/pokemonRepository');
+
 module.exports = {
-    getAll (req, res) {
-        res.render('pokedex', { data: [] });
+    async getAll (req, res) {
+        const pokemon = await pokemonRepository.getAll();
+        res.render('pokedex', { data: pokemon });
     },
     create (req, res) {
         res.render('new');

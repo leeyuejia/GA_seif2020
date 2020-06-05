@@ -16,7 +16,7 @@ If you finish lab early consider:
   - adding some CSS and practice styling your app
   - try working with the date object! Try to make it look human readable in HTML. It's tricky! [A Hint](https://momentjs.com/)
   - try working through the next section of the lab before it is covered in lecture - see what you can figure out
-  - **SUPER BONUS** - Once you finish this whole lab, add a second model for comments, it should have the name of the person who wrote it, and some text for the comment (maybe time stamps?). This model should 'belong' the the post, the data should be related in some way. Do you own research of how to set up a `one-to-many` relationship (one post can have many comments, one comment only belongs to one post), in MongoDB. Use Mongo Documents, Google, or [Matt's Notes](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Adi/tree/master/unit_2/w06d05/instructor_notes) - note we will not have class time to teach a second, related model. 
+  - **SUPER BONUS** - Once you finish this whole lab, add an array comments inside log, every comment must have the name of the person who wrote it, some text for the comment, and both createdAt and updatedAt (timestamps) fields (use json schema to enforce that in the mongodb). 
 
 ### Set up
 
@@ -25,12 +25,12 @@ Let's keep track of our Restful Routes as we build out our app. Copy/paste this 
 Index, New and Create has been completed for you.
 
 #### Restful Routes
-|#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
+|#|Action|URL|HTTP Verb|EJS view filename|Mongo method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|1| Index | /logs/ | GET | index.ejs | Log.find()|
+|1| Index | /logs/ | GET | index.ejs | find()|
 |2| Show |||||
 |3| New | /logs/new | GET | new.ejs | none |
-|4| Create | /logs/ | POS T| none | Log.create(req.body)|
+|4| Create | /logs/ | POS T| none | insertOne()|
 |5| Edit |||||
 |6| Update |||||
 |7| Destroy ||||||
@@ -66,17 +66,17 @@ Index, New and Create has been completed for you.
 1. don't forget to `git add` and `git commit` your work, give yourself an informative commit message so you can trace back your work, if you need to
 
 ### Mongo
-1. install mongoose and configure it in your `server.js`
+1. Install mongodb and configure it in your `server.js`
 
 ### Logs Model
 1. `mkdir models`
 1. `touch models/logs.js`
-1. Create the logs schema
+1. Create the logs schema, and the following fields are required.
   - title: string
   - entry: string
   - shipIsBroken: Boolean (bonus: set a default to true)
     - Super bonus:
-      - as a second argument to mongoose.Schema(), add `{ timestamps: true }`
+      - Add both createdAt and updatedAt (timestamps) fields
 
 ### Upgrade your Create Route
 1. upgrade your code to create your log in MongoDB
@@ -137,12 +137,13 @@ Index, New and Create has been completed for you.
 ### Router
 1. `mkdir controllers`
 1. `touch controllers/logs.js`
-1. work on refactoring your code so your logs routes are in your controller file, rather than in `server.js`
+1. `touch routes.js`
+1. Import controllers in the `routes.js` and connect the controller methods with api routes.
 
 
 ### Bonuses
 1. The captain wants to keep track of eating habits: make a new set of routes in a new file in your controller folder called foodlogs
-  1. build out the 7 restful routes for foodlogs, include a new model with whatever properties make sense
+1. build out the 7 restful routes for foodlogs, include a new model with whatever properties make sense
 1. make a seed file and seed it
 1. have your update route redirect to the show page of the log that was edited
 1. research `res.redirect('back')`
