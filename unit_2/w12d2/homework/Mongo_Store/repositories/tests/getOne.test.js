@@ -23,7 +23,7 @@ describe('monsterRepository.getOne',() => {
             const itemNotExist = await monsterRepository.getOneByCaseInsensitivity({name:'Apceros'})
             throw new Error ('its an bloody error')
         } catch (err) {
-            expect(err.message).to.equal('that is an error')
+            expect(err.message).to.equal('its an bloody error')
         }
     })
 })

@@ -19,6 +19,15 @@ module.exports = {
         );
         if(!found) throw new Error(`pet with the name ${found} does not exists`)
         return found
+    },
+    async create(item) {
+        try{
+            const result = await db.monsters.insertOne(item);
+            console.log(result.insertedCount)
+            return result;
+        } catch(err) {
+            throw new Error(`You are not suppose to insert this item ${JSON.stringify(item)}`)
+        }
     }
 }
 
