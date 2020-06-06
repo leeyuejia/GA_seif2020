@@ -1,8 +1,38 @@
 const db = require('../db')
 
 module.exports = {
+    //for indexpage
     findSmall() {
         return db.monsters.find({type:'small'}).toArray()
+    },
+    // for show one monster
+    async show (name) {
+        const result = await db.monsters.findOne({
+            name: {
+                '$regex': `^${name}$`,
+                '$options': 'i'
+            }
+        })
+        if(!result) throw new Error('this monster does not exist');
+        return result
+    },
+    // for editing and updating monster
+    async edit(name, infoToUpdate) {
+        try {
+            const result = await db.monsters.updateOne({
+                name: {
+                    '$regex': `^${name}$`,
+                    '$options': 'i'
+                }
+            }, { $set: {infoToUpdate} }
+            );
+            if (!result.result.n) {
+                throw new Error(`this error`)
+            }
+            return result;
+        } catch (err) {
+            throw new Error(`Due to this ${err.message}, I cannot edit this ${JSON.stringify(infoToUpdate)}`)
+        }
     },
     async getOne(options) {
         const oneMonster = await db.monsters.findOne(options)

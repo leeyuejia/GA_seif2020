@@ -15,11 +15,16 @@ module.exports = {
     },
     async showPage (req, res) {
         try {
-            const id = req.params.id
-            const oneMonsters = await monsterRepository.getOne();
-            res.send('my id is ' + id + ' and monster is ' + oneMonsters)
-        } catch (err){
-            
+            const name = req.params.name
+            const showMonster = await monsterRepository.show(name);
+            res.render('show.ejs', {showMonster})
+        } catch (err) {
+            return res.send(err.message)
+        }
+    },
+    async editPage (req,res) {
+        try {
+            const name = re
         }
     }
 
