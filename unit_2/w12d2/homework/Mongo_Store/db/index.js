@@ -14,7 +14,7 @@ rawData()
 
 const MongoClient = require('mongodb').MongoClient;
 const MONGO_URL = 'mongodb://localhost:27017'
-// const assert = require('assert')
+const assert = require('assert')
 const DB_NAME = 'lab'
 const client = new MongoClient(MONGO_URL, { useUnifiedTopology: true });
 
@@ -34,8 +34,8 @@ module.exports = {
 
 
 /////////////////////////   Add fields to data (run only once!)  ////////////////////////////////
-/*
 
+/*
 client.connect(async (err)=> {
     assert.equal(null, err)
     console.log('connected sucessfully to server');
@@ -48,7 +48,8 @@ const generateRandomPrice = (min, max) => {
     largeMonster.forEach(el => {
         monsters.updateOne({_id: el._id}, {$set:{
                 price: generateRandomPrice(30,100),
-                qty: generateRandomPrice(3,10)
+                qty: generateRandomPrice(3,10),
+                img: ""
                 }
             }
         )
