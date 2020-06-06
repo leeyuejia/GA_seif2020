@@ -5,6 +5,7 @@ module.exports = {
         const items = await shopRepository.getAll();
         res.render('shop/index', { items });
     },
+<<<<<<< HEAD
     async show (req, res) {
         try {
             const item = await shopRepository.show(req.params.name);
@@ -22,6 +23,14 @@ module.exports = {
             return res.send(req.body);
         } catch(err) {
             return res.send(err.message);
+=======
+    async getOneByName (req, res) {
+        try {
+            const item = await shopRepository.getOneByName(req.params.name);
+            res.render('shop/show', { item });
+        } catch (err) {
+            res.render('errors/404', { err });
+>>>>>>> 0d079a0ba9a49c1a971c6e2677729a94c92a19dc
         }
     }
 };
