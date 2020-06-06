@@ -16,14 +16,16 @@
         </h3>
         <div class="container d-flex">
             <% items.forEach(item => { %>
-                <div class="card mx-3 shadow" style="width: 18rem;">
-                    <img src="<%= item.img %>" class="card-img-top" alt="<%= item.name %>">
-                    <div class="card-body">
-                        <h5 class="card-title"><%= item.name %></h5>
-                        <p class="card-text"><%= item.description %></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="<%= item.name.toLowerCase() %>">
+                    <div class="card mx-3 shadow" style="width: 18rem;">
+                        <img src="<%= item.img %>" class="card-img-top" alt="<%= item.name %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= item.name %></h5>
+                            <p class="card-text"><%= item.description %></p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
-                </div>
+                </a>
             <% }) %>
         </div>
     </body>
