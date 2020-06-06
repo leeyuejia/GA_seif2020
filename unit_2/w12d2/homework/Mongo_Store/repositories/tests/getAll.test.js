@@ -17,9 +17,9 @@ describe('shopRepository.getAll', () => {
         expect(shopItems).to.be.an('array');
     });
 
-    it('should return an array of shop items, and the first item should have the name "Beans"', async () => {
+    it('should return an array of shop items, and one of the items should be "Beans"', async () => {
         const shopItems = await shopRepository.getAll();
-        const beans = shopItems[0];
+        const beans = shopItems.find(item => item.name === 'Beans');
         expect(beans.name).to.equal('Beans');
     });
 
