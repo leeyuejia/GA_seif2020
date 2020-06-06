@@ -14,11 +14,8 @@ module.exports = {
         }
     },
     async create (req, res) {
-<<<<<<< HEAD
         req.body.price = parseInt(req.body.price);
         req.body.qty = parseInt(req.body.qty);
-=======
->>>>>>> a43a82e6bfc169091245bdb10a60e2e43e8ce131
         try {
             const item = {
                 'name': req.body.name,
@@ -41,13 +38,6 @@ module.exports = {
             res.render('errors/404', { err });
         }
     },
-<<<<<<< HEAD
-    // async updateByName (req, res) {
-    //     try{
-    //         const item = await shopRepository.updateByName(name, item)
-    //     }
-    // }
-=======
     async update (req, res) {
         try {
             const item = {
@@ -63,5 +53,4 @@ module.exports = {
             res.render('errors/404', { err });
         }
     }
->>>>>>> a43a82e6bfc169091245bdb10a60e2e43e8ce131
 };

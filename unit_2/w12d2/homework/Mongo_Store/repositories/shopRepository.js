@@ -5,11 +5,7 @@ module.exports = {
         return db.shop.find()
             .toArray();
     },
-<<<<<<< HEAD
-    async show(name) {
-=======
     async show (name) {
->>>>>>> a43a82e6bfc169091245bdb10a60e2e43e8ce131
         const item = await db.shop.findOne({ name: { '$regex': `^${name}$`, '$options': 'i' } });
         if (!item) throw new Error('Non-existance');
         return item;
@@ -33,19 +29,6 @@ module.exports = {
         if (!foundItem) throw new Error(`Item with name '${name}' does not exist`);
         return foundItem;
     },
-<<<<<<< HEAD
-    async updateByName(name, item) {
-        try {
-            const result = await db.shop.updateOne({ name },
-                {
-                    $set:
-                        { item }
-                }
-            )
-            console.log(result)
-        } catch (err) {
-            throw 
-=======
     async updateByName (name, item) {
         try {
             const result = await db.shop.updateOne({
@@ -62,7 +45,6 @@ module.exports = {
             return result;
         } catch (err) {
             throw new Error(`Due to ${err.message}, I cannot update it with ${JSON.stringify(item)}`);
->>>>>>> a43a82e6bfc169091245bdb10a60e2e43e8ce131
         }
     }
 };
