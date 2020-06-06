@@ -31,12 +31,9 @@ module.exports = {
             res.render('errors/404', { err });
         }
     },
-    async edit (req, res) {
-        try {
-            const result = await shopRepository.editOneByName(req.params.name)
-            res.render('edit.ejs',{result})
-        } catch (err) {
-            res.send("items cannot be added!" + err.message)
-            }
-        }
+    // async updateByName (req, res) {
+    //     try{
+    //         const item = await shopRepository.updateByName(name, item)
+    //     }
+    // }
 };
