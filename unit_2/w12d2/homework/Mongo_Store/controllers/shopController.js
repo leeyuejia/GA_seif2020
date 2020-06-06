@@ -16,7 +16,6 @@ module.exports = {
     async create (req, res) {
         req.body.price = parseInt(req.body.price);
         req.body.qty = parseInt(req.body.qty);
-
         try {
             await shopRepository.create(req.body);
             return res.send(req.body);
@@ -31,5 +30,13 @@ module.exports = {
         } catch (err) {
             res.render('errors/404', { err });
         }
-    }
+    },
+    async edit (req, res) {
+        try {
+            const result = await shopRepository.editOneByName(req.params.name)
+            res.render('edit.ejs',{result})
+        } catch (err) {
+            res.send("items cannot be added!" + err.message)
+            }
+        }
 };
