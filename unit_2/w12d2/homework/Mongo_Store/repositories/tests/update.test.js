@@ -19,7 +19,7 @@ describe('shopRepository.update', () => {
             'price': 100,
             'qty': 100
         });
-        expect(result.result.n).to.equal(1);
+        expect(result).to.be.true;
     });
 
     it('should return error when update the non-existing shop item', async () => {
@@ -31,7 +31,7 @@ describe('shopRepository.update', () => {
                 'price': 100,
                 'qty': 100
             });
-            expect(result.result.n).to.equal(1);
+            expect(result).to.be.false;
         } catch (err) {
             expect(err.message).to.be.an('string');
         }

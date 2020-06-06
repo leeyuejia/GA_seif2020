@@ -1,9 +1,12 @@
 const db = require('../db');
 
 module.exports = {
-    getAll () {
-        return db.shop.find()
-            .toArray();
+    async getAll () {
+        try {
+            return await db.shop.find().toArray();
+        } catch (err) {
+            throw new Error(`Database Error - ${err.message}`);
+        }
     },
     async show (name) {
         const item = await db.shop.findOne({ name: { '$regex': `^${name}$`, '$options': 'i' } });
@@ -12,7 +15,9 @@ module.exports = {
     },
     async create (item) {
         try {
-            return await db.shop.insertOne(item);
+            const { insertedCount } = await db.shop.insertOne(item);
+            if (!insertedCount) throw new Error('insertion failure');
+            return true;
         } catch (err) {
             throw new Error(`Due to ${err.message}, you are not allowed to insert this item ${JSON.stringify(item)}`);
         }
@@ -31,7 +36,7 @@ module.exports = {
     },
     async updateByName (name, item) {
         try {
-            const result = await db.shop.updateOne({
+            const { matchedCount } = await db.shop.updateOne({
                 name: {
                     '$regex': `^${name}$`,
                     '$options': 'i'
@@ -39,10 +44,8 @@ module.exports = {
             }, {
                 $set: item
             });
-            if(!result.result.n) {
-                throw new Error(`This item with name ${name} doesn\'t exists`);
-            }
-            return result;
+            if (!matchedCount) throw new Error(`${name} doesn't exist`);
+            return true;
         } catch (err) {
             throw new Error(`Due to ${err.message}, I cannot update it with ${JSON.stringify(item)}`);
         }

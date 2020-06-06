@@ -19,7 +19,7 @@ describe('shopRepository.create', () => {
             'price': 200,
             'qty': 100
         });
-        expect(result.insertedCount).to.equal(1);
+        expect(result).to.be.true;
         const item = await shopRepository.show('Cup cakes');
         expect(item.name).to.equal('Cup cakes');
     });

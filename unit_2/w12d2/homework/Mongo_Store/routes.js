@@ -9,10 +9,10 @@ module.exports = app => {
     // create post api
     app.post('/shop', shopController.create);
     // Min Shan's show route
-    // app.get('/:name', shopController.getOneByName);
+    app.get('/:name', shopController.getOneByName);
 
     // Yinsheng's show route
-    app.get('/shop/:name', shopController.show);
+    // app.get('/shop/:name', shopController.show);
 
     // delete route
     // app.delete('/shop/:name', shopController.destroy);

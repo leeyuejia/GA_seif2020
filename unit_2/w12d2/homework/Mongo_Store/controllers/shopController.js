@@ -2,15 +2,19 @@ const shopRepository = require('../repositories/shopRepository');
 
 module.exports = {
     async getAll (req, res) {
-        const items = await shopRepository.getAll();
-        res.render('shop/index', { items });
+        try {
+            const items = await shopRepository.getAll();
+            return res.render('shop/index', { items });
+        } catch (err) {
+            return res.render('errors/404', { err });
+        }
     },
     async show (req, res) {
         try {
             const item = await shopRepository.show(req.params.name);
             return res.send(item);
         } catch (err) {
-            return res.send(err.message);
+            return res.render('errors/404', { err });
         }
     },
     async create (req, res) {
@@ -25,15 +29,15 @@ module.exports = {
             await shopRepository.create(item);
             return res.send(item);
         } catch (err) {
-            return res.send(err.message);
+            return res.render('errors/404', { err });
         }
     },
     async getOneByName (req, res) {
         try {
             const item = await shopRepository.getOneByName(req.params.name);
-            res.render('shop/show', { item });
+            return res.render('shop/show', { item });
         } catch (err) {
-            res.render('errors/404', { err });
+            return res.render('errors/404', { err });
         }
     },
     async update (req, res) {
@@ -48,7 +52,7 @@ module.exports = {
             await shopRepository.updateByName(req.params.name, item);
             return res.send(item);
         } catch (err) {
-            res.render('errors/404', { err });
+            return res.render('errors/404', { err });
         }
     }
 };
