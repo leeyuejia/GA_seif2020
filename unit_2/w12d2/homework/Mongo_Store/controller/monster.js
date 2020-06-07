@@ -69,6 +69,21 @@ module.exports = {
         } catch(err) {
             return res.send(err.message)
         }
-    }
+    },
+    async buyPage (req,res) {
+            console.log(req.params.name + ' req.params.name')
+            if(typeof req.body.qty !== 'number') {
+                req.body.qty = parseInt(req.body.qty)
+                };
+            name = req.params.name
+            amount = req.body.qty
+            console.log(name + ' and ' + amount + ' req.body.qty')
 
+        try{
+            await monsterRepository.updateStock(name, amount)
+            res.redirect('/monster')
+        } catch(err) {
+            return res.send(err.message)
+        }
+    }
 }

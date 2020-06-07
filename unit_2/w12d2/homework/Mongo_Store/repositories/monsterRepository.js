@@ -62,7 +62,7 @@ module.exports = {
         if (!result) throw new Error('Cannot find any data in database')
         return result;
     },
-////// Create a new monster and render it in the new monster show page (test passed)
+////// Create a new monster and redirect to index page with new monster(test passed)
     async create(item) {
         try{
             const result = await db.monsters.insertOne(item);
@@ -70,6 +70,24 @@ module.exports = {
             return result;
         } catch(err) {
             throw new Error(`You are not suppose to insert this item ${JSON.stringify(item)}`)
+        }
+    },
+    async updateStock(name, amount) {
+        try{
+            const result = await db.monsters.updateOne({
+                name: {
+                    '$regex': `^${name}$`,
+                    '$options': 'i'
+                    }
+                },{
+                    $inc: {qty: - amount}
+                })
+            if (!result.result.n) {
+                    throw new Error(`there is an error in your numbers`)
+                }
+                return result;
+        }catch(err) {
+            throw new Error('I cannot read your numbers')
         }
     }
 }

@@ -33,7 +33,14 @@
                     <p class="card-text">Price : $<%=monster.price%></p>
                     <p class="card-text">in Stock :<%=monster.qty%></p>
                     <a href="/monster/<%=monster.name%>" class="btn btn-primary my-2">View pets</a>
-                    <a href="#" class="btn btn-primary my-2">Another link</a>
+                    <form action="/monster/<%=monster.name%>/buy?_method=PUT" method="POST" class="float-right">
+                        <div class="input-group d-flex flex-row flex-nowrap align-items-center">
+                          <div class="input-group-append flex-shrink-1">
+                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="qty" placeholder="Qty">
+                          </div>
+                          <button class="btn btn-primary my-2" type="submit" style="width: 10rem;">BUY </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         <%})%>
