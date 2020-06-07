@@ -85,7 +85,6 @@
 | w24d2 | **Final Projects** |
 | w24d3 | **Final Projects** |
 | w25d1 || **Final Project Presentations & Graduation ** ||
-## Unit 4
 
 ## CS Warm Up Exercises List
 | Computer Science |
