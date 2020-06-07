@@ -38,7 +38,7 @@
                         <div class="input-group-prepend">
                             <label for="img" class="input-group-text" id="basic-addon3">Pet's image URL</label>
                         </div>
-                        <input type="text" class="form-control" name="img" placeholder="<%=info.img%>">
+                        <input type="text" class="form-control" name="img" value="<%=info.img%>">
                     </div>
 
                     <div class="input-group mb-3">
@@ -46,7 +46,7 @@
                             <label for="price" class="input-group-text" id="basic-addon3">Price</label>
                         </div>
                         <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)"
-                            name="price" placeholder="<%=info.price%>">
+                            name="price" value="<%=info.price%>">
                         <div class="input-group-append mr-2">
                             <span class="input-group-text">.00</span>
                         </div>
@@ -54,10 +54,9 @@
                         <div class="input-group-prepend ml-2">
                             <label for="qty" class="input-group-text" id="basic-addon3">In Stock</label>
                         </div>
-
                         <div class="input-group-append">
                             <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="qty"
-                            placeholder="<%=info.qty%>">
+                            value="<%=info.qty%>">
                         </div>
 
                     </div>
@@ -68,7 +67,7 @@
                                 monster</label>
                         </div>
                         <textarea class="form-control" aria-label="With textarea" maxlength="300" name="description"
-                            rows="5" placeholder="Max-character is 300"></textarea>
+                            rows="5"><%=info.description%></textarea>
                     </div>
                     <div class="float-right">
                         <button class="btn btn-primary my-2" type="submit">Save updated info</button>

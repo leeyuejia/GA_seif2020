@@ -56,7 +56,13 @@ module.exports = {
         if(!found) throw new Error(`this monster does not exist`)
         return found
     },
-
+////// find any one monster to render the keys in newpage (test passed)
+    async getOne() {
+        const result = await db.monsters.findOne();
+        if (!result) throw new Error('Cannot find any data in database')
+        return result;
+    },
+////// Create a new monster and render it in the new monster show page (test passed)
     async create(item) {
         try{
             const result = await db.monsters.insertOne(item);

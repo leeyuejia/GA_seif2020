@@ -45,7 +45,30 @@ module.exports = {
         } catch(err) {
             res.send(err.message)
         }
+    },
+    async newPage (req,res) {
+        try {
+            const data = await monsterRepository.getOne();
+            res.render('new.ejs', {data})
+        } catch(err) {
+            return res.send(err.message) // later change to 404 page
+        }
+    },
+    async postPage(req,res) {
+        if(typeof req.body.price !== 'number'){
+            req.body.price = parseInt(req.body.price)
+            }
+        if(typeof req.body.qty !== 'number') {
+            req.body.qty = parseInt(req.body.qty)
+            };
+            req.body.type = 'small'
+        try{
+            console.log(req.body)
+            await monsterRepository.create(req.body)
+            res.redirect('/monster')
+        } catch(err) {
+            return res.send(err.message)
+        }
     }
-
 
 }
