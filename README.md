@@ -45,16 +45,16 @@
 | w12d3 |[](./unit_2/w12d1/warm_up_exercise)| [MongoDB Node.JS Driver CRUD, async/await](./unit_2/w12d1/instructor_notes)| [](./unit_2/w12d1/student_labs)|[Mongo Vampires](./unit_2/w12d1/homework)|
 | w13d1 |[](./unit_2/w12d2/warm_up_exercise)| [Recap on async/await](./unit_2/w12d2/instructor_notes)| [](./unit_2/w12d2/student_labs)|[](./unit_2/w12d2/homework)|
 | w13d2 |[](./unit_2/w12d2/warm_up_exercise)| [Data repository Layer, Full CRUD Express + MongoDB App, TDD for backend](./unit_2/w12d2/instructor_notes)| [Pokedex](./unit_2/w12d2/student_labs)|[Mongo Store](./unit_2/w12d2/homework)|
-| w13d3 |[](./unit_2/w12d3/warm_up_exercise)| [Schema Validation & MongoDB DaaS & Heroku Deployment Lesson](./unit_2/w12d3/instructor_notes)| [The Captain's Log](./unit_2/w12d3/student_labs)|[](./unit_2/w12d3/homework)|
-| w14d1 |[**PROJECT 2**](./unit_2/w13d2/warm_up_exercise)| [](./unit_2/w13d2/instructor_notes)| [](./unit_2/w13d2/student_labs)|[](./unit_2/w13d2/homework)|
-| w14d2 |[**PROJECT 2**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
-| w14d3 |[**PROJECT 2**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
+| w13d3 |[](./unit_2/w12d3/warm_up_exercise)| [Mongo Store Review](./unit_2/w12d3/instructor_notes)| [](./unit_2/w12d3/student_labs)|[](./unit_2/w12d3/homework)|
+| w14d1 |[](./unit_2/w13d1/warm_up_exercise)| [Schema Validation & MongoDB DaaS & Heroku Deployment Lesson](./unit_2/w13d1/instructor_notes)| [](./unit_2/w13d1/student_labs)|[The Captain's Log](./unit_2/w13d1/homework)|
+| w14d2 |[Registration Form](./unit_2/w13d3/warm_up_exercise)| [Sessions & Authentication](./unit_2/w13d3/instructor_notes)| [Create anthentication layer](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
+| w14d3 |[](./unit_2/w13d3/warm_up_exercise)| [Session & Authentication Cont. Project #2 Approval](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
 | w15d1 |[**PROJECT 2**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
 | w15d2 |[**PROJECT 2**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
 | w15d3 |[**PROJECT 2**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
 | w16d1 |[**PROJECT 2**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
 | w16d2 |[**PROJECT 2**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
-| w16d3 |[**PROJECT 2**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
+| w16d3 |[**PROJECT 2 PRESENTATION**](./unit_2/w13d3/warm_up_exercise)| [](./unit_2/w13d3/instructor_notes)| [](./unit_2/w13d3/student_labs)|[](./unit_3/w13d3/homework)|
 
 ## Unit 3
 
