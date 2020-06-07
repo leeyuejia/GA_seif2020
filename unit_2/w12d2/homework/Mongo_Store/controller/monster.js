@@ -24,7 +24,26 @@ module.exports = {
     },
     async editPage (req,res) {
         try {
-            const name = re
+            const name = req.params.name
+            const info = await monsterRepository.getOneByCaseInsensitivity(name);
+            res.render('edit.ejs', {name, info})
+        } catch(err) {
+            return res.send(err.message)
+        }
+    },
+    async putPage (req, res) {
+        try {
+            const name = req.params.name
+            const info = {
+                'description': req.body.description,
+                'img': req.body.img,
+                'price': parseInt(req.body.price),
+                'qty': parseInt(req.body.qty)
+            }
+            await monsterRepository.edit(name, info)
+            res.redirect(`/monster/${name}`)
+        } catch(err) {
+            res.send(err.message)
         }
     }
 

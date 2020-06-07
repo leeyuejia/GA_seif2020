@@ -8,6 +8,6 @@ module.exports = (app) => {
     app.get("/monster/:name", monsterController.showPage) // show individual item
     app.get('/monster/:name/edit', monsterController.editPage) // edit an item
     // app.post("/monster", monsterController.postPage) // add an item and direct to homepage
-    // app.put('/monster/:id', monsterController.putPage) // after edited an item
+    app.put('/monster/:name', monsterController.putPage) // after edited an item
     // app.delete('/monster/:id', monsterController.deletePage) //delete an item
 }
