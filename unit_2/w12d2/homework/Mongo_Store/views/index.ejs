@@ -7,22 +7,12 @@
     <title>Monsters as Pets</title>
 
     <%-include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/index.css">
 
 </head>
-<style>
-    .head-container {
-        width: 95%;
-        text-align: center;
-    }
-    .no-stock {
-        background-color: rgb(243, 53, 53);
-        border-color: rgb(243, 53, 53);
-    }
-</style>
-
 <body>
     <%-include('./partials/header.ejs') %>
-    <div class="main-container mx-auto">
+    <div class="main-container mx-auto" id="table">
         <div class="row d-flex flex-row mx-auto justify-content-center">
             <%monsters.forEach( monster => {%>
             <div class="card m-2 d-flex flex-column justify-content-center" style="width: 18rem;">
@@ -46,11 +36,9 @@
                     <% }%>
                 </div>
             </div>
-
         <%})%>
         </div>
     </div>
-
 </body>
 
 </html>

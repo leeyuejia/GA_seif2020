@@ -10,5 +10,5 @@ module.exports = (app) => {
     app.post("/monster", monsterController.postPage) // add an item and direct to homepage
     app.put('/monster/:name/buy', monsterController.buyPage) // buy and minus a monster
     app.put('/monster/:name', monsterController.putPage) // after edited an item
-    // app.delete('/monster/:id', monsterController.deletePage) //delete an item
+    app.delete('/monster/:name', monsterController.deleteOne) //delete an item
 }

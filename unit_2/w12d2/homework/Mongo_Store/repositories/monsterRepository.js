@@ -89,6 +89,20 @@ module.exports = {
         }catch(err) {
             throw new Error('I cannot read your numbers')
         }
+    },
+////// Search by name and delete the data. 
+    async deleteOne (name) {
+        try{
+            const result = await db.monsters.deleteOne({
+                name
+            })
+            if (!result.result.n) {
+                throw new Error ('Something went wrong in your delete')
+            }
+            return result
+        } catch(err) {
+            throw new Error('unable to delete')
+        }
     }
 }
 

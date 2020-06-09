@@ -1,0 +1,24 @@
+.head-container {
+    width: 95%;
+    text-align: center;
+}
+.header-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+.no-stock, .deleteBtn {
+    background-color: rgb(243, 53, 53);
+    border-color: rgb(243, 53, 53);
+    border-radius: .25rem;
+}
+#table {
+    margin-top: 200px;
+}
+.no-stock, .deleteBtn :hover {
+    background-color: rgb(148, 26, 26);
+    border-color: rgb(148, 26, 26);
+}
