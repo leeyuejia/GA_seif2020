@@ -22,23 +22,23 @@
             <!-- legend for account info -->
             <legend>ACCOUNT INFORMATION</legend>
               <!-- username -->
-              <label>USERNAME</label>
-              <input type="text"/>
+              <label for= "username">USERNAME</label>
+              <input type="text" id="username" placeholder="your username. the name u use to name yourself as a user"/>
               <!-- password -->
-              <label>PASSWORD</label>
-              <input type="text">
+              <label for="password">PASSWORD</label>
+              <input type="password" id="password" placeholder="shh... do not let people see your password">
               <!-- email -->
-              <label>E-MAIL</label>
-              <input type="text"/>
+              <label for="email">E-MAIL</label>
+              <input type="email" id="email" placeholder="hint: at"/>
           </fieldset>
           <!-- fieldset for profile info -->
-          <fieldset class="profile-info">
+          <fieldset class="profile-info" id="flex-grow">
             <!-- legend for profile info -->
             <legend>PROFILE INFORMATION</legend>
               <!-- biography -->
-              <label>BIOGRAPHY</label>
+              <label for="biography">BIOGRAPHY</label>
               <!-- textarea for larger bodies of text -->
-              <textarea></textarea>
+              <textarea id="biography" placeholder="Describe about yourself. (max.Char 300)" maxlength="300"></textarea>
           </fieldset>
           <!-- submit button -->
           <input type="submit">
