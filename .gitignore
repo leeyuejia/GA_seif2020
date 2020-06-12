@@ -251,6 +251,7 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+**/node_modules
 
 # Ignore precompiled javascript packs
 /public/packs
