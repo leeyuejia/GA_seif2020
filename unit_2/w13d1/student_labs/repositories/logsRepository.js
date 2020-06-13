@@ -1,10 +1,10 @@
 const db = require('../db');
 
 module.exports = {
-    create (data) {
+     create (data) {
         return db.logs.insertOne(data);
     },
-    getAll () {
+     getAll () {
         return db.logs.find().toArray();
     }
 };
