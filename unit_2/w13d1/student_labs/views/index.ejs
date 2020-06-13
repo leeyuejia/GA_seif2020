@@ -4,5 +4,11 @@
         <%- include('./partials/head.ejs') %>
     </head>
     <body>
+        <% logs.forEach(log => { %>
+            <p><%= log.title %></p>
+            <p><%= log.entry %></p>
+            <p><%= log.isShipBroken %></p>
+            <p><%= log.date %></p>
+        <%}) %>
     </body>
 </html>
