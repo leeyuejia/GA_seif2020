@@ -23,9 +23,9 @@ client.connect(async (err) => {
 
     try {
         const result = await collection.insertOne({ 
-            lineItems: [{ 
-                title: 'hamburger', price: 10, purchased: true, quantity: 1
-            }] 
+            lineItems1: [{ 
+                title: 'hamburger', price: 10, purchased: true
+            }],
         });
         assert.equal(result.insertedCount, 1);
     } catch (err) {
