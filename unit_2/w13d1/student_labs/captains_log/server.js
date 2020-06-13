@@ -20,7 +20,7 @@ app.emit('ready');
 ///////////////////////////   routes   //////////////////////////////
 app.get('/', (req,res) => res.redirect('./logs'))
 app.get('/logs', captainController.indexPage); //render index.ejs, db.find()
-app.get('/logs/create', captainController.newPage) // render new.ejs db.insertOne()
+app.get('/logs/new', captainController.newPage) // render new.ejs db.insertOne()
 app.get('/logs/:id', captainController.showPage) // render show.ejs db.findOne()
 // app.get('/logs/:id/edit', captainController.editPage) // render edit.ejs 
 app.post('/logs', captainController.createPage) // add logs into db and redirect to index page

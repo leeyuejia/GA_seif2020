@@ -1,6 +1,6 @@
 const logsRepository = require('../repositories/logsRepository');
 const moment = require('moment');
-const ajvLogsValidator = require('../validators/ajvLogsValidator');
+const ajvLogsValidator = require('../../validators/ajvLogsValidator');
 
 const addFormattedDate = logs => logs.map(log => {
     if (log.date) log.formattedDate = moment(log.date).format('dddd, MMMM Do YYYY, h:mm:ss a');
