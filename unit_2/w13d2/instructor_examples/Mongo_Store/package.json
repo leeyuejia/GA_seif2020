@@ -1,0 +1,22 @@
+{
+  "name": "Mongo_Store",
+  "version": "1.0.0",
+  "description": "[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon server.js",
+    "reseed": "mongoimport --jsonArray --db homework --collection shop --drop --file ./db/seed/shop.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "jest": "^26.0.1",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.5.8"
+  }
+}
