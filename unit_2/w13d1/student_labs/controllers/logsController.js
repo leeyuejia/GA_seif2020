@@ -13,7 +13,7 @@ module.exports = {
         res.render('logs/index', { logs });
     },
     getForm (req, res) {
-        res.render('logs/new');
+        res.render('logs/new', { date: moment().format('YYYY-MM-DDTHH:mm') });
     },
     create (req, res) {
         try {
