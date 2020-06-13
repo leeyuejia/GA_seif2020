@@ -14,10 +14,10 @@ module.exports = app => {
     // create post api
     app.post('/products', shopController.create);
     // Min Shan's show route
-    app.get('/products/:productId', shopController.getOneByName);
+    // app.get('/products/:productId', shopController.getOneByName);
 
     // Yinsheng's show route
-    // app.get('/shop/:name', shopController.show);
+    app.get('/products/:productId', shopController.show);
 
     // delete route
     app.delete('/products/:productId', shopController.destroy);
@@ -27,5 +27,5 @@ module.exports = app => {
     // app.get('/shop/edit', shopController.edit);
 
     // update route
-    // app.patch('/productId/:productId', shopController.update);
+    app.patch('/products/:productId', shopController.update);
 };
