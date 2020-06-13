@@ -59,7 +59,7 @@ describe('logsRepository.create', () => {
             title: 'My First Log',
             entry: 'Blah blah blah',
             isShipBroken: true,
-            date: new Date()
+            date: Date.now()
         })
             .catch(err => {
                 expect(err).to.be.ok;
