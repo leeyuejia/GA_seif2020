@@ -59,7 +59,11 @@ describe('logsRepository.create', () => {
             title: 'My First Log',
             entry: 'Blah blah blah',
             isShipBroken: true,
+<<<<<<< HEAD
             date: Date.now()// it should an incorrect form of date  // new Date() is a format/ Date.now() is a number
+=======
+            date: Date.now()
+>>>>>>> c39e73e105f22f3946e405992142eac70f793fd1
         })
         .then ((result) => {
             console.log(result)

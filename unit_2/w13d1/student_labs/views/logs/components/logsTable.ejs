@@ -1,0 +1,20 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Entry</th>
+        <th scope="col">Is The Ship Broken?</th>
+        <th scope="col">Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% logs.forEach((log, index) => { %>
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= log.title %></td>
+        <td><%= log.entry %></td>
+        <td><%= log.isShipBroken %></td>
+        <td><%= log.formattedDate %></td>
+    <%}) %>
+    </tbody>
+</table>

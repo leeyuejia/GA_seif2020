@@ -1,30 +1,28 @@
 const logsRepository = require('../repositories/logsRepository');
 const moment = require('moment');
-const logsValidator = require('../validators/logsValidator');
-const ValidationError = require('../exceptions/ValidationError');
+const ajvLogsValidator = require('../validators/ajvLogsValidator');
+
+const addFormattedDate = logs => logs.map(log => {
+    if (log.date) log.formattedDate = moment(log.date).format('dddd, MMMM Do YYYY, h:mm:ss a');
+    return log;
+});
 
 module.exports = {
     async getAll (req, res) {
         const logs = await logsRepository.getAll(); // retrieved log from db
-        moment.locale('de');
-        logs[0].date = moment('20201001', 'YYYYMMDD');
-        res.render('index', { logs });
+        addFormattedDate(logs);
+        res.render('logs/index', { logs });
     },
     getForm (req, res) {
-        res.render('new');
+        res.render('logs/new', { date: moment().format('YYYY-MM-DDTHH:mmZ') });
     },
     create (req, res) {
         try {
-            logsValidator.validate(req.body);
+            req.body.date = moment(req.body.date).toISOString();
+            ajvLogsValidator.logs.validate(req.body);
             res.send('ok');
         } catch (err) {
-            console.log('errorMessage', err.message);
-            if (err instanceof ValidationError) {
-                res.send(err.message);
-            } else {
-                res.send('there was an error');
-            }
+            res.send(err.message);
         }
-
     }
 };

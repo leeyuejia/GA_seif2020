@@ -5,7 +5,7 @@ const PORT = 3000;
 const db = require('./db');
 
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 // app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs');
