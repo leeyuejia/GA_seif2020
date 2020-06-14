@@ -2,44 +2,50 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs') %>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="ajax.js"></script>
 </head>
 <body>
-    <form action="/new" method="post">
+    <form
+        action="/new"
+        method="post"
+        id="create-log-form"
+    >
         <div class="container py-5">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" name="title">
+            <div class="form-group title">
+                <label for="title-input">Title</label>
+                <input type="text" class="form-control" id="title-input" name="title">
             </div>
-            <div class="form-group">
-                <label for="entry">Entry</label>
-                <textarea class="form-control" id="entry" name="entry"></textarea>
+            <div class="form-group entry">
+                <label for="entry-input">Entry</label>
+                <textarea class="form-control" id="entry-input" name="entry"></textarea>
             </div>
             <div class="form-group row">
                 <label
-                    for="date-time"
+                    for="date-time-input"
                     class="col-2 col-form-label"
                 >
                     Date and time
                 </label>
-                <div class="col-10">
+                <div class="col-10 date">
                     <input
                         name="date"
                         class="form-control"
                         type="datetime-local"
                         value="<%= date %>"
-                        id="date-time"
+                        id="date-time-input"
                     >
                 </div>
             </div>
-            <div class="custom-control custom-switch pb-4">
+            <div class="custom-control custom-switch pb-4 isShipBroken">
                 <input
                     type="checkbox"
                     class="custom-control-input"
-                    id="isShipBroken"
+                    id="isShipBroken-input"
                     name="isShipBroken"
                     value="true"
                 >
-                <label class="custom-control-label" for="isShipBroken">Is Ship Broken?</label>
+                <label class="custom-control-label" for="isShipBroken-input">Is Ship Broken?</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             <a

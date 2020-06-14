@@ -10,11 +10,13 @@
     </thead>
     <tbody>
     <% logs.forEach((log, index) => { %>
-        <th scope="row"><%= index + 1 %></th>
-        <td><%= log.title %></td>
-        <td><%= log.entry %></td>
-        <td><%= log.isShipBroken %></td>
-        <td><%= log.formattedDate %></td>
+        <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><%= log.title %></td>
+            <td><%= log.entry %></td>
+            <td><%= log.isShipBroken %></td>
+            <td><%= log.formattedDate %></td>
+        </tr>
     <%}) %>
     </tbody>
 </table>
