@@ -1,7 +1,8 @@
 const validator = require('../usersValidator');
 const chai = require('chai');
 const { expect } = chai;
-chai.use(require('chai-iso8601')());
+const asserttype = require('chai-asserttype');
+chai.use(asserttype);
 const ValidationError = require('../../exceptions/ValidationError');
 
 describe('validator.users.validate', () => {
@@ -11,8 +12,8 @@ describe('validator.users.validate', () => {
             password: 'Something happened on the ship',
         };
         validator.users.validate(data);
-        expect(data.createdAt).to.be.iso8601(data.createdAt);
-        expect(data.updatedAt).to.be.iso8601(data.updatedAt);
+        expect(data.createdAt).to.be.date();
+        expect(data.updatedAt).to.be.date();
     });
 
     it('should require username', () => {

@@ -1,9 +1,5 @@
 module.exports = {
     type: 'object',
-    dynamicDefaults: {
-        createdAt: 'datetime',
-        updatedAt: 'datetime',
-    },
     required: ['username', 'password'],
     properties: {
         username: {
