@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs') %>
+    </head>
+    <body>
+        <h3
+            class=""
+        >
+            Mongo Store
+        </h3>
+        <div class="container d-flex">
+            <% items.forEach(item => { %>
+                <a href="/shop/products/<%= item.name.toLowerCase() %>">
+                    <div class="card mx-3 shadow" style="width: 18rem;">
+                        <img src="<%= item.img %>" class="card-img-top" alt="<%= item.name %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= item.name %></h5>
+                            <p class="card-text"><%= item.description %></p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+    </body>
+</html>
