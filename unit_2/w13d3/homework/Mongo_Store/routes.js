@@ -11,6 +11,8 @@ module.exports = app => {
 
     app.get('/users/new', usersController.newForm);
     app.post('/users', usersController.create);
+
+    app.get('/shop/products', shopController.getAll);
     // get the create form api
     // app.get('/shop', shopController.makeNew);
     app.use((req, res, next) => {
@@ -23,8 +25,6 @@ module.exports = app => {
 
     app.get('/app', appController.app);
     app.delete('/sessions', sessionsController.destroy);
-
-    app.get('/shop/products', shopController.getAll);
 
     // create post api
     app.post('/shop/products', shopController.create);
