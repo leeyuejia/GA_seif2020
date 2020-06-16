@@ -12,5 +12,10 @@ module.exports = {
         } catch (err) {
             throw new Error(`Due to ${err.message}, you are not allowed to insert this item ${JSON.stringify(user)}`);
         }
+    },
+    async find (username) {
+        const user = await db.users.findOne({ username: username });
+        if(!user) throw new Error(`The user ${username} is not in our DB`);
+        return user;
     }
 };
