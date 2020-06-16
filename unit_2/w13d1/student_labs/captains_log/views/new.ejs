@@ -11,11 +11,14 @@
         <input type="text" name="title" placeholder="your title">
         <label for="entry">Entry</label>
         <textarea name="entry" id="entry" cols="30" rows="10" placeholder="your entry max.char(300)" maxlength="300" required></textarea>
-        <label for="shipIsBroker">Is the ship Broken?</label>
-        <label for="true" name= "shipIsBroken">True</label>
-        <input type="checkbox" name="shipIsBroken" id="shipIsBroken" value="true">
-        <label for="true" name= "shipIsBroken">False</label>
-        <input type="checkbox" name="shipIsBroken" id="shipIsBroken" value="false">
+        <label for="isShipBroken">Is the ship Broken?</label>
+        <!-- <input type="checkbox" checked name="isShipBroken" id="isShipBroken"> -->
+        <label for="true" name= "isShipBroken">True</label>
+        <input type="checkbox" name="isShipBroken" id="isShipBroken" value=true>
+        <label for="true" name= "isShipBroken">False</label>
+        <input type="checkbox" name="isShipBroken" id="isShipBroken" value=false>
+        <label for="date">Date of entry</label>
+        <input type="datetime-local" name="date" id="date">
         <button type="submit">Enter logs</button>
     </form>
     

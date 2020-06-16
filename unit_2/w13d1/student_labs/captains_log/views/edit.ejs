@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="/logs/<%=infoToEdit.name%>?_method=PUT" method="POST">
+    <label for="title">Title</label>
+    <input type="text" name="title" placeholder="your title" value="<%=infoToEdit.title%>" required>
+    <label for="entry">Entry</label>
+    <textarea name="entry" id="entry" cols="30" rows="10" placeholder="your entry max.char(300)" maxlength="300" required><%=infoToEdit.entry%></textarea>
+    <label for="isShipBroken">Is the ship Broken?</label>
+    <!-- <input type="checkbox" checked name="isShipBroken" id="isShipBroken"> -->
+    <% if (infoToEdit.isShipBroken) {%>
+        <label for="true" name= "isShipBroken">True</label>
+        <input type="checkbox" name="isShipBroken" id="isShipBroken" value=true checked>
+        <label for="true" name= "isShipBroken">False</label>
+        <input type="checkbox" name="isShipBroken" id="isShipBroken" value=false>
+    <%} else {%>
+        <label for="true" name= "isShipBroken">True</label>
+        <input type="checkbox" name="isShipBroken" id="isShipBroken" value=true>
+        <label for="true" name= "isShipBroken">False</label>
+        <input type="checkbox" name="isShipBroken" id="isShipBroken" value=false checked>
+    <%}%>
+    <p>log created at : <%=infoToEdit.date%></p>
+
+
+    <label for="updatedAt">Updated Date at</label>
+    <input type="datetime-local" name="updatedAt" id="date">
+    <button type="submit">Update logs</button>
+</form>
+</body>
+</html>
