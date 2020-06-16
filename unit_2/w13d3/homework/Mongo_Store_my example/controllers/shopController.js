@@ -2,12 +2,15 @@ const shopRepository = require('../repositories/shopRepository');
 
 module.exports = {
     async getAll (req, res) {
-        try {
-            const items = await shopRepository.getAll();
-            return res.render('shop/index', { items });
-        } catch (err) {
-            return res.render('errors/404', { err });
-        }
+        if(req.session.currentUser) {
+            try {
+                const items = await shopRepository.getAll();
+                return res.render('shop/index', { items });
+            } catch (err) {
+                return res.render('errors/404', { err });
+            }
+        }else 
+            return res.redirect('/')
     },
     async show (req, res) {
         try {

@@ -1,15 +1,17 @@
-const ajv = require('ajv');
-const Ajv = new ajv({
+const { required } = require("./schema/users");
+
+const User = require('./schema/users');
+const Ajv = require('ajv');
+const ajv = new Ajv({
     useDefaults: true,
     coerceTypes: true,
     allErrors: true,
 });
-const User = require('./schema/users');
-const validator = Ajv.compile(User);
-const ValidationError = require('../exceptions/ValidationError');
+const validator = ajv.compile(User);
+const ValidationError = require('../exceptions/ValidationError')
 
 module.exports = {
-    validate (data) {
+    validate(data) {
         const isValid = validator(data);
         if(!isValid) {
             console.log(`Validator Errors: ${validator.errors}`);
@@ -20,4 +22,5 @@ module.exports = {
         data.updatedAt = data.updatedAt ? new Date(data.updatedAt) : new Date();
         return isValid;
     }
-};
+
+}

@@ -1,20 +1,20 @@
 module.exports = {
     type: 'object',
     required: ['username', 'password'],
-    properties: {
+    properties : {
         username: {
             type: 'string'
         },
-        password: {
+        password : {
             type: 'string'
         },
-        createdAt: {
+        createdAt : {
             type: 'string',
             format: 'date-time'
         },
-        updatedAt: {
+        updatedAt : {
             type: 'string',
-            format: 'date-time'
-        }
+            format: 'date-time' // <-- to format the date 
+        },
     }
-};
+}
