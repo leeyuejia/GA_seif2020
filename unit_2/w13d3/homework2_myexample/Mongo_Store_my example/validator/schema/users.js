@@ -14,7 +14,7 @@ module.exports = {
         },
         updatedAt : {
             type: 'string',
-            format: 'date-time' // <-- to format the date 
+            format: 'date-time'
         },
     }
 }

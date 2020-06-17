@@ -1,5 +1,3 @@
-const { required } = require("./schema/users");
-
 const User = require('./schema/users');
 const Ajv = require('ajv');
 const ajv = new Ajv({
@@ -22,5 +20,4 @@ module.exports = {
         data.updatedAt = data.updatedAt ? new Date(data.updatedAt) : new Date();
         return isValid;
     }
-
 }

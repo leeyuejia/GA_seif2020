@@ -8,7 +8,7 @@ const usersRepository = require('../repositories/usersRepository');
 const bcrypt = require('bcrypt')
 module.exports = {
     newForm(req,res) {
-       return res.render('session/new')
+       return res.render('sessions/new')
     },
     async create(req, res) {
         try {

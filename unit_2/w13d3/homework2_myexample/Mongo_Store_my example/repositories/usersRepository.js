@@ -5,12 +5,11 @@ const SALT_ROUND = process.env.SALT_ROUND || 10;
 module.exports = {
     async create (user) {
         try {
-            console.log(user + 'users')
             user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(SALT_ROUND)) // bcrypt the password 
-            const result = await db.users.insertOne(user);
-            console.log(result.insertedCount)
-            if (!result.insertedCount) throw new Error('insertion failure');
-            return result.insertedCount;
+            console.log('user is'+ user)
+            const { insertedCount } = await db.users.insertOne(user);
+            if (!insertedCount) throw new Error('insertion failure');
+            return true;
         } catch (err) {
             throw new Error(`Due to ${err.message}, you are not allowed to insert this item`);
         }

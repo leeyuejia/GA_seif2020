@@ -17,7 +17,7 @@ module.exports = app => {
     })
 
     app.get('/sessions/new', sessionsController.newForm)
-    app.post('./sessions', sessionsController.create)
+    app.post('/sessions', sessionsController.create)
     app.delete('/sessions',sessionsController.destroy)
 
     app.get('/users/new', usersController.newForm)
