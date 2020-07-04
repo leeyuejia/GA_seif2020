@@ -1,0 +1,83 @@
+body{
+    margin: auto;
+    margin-top: 1.5rem;
+    background-color: darkolivegreen
+}
+main {
+    background-color: honeydew;
+    margin: 1.5rem;
+    margin: auto;
+    width: 90%;
+    height: 1100px;
+}
+.mainContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+    height: 100%;
+}
+#sideBar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 25%;
+    margin: 1.5rem;
+    background-color: darkolivegreen;
+}
+ul {
+    font-size: 2rem;
+    list-style: none;
+    line-height: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.rightBarContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.topElement {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+}
+.topCard {
+    margin: 1.5rem;
+    background-color: grey;
+    width: 33%;
+    padding: 1rem;
+}
+#mainElementContainer {
+    height: 100%;
+    flex: 0 1 auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+.mainElementContainer {
+    margin: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+
+}
+.mainElement {
+    padding: 1rem;
+    height: 25%;
+    background-color: darkolivegreen;
+}
+#chart {
+    padding: 1rem;
+    height: 75%;
+    border-top: 1px solid white;
+    background-color: darkolivegreen;
+}
+.display {
+    flex: 1 0 auto;
+}
+
+h4,h2,p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
