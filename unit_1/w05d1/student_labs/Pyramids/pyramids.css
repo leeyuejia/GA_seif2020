@@ -1,0 +1,13 @@
+body{
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.triangle {
+	display: inline-block;
+	width: 20;
+	height: 20;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+}
