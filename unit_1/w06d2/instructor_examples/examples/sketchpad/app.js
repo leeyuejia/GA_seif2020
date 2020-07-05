@@ -2,49 +2,83 @@
 const height = 600;
 const width = 600;
 $(() => {
-    $('#app').append(
-        $('<div>')
+    $('#app')
+        .append($('<div>')
             .addClass('container')
-            .css({ width: width + 'px', height: height + 'px' })
-    );
+            .css({
+                width: width + 'px',
+                height: height + 'px'
+            }));
 
-    const randomColor = () => {
-        const red = Math.floor(Math.random() * 255);
-        const green = Math.floor(Math.random() * 255);
-        const blue = Math.floor(Math.random() * 255);
-        const color = 'rgb(' + red + ',' + green + ',' + blue + ')';
-        return color;
+    const addColor = event => {
+        $(event.currentTarget).addClass('pink');
     };
-
-    const changeColor = event => {
-        // $(event.target).addClass('pink');
-        $(event.target).css('background', randomColor());
-    };
-
-    const calculateWidth = (containerWidth, containerHeight, numberOfSquares) => {
-        return Math.floor(
-            Math.sqrt((containerWidth * containerHeight) / numberOfSquares)
-        );
-    };
-
-    const renderSquares = number => {
-        console.log('squre is ' + calculateWidth(width, height, number));
+    
+    const render = (number) => {
+        $('.container').empty();
         for (let i = 0; i < number; i++) {
-            let $div = $('<div>')
-                .addClass('square')
-                .css({
-                    width: calculateWidth(width, height, number) + 'px',
-                    height: calculateWidth(width, height, number) + 'px'
-                });
+            let $div = $('<div>').addClass('square');
             $('.container').append($div);
         }
-        $('.square').on('mouseover', changeColor);
+        $('.square').on('mouseover', addColor);
     };
 
     $('form').on('submit', event => {
-        $('.container').empty();
-        const size = parseInt($('#input-box').val(), 10);
-        renderSquares(size);
         event.preventDefault();
+        const size = parseInt($('#input-box').val());
+
+        render(size);
+
+        $('form').trigger('reset');
     });
 });
+
+// const height = 600;
+// const width = 600;
+// $(() => {
+//     $('#app').append(
+//         $('<div>')
+//             .addClass('container')
+//             .css({ width: width + 'px', height: height + 'px' })
+//     );
+
+//     const randomColor = () => {
+//         const red = Math.floor(Math.random() * 255);
+//         const green = Math.floor(Math.random() * 255);
+//         const blue = Math.floor(Math.random() * 255);
+//         const color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+//         return color;
+//     };
+
+//     const changeColor = event => {
+//         // $(event.target).addClass('pink');
+//         $(event.target).css('background', randomColor());
+//     };
+
+//     const calculateWidth = (containerWidth, containerHeight, numberOfSquares) => {
+//         return Math.floor(
+//             Math.sqrt((containerWidth * containerHeight) / numberOfSquares)
+//         );
+//     };
+
+//     const renderSquares = number => {
+//         console.log('squre is ' + calculateWidth(width, height, number));
+//         for (let i = 0; i < number; i++) {
+//             let $div = $('<div>')
+//                 .addClass('square')
+//                 .css({
+//                     width: calculateWidth(width, height, number) + 'px',
+//                     height: calculateWidth(width, height, number) + 'px'
+//                 });
+//             $('.container').append($div);
+//         }
+//         $('.square').on('mouseover', changeColor);
+//     };
+
+//     $('form').on('submit', event => {
+//         $('.container').empty();
+//         const size = parseInt($('#input-box').val(), 10);
+//         renderSquares(size);
+//         event.preventDefault();
+//     });
+// });
