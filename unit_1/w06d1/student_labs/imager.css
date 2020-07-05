@@ -1,0 +1,11 @@
+body {
+    margin: 0 auto;
+}
+.container {
+    background-color: ghostwhite;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+img {
+    display: inline-flex;
+}
