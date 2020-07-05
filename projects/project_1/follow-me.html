@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>follow-me</title>
+    <link rel="stylesheet" href="css/follow-me.css">
+    <!-- google font - Anton script and shadows into light css description below -->
+    <!-- font-family: 'Anton', sans-serif;
+        font-family: 'Shadows Into Light', cursive; -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- <script src="https://code.jquery.com/jquery-3.5.0.slim.js"
+    integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE=" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/ce6964e6dc.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://tonejs.github.io/build/Tone.js"></script>
+    <script src="js/follow-me.js"></script>
+    <!-- <script src="js/sound.js"></script> -->
+</head>
+
+<body>
+    <!-- On-load page -->
+
+    <div class="startpage hiddenStart">
+        <div class="startpage-textbox">
+            <h1>WELCOME</h1>
+            <!-- <button id="sound-test">click to play sound</button> -->
+            <p>"Follow-me"is a simple game developed to test
+                and evaluate how far can your memory stretch. After the first round, do challenge yourself
+                numerous time to improve your memory.</p>
+            <p class="quote">"Memories Are Precious"</p>
+            <ul id="instruction">
+                <li>Click <span>TEST YOUR MEMORY</span> button and follow the dialogue's instruction</li>
+                <li><span>REMEMBER</span> the sequence and click the <span>EXACT</span> same box in the
+                    <span>EXACT</span> same sequence</li>
+                <li><span>!NOTE</span> If you restart the game, your progress will be lost</li>
+            </ul>
+            <form id="form">
+                <input type="text" id="input-name" placeholder="Your name" value="">
+                <input type="submit" class="submit" value="Test your memory">
+            </form>
+        </div>
+    </div>
+    <!-- On-load page -->
+
+    <!-- epilogue page -->
+    <div class="epilogue-page hiddenEpi">
+        <div class="epilogue-container">
+            <h1>Thank you for playing</h1>
+            <h2>You have cleared a total of</h2>
+            <h4 id="level-status">"value of number cleared"</h4>
+            <p class="advice">"Our memory works like a data storage. If it is full, it can no longer take
+                in any more data. Clear up some space and you can take in memory again. Let go grudges and
+                bad memories and free your mind."
+            </p>
+            <div id="play-again">
+            <input type="submit" class="submit" value="Play Again">
+            </div>
+        </div>
+    </div>
+    <!-- epilogue page -->
+
+    <div class="about-page hiddenAbout">
+        <div class="about-container">
+            <h1>ABOUT DEV</h1>
+            <p>The developer's motivation for this game is to assist doctor to assess demented
+                patient's memory capabilities. Doctors can use this game during each patient's routine review
+                to diagnose the rate of degeneration. Demented patient can also use this game to exercise memory muscles
+                to slow the rate of degeneration. Feel free to reach out to the developer via the below media.
+            </p>
+            <div id="socialmedia">
+                <a href="http://facebook.com"><i class="fab fa-facebook-square fa-3x logo" id="facebook"></i></a>
+                <a href="http://linkedin.com"><i class="fab fa-linkedin fa-3x logo" id="linkedin"></i></a>
+                <a href="http://instagram.com"><i class="fab fa-instagram fa-3x logo" id="instagram"></i></a>
+            </div>
+            <input type="button" class="submit" id="closeAbout" value="Continue to play game">
+        </div>
+    </div>
+
+    <!-- main page -->
+    <div class="header-container mainpage">
+        <div id="username">
+        </div>
+        <div class="button" id="about">
+            <h2>About</h2>
+        </div>
+        <div id="title">
+            <h1>FOLLOW - ME</h1>
+        </div>
+        <div id="start-game" class="button">
+            <h2>Start</h2>
+        </div>
+        <div class="button" id="restart">
+            <h2>Restart</h2>
+        </div>
+    </div>
+    <div class="top-container mainpage">
+        <div id="image-avatar">
+            <img src="#" alt="Avatar-pic" width="150px" height="150px">
+        </div>
+        <div id="dialogue">
+            <h1></h1>
+        </div>
+        <div id="box-count">
+            <h2></h2>
+        </div>
+        <div id="lifecount">
+            <img src="https://i.imgur.com/akwaNdR.png" id="life1" alt="life" width="50px" height="50px">
+            <img src="https://i.imgur.com/akwaNdR.png" id="life2" alt="life" width="50px" height="50px">
+            <img src="https://i.imgur.com/akwaNdR.png" id="life3" alt="life" width="50px" height="50px">
+        </div>
+    </div>
+    <div class="indicator mainpage">
+        <div class="computer">COMPUTER</div>
+        <div class="player">PLAYER</div>
+    </div>
+    <div class="gameboard-container mainpage">
+        <div class="left-column" id="AI-board"></div>
+        <div class="right-column" id="player-board"></div>
+    </div>
+    <div class="footer">
+        <h4>level 1 </h4>
+        <h4>level 2 </h4>
+        <h4>level 3 </h4>
+        <h4>level 4 </h4>
+        <h4>level 5 </h4>
+        <h4>level 6 </h4>
+        <h4>level 7 </h4>
+        <h4>level 8 </h4>
+        <h4>level 9 </h4>
+        <h4>level 10 </h4>
+        <h4>level 11 </h4>
+        <h4>level 12 </h4>
+        <h4>level 13 </h4>
+        <h4>level 14 </h4>
+        <h4>level 15 </h4>
+        <h4>level 16 </h4>
+        <h4>level 17 </h4>
+        <h4>level 18 </h4>
+        <h4>level 19 </h4>
+        <h4>level 20 </h4>
+    </div>
+    <!-- main page -->
+</body>
+
+</html>
