@@ -27,7 +27,6 @@ const port = process.env.PORT || 3300;
 
 // DATA - put into marsMissions.js file inside of a models folder, for module.exports
 // remember to require it in the server
-<<<<<<< HEAD
 const marsMissions = [
     {
         name: 'Curiosity',
@@ -65,10 +64,8 @@ const marsMissions = [
         img: 'https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA18891_hires.jpg'
     }
 ];
-=======
 // done for the above
 
->>>>>>> b0b9d05fd6fd948e59a333e0548fefc9f2e6cc2e
 
 // INDEX Route
 // send data to 'missions/index.ejs' view
