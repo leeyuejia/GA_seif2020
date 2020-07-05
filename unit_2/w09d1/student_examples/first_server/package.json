@@ -7,11 +7,7 @@
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
   "author": "easonzhou",
-=======
-  "author": "",
->>>>>>> 85e7a99ca5cfcf6480429364359401c311fafb1a
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
