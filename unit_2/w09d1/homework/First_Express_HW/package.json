@@ -1,0 +1,16 @@
+{
+  "name": "first_express_hw",
+  "version": "1.0.0",
+  "description": "Homework w09d1",
+  "main": "homework.js",
+  "scripts": {
+    "start": "nodemon homework.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}

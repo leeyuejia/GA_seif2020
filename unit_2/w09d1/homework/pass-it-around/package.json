@@ -1,19 +1,17 @@
 {
-  "name": "first_server",
+  "name": "pass-it-around",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "pass-it-around.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon pass-it-around.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
-  "author": "easonzhou",
-=======
+  "keywords": [],
   "author": "",
->>>>>>> 85e7a99ca5cfcf6480429364359401c311fafb1a
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   }
 }

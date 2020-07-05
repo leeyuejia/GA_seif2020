@@ -1,15 +1,11 @@
 {
-  "name": "express_plants",
+  "name": "express_calculator",
   "version": "1.0.0",
-  "description": "",
+  "description": "express_calculator",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "start": "node server.js"
-=======
     "start": "nodemon server.js"
->>>>>>> 85e7a99ca5cfcf6480429364359401c311fafb1a
   },
   "author": "",
   "license": "ISC",
