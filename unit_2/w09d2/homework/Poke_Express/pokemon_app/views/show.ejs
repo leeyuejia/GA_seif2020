@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./show.css">
+</head>
+<style>
+    * {
+        text-align: center;
+    }
+
+    body {
+        margin: 0 auto;
+        background-color: ghostwhite;
+        font-family: 'Balsamiq Sans', cursive;
+    }
+
+    .list {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul {
+        flex: 0 1 auto;
+        /* margin: 0;
+        padding: 0; */
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    li:hover {
+        cursor: pointer;
+        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    img {
+        width: 30%;
+        border-radius: 3em;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    @-webkit-keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        100% {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+    }
+
+    @keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        100% {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+    }
+</style>
+
+<body>
+    <h1>Gotta catch Em all</h1>
+    <% let pokemonName = data[itemID].name %>
+    <h2><%= pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1) %></h2>
+    <div class="image">
+        <img src="<%=data[itemID].img %>.jpg" alt="<%=data[itemID].name %>">
+    </div>
+    <div class="list">
+        <ul>
+            <% for (let i = 0; i < data.length; i++) { %>
+            <li> <a href="./<%=i%>"><%= data[i].name.charAt(0).toUpperCase() + data[i].name.slice(1) %></a> </li>
+            <%} %>
+        </ul>
+        <a href="./"> <- Back to home page</a>
+    </div>
+</body>
+
+</html>

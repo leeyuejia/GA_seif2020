@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0 auto;
+        text-align: center;
+    }
+    #data {
+        display: flex;
+        flex-flow: column wrap;
+    }
+</style>
+<body>
+    <div>
+        <img src= "<%= data[itemID].img %>" alt="<%= data[itemID].name %>">
+    </div>
+    <div id="data">
+        <h1>Name of Mission : <%=data[itemID].name %></h1>
+        <h1>Launch Date : <%= data[itemID].launchDate%></h1>
+        <h1>Operator: <%= data[itemID].operator%></h1>
+        <h1>Mission Type: <%= data[itemID].missionType%></h1>
+    </div>
+    <div>
+        <a href="./">back to home page</a>
+    </div>
+</body>
+</html>

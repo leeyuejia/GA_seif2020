@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<style>
+    * {
+    text-align: center; 
+}
+body {
+    margin: 0 auto;
+    background-color:ghostwhite;
+    font-family: 'Balsamiq Sans', cursive;
+}
+ul {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+li:hover {
+    cursor:pointer;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+</style>
+<body>
+    <h1>ALL POKEMON</h1>
+    <ul>
+        <% for (let i = 0; i < data.length; i++) { %>
+            <li class=".scale-up-center"> <a href="/pokemon/<%=i%>"><%= data[i].name.charAt(0).toUpperCase() + data[i].name.slice(1) %></a> </li> 
+        <%} %> 
+    </ul>
+</body>
+</html>

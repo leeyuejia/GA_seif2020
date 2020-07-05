@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const fruits = require('./models/fruits.js');
+const animal = require('./models/fruits.js');
 
 app.get('/fruits', (request, response)=>{
     response.send(fruits)
@@ -17,3 +18,6 @@ app.get('/fruits/:indexOfFruitsArray', (request, response)=>{
 app.listen(3000, ()=>{
     console.log('I am listening on port 3000');
 });
+
+console.log(fruits)
+console.log(animal)

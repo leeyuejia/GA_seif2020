@@ -1,6 +1,11 @@
 // DEPENDENCIES
+require('dotenv').config()
 const express = require('express');
+
+
 const app = express();
+app.set('views', './views/missions');
+app.set('view engine', 'ejs');
 
 // run `npm i` to install dependencies in package.json
 
@@ -18,10 +23,11 @@ const app = express();
 // views/missions folder has not been created create it!
 
 // PORT
-const port = 3000;
+const port = process.env.PORT || 3300;
 
 // DATA - put into marsMissions.js file inside of a models folder, for module.exports
 // remember to require it in the server
+<<<<<<< HEAD
 const marsMissions = [
     {
         name: 'Curiosity',
@@ -59,19 +65,21 @@ const marsMissions = [
         img: 'https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA18891_hires.jpg'
     }
 ];
+=======
+// done for the above
+
+>>>>>>> b0b9d05fd6fd948e59a333e0548fefc9f2e6cc2e
 
 // INDEX Route
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
 // Stretch: the names should provide a link to the show page
-
+require('./router')(app);
 // SHOW Route
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
 // the view should have a link back to the index
 // Stretch: display the image inside an image tag
-
-
 
 // LISTENER
 app.listen(port, ()=> {
