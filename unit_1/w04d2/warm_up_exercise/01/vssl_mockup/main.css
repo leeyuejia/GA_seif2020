@@ -1,0 +1,107 @@
+
+header {
+    background-image: url(https://i.ibb.co/M9p6390/sailboat.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1, header p{
+    color: ghostwhite;
+    text-align: center;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin: 0 auto;
+}
+header p {
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+nav {
+    background-color: gray;
+    padding: 20px;
+}
+ul {
+    padding: 20px;
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	justify-content:center;
+}
+nav a {
+    padding: 20px;
+    font-size: 20px;
+	-webkit-flex: 1 auto 30px;
+    flex: 1 auto 30px;
+}
+h2 {
+    font-size: 50px;
+    padding:40px;
+    margin: 50px;
+    text-align: center;
+    line-height: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+.content .article1 img {
+    display: inline-block;
+    text-align: center;
+    width: 99%;
+}
+.content {
+
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	justify-content:center;
+}
+.article1 {
+    -webkit-flex: 1 0 150px;
+	flex: 1 0 150px;
+    margin: 30px;
+    padding: 0px 40px;
+    width: 300px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h3 {
+    font-size: 35px;
+    font-weight: 400;
+}
+p {
+    font-size: 20px;
+    line-height: 30px;
+    color: darkgrey;
+    margin: 50px 0px 0px 0px;
+}
+.article1 a {
+    font-size: 20px;
+    margin:50px 0px 0px 0px;
+    text-decoration: none;
+    display: inline-block;
+}
+.article1 a:hover {
+    text-decoration: underline;
+}
+footer {
+    border-top: 1px solid black;
+}
+#icons {
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+}
