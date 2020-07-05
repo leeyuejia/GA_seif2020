@@ -30,16 +30,19 @@ const panagrams = [ 'The','job', 'requires', 'extra', 'pluck', 'and', 'zeal', 'f
 // console.log(nums.filter(num => {return num <100}))
 // console.log(panagram.filter(word => {return word.length%2 === 0}))
 // console.log(panagrams.filter(word => {return word.length%2 === 0}))
+
 // //Find
 // console.log(smallNums.find(evenNum => {return evenNum% 5 === 0}))
 // console.log(nums.find(evenNum => {return evenNum%5 ===0}))
 // console.log(panagram.find(word => {return word.length > 6}))
 // console.log(panagrams.find(word => {return word.length > 6}))
+
 // //findindex
 // console.log(smallNums.findIndex(indexNum => {return indexNum%3 === 0}))
 // console.log(nums.findIndex(indexNum => {return indexNum%3 === 0}))
 // console.log(panagrams.findIndex(wordLength => {return wordLength.length < 2}))
 // console.log(panagram.findIndex(wordLength => {return wordLength.length < 2}))
+
 // //ForEach
 // smallNums.forEach(timesThree => {console.log(timesThree*3)})
 // nums.forEach(timesThree => {console.log(timesThree*3)})
