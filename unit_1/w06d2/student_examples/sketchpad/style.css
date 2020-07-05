@@ -1,9 +1,17 @@
+.container{
+    border: 1px solid black;
+    overflow: scroll;
+    display: flex;
+    flex-flow: row wrap;
+}
 .square {
-    display:inline-block;
+    /* display:inline-block; */
     background: ivory;
     width: 20px;
     height: 20px;
     border: 1px solid black;
+    box-sizing: border-box;
+    margin: 0 0 0 0;
 }
 .pink {
     background: pink;

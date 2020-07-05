@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
-        <script src="app.js" charset="utf-8"></script>
-        <link rel="stylesheet" href="app.css">
-    </head>
-    <body>
-        <div id="colors"></div>
-        <div id="choices"></div>
-    </body>
+<html>
+  <head>
+    <title>Color Palette Picker</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="app.css">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <button id="generate">GENERATE</button>
+      <div id="container">
+        <div id="color-palette"></div>
+        <div id="my-palette"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
