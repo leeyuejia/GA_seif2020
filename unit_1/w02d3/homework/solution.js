@@ -21,3 +21,15 @@ const checkPalindrome = (string) => {
 
 console.log(checkPalindrome('Radar'))
 console.log(checkPalindrome('Borscht'))
+
+const checkPrime = (num) => {
+    for (i=1; i <=num; i++) {
+        if(Math.sqrt(i) === parseInt(Math.sqrt(i))) {
+            if(i%2 !== 0) {
+                console.log(i)
+            }
+        }
+    }
+}
+
+checkPrime(100)
