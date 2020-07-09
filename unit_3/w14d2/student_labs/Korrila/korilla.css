@@ -1,0 +1,24 @@
+.hidden {
+    display: none;
+}
+.show {
+    display:block;
+}
+.card {
+    width: 20rem;
+
+}
+
+.receipt-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.totalBill {
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+}
+.green {
+    font-weight: 900;
+    color: green
+}
