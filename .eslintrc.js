@@ -6,13 +6,17 @@ module.exports = {
         'jquery': true,
         'jest': true,
     },
-    'extends': 'eslint:recommended',
+    'extends': [
+        'eslint:recommended',
+        'plugin:react/recommended',
+    ],
     'globals': {
         'Atomics': 'readonly',
         'SharedArrayBuffer': 'readonly',
         'window': true
     },
     'parserOptions': {
+        'sourceType': 'module',
         'ecmaVersion': 2018
     },
     'rules': {
@@ -28,6 +32,9 @@ module.exports = {
             'exports': 'only-multiline',
         }],
         'space-before-function-paren': 'warn',
-        'object-curly-spacing': ["warn", 'always']
+        'object-curly-spacing': ["warn", 'always'],
+        'react/jsx-indent-props': [2, 4],
+        'react/jsx-indent': [2, 4, { checkAttributes: true, indentLogicalExpressions: true }],
+        'react/jsx-max-props-per-line': [2, { maximum: 2, when: 'always' }]
     }
 };
