@@ -1,3 +1,4 @@
+
 const receipt1 =
   {
     person: 'Karolin',
@@ -44,3 +45,10 @@ const receipt3 = {
   },
   paid: true
 }
+
+const receipts = [receipt1,receipt2,receipt3]
+
+receipts.map(each => {
+  each.toppingShow =false
+  return receipts
+})

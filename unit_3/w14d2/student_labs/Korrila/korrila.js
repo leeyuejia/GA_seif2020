@@ -9,41 +9,60 @@ class Title extends React.Component {
     }
 }
 
-class App extends React.Component {
-    constructor (props) {
+class Topping extends React.Component {
+    constructor(props) {
         super(props)
         this.state = {
-            receipt1 : receipt1,
-            receipt2 : receipt2,
-            receipt3 : receipt3,
-            receipts : [receipt1,receipt2,receipt3],
-            displayStatus : "hidden"
+            receipts: receipts
         }
-    }
-    toggleTopping = event => {
-        this.setState({ displayStatus : 'show'})
-        console.log(event.target.id);
-    }
-    togglePaid = async (event) => {
-        console.log('hi')
-        this.state.receipts.forEach( receipt => {
-            console.log(event.target.name)
-            console.log(receipt)
-            if(receipt.person === event.target.name) {
-             return this.setState({[receipt.paid] : true })
-            }
-        })
-        /// need to use the name to find that person and set it "paid" as true or false
-        console.log(event.target.name)
     }
     render() {
         return (
-            <div>
-                    <Title title='Korrila'/>
-                <div class='receipt-container'>
-                {this.state.receipts.map (receipt => 
-                    <div class= 'receipt card m-3'id={receipt.person}>
-                        <div class= 'card-body'>
+            <ul>
+                <button id={this.props.index} type='button' onClick={this.props.toggleTopping}>Close</button>
+                {receipts.map((receipt,index) => {
+                    if(index == this.props.index) {
+                        return receipt.order.toppings.map(topping => 
+                        <li class='text-muted'>{topping}</li>
+                        )
+                    }
+                })}
+            </ul> 
+        )
+    }
+}
+class Receipt extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            receipts: receipts
+        }
+    }
+    togglePaid = (event) => {
+        console.log('hi')
+        const update = this.state.receipts.map((receipt,index) => {
+            if(index == event.target.id) receipt.paid = true;
+            return receipt;
+        });
+        this.setState({receipts: update})
+        console.log(this.state.receipts[event.target.id])
+    }
+    toggleTopping = (event) => {
+        console.log(event.target.id)
+        const update = this.state.receipts.map ((receipt,index) => {
+            if(index == event.target.id) {
+                receipt.toppingShow = receipt.toppingShow? false : true 
+                return receipt
+            }
+        })
+        this.setState ({receipt:update})
+    }
+    render() {
+        return (
+            <div class='receipt-container'>
+                {this.state.receipts.map ((receipt,index) => {
+                    return <div class= 'receipt card m-3'id={index}>
+                        <div class= 'card-body' style= {{height: "150px", "flex": "1 0 150px"}}>
                             <h5>{receipt.person}</h5>
                         </div>
                         <div class="card-header">
@@ -56,22 +75,37 @@ class App extends React.Component {
                             <li class='list-group-item'><b>Sauce:</b>{receipt.order.sauce}</li>
                             <li class='list-group-item'id={receipt.order.main}>
                                 <b>Toppings:</b><br/>
-                                <button id="button" onClick ={this.toggleTopping}>Click here to show more</button>
-                                <div class= {this.state.displayStatus}>
-                                    {receipt.order.toppings.map(topping => 
-                                        <p class='text-muted'>{topping}</p>
-                                    )}
-                                </div>
+                                {receipt.toppingShow?
+                                    <Topping index= {index} toggleTopping = {this.toggleTopping}></Topping>
+                                    :
+                                    <button id={index} type='button' onClick={this.toggleTopping}>Click to see more</button>
+                                }
                             </li>
                             <li class='list-group-item'><b>Drinks:</b>{receipt.order.drink}</li>
                         </ul>
                         <div class="card-header border-top totalBill mt-2">
-                            {receipt.paid ? <p class="green" >Paid</p> : <button name={receipt.person} type='button' onClick= {this.togglePaid} class= "btn btn-danger">Pay now</button>}
+                            {receipt.paid ? <p className="green" >Paid</p> : <button id={index} type='button' onClick= {this.togglePaid} className= "btn btn-danger">Pay now</button>}
                             <p class="cost"> <b>Total Bill:</b>${receipt.order.cost} </p>
                         </div>
                     </div>
-                )}
-                </div>
+                })}
+            </div>
+        )
+    }
+}
+
+class App extends React.Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            receipts : receipts,
+        }
+    }
+    render() {
+        return (
+            <div>
+                <Title title='Korrila'/>
+                <Receipt/>
             </div>
         )
     }
