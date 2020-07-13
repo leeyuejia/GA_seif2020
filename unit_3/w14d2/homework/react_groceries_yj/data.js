@@ -10,7 +10,7 @@ const groceries =[
     {
         item: 'pasta sauce',
         brand: 'san remo',
-        units: 'grams',
+        units: 'pkts',
         quantity: 1,
         isPurchased: false,
         note: 'Tomato sauce'
@@ -19,7 +19,7 @@ const groceries =[
         item: 'Salty bacon',
         brand: 'kelly\s',
         units: 'grams',
-        quantity: 1,
+        quantity: 500,
         isPurchased: false,
         note: ''
     }
