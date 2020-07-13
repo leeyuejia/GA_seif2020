@@ -63,42 +63,135 @@
 //   document.querySelector('.container')
 // )
 
+// class Square extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <h4>square</h4>
+//       </div>
+//     );
+//   }
+// }
+
+// class Board extends React.Component {
+//   render() {
+//     return (
+//       <div className="board">
+//         <Square />
+//         <Square />
+//         <Square />
+//         <Square />
+//         <Square />
+//         <Square />
+//         <Square />
+//         <Square />
+//         <Square />
+//       </div>
+//     );
+//   }
+// }
+
+// class Player extends React.Component {
+//   render() {
+//     return (
+//       <div className={this.props.whichPlayer}>
+//         <h2>Player {this.props.whichPlayer}</h2>
+//         <h3>Wins: </h3>
+//       </div>
+//     );
+//   }
+// }
+
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <Header />
+//         <Player whichPlayer="X" />
+//         <Player whichPlayer="O" />
+//         <Board />
+//       </div>
+//     );
+//   }
+// }
+// // class Header extends React.Component {
+// //   render() {
+// //     return <h1> Header - React Tac Toe </h1>;
+// //   }
+// // }
+// function Header() {
+//   return <h1> Header - React Tac Toe </h1>;
+// }
+
+// ReactDOM.render(<App></App>, document.querySelector(".container"));
+
+// class Header extends React.Component {
+//   render () {
+//     return (
+//       <h1> React Tac Toe </h1>
+//     )
+//   }
+// }
+
+const Header = (props) => {
+  return (
+    <div>
+      <h1> React Tac Toe {props.hello} </h1>
+      {props.children}
+    </div>
+  )
+}
+
+class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 123
+    };
+  }
+  render() {
+    return (
+      <div className='board'>
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+      </div>
+    )
+  }
+}
+
+// class Player extends React.Component {
+//   render () {
+//     return (
+//       <div className={this.props.whichPlayer}>
+//         <h2>Player {this.props.whichPlayer} </h2>
+//         <h3>Wins: </h3>
+//       </div>
+//     )
+//   }
+// }
+const Player = (props) => {
+  return (
+    <div className={props.whichPlayer}>
+      <h2>Player {props.whichPlayer} </h2>
+      <h3>Wins: </h3>
+    </div>
+  )
+}
+
 class Square extends React.Component {
   render() {
     return (
       <div>
         <h4>square</h4>
       </div>
-    );
-  }
-}
-
-class Board extends React.Component {
-  render() {
-    return (
-      <div className="board">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-      </div>
-    );
-  }
-}
-
-class Player extends React.Component {
-  render() {
-    return (
-      <div className={this.props.whichPlayer}>
-        <h2>Player {this.props.whichPlayer}</h2>
-        <h3>Wins: </h3>
-      </div>
-    );
+    )
   }
 }
 
@@ -106,18 +199,16 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
-        <Player whichPlayer="X" />
-        <Player whichPlayer="O" />
+        <Header hello='world'>Some beauties</Header>
+        <Player whichPlayer='X' />
+        <Player whichPlayer='O' />
         <Board />
       </div>
-    );
-  }
-}
-class Header extends React.Component {
-  render() {
-    return <h1> Header - React Tac Toe </h1>;
+    )
   }
 }
 
-ReactDOM.render(<App></App>, document.querySelector(".container"));
+ReactDOM.render(
+  <App />,
+  document.querySelector('.container')
+)
