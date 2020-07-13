@@ -59,8 +59,7 @@ class App extends React.Component {
     }
     encode = event => {
         event.preventDefault();
-        this.setState({encode: event.target.value})
-        let str = this.state.encode
+        let str = event.target.value
         let amount = this.state.amount
         const result = caesarShift(str, amount)
         this.setState ({encoded : result}, () => {
