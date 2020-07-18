@@ -1,0 +1,10 @@
+.taskItemContainer {
+    background-color: white;
+    height: 52px;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    margin-bottom: 8px;
+    display: flex;
+}

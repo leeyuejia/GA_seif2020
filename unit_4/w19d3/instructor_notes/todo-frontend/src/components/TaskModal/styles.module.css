@@ -1,0 +1,25 @@
+* {
+    font-size: 14px;
+}
+
+.taskModalContainer {
+    background-color: #ebecf0;
+    border-radius: 4px;
+    padding: 8px;
+}
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    color: #172b4d;
+    font-weight: 600;
+}
+.description {
+    margin-top: 16px;
+}
+
+input[type=checkbox] {
+    margin-top: 16px;
+}
