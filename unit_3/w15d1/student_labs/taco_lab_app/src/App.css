@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.container-display {
+  display : flex;
+  flex-flow : column wrap;
+  width: 90rem;
+}
+
+.eachCard {
+  width:85rem;
+  margin: 0;
+}

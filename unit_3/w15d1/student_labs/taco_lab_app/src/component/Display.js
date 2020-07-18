@@ -12,20 +12,22 @@ class Display extends Component {
         const taco = this.props.taco
         const arrayKey = Object.keys(taco)
         return (
-            <MDBContainer>
-                <h1>{taco.seasoning.name}</h1>
-                <MDBListGroup style={{ width: "22rem" }}>
+            <MDBContainer style={{ width: "90rem", margin:"0 auto" }}>
+                <h1>Random Taco</h1>
+                <MDBListGroup style={{ width: "40rem" }}>
+                <MDBListGroupItem>seasoning: {taco.seasoning.name}</MDBListGroupItem>
                     <MDBListGroupItem>Base_Layer: {taco.base_layer.name}</MDBListGroupItem>
                     <MDBListGroupItem>Condiment : {taco.condiment.name}</MDBListGroupItem>
                     <MDBListGroupItem>mixin : {taco.mixin.name}</MDBListGroupItem>
-                    <MDBListGroupItem>seasoning: {taco.seasoning.name}</MDBListGroupItem>
+                    
                     <MDBListGroupItem>shell : {taco.shell.name}</MDBListGroupItem>
                 </MDBListGroup>
+                <div className='container-display'>
                 {arrayKey.map((key,index) => {
-                    console.log(key)
-                    return<Panel tacoKey= {key} key={index}/>
+                    return <Panel tacoKey= {key} key={index} taco = {taco}/>
                 })
                 }
+                </div>
             </MDBContainer>
         )
     }
