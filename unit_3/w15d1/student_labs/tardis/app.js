@@ -14,7 +14,7 @@ class DivOne extends React.Component {
   render() {
     return (
       <div>
-        <h3 className ={this.state.display? 'show': 'hide'} onClick={() => { this.changeIt(this.state.tardis.name) }}>
+        <h3 className ={this.props.display? 'hide': 'show'} onClick={() => { this.changeIt(this.state.tardis.name) }}>
           {this.state.tardis.name}
         </h3>
       </div>
@@ -54,7 +54,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <DivOne tardis={this.state.tardis} handleChange={this.changeIt}/>
+        <DivOne tardis={this.state.tardis} display={this.state.display} handleChange={this.changeIt}/>
         <h3 className ={this.state.display? 'show': 'hide'} onClick={() => { this.changeIt(this.state.tardis.name) }}>{this.state.tardis.name}</h3>
 
       </div>
