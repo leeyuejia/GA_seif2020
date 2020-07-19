@@ -34,6 +34,7 @@ class App extends React.Component {
         }
 
     }
+    // Can write in a async function way? 
     updateToDo = (todo, index) => {
         todo.complete = !todo.complete
         fetch('todos/' + todo._id, {
