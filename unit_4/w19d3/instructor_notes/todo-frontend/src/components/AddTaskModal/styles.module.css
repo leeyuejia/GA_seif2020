@@ -2,7 +2,7 @@
     font-size: 14px;
 }
 
-.taskModalContainer {
+.addTaskModalContainer {
     background-color: #ebecf0;
     border-radius: 4px;
     padding: 16px;
@@ -12,6 +12,10 @@
     display: flex;
     flex-direction: column;
 }
+.title {
+    color: #172b4d;
+    font-weight: 600;
+}
 .modal {
     display: flex;
     align-items: center;
@@ -20,15 +24,4 @@
 .title {
     color: #172b4d;
     font-weight: 600;
-}
-.description {
-    margin-top: 16px;
-}
-
-.flexEnd {
-    margin-top: auto;
-}
-
-input {
-    margin: 0 8px 0 0;
 }

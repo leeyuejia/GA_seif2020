@@ -4,8 +4,9 @@ const { ObjectId } = require('mongodb');
 const doFindMany = condition => db.tasks.find(condition).toArray();
 
 module.exports = {
-    async create (taskDto) {
-        const { ops: [task] } = await db.tasks.insertOne(taskDto);
+    async create (data) {
+        if (!('isCompleted' in data)) data.isCompleted = false;
+        const { ops: [task] } = await db.tasks.insertOne(data);
         return task;
     },
     async updateById (id, newData) {
@@ -26,6 +27,6 @@ module.exports = {
         const { result } = await db.tasks.deleteOne({
             _id: ObjectId(id),
         });
-        return !!result.ok;
+        return !!result.n;
     }
 };
