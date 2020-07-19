@@ -1,9 +1,13 @@
 import apiUtil from '../utils/api';
 
+const buildUrl = apiPath => {
+    return process.env.REACT_APP_BACKEND_API + apiPath;
+};
+
 export default {
     async getAll () {
         try {
-            const response = await apiUtil.get('http://localhost:3000/tasks');
+            const response = await apiUtil.get(buildUrl('/tasks'));
             return response.data;
         } catch (err) {
             console.log(err);
@@ -11,15 +15,15 @@ export default {
         }
     },
     async create (task) {
-        const response = await apiUtil.post('http://localhost:3000/tasks', task);
+        const response = await apiUtil.post(buildUrl('/tasks'), task);
         return response.data;
     },
     async delete (id) {
-        const response = await apiUtil.delete(`http://localhost:3000/tasks/${id}`);
+        const response = await apiUtil.delete(buildUrl(`/tasks/${id}`));
         return response.data;
     },
     async updateCompletionStatus (id, isCompleted) {
-        const response = await apiUtil.update(`http://localhost:3000/tasks/${id}`, {
+        const response = await apiUtil.update(buildUrl(`/tasks/${id}`), {
             isCompleted,
         });
         return response.data;
