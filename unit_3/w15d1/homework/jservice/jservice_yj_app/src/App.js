@@ -1,100 +1,22 @@
 import React, { Component } from 'react'
-import logo from './logo.svg';
 import './App.css';
+import Title from './component/Title'
+import Footer from './component/Footer'
+import ScoreBoard from './component/ScoreBoard'
+import Question from './component/Question'
 
-const apiUrl = 'http://jservice.io/api/random'
+const apiUrl = 'http://jservice.io/api/'
 
-class Title extends Component {
+class Category extends Component {
   render() {
-    return (
-      <h1>
-        Welcome to jservice
-      </h1>
-    )
-  }
-}
-class Footer extends Component {
-  render() {
-    return (
-      <footer>
-        Question provided by jservice
-      </footer>
-    )
-  }
-}
-class Question extends Component {
-  constructor(props) {
-    super(props)
-
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
-  handleChange(event) {
-    event.preventDefault()
-    this.props.handleAnswer(event)
-  }
-  handleSubmit (event) {
-    event.preventDefault()
-    const answer = this.props.question.answer
-    console.log(answer)
-    this.props.handleDisplay(event,answer)
-  }
-  render() {
-    const data = this.props.question
-    return (
+    return(
       <React.Fragment>
-        <h2>Category : {data.category.title}</h2>
-        <h2 id={this.props.index}>Question: {data.question}</h2>
-        <label htmlFor='answer'>Answer :</label>
-        <input type='text' id='answer' onChange={this.handleChange}></input>
-        <button type='submit' onClick={this.handleSubmit}>Submit</button>
+        <h1> Category</h1>
       </React.Fragment>
     )
   }
 }
-class DisplayResult extends Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
-      <React.Fragment>
-        <div className='result'>
-            <div className='submitAnswer'>
-              <h3>{this.props.answer}</h3>
-            </div>
-            <div className='answer'>
-              <h3>{this.props.rightAns}</h3>
-            </div>
-          </div> 
-      </React.Fragment>
-    )
-  }
-}
-class ScoreBoard extends Component {
-  constructor(props) {
-    super(props)
-    this.handleScore = this.handleScore.bind(this)
-  }
-  handleScore (event) {
-    event.preventDefault()
-    this.props.updateScore(event)
-  }
 
-  render() {
-    return (
-      <React.Fragment>
-        <h1>Score</h1>
-        <h2 >{this.props.score}</h2>
-        <div>
-          <button onClick={this.handleScore} name='+'>+</button>
-          <button onClick={this.handleScore} name='-'>-</button>
-        </div>
-      </React.Fragment>
-    )
-  }
-  
-}
 class DisplayBoard extends Component {
   constructor(props) {
     super(props)
@@ -103,38 +25,38 @@ class DisplayBoard extends Component {
       data: null,
       display: false,
       answer : null,
-      score : 0
+      score : 0,
+      category : [],
+      count : 10
     }
-    this.generateQuestion = this.generateQuestion.bind(this)
+    this.generateRandomQuestion = this.generateRandomQuestion.bind(this)
     this.setAnswer = this.setAnswer.bind(this)
     this.setDisplay = this.setDisplay.bind(this)
     this.updateScore = this.updateScore.bind(this)
   }
   //fetch api function
-  async fetchQuestion() {
-    const response = await fetch(apiUrl)
+  async fetchRandomQuestion() {
+    const response = await fetch(apiUrl + 'random'+'?count=10')
     const result = await response.json()
     console.log(result)
     this.setState({ data: result })
   }
   /// On load
   async componentDidMount() {
-    await this.fetchQuestion()
+    await this.fetchRandomQuestion()
   }
   ///Generate Question
-  async generateQuestion(event) {
+  async generateRandomQuestion(event) {
     event.preventDefault()
     await this.setState({
       display : !this.state.display,
       answer: null
     })
-    await this.fetchQuestion()
+    await this.fetchRandomQuestion()
   }
   setAnswer (event) {
     event.preventDefault()
-    const id = event.target.id
     const value = event.target.value
-    console.log(id +  " and " + value)
     this.setState({answer: value})
   }
   setDisplay (event,answer) {
@@ -148,12 +70,14 @@ class DisplayBoard extends Component {
         this.setState({score : this.state.score +1})
       }else if (operator === '-' && this.state.score > 0) {
       this.setState({score : this.state.score -1})
-    }
+      }else if (operator === 'reset') {
+        this.setState({score : 0})
+      }
   }
   render() {
     return (
       <div>
-        <button onClick={this.generateQuestion}>
+        <button onClick={this.generateRandomQuestion}>
           Random Question
         </button>
         <div>
@@ -165,16 +89,9 @@ class DisplayBoard extends Component {
               index={index} 
               key={index} 
               handleAnswer={this.setAnswer}
-              handleDisplay={this.setDisplay} />
+              handleDisplay={this.setDisplay}
+              />
             })}
-        </div>
-        <div>
-        {this.state.display ? 
-          <DisplayResult 
-            answer = {this.state.answer}
-            rightAns = {this.state.rightAns} />
-          : ''
-        }
         </div>
         <div className='scoreboard'>
           <ScoreBoard 
@@ -187,12 +104,12 @@ class DisplayBoard extends Component {
   }
 }
 
-
 function App() {
   return (
     <div className="App">
       <Title />
       <DisplayBoard />
+      <Category />
       <Footer />
     </div>
   );
