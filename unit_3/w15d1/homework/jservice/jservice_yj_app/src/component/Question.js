@@ -41,9 +41,11 @@ class Question extends Component {
         })
         return result
     }
-    async componentDidUpdate(prevProps) {
+ componentDidUpdate(prevProps) {
+        console.log(this.props.question.question)
+        console.log(prevProps.question.question)
         if(this.props.question.question !== prevProps.question.question) {
-            await this.setState({
+             this.setState({
                 question: this.props.question,
                 displayAnswer : false,
                 submitAnswer: '',
