@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
   function Title () {
     return (
-      <h1>
+      <h1 className='title'>
         Welcome to jservice
       </h1>
     )

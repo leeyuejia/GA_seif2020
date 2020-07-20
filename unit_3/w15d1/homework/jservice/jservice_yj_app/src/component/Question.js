@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { MDBBox, MDBInput,MDBBtn, MDBBtnGroup } from 'mdbreact';
+
 import DisplayResult from './DisplayResult'
 
 class Question extends Component {
@@ -41,7 +43,6 @@ class Question extends Component {
     }
     async componentDidUpdate(prevProps) {
         if(this.props.question.question !== prevProps.question.question) {
-            console.log(this.props.category)
             await this.setState({
                 question: this.props.question,
                 displayAnswer : false,
@@ -55,23 +56,22 @@ class Question extends Component {
       const clue = this.clue(this.props.question.answer)
       const displayAnswer = this.state.displayAnswer
       const category = this.state.category
-      // data structure for categories title is different when generating random 10 or generating by categories
+      console.log(category)
       return (
         <React.Fragment>
-            <div>
+            <MDBBox className="block-example border border-dark eachQuestion">
             { category === null ? 
-            
-                <h3>Category :{data.category.title}</h3>
+                <h3><strong>Category</strong> :{data.category.title}</h3>
                 :
-                <h3>Category :{category}</h3>
+                <h3><strong>Category</strong>  :{category}</h3>
             }
-                
-          <h3 id={this.props.index}>Question: {data.question}</h3>
-          <label htmlFor='answer'>Answer :</label>
-          <input type='text' className='answer' onChange={this.handleChange} value={this.state.submitAnswer}></input>
-          <button type='submit' onClick={this.handleSubmit}>Show Answer</button>
-          <h3>Clue : {clue} </h3>
-          </div>
+          <h3 id={this.props.index}><strong>Question</strong>: {data.question}</h3>
+          <h3><strong>Clue</strong> : {clue} </h3>
+
+          <MDBInput label="Answer" type='text' onChange={this.handleChange} value={this.state.submitAnswer}/>
+
+          <MDBBtn type='submit' onClick={this.handleSubmit}>Show Answer</MDBBtn>
+          
           {displayAnswer? 
             <div>
                 <DisplayResult 
@@ -81,7 +81,8 @@ class Question extends Component {
             :
             ''
         }
-          
+          </MDBBox>
+
         </React.Fragment>
       )
     }
