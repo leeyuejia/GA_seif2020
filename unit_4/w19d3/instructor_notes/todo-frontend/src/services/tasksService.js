@@ -1,7 +1,7 @@
 import apiUtil from '../utils/api';
 
 const buildUrl = apiPath => {
-    return process.env.REACT_APP_BACKEND_API + apiPath;
+    return 'https://localhost:3000' + apiPath;
 };
 
 export default {
