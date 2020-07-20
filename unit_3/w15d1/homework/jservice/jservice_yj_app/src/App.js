@@ -60,7 +60,7 @@ class DisplayBoard extends Component {
     const response = await fetch(apiUrl + 'category?id=' + query)
     const result = await response.json()
     const tenResult = []
-      for(let i=0 ; i < 10; i++) {
+      for(let i=0 ; i < 5; i++) {
        tenResult.push(result.clues[randomNumber(result.clues.length)])
       }
       console.log(tenResult)
