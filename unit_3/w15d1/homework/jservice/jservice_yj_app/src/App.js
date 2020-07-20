@@ -31,7 +31,6 @@ class Question extends Component {
   }
   handleChange(event) {
     event.preventDefault()
-    console.log(event.target)
     this.props.handleAnswer(event)
   }
   handleSubmit (event) {
@@ -53,7 +52,49 @@ class Question extends Component {
     )
   }
 }
+class DisplayResult extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <React.Fragment>
+        <div className='result'>
+            <div className='submitAnswer'>
+              <h3>{this.props.answer}</h3>
+            </div>
+            <div className='answer'>
+              <h3>{this.props.rightAns}</h3>
+            </div>
+          </div> 
+      </React.Fragment>
+    )
+  }
+}
+class ScoreBoard extends Component {
+  constructor(props) {
+    super(props)
+    this.handleScore = this.handleScore.bind(this)
+  }
+  handleScore (event) {
+    event.preventDefault()
+    this.props.updateScore(event)
+  }
 
+  render() {
+    return (
+      <React.Fragment>
+        <h1>Score</h1>
+        <h2 >{this.props.score}</h2>
+        <div>
+          <button onClick={this.handleScore} name='+'>+</button>
+          <button onClick={this.handleScore} name='-'>-</button>
+        </div>
+      </React.Fragment>
+    )
+  }
+  
+}
 class DisplayBoard extends Component {
   constructor(props) {
     super(props)
@@ -61,11 +102,13 @@ class DisplayBoard extends Component {
     this.state = {
       data: null,
       display: false,
-      answer : null
+      answer : null,
+      score : 0
     }
     this.generateQuestion = this.generateQuestion.bind(this)
     this.setAnswer = this.setAnswer.bind(this)
     this.setDisplay = this.setDisplay.bind(this)
+    this.updateScore = this.updateScore.bind(this)
   }
   //fetch api function
   async fetchQuestion() {
@@ -98,6 +141,15 @@ class DisplayBoard extends Component {
     event.preventDefault()
     this.setState ({display : !this.state.display, rightAns : answer})
   }
+  updateScore (event) {
+    event.preventDefault()
+    const operator = event.target.name
+      if(operator === '+') {
+        this.setState({score : this.state.score +1})
+      }else if (operator === '-' && this.state.score > 0) {
+      this.setState({score : this.state.score -1})
+    }
+  }
   render() {
     return (
       <div>
@@ -118,16 +170,17 @@ class DisplayBoard extends Component {
         </div>
         <div>
         {this.state.display ? 
-          <div className='result'>
-            <div className='submitAnswer'>
-              <h3>{this.state.answer}</h3>
-            </div>
-            <div className='answer'>
-              <h3>{this.state.rightAns}</h3>
-            </div>
-          </div> 
+          <DisplayResult 
+            answer = {this.state.answer}
+            rightAns = {this.state.rightAns} />
           : ''
         }
+        </div>
+        <div className='scoreboard'>
+          <ScoreBoard 
+            score = {this.state.score}
+            updateScore = {this.updateScore}
+            />
         </div>
       </div>
     )
