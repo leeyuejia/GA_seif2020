@@ -1,0 +1,34 @@
+* {
+    font-size: 14px;
+}
+
+.taskModalContainer {
+    background-color: #ebecf0;
+    border-radius: 4px;
+    padding: 16px;
+    outline: none;
+    width: 30%;
+    min-height: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    color: #172b4d;
+    font-weight: 600;
+}
+.description {
+    margin-top: 16px;
+}
+
+.flexEnd {
+    margin-top: auto;
+}
+
+input {
+    margin: 0 8px 0 0;
+}
