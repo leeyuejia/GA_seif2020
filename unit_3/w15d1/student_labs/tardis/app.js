@@ -11,6 +11,25 @@ class DivOne extends React.Component {
       display: false
     }
   }
+    changeIt(text) {
+      event.preventDefault()
+      this.state.display = this.state.display? false : true
+      if (this.state.tardis.caps) {
+        this.setState({
+          tardis: {
+            name: text.toLowerCase(),
+            caps: false
+          }
+        })
+      } else {
+        this.setState({
+          tardis: {
+            name: text.toUpperCase(),
+            caps: true
+          }
+        })
+      }
+  }
   render() {
     return (
       <div>
