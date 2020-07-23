@@ -6,20 +6,29 @@ import ScoreBoard from './component/ScoreBoard'
 import Question from './component/Question'
 import Selection from './component/Selection'
 
-const apiUrl = 'http://jservice.io/api/'
+const apiUrl = 'https://jservice.io/api/'
 const randomNumber = (max) => {
   return Math.floor(Math.random() * Math.floor(max))
 }
-
-
+const pushToArray = (result, amt) => {
+  let newArray = []
+  for(let i=0 ; i < amt; i++) {
+    newArray.push(result.clues[randomNumber(result.clues.length)])
+   }
+   return newArray
+}
+const mapTitleToResult = (input, original) => {
+  input.map((el,index) => {
+    return el.category = {title : original.title}
+  })
+  return input
+}
 class DisplayBoard extends Component {
   constructor(props) {
     super(props)
     this.state = {
       data: null,
       score : 0,
-      category : null,
-      count : 10
     }
     this.generateQuestion = this.generateQuestion.bind(this)
     this.updateScore = this.updateScore.bind(this)
@@ -31,46 +40,30 @@ class DisplayBoard extends Component {
     const query = event.target.value
     switch(query) {
       case 'one' :
-        await this.setState({
-          query :'random',
-          category : null})
+        await this.setState({query :'random'})
         break;
       case 'ten' :
-        await this.setState({
-          query :'random?count=10',
-          category : null
-        })
+        await this.setState({query :'random?count=10'})
         break;
-        default :
+      default :
         return true
     }
-      const response = await fetch(apiUrl + this.state.query)
-      const result = await response.json()
-      console.log(result)
-      console.log(this.state.category)
-      this.setState({ data: result })
+    const response = await fetch(apiUrl + this.state.query)
+    const result = await response.json()
+    this.setState({ data: result })
   }
 
   async fetchCategoryQuestion(event) {
     const query = event.target.value
-    const name = event.target.name
-    console.log(query)
-    console.log(name)
-    console.log(this.state.category)
     const response = await fetch(apiUrl + 'category?id=' + query)
     const result = await response.json()
-    const tenResult = []
-      for(let i=0 ; i < 5; i++) {
-       tenResult.push(result.clues[randomNumber(result.clues.length)])
-      }
-      console.log(tenResult)
+    const resultToArray = pushToArray(result,5)
+    const finalResult = mapTitleToResult(resultToArray, result)
+    console.log(finalResult)
     await this.setState({ 
-        data: tenResult,
+        data: finalResult,
         query : 'category?id=' + query,
-        category : name
       })
-      console.log(this.state.data)
-      console.log(this.state.category)
   }
 
   ///Generate Question
@@ -131,7 +124,6 @@ class DisplayBoard extends Component {
               question={question} 
               index={index} 
               key={index}
-              category ={this.state.category}
               />
             })}
         </div>
