@@ -7,13 +7,14 @@
     "test": "NODE_ENV=test jest",
     "seed": "mongoimport --jsonArray --db lab --collection tasks --drop --file ./db/seed/tasks.json",
     "start": "NODE_ENV=prod node server.js",
-    "start:dev": "NODE_ENV=dev nodemon server.js"
+    "start:dev": "cross env NODE_ENV=dev nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
     "express": "^4.17.1",
     "mongodb": "^3.5.9"
   },

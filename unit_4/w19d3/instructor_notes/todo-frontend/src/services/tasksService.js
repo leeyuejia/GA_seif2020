@@ -1,7 +1,8 @@
 import apiUtil from '../utils/api';
 
+const getDomain = () => process.env.REACT_APP_TASKS_ENDPOINT || 'https://localhost:3000'
 const buildUrl = apiPath => {
-    return 'https://localhost:3000' + apiPath;
+    return getDomain() + apiPath;
 };
 
 export default {
