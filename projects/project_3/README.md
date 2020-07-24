@@ -4,7 +4,7 @@
 
 ## Attendance
 Attendance as usual during project week. Adhoc classes will be organised and instructors will be around to help with your projects.
-  - **W18D1 - Saturday, 21 Dec at 10:00am**: Project presentation day!
+  - **W18D1 - Tuesday, 11 Aug at 7:00pm**: Project presentation day!
 
 ## Stand-ups
 Not required, but a suggestion: consider having stand-ups with your group every day to keep track of how your project progress is coming along. Consider the following points to talk about:
