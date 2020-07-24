@@ -69,6 +69,8 @@ Competencies: SQL queries, aggregation
 
 #### Step 4 - Queries
 
+Hint: research SQL [aggregate functions](https://www.sqlservertutorial.net/sql-server-aggregate-functions/).
+
   - In the given `realty.sql` file, write the SQL commands you would use to retrieve the following information from your database. Test each command in PSQL to make sure it is correct:
 
       - The average square footage of all offices.
