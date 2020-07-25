@@ -8,6 +8,7 @@ SELECT * FROM apartment;
 SELECT * FROM apartment WHERE occupied=FALSE;
 
 -- 4. The names of all of the companies
+SELECT DISTINCT company from office;
 SELECT company FROM office;
 
 -- 5. The number of cubicles and bathrooms in the 3rd office
@@ -16,8 +17,17 @@ SELECT cubicles, bathrooms FROM office WHERE id=3;
 -- 6. The storefronts that have kitchens
 SELECT * FROM storefront WHERE kitchen=true;
 
--- 7. The storefront with the highest square footage and outdoor seating
-SELECT * FROM storefront where outdoor_seating = true AND sq_ft = (SELECT MAX(sq_ft) FROM storefront WHERE outdoor_seating = true);
+-- 7. The storefront with the highest square footage and outdoor seating (subquery)
+SELECT 
+    * 
+FROM 
+    storefront 
+        WHERE 
+            sq_ft = (SELECT MAX(sq_ft) 
+            FROM 
+                storefront 
+            WHERE 
+                outdoor_seating = true);
 
 -- 8. The office with the lowest number of cubicles
 SELECT * FROM office WHERE cubicles = (SELECT MIN(cubicles) FROM office);
