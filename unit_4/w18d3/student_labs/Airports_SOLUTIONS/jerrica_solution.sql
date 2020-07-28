@@ -1,5 +1,5 @@
 SELECT
-    COUNT(*)
+    *
 FROM
     routes
 INNER JOIN
