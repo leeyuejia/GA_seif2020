@@ -1,12 +1,12 @@
-const numsToSum = [ 1 , 2, 3, 4, 5, 6, 7, 8 , 9 ,10 ]
+// const numsToSum = [ 1 , 2, 3, 4, 5, 6, 7, 8 , 9 ,10 ]
 
-const sumNum = (arr, sum) => {
-    sum = sum || 0;
-    if(arr.length === 0) {
-    return sum;}
-    sum += numsToSum.shift()
-    return sumNum (arr,sum);
-}
+// const sumNum = (arr, sum) => {
+//     sum = sum || 0;
+//     if(arr.length === 0) {
+//     return sum;}
+//     sum += numsToSum.shift()
+//     return sumNum (arr,sum);
+// }
 
 // console.log(sumNum(numsToSum))
 
@@ -17,16 +17,17 @@ const testCase = 5;
 const factorial = (num, sum) => {
     sum = sum || 1;
     if (num === 0) {
-    return sum };
+        return sum 
+        };
     sum = sum * num
     num = num - 1
     return factorial(num, sum)
 }
 
-factorial(testCase)
+console.log(factorial(3))
 
 // step counting
-
+/*
 // fibonacci number 
 
 const fibo = (num,num1,num2,num3)=> {
@@ -65,3 +66,4 @@ branches(13)
 // array flattener
 
 // total recall
+*/
