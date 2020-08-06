@@ -1,6 +1,7 @@
 //divide array until cannot divide anymore
 const myArray = [12,6,3,7,13,8];
 const sorted = mergeSort(myArray) 
+
 function mergeSort(arr) {
   if(arr.length <=1) {
       return arr;
@@ -11,11 +12,6 @@ function mergeSort(arr) {
   return merge(mergeSort(leftArr),mergeSort(rightArr))
   // YOUR CODE HERE
 }
-
-function quickSort(arr){
-  // YOUR CODE HERE
-}
-
 
 // HELPER FUNCTION: merge two sorted arrays
 function merge(arr1, arr2) {
