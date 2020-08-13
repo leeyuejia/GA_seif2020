@@ -20,7 +20,7 @@ const findWordFrequencies = sentence => {
     return stats;
 };
 
-// { the: 2, world: 1, is: 2, all: 1, that: 1, case: 1 }
+let wordO = { the: 2, world: 1, is: 2, all: 1, that: 1, case: 1 }
 const findHighestFrequency = wordObject => {
     const hWord = Object.keys(wordObject).reduce((hWord, word) => {
         if(wordObject[hWord] < wordObject[word]) {
@@ -32,7 +32,7 @@ const findHighestFrequency = wordObject => {
     result[hWord] = wordObject[hWord];
     return result;
 };
-
+console.log(findHighestFrequency(wordO))
 module.exports = {
     findHighestFrequency,
     findWordFrequencies

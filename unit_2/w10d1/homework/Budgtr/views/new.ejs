@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/normalize.css">
+    <link rel="stylesheet" href="/public/css/skeleton.css">
+</head>
+
+<body>
+    <h1>New Item</h1>
+    <form action="/budgets" method="POST">
+        <label for="name">Date</label>
+        <input type="text" name="date" id="date" placeholder="eg. April 1" />
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="describe" />
+        <label for="from">from</label>
+        <input type="text" name="from" id="from" placeholder="from where" />
+        <label for="amount">amount</label>
+        <input type="number" name="amount" id="amount" placeholder="amount" />
+        <label for="tags">Choose a tag</label>
+        <select name="tags" id="tags">
+            <%data.forEach(el => {%>
+            <%for (let i = 0; i< el.tags.length; i++) {%>
+            <option value="<%=el.tags[i]%>"><%=el.tags[i]%></option>
+            <%}%>
+        <%})%>
+            <option value="Others">others</option>
+        </select>
+        <input type="submit" value="Create transaction">
+    </form>
+</body>
+
+</html>

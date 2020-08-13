@@ -1,46 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <%- include('./partials/head.ejs') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">New Baked Good Page</h1>
-            <form action="/bakedgoods" method="POST">
-                <div class="field">
-                    <label class="label" for="name">Name</label>
-                    <div class="control">
-                        <input class="input" type="text" name="name" id="name" />
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label" for="price">Price</label>
-                    <div class="control">
-                        <input class="input" type="number" name="price" id="price" />
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label" for="image">Image URL?</label>
-                    <div class="control">
-                        <input class="input" type="text" name="image" id="image" />
-                    </div>
-                </div>
-                <div class="field is-grouped">
-                    <div class="control">
-                        <input class="button is-link" type="submit" value="Create" />
-                    </div>
-                    <div class="control">
-                       <a class="button is-link is-light" href="/bakedgoods">Back to Home</a>
-                    </div>
-                </div>
-
-            </form>
-        </div>
-
-    </section>
+    <h1>Add your food here!</h1>
+    <form action="/bakedgoods" method="POST">
+        <label for="name">Name of your food</label>
+        <input type="text" name="name">
+        <label for="price"> How much are you selling it for</label>
+        <input type="text" name="price">
+        <label for="imgurl">or put your image url here!</label>
+        <input type="text" name="image">
+        <input type="submit" value="ADD">
+    </form> 
 </body>
-
 </html>
