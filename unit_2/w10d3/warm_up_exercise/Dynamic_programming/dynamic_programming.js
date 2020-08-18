@@ -32,7 +32,7 @@ var fibonacci = (function () {
 
 console.log(fibonacci(8))
 
-// Dynamic Programming - recursive + memoization
+// Dynamic Programming - recursive + memoization (lina example, to be studied)
 
 let memo = [];
 let result = null;
