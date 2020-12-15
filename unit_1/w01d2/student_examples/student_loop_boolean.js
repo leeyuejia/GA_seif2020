@@ -18,24 +18,25 @@ for (z=0; z<=30; z++) {
 // };
 let found = false;
 let count = 0;
-let fave_day = 'semptember';
+let fave_day = 'friday';
 let everyday = ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
 console.log ('count', count);
 
-for (let x=0; x<=everyday.length; x++) {
+for (let x=0; x<everyday.length; x++) {
     if (fave_day === everyday[x]) {
         console.log ('TGIF') 
         found = true;
     } else {
-        console.log ('Boring day')
+        console.log (`today is ${everyday[x]} , it is a Boring day`)
     }
     
     count = 'banana';
 };
 if(!found) {
-    console.log ('your')
+    console.log ('found is' + false)
 };
 console.log ('count', count);
+
 //compare the above//
 // let fave_day = 'September';
 // let found = false;
