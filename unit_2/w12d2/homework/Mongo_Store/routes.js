@@ -1,26 +1,29 @@
-const shopController = require('./controllers/shopController');
+const {monsterController} = require('./controller');
 
-module.exports = app => {
-    app.get('/', shopController.getAll);
 
-    // get the create form api
-    // app.get('/shop', shopController.makeNew);
+module.exports = (app) => {
+    app.get('/', (req,res) => res.redirect('./monster'));
+    app.get('/monster', monsterController.indexPage); // homepage
+    app.get('/monster/new', monsterController.newPage) // new item
+    app.get("/monster/:name", monsterController.showPage) // show individual item
+    app.get('/monster/:name/edit', monsterController.editPage) // edit an item
+    app.post("/monster", monsterController.postPage) // add an item and direct to homepage
+    app.put('/monster/:name/buy', monsterController.buyPage) // buy and minus a monster
+    app.put('/monster/:name', monsterController.putPage) // after edited an item
+    app.delete('/monster/:name', monsterController.deleteOne) //delete an item
+}
 
-    // create post api
-    app.post('/shop', shopController.create);
-    // Min Shan's show route
-    app.get('/:name', shopController.getOneByName);
-
-    // Yinsheng's show route
-    // app.get('/shop/:name', shopController.show);
-
-    // delete route
-    // app.delete('/shop/:name', shopController.destroy);
-
-    // edit route
-    // retrieve the current document in edit page
-    // app.get('/shop/edit', shopController.edit);
-
+module.exports = (app) => {
+    app.get('/', (req,res) => res.redirect('./monster'));
+    app.get('/monster', monsterController.indexPage); // homepage
+    app.get('/monster/new', monsterController.newPage) // new item
+    app.get("/monster/:name", monsterController.showPage) // show individual item
+    app.get('/monster/:name/edit', monsterController.editPage) // edit an item
+    app.post("/monster", monsterController.postPage) // add an item and direct to homepage
+    app.put('/monster/:name/buy', monsterController.buyPage) // buy and minus a monster
+    app.put('/monster/:name', monsterController.putPage) // after edited an item
+    app.delete('/monster/:name', monsterController.deleteOne) //delete an item
+}
     // update route
     app.put('/shop/:name', shopController.update);
 };

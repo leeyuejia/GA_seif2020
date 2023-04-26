@@ -18,3 +18,4 @@ app.on('ready', () => {
     app.listen(PORT, () => console.log('Gotta catch em all on port 3000'));
 });
 
+module.exports = app;

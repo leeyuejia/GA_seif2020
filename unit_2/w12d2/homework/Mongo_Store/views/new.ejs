@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsters as Pets</title>
+
+    <%-include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/public/css/index.css">
+
+</head>
+
+<body>
+    <%-include('./partials/header.ejs') %>
+    <form action="/monster" method="POST" class="mx-auto" style="width: 40rem;" id="table">
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label for="name" class="input-group-text" id="basic-addon3">Name</label>
+            </div>
+            <input type="text" class="form-control" name="name" placeholder="name of your pet" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label for="img" class="input-group-text" id="basic-addon3">Pet's image URL</label>
+            </div>
+            <input type="text" class="form-control" name="img" placeholder="eg. https://i.imgur.com/ZRHzkRT.png" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label for="price" class="input-group-text" id="basic-addon3">Price</label>
+            </div>
+            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="price"
+                required>
+            <div class="input-group-append mr-2">
+                <span class="input-group-text">.00</span>
+            </div>
+
+            <div class="input-group-prepend ml-2">
+                <label for="qty" class="input-group-text" id="basic-addon3">In Stock</label>
+            </div>
+            <div class="input-group-append">
+                <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="qty"
+                    required>
+            </div>
+
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <label for="description" class="input-group-text" id="basic-addon3">Describe your
+                    monster</label>
+            </div>
+            <textarea class="form-control" aria-label="With textarea" maxlength="300" name="description"
+                rows="5" required>Description your monster. max character: 300</textarea>
+        </div>
+        <div class="float-right">
+            <button class="btn btn-primary my-2" type="submit" style="width: 10rem;">Add </button>
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>

@@ -1,18 +1,28 @@
-const express = require('express');
-const methodOverride = require('method-override');
-const app = express();
-const PORT = 3000;
-const db = require('./db');
+require('dotenv').config()
+const express = require('express')
+const app = express()
+const db = require('./db')
+const port = process.env.PORT || 8080
+const methodOverride = require('method-override')
 
-// middleware
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: false }));
+app.set('view engine', 'ejs')
+app.use('/public', express.static('public'))
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))
 app.use(methodOverride('_method'));
+require('./routes')(app)
 
-app.set('view engine', 'ejs');
+db.connect().then(()=> app.emit('ready'));
 
-db.connect();
+app.on('ready', ()=> {
+    app.listen(port, ()=> {
+        console.log("I am listening on port", port)
+    })
+})
 
-require('./routes')(app);
-
+app.on('ready', ()=> {
+    app.listen(port, ()=> {
+        console.log("I am listening on port", port)
+    })
+})
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));
