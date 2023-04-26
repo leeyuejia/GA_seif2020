@@ -18,6 +18,8 @@ module.exports = {
         }
     },
     async create (req, res) {
+        req.body.price = parseInt(req.body.price);
+        req.body.qty = parseInt(req.body.qty);
         try {
             const item = {
                 'name': req.body.name,

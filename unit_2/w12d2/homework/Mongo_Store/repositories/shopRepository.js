@@ -13,7 +13,7 @@ module.exports = {
         if (!item) throw new Error('Non-existance');
         return item;
     },
-    async create (item) {
+    async create(item) {
         try {
             const { insertedCount } = await db.shop.insertOne(item);
             if (!insertedCount) throw new Error('insertion failure');
@@ -22,7 +22,7 @@ module.exports = {
             throw new Error(`Due to ${err.message}, you are not allowed to insert this item ${JSON.stringify(item)}`);
         }
     },
-    async getOneByName (name) {
+    async getOneByName(name) {
         const foundItem = await db.shop.findOne(
             {
                 name: {
