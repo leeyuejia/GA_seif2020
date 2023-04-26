@@ -1,3 +1,55 @@
 body {
+  display: flex;
+  flex-flow: column nowrap;
   background: rgba(233, 244, 255 , 1);
+}
+div {
+  border: 3px solid black;
+  border-radius: 2em;
+  margin: 10px auto;
+  width: 100%;
+  min-height: 250px;
+  text-align: center;
+}
+.B-C-D-E-F {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.B-C-D-E {
+  width: 80%;
+}
+.C-D-E {
+  display: flex;
+}
+
+.A {
+  background-color: blue;
+}
+.B {
+  background-color: blueviolet;
+}
+.C {
+  background-color: lightgreen;
+}
+.D {
+  background-color: green
+}
+.E {
+  background-color: darkgreen;
+}
+.F {
+  width: 20%;
+  background-color: orange;
+}
+
+@media (max-width: 800px) {
+  .B-C-D-E-F {
+    flex-flow: column nowrap;
+  }
+ .F {
+   width:100%;
+ }
+ .B-C-D-E {
+   width: 100%;
+ }
 }
