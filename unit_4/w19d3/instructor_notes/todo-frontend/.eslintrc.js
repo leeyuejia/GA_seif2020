@@ -8,7 +8,6 @@ module.exports = {
     },
     'extends': [
         'eslint:recommended',
-        'plugin:react/recommended',
     ],
     'globals': {
         'Atomics': 'readonly',
@@ -32,7 +31,7 @@ module.exports = {
             'exports': 'only-multiline',
         }],
         'space-before-function-paren': 'warn',
-        'object-curly-spacing': ["warn", 'always'],
+        'object-curly-spacing': ['warn', 'always'],
         'react/jsx-indent-props': [2, 4],
         'react/jsx-indent': [2, 4, { checkAttributes: true, indentLogicalExpressions: true }],
         'react/jsx-max-props-per-line': [2, { maximum: 2, when: 'always' }]

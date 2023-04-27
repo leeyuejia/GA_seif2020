@@ -1,0 +1,33 @@
+.taskItemContainer {
+    background-color: white;
+    height: 52px;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.isCompleted {
+    background-color: #e3e3e3;
+    text-decoration: line-through;
+    color: #7b7b7b;
+}
+.titleContainer {
+    display: flex;
+}
+.closeIconContainer {
+    justify-content: flex-end;
+}
+.descriptionIconContainer {
+    margin-top: auto;
+}
+.closeIcon {
+    padding: 2px;
+    border-radius: 50%;
+}
+.closeIcon:hover {
+    cursor:pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}

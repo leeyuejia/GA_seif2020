@@ -1,0 +1,27 @@
+.titleContainer {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.title {
+  padding-left: 8px;
+  color: #172b4d;
+  font-weight: 600;
+  font-size: 14px;
+}
+.container {
+  width: 272px;
+  height: 80%;
+  background-color: #ebecf0;
+  border-radius: 4px;
+  padding: 8px;
+}
+.task-item-container {
+  background-color: white;
+  height: 52px;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  justify-content: flex-start;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+}
