@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.displayBoard-container {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 5rem;
+}
+.title {
+  margin-top: 5rem;
+}
+
+/* menu div */
+.menu-left {
+  width: 15%;
+  margin-right: 2rem;
+}
+.selection-container {
+  display: flex;
+  flex-flow: column nowrap;
+
+}
+.menu-left > h2,.scoreboard > h2 {
+  border-bottom: 0.5px solid black;
+}
+
+.scoreboard {
+  width: 18%;
+  margin-left: 2rem;
+}
+.scorebutton {
+  display: inline-flex;
+}
+
+.questionboard {
+  width: 100%;
+  flex: 0 1 auto;
+
+}
+.eachQuestion {
+  text-align: left;
+  padding: 2rem !important;
+  background-color: rgb(167, 179, 157);
+  border: none !important;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+footer {
+  margin-top: 5rem;
+  background-color: green;
+}

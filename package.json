@@ -9,6 +9,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "http-server": "^0.12.3",
+    "mdbreact": "^4.27.0",
     "moment": "^2.26.0",
     "mongodb": "^3.5.8"
   },
