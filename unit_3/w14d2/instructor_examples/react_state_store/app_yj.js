@@ -91,7 +91,7 @@ console.log(products);
 
 
 ////////// RENDER DYNAMICALLY ///////
-class App extends React.Component {
+class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -132,10 +132,10 @@ class App extends React.Component {
   /// cannot use .forEach as it returns undefined
   render() {
     return (
-      <div>
+      <div class='container'>
         <div>
           <h1>Big Time Shopping</h1>
-          {!this.state.isHiring ? <h2>Yes, we are hiring</h2> : <h2>Sorry, please come back again. </h2>}
+          <h4>{this.state.isHiring ? 'Yes, we are hiring' : 'Sorry, please come back again.' }</h4>
           <h2> Preview our new item</h2>
           <h3>{this.state.name}</h3>
           <h3>{this.state.price}</h3>
@@ -158,9 +158,6 @@ class App extends React.Component {
               <li class='list-group-item'><b>{product.name}</b> (SGD{product.price}), {product.description}</li>)}
           </ul>
         </div>
-        <div class='card-footer text-muted'>
-          
-        </div>
 
       </div>
     )
@@ -169,15 +166,28 @@ class App extends React.Component {
 
 class Greet extends React.Component {
   render() {
-    this.props.Name = "superman"
     return (
-      <div>
-        hello {this.props.Name}, a.k.a {this.props.heroName}
+      <div class='card-footer text-muted text-center'>
+        Brought to you by {this.props.Name}, a.k.a {this.props.heroName}
         <p>{this.props.children}</p>
       </div>
     )
   }
 }
+
+
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Main></Main>
+        < Greet Name='BRUCE' heroName='Batman'></Greet>
+      </div>
+    )
+  }
+}
+
 
 // class App extends React.Component {
 //   render() {
@@ -315,4 +325,4 @@ class Greet extends React.Component {
 //   }
 // }
 
-ReactDOM.render(<App />, document.querySelector(".container"));
+ReactDOM.render(<App />, document.querySelector("body"));

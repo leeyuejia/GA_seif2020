@@ -62,14 +62,14 @@
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w17d1 |[Loop the Loop](./unit_3/w14d1/warm_up_exercise)| [Intro to React, Components](./unit_3/w14d1/instructor_notes)| [Static Dashboard](./unit_3/w14d1/student_labs)|[](./unit_3/w14d1/homework)|
 | w17d2 |[Bubble Sort](./unit_3/w14d2/warm_up_exercise)| [State, Control Flow, .map](./unit_3/w14d2/instructor_notes)| [Korilla Receipts](./unit_3/w14d2/student_labs)|[Groceries](./unit_3/w14d2/homework)|
-| w17d3 |[100 Goblins](./unit_3/w14d3/warm_up_exercise)| [Props, CSS/className, Lifting State ,AJAX](./unit_3/w14d3/instructor_notes)| [Dr. Who's Police Box, jService](./unit_3/w14d3/student_labs)|[](./unit_3/w14d3/homework)|
-| w18d1 |[](./unit_3/w15d1/warm_up_exercise)| [Virtual DOM](./unit_3/w15d1/instructor_notes)| [Animal Shelter](./unit_3/w15d1/student_labs)|[](./unit_3/w15d1/homework)|
-| w18d2 |[Happy Fun Ball](./unit_3/w15d2/warm_up_exercise)| [Express API Recap](./unit_3/w15d2/instructor_notes)| [Animal Shelter](./unit_3/w15d2/student_labs)|[Bookmarks](./unit_3/w15d2/homework)|
-| w18d3 |[Project Management](./unit_3/w15d3/warm_up_exercise)| [MERN Stack](./unit_3/w15d3/instructor_notes)| [Animal Shelter](./unit_3/w15d3/student_labs)|[Bookmarks cont.](./unit_3/w15d3/homework)|
-| w19d1 | | [SQL Basics](./unit_3/w16d1/instructor_notes)| [Computers and Televisions](./unit_3/w16d1/student_labs)|[](./unit_3/w16d1/homework)|
-| w19d2 |[](./unit_3/w16d2/warm_up_exercise)| [Advanced SQL](./unit_3/w16d2/instructor_notes)| [Airports](./unit_3/w16d2/student_labs)|[Carmen, NFL](./unit_3/w16d2/homework)|
+| w17d3 |[100 Goblins](./unit_3/w15d1/warm_up_exercise)| [Props, CSS/className, Lifting State ,AJAX](./unit_3/w15d1/instructor_notes)| [Dr. Who's Police Box, jService](./unit_3/w15d1/student_labs)|[](./unit_3/w15d1/homework)|
+| w18d1 |[Happy Fun Ball](./unit_3/w15d2/warm_up_exercise)| [API, CRUD starter](./unit_3/w15d2/instructor_notes)| [Animal Shelter](./unit_3/w15d2/student_labs)|[](./unit_3/w15d2/homework)|
+| w18d2 |[](./unit_3/w15d3/warm_up_exercise)| [MERN CRUD](./unit_3/w15d3/instructor_notes)| [Animal Shelter](./unit_3/w15d3/student_labs)|[Bookmarks](./unit_3/w15d3/homework)|
+| w18d3 |[Github collaboration](./unit_3/w16d1/warm_up_exercise)| [MERN Stack](./unit_3/w16d1/instructor_notes)| [](./unit_3/w16d1/student_labs)|[Bookmarks cont.](./unit_3/w16d1/homework)|
+| w19d1 |[Project Management](./unit_4/w18d2/morning_exercise)| [SQL Basics](./unit_4/w18d2/instructor_notes)| [Computers and Televisions](./unit_4/w18d2/student_labs)|[](./unit_3/w16d1/homework)|
+| w19d2 |[](./unit_4/w18d3/warm_up_exercise)| [Advanced SQL](./unit_4/w18d3/instructor_notes)| [Airports](./unit_4/w18d3/student_labs)|[Carmen, NFL](./unit_4/w18d3/homework)|
 | w19d3 |[CS - Intro to Algorithms](https://my.generalassemb.ly/activities/780) [CS - Big O](https://my.generalassemb.ly/activities/511) | [TDD in controller layer, mock functions](./unit_3/w16d3/instructor_notes)| [](./unit_3/w16d3/student_labs)|[](./unit_3/w16d3/homework)|
-| w20d1 |[SQL Zoo](./unit_4/w19d1/warm_up_exercise) [CS - Recursion](https://my.generalassemb.ly/activities/773) [CS - Intro to sorting](https://my.generalassemb.ly/activities/818)| [CORS](./unit_4/w19d1/instructor_notes)| [](./unit_4/w19d1/student_labs)|[Dating App](./unit_4/w19d1/homework)|
+| w20d1 |[SQL Zoo](./unit_4/w19d1/warm_up_exercise) [CS - Recursion](https://my.generalassemb.ly/activities/773) [CS - Intro to sorting](https://my.generalassemb.ly/activities/818)| [CORS, Create_React_APP](./unit_4/w20d2/instructor_notes)| [Q+A LAB](./unit_4/w20d2/student_labs)|[Dating App](./unit_4/w20d3/homework)|
 | w20d2 |[Intro to Regular Expressions](./unit_4/w20d3/warm_up_exercise)| [One to Many](./unit_4/w20d3/instructor_notes)| [QandA, Deployment](./unit_4/w20d3/student_labs)|[Dating App](./unit_4/w20d3/homework)|
 | w20d3 |[CS - Basic Sorting Algo](https://my.generalassemb.ly/activities/778) [CS - Divide and Conquer Sorting Algo](https://my.generalassemb.ly/activities/882)| [Many to Many Through](./unit_4/w21d1/instructor_notes)| [Data Modeling, Stock Prices](./unit_4/w21d1/student_labs)|[Products and Reviews](./unit_4/w21d1/homework)|
 | w21d1 | **Project 3**|

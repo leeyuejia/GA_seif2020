@@ -1,0 +1,18 @@
+.encode {
+    background-color: grey;
+    width: 50%;
+}
+.decode {
+    background-color: darkgray;
+    width: 50%;
+}
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: center;
+}
+textarea {
+    height: 100px;
+}
