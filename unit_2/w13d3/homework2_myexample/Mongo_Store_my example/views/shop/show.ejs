@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+    <body>
+        <div class="container d-flex">
+            <div><%= item.name %></div>
+            <img src="<%= item.img %>" alt="<%= item.name %>">
+            <div><%= item.description %></div>
+        </div>
+    </body>
+</html>

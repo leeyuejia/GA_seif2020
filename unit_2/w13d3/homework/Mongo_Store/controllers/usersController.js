@@ -5,6 +5,8 @@ module.exports = {
     async create (req, res) {
         try {
             validate(req.body);
+            console.log(req.body)
+
             await usersRepository.create(req.body);
             res.redirect('/');
         } catch(err) {
