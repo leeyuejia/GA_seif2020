@@ -106,13 +106,14 @@ input[type="submit"] {
   border-radius: 0.5rem;
   border: none;
   background-color: rgb(0, 68, 255);
-    font-family: 'Oswald';
+  font-family: 'Oswald';
   font-weight: 500;
   font-size: 2em;
   color: white;
 }
 
 input[type="submit"]:hover {
+  transition: 0.5s;
   height: 80px;
   border-radius: 0.5rem;
   border: none;
