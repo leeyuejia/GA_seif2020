@@ -59,12 +59,16 @@ describe('logsRepository.create', () => {
             title: 'My First Log',
             entry: 'Blah blah blah',
             isShipBroken: true,
-            date: Date.now()
+            date: Date.now()// it should an incorrect form of date  // new Date() is a format/ Date.now() is a number
         })
-            .catch(err => {
-                expect(err).to.be.ok;
-                expect(err.message).to.equal('Document failed validation');
-                done();
-            });
+        .then ((result) => {
+            console.log(result)
+            throw new Error ('Log creation should have failed')
+        })
+        .catch(err => {
+            expect(err).to.be.ok;
+            expect(err.message).to.equal('Document failed validation');
+            done();
+        });
     });
 });

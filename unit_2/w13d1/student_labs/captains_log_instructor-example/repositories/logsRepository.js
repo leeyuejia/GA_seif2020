@@ -5,7 +5,7 @@ module.exports = {
         data.date = new Date(data.date);
         return db.logs.insertOne(data);
     },
-    getAll () {
+     getAll () {
         return db.logs.find().toArray();
     }
 };

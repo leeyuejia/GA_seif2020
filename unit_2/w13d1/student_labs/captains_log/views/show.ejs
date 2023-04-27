@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><%=entry.title%></p>
+    <p><%=entry.entry%></p>
+    <p><%=entry.isShipBroken%></p>
+    <p><%=entry.date%></p>
+    <% if (entry.updatedAt) { %>
+     <p><%=entry.updatedAt%>
+     <%}%>
+    <a href="/logs/<%=entry.title%>/edit" class = editbtn>EDIT</a>
+</body>
+</html>

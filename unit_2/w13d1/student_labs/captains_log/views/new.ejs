@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/logs" method="POST">
+        <label for="title">Title</label>
+        <input type="text" name="title" placeholder="your title">
+        <label for="entry">Entry</label>
+        <textarea name="entry" id="entry" cols="30" rows="10" placeholder="your entry max.char(300)" maxlength="300" required></textarea>
+        <label for="isShipBroken">Is the ship Broken?</label>
+        <!-- <input type="checkbox" checked name="isShipBroken" id="isShipBroken"> -->
+        <label for="true" name= "isShipBroken">True</label>
+        <input type="checkbox" name="isShipBroken" id="isShipBroken" value=true>
+        <label for="true" name= "isShipBroken">False</label>
+        <input type="checkbox" name="isShipBroken" id="isShipBroken" value=false>
+        <label for="date">Date of entry</label>
+        <input type="datetime-local" name="date" id="date">
+        <button type="submit">Enter logs</button>
+    </form>
+    
+</body>
+</html>
